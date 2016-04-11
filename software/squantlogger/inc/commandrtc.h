@@ -22,23 +22,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 /*
-Results occuring in an application
+Command functions used for the real time clock
 */
 
-#ifndef __RESULTS_H__
-#define __RESULTS_H__
+#ifndef COMMANDRTC_H
+#define COMMANDRTC_H
 
-typedef enum
-{
-    noError,
-    error,
-    empty,
-    notEmpty,
-    Full,
-    readError,
-    writeError,
-    timeOut,
-	parseError,
-} results;
+void printRtcDateTime(void);
+void setRtcDateTime(char *s, int size);
+
 
 #endif

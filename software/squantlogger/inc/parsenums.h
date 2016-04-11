@@ -25,5 +25,8 @@ SOFTWARE.
 #define PARSENUMS_H
 
 #include <stdint.h>
+#include <results.h>
+
+results parseU08hex(uint8_t *s, uint8_t len, uint8_t *value);
 
 #endif
