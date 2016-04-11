@@ -1,7 +1,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2015 Anton Bilos
+Copyright (c) 2016 Bart Bilos
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,24 +20,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-*/
-/*
-Results occuring in an application
-*/
+ */
+#ifndef PARSENUMS_H
+#define PARSENUMS_H
 
-#ifndef __RESULTS_H__
-#define __RESULTS_H__
-
-typedef enum
-{
-    noError,
-    error,
-    empty,
-    notEmpty,
-    Full,
-    readError,
-    writeError,
-    timeOut,
-} results_t;
+#include <stdint.h>
 
 #endif
