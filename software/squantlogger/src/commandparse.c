@@ -34,8 +34,14 @@ void commandread(char *s, int size)
 {
 	switch(s[1])
 	{
-	case 'r':	// read out rtc date and time, format YYMMDD HHMMSS
-		printRtcDateTime();
+	case 't':	// read out RTC time
+		printRtcTime();
+		break;
+	case 'd': 	// read out RTC date
+		printRtcDate();
+		break;
+	case 'r':	// read out register
+		printRtcReg(s, size);
 	break;
 	}
 }
@@ -44,8 +50,16 @@ void commandwrite(char *s, int size)
 {
 	switch(s[1])
 	{
-	case 'r':	// write rtc date and time, format YYMMDD HHMMSS in decimals
+	case 't':
+
+		break;
+
+	case 'd':
 		setRtcDateTime(s, size);
+		break;
+
+	case 'r':	// write rtc date and time, format YYMMDD HHMMSS in decimals
+		setRtcReg(s, size);
 		break;
 	}
 }

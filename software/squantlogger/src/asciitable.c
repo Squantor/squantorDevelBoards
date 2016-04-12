@@ -135,12 +135,12 @@ ascii_entry_t ascii_table[ASCIITABLE_SIZE] =
 		{0,0},	// '_'
 
 		{0,0},	// '`'
-		{ascii_alpha | ascii_hex, 0},	// 'a'
-		{ascii_alpha | ascii_hex, 0},	// 'b'
-		{ascii_alpha | ascii_hex, 0},	// 'c'
-		{ascii_alpha | ascii_hex, 0},	// 'd'
-		{ascii_alpha | ascii_hex, 0},	// 'e'
-		{ascii_alpha | ascii_hex, 0},	// 'f'
+		{ascii_alpha | ascii_hex, 0xA},	// 'a'
+		{ascii_alpha | ascii_hex, 0xB},	// 'b'
+		{ascii_alpha | ascii_hex, 0xC},	// 'c'
+		{ascii_alpha | ascii_hex, 0xD},	// 'd'
+		{ascii_alpha | ascii_hex, 0xE},	// 'e'
+		{ascii_alpha | ascii_hex, 0xF},	// 'f'
 		{ascii_alpha, 0},	// 'g'
 
 		{ascii_alpha, 0},	// 'h'

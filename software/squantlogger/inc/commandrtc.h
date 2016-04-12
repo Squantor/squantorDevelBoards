@@ -28,7 +28,9 @@ Command functions used for the real time clock
 #ifndef COMMANDRTC_H
 #define COMMANDRTC_H
 
-void printRtcDateTime(void);
+void printRtcReg(char *s, int size);
+void printRtcTime(void);
+void printRtcDate(void);
 void setRtcDateTime(char *s, int size);
 
 
