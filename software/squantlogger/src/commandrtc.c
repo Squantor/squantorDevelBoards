@@ -45,10 +45,10 @@ void printRtcReg(char *s, int size)
 	}
 }
 
-void setRtcReg(char *s, int sizrtc_datae)
+void setRtcReg(char *s, int size)
 {
 	uint8_t rtc_data[2];
-	results result;
+	results result = noError;
 	result = parseU08hex(s + 3, 2, &rtc_data[0]);
 	result += parseU08hex(s + 6, 2, &rtc_data[1]);
 	if(result == noError)
@@ -73,18 +73,28 @@ void printRtcDate(void)
 	print_hex_u8(rtc_data[0]);
 }
 
-void setRtcDateTime(char *s, int size)
+void setRtcTime(char *s, int size)
 {
-	uint8_t rtc_data[8];
+	uint8_t rtc_data[4];
 	rtc_data[0] = 0x00;
-	rtc_data[4] = 0x00;
-	results result;
-	result = parseU08hex(s + 3, 2, &rtc_data[7]);
-	result |= parseU08hex(s + 5, 2, &rtc_data[6]);
-	result |= parseU08hex(s + 7, 2, &rtc_data[5]);
-	result |= parseU08hex(s + 10, 2, &rtc_data[3]);
-	result |= parseU08hex(s + 12, 2, &rtc_data[2]);
-	result |= parseU08hex(s + 14, 2, &rtc_data[1]);
+	results result = noError;
+	result |= parseU08hex(s + 3, 2, &rtc_data[3]);
+	result |= parseU08hex(s + 5, 2, &rtc_data[2]);
+	result |= parseU08hex(s + 7, 2, &rtc_data[1]);
 	if(result == noError)
 		Chip_I2C_MasterSend(I2C0, DS3231_SLAVE_ADDR, rtc_data, sizeof(rtc_data));
 }
+
+void setRtcDate(char *s, int size)
+{
+	uint8_t rtc_data[4];
+	rtc_data[0] = 0x04;
+	results result = noError;
+	result |= parseU08hex(s + 3, 2, &rtc_data[3]);
+	result |= parseU08hex(s + 5, 2, &rtc_data[2]);
+	result |= parseU08hex(s + 7, 2, &rtc_data[1]);
+	if(result == noError)
+		Chip_I2C_MasterSend(I2C0, DS3231_SLAVE_ADDR, rtc_data, sizeof(rtc_data));
+}
+
+

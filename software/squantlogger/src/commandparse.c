@@ -51,11 +51,11 @@ void commandwrite(char *s, int size)
 	switch(s[1])
 	{
 	case 't':
-
+		setRtcTime(s, size);
 		break;
 
 	case 'd':
-		setRtcDateTime(s, size);
+		setRtcDate(s, size);
 		break;
 
 	case 'r':	// write rtc date and time, format YYMMDD HHMMSS in decimals

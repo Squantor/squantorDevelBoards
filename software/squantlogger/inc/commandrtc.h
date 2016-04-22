@@ -31,7 +31,8 @@ Command functions used for the real time clock
 void printRtcReg(char *s, int size);
 void printRtcTime(void);
 void printRtcDate(void);
-void setRtcDateTime(char *s, int size);
-
+void setRtcTime(char *s, int size);
+void setRtcDate(char *s, int size);
+void setRtcReg(char *s, int size);
 
 #endif
