@@ -1,4 +1,4 @@
-update=di 30 mei 2017 22:05:38 CEST
+update=do 08 jun 2017 21:19:12 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,10 +58,8 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=/home/abilos/projects/public/SquantorPcbComponentLibrary/kicad/SquantorButtons
-LibName31=/home/abilos/projects/public/SquantorPcbComponentLibrary/kicad/SquantorConnectors
-LibName32=/home/abilos/projects/public/SquantorPcbComponentLibrary/kicad/SquantorNxp
-LibName33=/home/abilos/projects/public/SquantorPcbComponentLibrary/kicad/SquantorUsb
-LibName34=/home/abilos/projects/public/SquantorPcbComponentLibrary/kicad/SquantorWinbond
-LibName35=/home/abilos/projects/public/SquantorPcbComponentLibrary/kicad/SquantorAtmel
-LibName36=SquantorPCBOutline
+LibName30=SquantorPCBOutline
+LibName31=SquantorRCL
+LibName32=SquantorConnectors
+LibName33=SquantorButtons
+LibName34=SquantorNxp
