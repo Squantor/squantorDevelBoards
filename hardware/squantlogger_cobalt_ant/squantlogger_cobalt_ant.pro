@@ -1,4 +1,4 @@
-update=do 08 jun 2017 21:19:12 CEST
+update=do 08 jun 2017 21:40:57 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,7 +59,7 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=SquantorPCBOutline
-LibName31=SquantorRCL
-LibName32=SquantorConnectors
-LibName33=SquantorButtons
-LibName34=SquantorNxp
+LibName31=SquantorConnectors
+LibName32=SquantorButtons
+LibName33=SquantorNxp
+LibName34=SquantorMicrochip
