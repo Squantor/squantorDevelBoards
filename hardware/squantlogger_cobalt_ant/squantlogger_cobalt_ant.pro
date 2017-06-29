@@ -1,4 +1,4 @@
-update=do 29 jun 2017 19:30:19 CEST
+update=do 29 jun 2017 22:16:12 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -64,3 +64,4 @@ LibName32=SquantorButtons
 LibName33=SquantorNxp
 LibName34=SquantorMicrochip
 LibName35=SquantorWinbond
+LibName36=SquantorRCL
