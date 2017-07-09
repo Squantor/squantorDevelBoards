@@ -1246,10 +1246,8 @@ Wire Wire Line
 	1750 1300 1650 1300
 Wire Wire Line
 	1350 1300 1000 1300
-Text GLabel 4800 2050 0    60   Input ~ 0
+Text GLabel 4750 1950 0    60   Input ~ 0
 nRESET
-Wire Wire Line
-	5000 2050 4800 2050
 Text GLabel 6600 2750 2    60   Input ~ 0
 SWDIO
 Text GLabel 6650 3850 2    60   Input ~ 0
@@ -1378,4 +1376,46 @@ F 3 "" H 1550 1700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1550 1700 1250 1700
+Text GLabel 4800 2750 0    60   Input ~ 0
+GPIO1_8
+Text GLabel 4800 2850 0    60   Input ~ 0
+GPIO0_2
+Wire Wire Line
+	4850 2650 5000 2650
+Wire Wire Line
+	4850 2650 4850 2750
+Wire Wire Line
+	4850 2750 4800 2750
+Wire Wire Line
+	5000 2750 4900 2750
+Wire Wire Line
+	4900 2750 4900 2850
+Wire Wire Line
+	4900 2850 4800 2850
+Text GLabel 4750 2050 0    60   Input ~ 0
+GPIO0_1
+Wire Wire Line
+	5000 2150 4800 2150
+Wire Wire Line
+	4800 2150 4800 2050
+Wire Wire Line
+	4800 2050 4750 2050
+Wire Wire Line
+	5000 2050 4850 2050
+Wire Wire Line
+	4850 2050 4850 1950
+Wire Wire Line
+	4850 1950 4750 1950
+Text GLabel 4800 3550 0    60   Input ~ 0
+PIO1_9
+Wire Wire Line
+	5000 3550 4800 3550
+Text GLabel 1600 2500 2    60   Input ~ 0
+PIO1_9
+Text GLabel 1600 2400 2    60   Input ~ 0
+GPIO0_1
+Text GLabel 1600 2100 2    60   Input ~ 0
+GPIO1_8
+Text GLabel 1600 2000 2    60   Input ~ 0
+GPIO0_2
 $EndSCHEMATC
