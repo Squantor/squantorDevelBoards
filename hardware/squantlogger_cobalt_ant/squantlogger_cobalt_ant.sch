@@ -733,34 +733,34 @@ F 3 "" H 1400 3350 50  0001 C CNN
 	1    1400 3350
 	0    1    1    0   
 $EndComp
-Text GLabel 1200 3550 2    60   Input ~ 0
+Text GLabel 1900 3550 2    60   Input ~ 0
 ADC_0
-Text GLabel 1200 3650 2    60   Input ~ 0
+Text GLabel 1900 3650 2    60   Input ~ 0
 ADC_1
-Text GLabel 1200 3750 2    60   Input ~ 0
+Text GLabel 1900 3750 2    60   Input ~ 0
 ADC_2
-Text GLabel 1200 3850 2    60   Input ~ 0
+Text GLabel 1900 3850 2    60   Input ~ 0
 ADC_3
-Text GLabel 1200 3950 2    60   Input ~ 0
+Text GLabel 1900 3950 2    60   Input ~ 0
 ADC_4
-Text GLabel 1200 4150 2    60   Input ~ 0
+Text GLabel 1900 4150 2    60   Input ~ 0
 ADC_6
-Text GLabel 1200 4050 2    60   Input ~ 0
+Text GLabel 1900 4050 2    60   Input ~ 0
 ADC_5
-Text GLabel 1200 4250 2    60   Input ~ 0
+Text GLabel 1900 4250 2    60   Input ~ 0
 ADC_7
-Text GLabel 1200 4350 2    60   Input ~ 0
+Text GLabel 1900 4350 2    60   Input ~ 0
 ADC_8
 Wire Wire Line
-	1150 3550 1200 3550
+	1150 3550 1550 3550
 Wire Wire Line
 	1150 3650 1200 3650
 Wire Wire Line
-	1150 3750 1200 3750
+	1150 3750 1550 3750
 Wire Wire Line
 	1200 3850 1150 3850
 Wire Wire Line
-	1200 3950 1150 3950
+	1150 3950 1550 3950
 $Comp
 L W25Q32BV U4
 U 1 1 595545DA
@@ -1036,8 +1036,6 @@ F 3 "" H 1550 1900 50  0001 C CNN
 	1    1550 1900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1250 2200 1600 2200
 $Comp
 L VDDA #PWR037
 U 1 1 595637B5
@@ -1073,7 +1071,7 @@ Wire Wire Line
 Wire Wire Line
 	1150 3350 1400 3350
 Wire Wire Line
-	1200 4350 1150 4350
+	1150 4350 1550 4350
 $Comp
 L Cobalt_Ant_Digital J2
 U 1 1 5956C995
@@ -1285,12 +1283,10 @@ Wire Wire Line
 	5000 2450 4700 2450
 Wire Wire Line
 	4700 2450 4700 2600
-Text GLabel 1600 2300 2    60   Input ~ 0
+Text GLabel 2000 2300 2    60   Input ~ 0
 I2C_SCL
-Text GLabel 1600 2200 2    60   Input ~ 0
+Text GLabel 2000 2200 2    60   Input ~ 0
 I2C_SDA
-Wire Wire Line
-	1600 2300 1250 2300
 Text GLabel 6600 2050 2    60   Input ~ 0
 SERIAL_TXD
 Wire Wire Line
@@ -1307,26 +1303,12 @@ Text GLabel 6600 2150 2    60   Input ~ 0
 SERIAL_RTS
 Wire Wire Line
 	6600 2150 6400 2150
-Wire Wire Line
-	1250 2500 1600 2500
-Text GLabel 1600 2800 2    60   Input ~ 0
+Text GLabel 2000 2800 2    60   Input ~ 0
 SPI_SCK
-Text GLabel 1600 2700 2    60   Input ~ 0
+Text GLabel 2000 2700 2    60   Input ~ 0
 SPI_MOSI
-Text GLabel 1600 2600 2    60   Input ~ 0
+Text GLabel 2000 2600 2    60   Input ~ 0
 SPI_MISO
-Wire Wire Line
-	1600 2800 1250 2800
-Wire Wire Line
-	1250 2700 1600 2700
-Wire Wire Line
-	1600 2600 1250 2600
-Wire Wire Line
-	1250 2400 1600 2400
-Wire Wire Line
-	1250 2100 1600 2100
-Wire Wire Line
-	1250 2000 1600 2000
 Text GLabel 4800 3150 0    60   Input ~ 0
 SPI_SCK
 Text GLabel 6600 2850 2    60   Input ~ 0
@@ -1386,16 +1368,16 @@ Text GLabel 4800 3550 0    60   Input ~ 0
 PIO1_9
 Wire Wire Line
 	5000 3550 4800 3550
-Text GLabel 1600 2500 2    60   Input ~ 0
+Text GLabel 2000 2500 2    60   Input ~ 0
 PIO1_9
-Text GLabel 1600 2400 2    60   Input ~ 0
+Text GLabel 2000 2400 2    60   Input ~ 0
 GPIO0_1
-Text GLabel 1600 2100 2    60   Input ~ 0
+Text GLabel 2000 2100 2    60   Input ~ 0
 GPIO1_8
-Text GLabel 1600 2000 2    60   Input ~ 0
+Text GLabel 2000 2000 2    60   Input ~ 0
 GPIO0_2
 Wire Wire Line
-	1200 4150 1150 4150
+	1150 4150 1550 4150
 $Comp
 L GND #PWR046
 U 1 1 59D12714
@@ -1418,4 +1400,256 @@ F 3 "" H 3950 2600 50  0001 C CNN
 	1    3950 2600
 	0    1    1    0   
 $EndComp
+$Comp
+L R R27
+U 1 1 59D13941
+P 1700 3550
+F 0 "R27" V 1780 3550 50  0000 C CNN
+F 1 "100" V 1700 3550 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1630 3550 50  0001 C CNN
+F 3 "" H 1700 3550 50  0001 C CNN
+	1    1700 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1900 3650 1500 3650
+Wire Wire Line
+	1850 3550 1900 3550
+Wire Wire Line
+	1850 3750 1900 3750
+Wire Wire Line
+	1900 3850 1500 3850
+Wire Wire Line
+	1850 3950 1900 3950
+Wire Wire Line
+	1900 4050 1500 4050
+Wire Wire Line
+	1850 4150 1900 4150
+Wire Wire Line
+	1900 4250 1500 4250
+Wire Wire Line
+	1850 4350 1900 4350
+$Comp
+L R R18
+U 1 1 59D1552B
+P 1350 3650
+F 0 "R18" V 1430 3650 50  0000 C CNN
+F 1 "100" V 1350 3650 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1280 3650 50  0001 C CNN
+F 3 "" H 1350 3650 50  0001 C CNN
+	1    1350 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L R R28
+U 1 1 59D15601
+P 1700 3750
+F 0 "R28" V 1780 3750 50  0000 C CNN
+F 1 "100" V 1700 3750 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1630 3750 50  0001 C CNN
+F 3 "" H 1700 3750 50  0001 C CNN
+	1    1700 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R19
+U 1 1 59D156CB
+P 1350 3850
+F 0 "R19" V 1430 3850 50  0000 C CNN
+F 1 "100" V 1350 3850 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1280 3850 50  0001 C CNN
+F 3 "" H 1350 3850 50  0001 C CNN
+	1    1350 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L R R29
+U 1 1 59D15799
+P 1700 3950
+F 0 "R29" V 1780 3950 50  0000 C CNN
+F 1 "100" V 1700 3950 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1630 3950 50  0001 C CNN
+F 3 "" H 1700 3950 50  0001 C CNN
+	1    1700 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L R R20
+U 1 1 59D1586B
+P 1350 4050
+F 0 "R20" V 1430 4050 50  0000 C CNN
+F 1 "100" V 1350 4050 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1280 4050 50  0001 C CNN
+F 3 "" H 1350 4050 50  0001 C CNN
+	1    1350 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L R R30
+U 1 1 59D15941
+P 1700 4150
+F 0 "R30" V 1780 4150 50  0000 C CNN
+F 1 "100" V 1700 4150 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1630 4150 50  0001 C CNN
+F 3 "" H 1700 4150 50  0001 C CNN
+	1    1700 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L R R21
+U 1 1 59D15A1B
+P 1350 4250
+F 0 "R21" V 1430 4250 50  0000 C CNN
+F 1 "100" V 1350 4250 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1280 4250 50  0001 C CNN
+F 3 "" H 1350 4250 50  0001 C CNN
+	1    1350 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L R R31
+U 1 1 59D15AF9
+P 1700 4350
+F 0 "R31" V 1780 4350 50  0000 C CNN
+F 1 "100" V 1700 4350 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1630 4350 50  0001 C CNN
+F 3 "" H 1700 4350 50  0001 C CNN
+	1    1700 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L R R22
+U 1 1 59D1655D
+P 1450 2000
+F 0 "R22" V 1530 2000 50  0000 C CNN
+F 1 "100" V 1450 2000 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1380 2000 50  0001 C CNN
+F 3 "" H 1450 2000 50  0001 C CNN
+	1    1450 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L R R32
+U 1 1 59D167B5
+P 1800 2100
+F 0 "R32" V 1880 2100 50  0000 C CNN
+F 1 "100" V 1800 2100 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1730 2100 50  0001 C CNN
+F 3 "" H 1800 2100 50  0001 C CNN
+	1    1800 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R23
+U 1 1 59D16909
+P 1450 2200
+F 0 "R23" V 1530 2200 50  0000 C CNN
+F 1 "100" V 1450 2200 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1380 2200 50  0001 C CNN
+F 3 "" H 1450 2200 50  0001 C CNN
+	1    1450 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L R R33
+U 1 1 59D16A2B
+P 1800 2300
+F 0 "R33" V 1880 2300 50  0000 C CNN
+F 1 "100" V 1800 2300 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1730 2300 50  0001 C CNN
+F 3 "" H 1800 2300 50  0001 C CNN
+	1    1800 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L R R24
+U 1 1 59D16BDE
+P 1450 2400
+F 0 "R24" V 1530 2400 50  0000 C CNN
+F 1 "100" V 1450 2400 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1380 2400 50  0001 C CNN
+F 3 "" H 1450 2400 50  0001 C CNN
+	1    1450 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L R R34
+U 1 1 59D16C94
+P 1800 2500
+F 0 "R34" V 1880 2500 50  0000 C CNN
+F 1 "100" V 1800 2500 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1730 2500 50  0001 C CNN
+F 3 "" H 1800 2500 50  0001 C CNN
+	1    1800 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L R R25
+U 1 1 59D16D5F
+P 1450 2600
+F 0 "R25" V 1530 2600 50  0000 C CNN
+F 1 "100" V 1450 2600 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1380 2600 50  0001 C CNN
+F 3 "" H 1450 2600 50  0001 C CNN
+	1    1450 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R35
+U 1 1 59D16E25
+P 1800 2700
+F 0 "R35" V 1880 2700 50  0000 C CNN
+F 1 "100" V 1800 2700 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1730 2700 50  0001 C CNN
+F 3 "" H 1800 2700 50  0001 C CNN
+	1    1800 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R26
+U 1 1 59D16EEC
+P 1450 2800
+F 0 "R26" V 1530 2800 50  0000 C CNN
+F 1 "100" V 1450 2800 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1380 2800 50  0001 C CNN
+F 3 "" H 1450 2800 50  0001 C CNN
+	1    1450 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 2000 1300 2000
+Wire Wire Line
+	1250 2100 1650 2100
+Wire Wire Line
+	1250 2200 1300 2200
+Wire Wire Line
+	1250 2300 1650 2300
+Wire Wire Line
+	1250 2400 1300 2400
+Wire Wire Line
+	1250 2500 1650 2500
+Wire Wire Line
+	1250 2600 1300 2600
+Wire Wire Line
+	1250 2700 1650 2700
+Wire Wire Line
+	1250 2800 1300 2800
+Wire Wire Line
+	1600 2800 2000 2800
+Wire Wire Line
+	1950 2700 2000 2700
+Wire Wire Line
+	1600 2600 2000 2600
+Wire Wire Line
+	1950 2500 2000 2500
+Wire Wire Line
+	1600 2400 2000 2400
+Wire Wire Line
+	1950 2300 2000 2300
+Wire Wire Line
+	1600 2200 2000 2200
+Wire Wire Line
+	1950 2100 2000 2100
+Wire Wire Line
+	1600 2000 2000 2000
 $EndSCHEMATC
