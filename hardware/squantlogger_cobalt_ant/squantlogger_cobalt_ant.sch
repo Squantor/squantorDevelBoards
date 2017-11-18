@@ -651,9 +651,9 @@ F 3 "" H 750 5350 60  0001 C CNN
 	1    750  5100
 	1    0    0    -1  
 $EndComp
-Text GLabel 4800 3350 0    60   Input ~ 0
+Text GLabel 4800 3350 0    60   Output ~ 0
 I2C_SCL
-Text GLabel 4800 3450 0    60   Input ~ 0
+Text GLabel 4800 3450 0    60   BiDi ~ 0
 I2C_SDA
 Text GLabel 6050 950  0    60   Input ~ 0
 I2C_SDA
@@ -1126,7 +1126,7 @@ U 1 1 59578FC8
 P 3500 6050
 F 0 "U1" H 3500 6200 60  0000 C CNN
 F 1 "POWER_JOINER" H 3500 5900 60  0000 C CNN
-F 2 "SquantorRcl:R_0603_hand" H 3500 6050 60  0001 C CNN
+F 2 "SquantorRcl:R_0402_hand" H 3500 6050 60  0001 C CNN
 F 3 "" H 3500 6050 60  0001 C CNN
 	1    3500 6050
 	1    0    0    -1  
@@ -1137,7 +1137,7 @@ U 1 1 59579087
 P 3500 6450
 F 0 "U2" H 3500 6600 60  0000 C CNN
 F 1 "POWER_JOINER" H 3500 6300 60  0000 C CNN
-F 2 "SquantorRcl:R_0603_hand" H 3500 6450 60  0001 C CNN
+F 2 "SquantorRcl:R_0402_hand" H 3500 6450 60  0001 C CNN
 F 3 "" H 3500 6450 60  0001 C CNN
 	1    3500 6450
 	1    0    0    -1  
@@ -1285,7 +1285,7 @@ Wire Wire Line
 	4700 2450 4700 2600
 Text GLabel 2000 2300 2    60   Input ~ 0
 I2C_SCL
-Text GLabel 2000 2200 2    60   Input ~ 0
+Text GLabel 2000 2200 2    60   BiDi ~ 0
 I2C_SDA
 Text GLabel 6600 2050 2    60   Input ~ 0
 SERIAL_TXD
@@ -1309,7 +1309,7 @@ Text GLabel 2000 2700 2    60   Input ~ 0
 SPI_MOSI
 Text GLabel 2000 2600 2    60   Input ~ 0
 SPI_MISO
-Text GLabel 4800 3150 0    60   Input ~ 0
+Text GLabel 4800 3150 0    60   Output ~ 0
 SPI_SCK
 Text GLabel 6600 2850 2    60   Input ~ 0
 SPI_MOSI
@@ -1334,9 +1334,9 @@ F 3 "" H 1550 1700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1550 1700 1250 1700
-Text GLabel 4800 2750 0    60   Input ~ 0
+Text GLabel 4800 2750 0    60   BiDi ~ 0
 GPIO1_8
-Text GLabel 4800 2850 0    60   Input ~ 0
+Text GLabel 4800 2850 0    60   BiDi ~ 0
 GPIO0_2
 Wire Wire Line
 	4850 2650 5000 2650
@@ -1350,8 +1350,6 @@ Wire Wire Line
 	4900 2750 4900 2850
 Wire Wire Line
 	4900 2850 4800 2850
-Text GLabel 4750 2050 0    60   Input ~ 0
-GPIO0_1
 Wire Wire Line
 	5000 2150 4800 2150
 Wire Wire Line
@@ -1364,14 +1362,12 @@ Wire Wire Line
 	4850 2050 4850 1950
 Wire Wire Line
 	4850 1950 4750 1950
-Text GLabel 4800 3550 0    60   Input ~ 0
-PIO1_9
+Text GLabel 4800 3550 0    60   BiDi ~ 0
+GPIO1_9
 Wire Wire Line
 	5000 3550 4800 3550
 Text GLabel 2000 2500 2    60   Input ~ 0
-PIO1_9
-Text GLabel 2000 2400 2    60   Input ~ 0
-GPIO0_1
+GPIO1_9
 Text GLabel 2000 2100 2    60   Input ~ 0
 GPIO1_8
 Text GLabel 2000 2000 2    60   Input ~ 0
@@ -1902,4 +1898,175 @@ Wire Wire Line
 	2850 3750 2500 3750
 Wire Wire Line
 	2850 3550 2500 3550
+$Comp
+L 2pin_tact_switch S1
+U 1 1 5A1060A0
+P 5400 6650
+F 0 "S1" H 5400 6900 60  0000 C CNN
+F 1 "2pin_tact_switch" H 5400 6550 60  0000 C CNN
+F 2 "SquantorButtons:TD-85XU" H 5400 6650 60  0001 C CNN
+F 3 "" H 5400 6650 60  0001 C CNN
+	1    5400 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 2pin_tact_switch S2
+U 1 1 5A106189
+P 5400 7100
+F 0 "S2" H 5400 7350 60  0000 C CNN
+F 1 "2pin_tact_switch" H 5400 7000 60  0000 C CNN
+F 2 "SquantorButtons:TD-85XU" H 5400 7100 60  0001 C CNN
+F 3 "" H 5400 7100 60  0001 C CNN
+	1    5400 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR057
+U 1 1 5A106348
+P 5100 6650
+F 0 "#PWR057" H 5100 6400 50  0001 C CNN
+F 1 "GND" H 5100 6500 50  0000 C CNN
+F 2 "" H 5100 6650 50  0001 C CNN
+F 3 "" H 5100 6650 50  0001 C CNN
+	1    5100 6650
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR058
+U 1 1 5A106422
+P 5100 7100
+F 0 "#PWR058" H 5100 6850 50  0001 C CNN
+F 1 "GND" H 5100 6950 50  0000 C CNN
+F 2 "" H 5100 7100 50  0001 C CNN
+F 3 "" H 5100 7100 50  0001 C CNN
+	1    5100 7100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 6650 5100 6650
+Wire Wire Line
+	5100 7100 5150 7100
+$Comp
+L R R37
+U 1 1 5A1069FF
+P 5900 6650
+F 0 "R37" V 5980 6650 50  0000 C CNN
+F 1 "10k" V 5900 6650 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 5830 6650 50  0001 C CNN
+F 3 "" H 5900 6650 50  0001 C CNN
+	1    5900 6650
+	0    1    1    0   
+$EndComp
+$Comp
+L R R38
+U 1 1 5A106EF1
+P 5900 7100
+F 0 "R38" V 5980 7100 50  0000 C CNN
+F 1 "10k" V 5900 7100 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 5830 7100 50  0001 C CNN
+F 3 "" H 5900 7100 50  0001 C CNN
+	1    5900 7100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 7100 5750 7100
+Wire Wire Line
+	5650 6650 5750 6650
+$Comp
+L VDD #PWR059
+U 1 1 5A1072CF
+P 6100 6650
+F 0 "#PWR059" H 6100 6500 50  0001 C CNN
+F 1 "VDD" H 6100 6800 50  0000 C CNN
+F 2 "" H 6100 6650 50  0001 C CNN
+F 3 "" H 6100 6650 50  0001 C CNN
+	1    6100 6650
+	0    1    1    0   
+$EndComp
+$Comp
+L VDD #PWR060
+U 1 1 5A1074CB
+P 6100 7100
+F 0 "#PWR060" H 6100 6950 50  0001 C CNN
+F 1 "VDD" H 6100 7250 50  0000 C CNN
+F 2 "" H 6100 7100 50  0001 C CNN
+F 3 "" H 6100 7100 50  0001 C CNN
+	1    6100 7100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 6650 6050 6650
+Wire Wire Line
+	6100 7100 6050 7100
+Text GLabel 5750 6950 2    60   Input ~ 0
+nRESET
+Wire Wire Line
+	5750 6950 5700 6950
+Wire Wire Line
+	5700 6950 5700 7100
+Connection ~ 5700 7100
+Text GLabel 5750 6500 2    60   Input ~ 0
+BOOT
+Wire Wire Line
+	5750 6500 5700 6500
+Wire Wire Line
+	5700 6500 5700 6650
+Connection ~ 5700 6650
+Wire Wire Line
+	5000 4250 4800 4250
+Text GLabel 4800 4250 0    60   Input ~ 0
+LED
+Text GLabel 4550 6050 0    60   Input ~ 0
+LED
+$Comp
+L R R36
+U 1 1 5A10C5F4
+P 4750 6050
+F 0 "R36" V 4830 6050 50  0000 C CNN
+F 1 "4.7k" V 4750 6050 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 4680 6050 50  0001 C CNN
+F 3 "" H 4750 6050 50  0001 C CNN
+	1    4750 6050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 6050 4600 6050
+$Comp
+L LED D1
+U 1 1 5A10CA30
+P 5100 6050
+F 0 "D1" H 5100 6150 50  0000 C CNN
+F 1 "LED" H 5100 5950 50  0000 C CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 5100 6050 50  0001 C CNN
+F 3 "" H 5100 6050 50  0001 C CNN
+	1    5100 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 6050 4950 6050
+$Comp
+L VDD #PWR061
+U 1 1 5A10CCE6
+P 5300 6050
+F 0 "#PWR061" H 5300 5900 50  0001 C CNN
+F 1 "VDD" H 5300 6200 50  0000 C CNN
+F 2 "" H 5300 6050 50  0001 C CNN
+F 3 "" H 5300 6050 50  0001 C CNN
+	1    5300 6050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 6050 5300 6050
+Text GLabel 4750 2050 0    60   Input ~ 0
+BOOT
+Text GLabel 4800 2950 0    60   Input ~ 0
+GPIO2_7
+Wire Wire Line
+	5000 2850 4950 2850
+Wire Wire Line
+	4950 2850 4950 2950
+Wire Wire Line
+	4950 2950 4800 2950
+Text GLabel 2000 2400 2    60   Input ~ 0
+GPIO2_7
 $EndSCHEMATC
