@@ -1080,7 +1080,7 @@ U 1 1 5956C995
 P 900 2250
 F 0 "J2" H 900 2950 60  0000 C CNN
 F 1 "Cobalt_Ant_Digital" H 900 1550 60  0000 C CNN
-F 2 "SquantorConnectors:Header-0254-1X12-H010" H 1050 2800 60  0001 C CNN
+F 2 "SquantorConnectors:Header-0254-1X12-H015" H 1050 2800 60  0001 C CNN
 F 3 "" H 1050 2800 60  0001 C CNN
 	1    900  2250
 	1    0    0    -1  
@@ -1091,7 +1091,7 @@ U 1 1 5956CBBF
 P 900 3800
 F 0 "J3" H 900 4500 60  0000 C CNN
 F 1 "Cobalt_Ant_Analog" H 900 3100 60  0000 C CNN
-F 2 "SquantorConnectors:Header-0254-1X12-H010" H 950 4350 60  0001 C CNN
+F 2 "SquantorConnectors:Header-0254-1X12-H015" H 950 4350 60  0001 C CNN
 F 3 "" H 950 4350 60  0001 C CNN
 	1    900  3800
 	1    0    0    -1  
