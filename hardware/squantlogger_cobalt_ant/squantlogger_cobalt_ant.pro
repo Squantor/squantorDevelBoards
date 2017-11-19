@@ -1,4 +1,4 @@
-update=zo 19 nov 2017 14:24:59 CET
+update=zo 19 nov 2017 14:51:35 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../../SquantorPcbComponentLibrary/kicad
@@ -67,3 +65,5 @@ LibName35=SquantorWinbond
 LibName36=SquantorRCL
 LibName37=SquantorLabels
 LibName38=SquantorProto
+[general]
+version=1
