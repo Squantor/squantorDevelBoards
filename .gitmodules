@@ -1,0 +1,3 @@
+[submodule "software/lpc_chip_11cxx"]
+	path = software/lpc_chip_11cxx
+	url = git@github.com:Squantor/lpc_chip_11cxx.git
