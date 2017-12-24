@@ -29,7 +29,8 @@
  * this code.
  */
 
- #include <chip.h>
+#include <chip.h>
+#include <board.h>
 
 /*****************************************************************************
  * Private types/enumerations/variables
@@ -54,13 +55,7 @@ const uint32_t ExtRateIn = 0;
 /* Set up and initialize hardware prior to call to main */
 void SystemInit(void)
 {
-#if defined(NO_BOARD_LIB)
 	/* Chip specific SystemInit */
 	Chip_SystemInit();
-#else
-	/* Board specific SystemInit */
-	Board_SystemInit();
-#endif
 	Chip_GPIO_SetPinDIROutput(LPC_GPIO, 2, 9);
-
 }
