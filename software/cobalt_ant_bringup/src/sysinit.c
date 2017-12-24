@@ -57,5 +57,9 @@ void SystemInit(void)
 {
 	/* Chip specific SystemInit */
 	Chip_SystemInit();
-	Chip_GPIO_SetPinDIROutput(LPC_GPIO, 2, 9);
+#if defined(BOARD_COBALT_ANT)
+	boardCobaltAntInit();
+#else
+#error "No board defined"
+#endif
 }
