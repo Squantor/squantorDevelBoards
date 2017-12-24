@@ -1,5 +1,5 @@
 # Project settings
-BIN_NAME = lpc_1114_302_frame_C
+BIN_NAME = cobalt_ant_bringup
 MCU = lpc1114_323
 BOARD = BOARD_COBALT_ANT
 SOURCES = src/cobalt_ant_bringup.c src/sysinit.c src/cr_startup_lpc11xx.c src/boards/board_cobalt_ant_init.c
@@ -23,14 +23,14 @@ OBJDUMP = objdump
 OBJCOPY = objcopy
 
 # Toolchain flags
-COMPILE_FLAGS = -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -std=c11 -mcpu=cortex-m0 -mthumb -D$(BOARD) -flto
+COMPILE_FLAGS = -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -std=c11 -mcpu=cortex-m0 -mthumb -D$(BOARD)
 DEFINES = -DCORE_M0 -Dbreadboard
 RDEFINES = -DNDEBUG -DNO_BOARD_LIB -D__CODE_RED
 DDEFINES = -DDEBUG -DNO_BOARD_LIB -D__CODE_RED
 RCOMPILE_FLAGS = $(DEFINES) $(RDEFINES) -Os
 DCOMPILE_FLAGS = $(DEFINES) $(DDEFINES) -g3 -O0
 
-LINK_FLAGS = -nostdlib -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -flto
+LINK_FLAGS = -nostdlib -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb
 RLINK_FLAGS =
 DLINK_FLAGS =
 
@@ -98,18 +98,18 @@ clean:
 	$(RM) -r bin
 
 # Main rule, checks the executable and symlinks to the output
-all: $(BIN_PATH)/$(BIN_NAME).elf
+all: $(BIN_PATH)/$(BIN_NAME).axf
 
 # create the executable
-$(BIN_PATH)/$(BIN_NAME).elf: $(OBJECTS)
+$(BIN_PATH)/$(BIN_NAME).axf: $(OBJECTS)
 	$(CXX_PREFIX)$(CXX) $(LDFLAGS) $(OBJECTS) -Xlinker -Map="$(BIN_PATH)/$(BIN_NAME).map" -o $@ $(LIBS)
 	# dump size and log to file
-	$(CXX_PREFIX)$(SIZE) $(BIN_PATH)/$(BIN_NAME).elf
+	$(CXX_PREFIX)$(SIZE) $(BIN_PATH)/$(BIN_NAME).axf
 	date >> size$(BUILD_TARGET).log
-	$(CXX_PREFIX)$(SIZE) $(BIN_PATH)/$(BIN_NAME).elf >> size$(BUILD_TARGET).log
+	$(CXX_PREFIX)$(SIZE) $(BIN_PATH)/$(BIN_NAME).axf >> size$(BUILD_TARGET).log
 	# create the various output files
-	$(CXX_PREFIX)$(OBJCOPY) -R .stack -O binary $(BIN_PATH)/$(BIN_NAME).elf $(BIN_PATH)/$(BIN_NAME).bin
-	$(CXX_PREFIX)$(OBJDUMP) -h -S "$(BIN_PATH)/$(BIN_NAME).elf" > "$(BIN_PATH)/$(BIN_NAME).lss"
+	$(CXX_PREFIX)$(OBJCOPY) -R .stack -O binary $(BIN_PATH)/$(BIN_NAME).axf $(BIN_PATH)/$(BIN_NAME).bin
+	$(CXX_PREFIX)$(OBJDUMP) -h -S "$(BIN_PATH)/$(BIN_NAME).axf" > "$(BIN_PATH)/$(BIN_NAME).lss"
 
 # Add dependency files, if they exist
 -include $(DEPS)
