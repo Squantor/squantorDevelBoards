@@ -8,7 +8,6 @@
 #ifndef INC_BOARDS_BOARD_COBALT_ANT_H_
 #define INC_BOARDS_BOARD_COBALT_ANT_H_
 
-
-
+void boardCobaltAntInit(void);
 
 #endif /* INC_BOARDS_BOARD_COBALT_ANT_H_ */

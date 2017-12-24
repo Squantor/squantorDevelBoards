@@ -3,6 +3,7 @@
 	<name>cobalt_ant_bringup</name>
 	<comment></comment>
 	<projects>
+		<project>lpc_chip_11cxx_lib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

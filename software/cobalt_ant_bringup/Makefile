@@ -1,12 +1,13 @@
 # Project settings
 BIN_NAME = lpc_1114_302_frame_C
-MCU = lpc1114_302
-SOURCES = src/cr_startup_lpc11xx.c src/sysinit.c src/main.c src/crp.c src/print.c src/board_init.c
-INCLUDES = -Iinc -I"lpc_chip_11cxx/inc/"
+MCU = lpc1114_323
+BOARD = BOARD_COBALT_ANT
+SOURCES = src/cobalt_ant_bringup.c src/sysinit.c src/cr_startup_lpc11xx.c src/boards/board_cobalt_ant_init.c
+INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/"
 LDSCRIPT = -T"ld/nxp_$(MCU).ld"
-RLIBDIR = -L"lpc_chip_11cxx/bin/release"
+RLIBDIR = -L"../lpc_chip_11cxx/bin/release"
 RLIBS = -llpc_chip_11cxx
-DLIBDIR = -L"lpc_chip_11cxx/bin/debug"
+DLIBDIR = -L"../lpc_chip_11cxx/bin/debug"
 DLIBS = -llpc_chip_11cxx
 
 
@@ -22,14 +23,14 @@ OBJDUMP = objdump
 OBJCOPY = objcopy
 
 # Toolchain flags
-COMPILE_FLAGS = -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -std=c11 -mcpu=cortex-m0 -mthumb
+COMPILE_FLAGS = -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -std=c11 -mcpu=cortex-m0 -mthumb -D$(BOARD) -flto
 DEFINES = -DCORE_M0 -Dbreadboard
 RDEFINES = -DNDEBUG -DNO_BOARD_LIB -D__CODE_RED
 DDEFINES = -DDEBUG -DNO_BOARD_LIB -D__CODE_RED
 RCOMPILE_FLAGS = $(DEFINES) $(RDEFINES) -Os
 DCOMPILE_FLAGS = $(DEFINES) $(DDEFINES) -g3 -O0
 
-LINK_FLAGS = -nostdlib -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb
+LINK_FLAGS = -nostdlib -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -flto
 RLINK_FLAGS =
 DLINK_FLAGS =
 
@@ -72,14 +73,14 @@ DEPS = $(OBJECTS:.o=.d)
 .PHONY: release
 release: dirs
 	# make lpc_chip library if needed
-	$(MAKE) -C lpc_chip_11cxx release
+	$(MAKE) -C ../lpc_chip_11cxx release
 	$(MAKE) all --no-print-directory
 
 # Debug build for gdb debugging
 .PHONY: debug
 debug: dirs
 	# make lpc_chip library if needed
-	$(MAKE) -C lpc_chip_11cxx debug
+	$(MAKE) -C ../lpc_chip_11cxx debug
 	$(MAKE) all --no-print-directory
 
 # Create the directories used in the build

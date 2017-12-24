@@ -9,7 +9,7 @@
 #define INC_BOARD_H_
 
 #if defined(BOARD_COBALT_ANT)
-
+#include <boards/board_cobalt_ant.h>
 #else
 #error "No board defined"
 #endif
