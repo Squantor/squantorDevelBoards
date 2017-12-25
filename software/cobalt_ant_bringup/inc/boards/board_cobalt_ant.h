@@ -8,6 +8,8 @@
 #ifndef INC_BOARDS_BOARD_COBALT_ANT_H_
 #define INC_BOARDS_BOARD_COBALT_ANT_H_
 
+#include <chip.h>
+
 // LED
 #define LED_PORT	2
 #define LED_PIN		9

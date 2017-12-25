@@ -3,7 +3,7 @@ BIN_NAME = cobalt_ant_bringup
 MCU = lpc1114_323
 BOARD = BOARD_COBALT_ANT
 SOURCES = src/cobalt_ant_bringup.c src/sysinit.c src/cr_startup_lpc11xx.c src/boards/board_cobalt_ant_init.c \
-src/print.c src/ringbuffers.c
+src/print.c src/ringbuffers.c src/driver_W25Q32BV.c
 INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/"
 LDSCRIPT = -T"ld/nxp_$(MCU).ld"
 RLIBDIR = -L"../lpc_chip_11cxx/bin/release"

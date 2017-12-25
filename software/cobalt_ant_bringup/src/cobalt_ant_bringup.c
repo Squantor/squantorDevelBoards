@@ -84,6 +84,8 @@ int main(void)
 	/* Enable and setup SysTick Timer at a periodic rate */
 	SysTick_Config(SystemCoreClock / SYSTICKS_PER_S);
 
+	flashInit();
+
 	Chip_UART_SendRB(LPC_USART, &txring, str_ready, sizeof(str_ready));
 
 	uint32_t current_systick = systick;
@@ -97,7 +99,6 @@ int main(void)
 			Chip_UART_SendRB(LPC_USART, &txring, str_crlf, sizeof(str_crlf));
 			counter++;
 			Chip_GPIO_SetPinToggle(LPC_GPIO, LED_PORT, LED_PIN);
-			Chip_SSP_WriteFrames_Blocking(LPC_SSP0, sspTestBuf, sizeof(sspTestBuf));
 		}
 	}
 
