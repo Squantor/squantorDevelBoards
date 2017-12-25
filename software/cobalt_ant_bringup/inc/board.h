@@ -12,7 +12,9 @@
 #define UART_SRB_SIZE 	128	/* Send */
 #define UART_RRB_SIZE 	32	/* Receive */
 // uart speeds
-#define UART_SPEED		9600
+#define UART_SPEED		115200
+// systick definitions
+#define SYSTICKS_PER_S	100
 
 #if defined(BOARD_COBALT_ANT)
 #include <boards/board_cobalt_ant.h>

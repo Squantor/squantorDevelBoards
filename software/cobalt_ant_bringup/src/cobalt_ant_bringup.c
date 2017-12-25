@@ -32,13 +32,20 @@
 #include <chip.h>
 #include <stdio.h>
 #include <board.h>
+#include <print.h>
+#include <ringbuffers.h>
 
 /*****************************************************************************
  * Private types/enumerations/variables
  ****************************************************************************/
 
-#define TICKRATE_HZ1 (10) /* 10 ticks per second */
-#define TICKRATE_HZ2 (11) /* 11 ticks per second */
+const char str_ready[8] = "ready!\r\n";
+const char str_crlf[2] = "\r\n";
+const char str_space[1] = " ";
+const char str_separator[1] = ";";
+
+volatile uint32_t systick;
+
 
 /*****************************************************************************
  * Public types/enumerations/variables
@@ -52,13 +59,18 @@
  * Public functions
  ****************************************************************************/
 
+void UART_IRQHandler(void)
+{
+	Chip_UART_IRQRBHandler(LPC_USART, &rxring, &txring);
+}
+
 /**
  * @brief	Handle interrupt from SysTick timer
  * @return	Nothing
  */
 void SysTick_Handler(void)
 {
-	Chip_GPIO_SetPinToggle(LPC_GPIO, LED_PORT, LED_PIN);
+	systick++;
 }
 
 /**
@@ -67,15 +79,25 @@ void SysTick_Handler(void)
  */
 int main(void)
 {
-
+	systick = 0;
 	SystemCoreClockUpdate();
 
 	/* Enable and setup SysTick Timer at a periodic rate */
-	SysTick_Config(SystemCoreClock / TICKRATE_HZ1);
+	SysTick_Config(SystemCoreClock / SYSTICKS_PER_S);
 
-	/* LEDs toggle in interrupt handlers */
+	Chip_UART_SendRB(LPC_USART, &txring, str_ready, sizeof(str_ready));
+
+	uint32_t current_systick = systick;
+	uint32_t counter = 0;
 	while (1) {
-		__WFI();
+		if((current_systick + SYSTICKS_PER_S) < systick)
+		{
+			current_systick = systick;
+			print_dec_u32(counter);
+			Chip_UART_SendRB(LPC_USART, &txring, str_crlf, sizeof(str_crlf));
+			counter++;
+			Chip_GPIO_SetPinToggle(LPC_GPIO, LED_PORT, LED_PIN);
+		}
 	}
 
 	return 0;

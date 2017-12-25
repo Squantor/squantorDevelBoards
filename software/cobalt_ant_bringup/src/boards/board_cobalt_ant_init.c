@@ -33,6 +33,7 @@ RINGBUFF_T txring, rxring;
 /* Set up and initialize hardware prior to call to main */
 void boardCobaltAntInit(void)
 {
+
 	Chip_GPIO_SetPinDIROutput(LPC_GPIO, LED_PORT, LED_PIN);
 	// setup Test points as inputs with pullup
 	Chip_GPIO_SetPinDIRInput(LPC_GPIO, TP1_PORT, TP1_PIN);
@@ -66,7 +67,10 @@ void boardCobaltAntInit(void)
 	Chip_IOCON_PinMuxSet(LPC_IOCON, SERIAL_TXD_IOCON, IOCON_FUNC1);
 
 	// setup SPI flash
+    // setup the systick timer
 
-
-
+	// setup nvic
+	NVIC_SetPriority(UART0_IRQn, 1);
+	NVIC_EnableIRQ(UART0_IRQn);
+	//NVIC_EnableIRQ(I2C0_IRQn);
 }
