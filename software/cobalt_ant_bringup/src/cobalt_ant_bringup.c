@@ -31,6 +31,7 @@
 
 #include <chip.h>
 #include <stdio.h>
+#include <board.h>
 
 /*****************************************************************************
  * Private types/enumerations/variables
@@ -57,8 +58,7 @@
  */
 void SysTick_Handler(void)
 {
-	//Board_LED_Set(0, false);
-	Chip_GPIO_SetPinToggle(LPC_GPIO, 2, 9);
+	Chip_GPIO_SetPinToggle(LPC_GPIO, LED_PORT, LED_PIN);
 }
 
 /**
