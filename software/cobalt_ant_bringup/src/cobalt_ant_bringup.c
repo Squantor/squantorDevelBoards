@@ -38,7 +38,6 @@
 /*****************************************************************************
  * Private types/enumerations/variables
  ****************************************************************************/
-
 const char str_ready[8] = "ready!\r\n";
 const char str_crlf[2] = "\r\n";
 const char str_space[1] = " ";
@@ -89,6 +88,7 @@ int main(void)
 
 	uint32_t current_systick = systick;
 	uint32_t counter = 0;
+	uint8_t sspTestBuf[4] = {0x55, 0xAA, 0x5A, 0xA5};
 	while (1) {
 		if((current_systick + SYSTICKS_PER_S) < systick)
 		{
@@ -97,6 +97,7 @@ int main(void)
 			Chip_UART_SendRB(LPC_USART, &txring, str_crlf, sizeof(str_crlf));
 			counter++;
 			Chip_GPIO_SetPinToggle(LPC_GPIO, LED_PORT, LED_PIN);
+			Chip_SSP_WriteFrames_Blocking(LPC_SSP0, sspTestBuf, sizeof(sspTestBuf));
 		}
 	}
 

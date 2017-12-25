@@ -10,13 +10,11 @@
 #include <board.h>
 #include <stdint.h>
 #include <chip.h>
-#include <ring_buffer.h>
+#include <ringbuffers.h>
 
 /*****************************************************************************
  * Private types/enumerations/variables
  ****************************************************************************/
-uint8_t rxbuff[UART_RRB_SIZE], txbuff[UART_SRB_SIZE];
-RINGBUFF_T txring, rxring;
 
 /*****************************************************************************
  * Public types/enumerations/variables
@@ -65,8 +63,19 @@ void boardCobaltAntInit(void)
 	//Chip_IOCON_PinMuxSet(LPC_IOCON, SERIAL_RTS_IOCON, IOCON_FUNC1);
 	Chip_IOCON_PinMuxSet(LPC_IOCON, SERIAL_RXD_IOCON, IOCON_FUNC1);
 	Chip_IOCON_PinMuxSet(LPC_IOCON, SERIAL_TXD_IOCON, IOCON_FUNC1);
-
 	// setup SPI flash
+	Chip_GPIO_SetPinDIROutput(LPC_GPIO, FLASH_CE_PORT, FLASH_CE_PIN);
+	Chip_GPIO_SetPinOutHigh(LPC_GPIO, FLASH_CE_PORT, FLASH_CE_PIN);
+	Chip_IOCON_PinMuxSet(LPC_IOCON, FLASH_CE_IOCON, IOCON_FUNC0);
+	Chip_IOCON_PinLocSel(LPC_IOCON, IOCON_SCKLOC_PIO2_11);
+	Chip_IOCON_PinMuxSet(LPC_IOCON, FLASH_SCK_IOCON, IOCON_FUNC1);
+	Chip_IOCON_PinMuxSet(LPC_IOCON, FLASH_MOSI_IOCON, IOCON_FUNC1);
+	Chip_IOCON_PinMuxSet(LPC_IOCON, FLASH_MISO_IOCON, IOCON_FUNC1);
+	Chip_IOCON_PinMuxSet(LPC_IOCON, FLASH_MISO_IOCON, IOCON_FUNC1);
+	Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_2, IOCON_FUNC1);
+	Chip_SSP_Init(LPC_SSP0);
+	Chip_SSP_Enable(LPC_SSP0);
+
     // setup the systick timer
 
 	// setup nvic
