@@ -34,6 +34,8 @@
 #include <board.h>
 #include <print.h>
 #include <ringbuffers.h>
+#include <cmdline.h>
+
 
 /*****************************************************************************
  * Private types/enumerations/variables
@@ -86,12 +88,15 @@ int main(void)
 
 	flashInit();
 
-	Chip_UART_SendRB(LPC_USART, &txring, str_ready, sizeof(str_ready));
+	print_line(str_ready, sizeof(str_ready));
 
 	uint32_t current_systick = systick;
 	uint32_t counter = 0;
 	uint8_t sspTestBuf[4] = {0x55, 0xAA, 0x5A, 0xA5};
+	char commandline[CMDLINE_MAX_LENGTH];
+	int commandlineIndex = 0;
 	while (1) {
+		/*
 		if((current_systick + SYSTICKS_PER_S) < systick)
 		{
 			current_systick = systick;
@@ -99,6 +104,20 @@ int main(void)
 			Chip_UART_SendRB(LPC_USART, &txring, str_crlf, sizeof(str_crlf));
 			counter++;
 			Chip_GPIO_SetPinToggle(LPC_GPIO, LED_PORT, LED_PIN);
+		}*/
+		while(RingBuffer_IsEmpty(&rxring) == 0)
+		{
+			Chip_UART_ReadRB(LPC_USART, &rxring, &commandline[commandlineIndex], 1);
+			if(commandline[commandlineIndex] == '\r')
+			{
+				// terminate string
+				commandline[commandlineIndex+1] = 0;
+				// call handler
+				cmdlineParse(commandline);
+				commandlineIndex = 0;
+			}
+			else
+				commandlineIndex++;
 		}
 	}
 

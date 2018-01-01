@@ -34,7 +34,7 @@ extern "C" {
 
 #define CMDLINE_MAX_LENGTH  64
 #define CMDLINE_MAX_ARGS    6
-#define STRTOK_DELIM        (" \n")
+#define STRTOK_DELIM        (" \n\r")
 
 typedef result (*cmdlineHandler)(int * arglist);
 

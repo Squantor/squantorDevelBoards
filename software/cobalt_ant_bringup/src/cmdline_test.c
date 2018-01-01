@@ -28,10 +28,10 @@ SOFTWARE.
 #include <results.h>
 
 char strCmdTestTrigger[] = "test";
-char strTestHelp[] = "test - Basic test command, accepts two arguments";
+char strTestHelp[] = "test - Basic test command, accepts two arguments\n";
 
 result CmdTestHandler(int * arglist)
 {
-    printf("test arguments are %d and %d\n", arglist[0], arglist[1]);
+    //printf("test arguments are %d and %d\n", arglist[0], arglist[1]);
     return noError;
 }

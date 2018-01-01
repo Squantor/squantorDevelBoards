@@ -36,5 +36,6 @@ void print_dec_u16(uint16_t data);
 void print_dec_u32(uint32_t data);
 void print_bin_u32(uint32_t data);
 void print_char(uint8_t c);
+void print_line(uint8_t *s, uint16_t len);
 
 #endif
