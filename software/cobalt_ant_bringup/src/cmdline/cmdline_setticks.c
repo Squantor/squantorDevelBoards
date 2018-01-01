@@ -26,11 +26,13 @@ SOFTWARE.
 #include <stdio.h>
 #include <cmdline.h>
 #include <results.h>
+#include <ticks.h>
 
 const char strCmdSetticksTrigger[] = "setticks";
-const char strSetticksHelp[] = "setticks - Set current ticks: setticks 10000\n";
+const char strSetticksHelp[] = "setticks\n";
 
 result CmdSetticksHandler(int * arglist)
 {
+	ticksSet(arglist[0]);
     return noError;
 }

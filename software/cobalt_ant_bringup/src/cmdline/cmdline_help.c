@@ -31,7 +31,7 @@ SOFTWARE.
 #include <print.h>
 
 const char strCmdHelpTrigger[] = "help";
-const char strHelpHelp[] = "help - shows help information on all commands\n";
+const char strHelpHelp[] = "help\n";
 
 result CmdHelpHandler(int * arglist)
 {

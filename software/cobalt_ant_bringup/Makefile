@@ -32,7 +32,7 @@ DDEFINES = -DDEBUG -DNO_BOARD_LIB -D__CODE_RED
 RCOMPILE_FLAGS = $(DEFINES) $(RDEFINES) -Os
 DCOMPILE_FLAGS = $(DEFINES) $(DDEFINES) -g3 -O0
 
-LINK_FLAGS = -nostdlib -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb
+LINK_FLAGS = -nostdlib -Xlinker --cref -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb
 RLINK_FLAGS =
 DLINK_FLAGS =
 

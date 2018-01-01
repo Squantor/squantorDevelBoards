@@ -30,7 +30,7 @@ SOFTWARE.
 #include <ticks.h>
 
 const char strCmdGetticksTrigger[] = "getticks";
-const char strGetticksHelp[] = "getticks - Get current ticks: getticks\n";
+const char strGetticksHelp[] = "getticks\n";
 const char strCurrentTicks[] = "Current ticks are: ";
 const char str_crlf_local[] = "\r\n";
 

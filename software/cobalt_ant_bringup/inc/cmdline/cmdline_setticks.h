@@ -31,7 +31,7 @@ extern "C" {
 
 extern char strCmdSetticksTrigger[];
 extern char strSetticksHelp[];
-#define ARGCNTSETTICKS  0
+#define ARGCNTSETTICKS  1
 
 result CmdSetticksHandler(int * arglist);
 

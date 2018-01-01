@@ -28,7 +28,7 @@ SOFTWARE.
 #include <results.h>
 
 const char strCmdTestTrigger[] = "test";
-const char strTestHelp[] = "test - Basic test command, accepts two arguments\n";
+const char strTestHelp[] = "test\n";
 
 result CmdTestHandler(int * arglist)
 {
