@@ -26,8 +26,10 @@ SOFTWARE.
 
 #include "cmdline.h"
 // all command line constants
-#include "cmdline_test.h"
-#include "cmdline_help.h"
+#include "cmdline/cmdline_test.h"
+#include "cmdline/cmdline_help.h"
+#include "cmdline/cmdline_getticks.h"
+#include "cmdline/cmdline_setticks.h"
 
 // table of allowed commands
 cmdLineEntry cmdLineEntries[] =
