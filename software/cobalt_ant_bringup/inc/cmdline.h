@@ -50,9 +50,9 @@ typedef struct {
     // help string
     const char * strHelp;
     // argument count for command
-    uint8_t argCnt;
+    const uint8_t argCnt;
     // function(int arglist)
-    cmdlineHandler argHandler;
+    const cmdlineHandler argHandler;
 } cmdLineEntry;
 
 result cmdlineParseInt(char * token, int * value);

@@ -32,9 +32,11 @@ SOFTWARE.
 #include "cmdline/cmdline_setticks.h"
 
 // table of allowed commands
-cmdLineEntry cmdLineEntries[] =
+const cmdLineEntry cmdLineEntries[] =
 {
     {strCmdTestTrigger, strTestHelp, ARGCNTTEST, CmdTestHandler},
     {strCmdHelpTrigger, strHelpHelp, ARGCNTHELP, CmdHelpHandler},
+	{strCmdGetticksTrigger, strGetticksHelp, ARGCNTGETTICKS, CmdGetticksHandler},
+	{strCmdSetticksTrigger, strSetticksHelp, ARGCNTSETTICKS, CmdSetticksHandler},
     {NULL, NULL, 0, NULL},
 };

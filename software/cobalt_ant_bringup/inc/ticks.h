@@ -22,22 +22,22 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+#ifndef TICKS_H
+#define TICKS_H
+
 #include <stdint.h>
-#include <stdio.h>
-#include <cmdline.h>
-#include <results.h>
-#include <print.h>
-#include <ticks.h>
 
-const char strCmdGetticksTrigger[] = "getticks";
-const char strGetticksHelp[] = "getticks - Get current ticks: getticks\n";
-const char strCurrentTicks[] = "Current ticks are: ";
-const char str_crlf_local[] = "\r\n";
+extern volatile uint32_t systick;
 
-result CmdGetticksHandler(int * arglist)
+static inline uint32_t ticksGet()
 {
-	print_line(strCurrentTicks, sizeof(strCurrentTicks));
-	print_dec_u32(ticksGet());
-	print_line(str_crlf_local, sizeof(str_crlf_local));
-    return noError;
+	return systick;
 }
+
+static inline void ticksSet(uint32_t ticks)
+{
+	// TODO disable interrupts?
+	systick = ticks;
+}
+
+#endif

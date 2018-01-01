@@ -29,7 +29,7 @@ SOFTWARE.
 extern "C" {
 #endif
 
-extern cmdLineEntry cmdLineEntries[];
+extern const cmdLineEntry cmdLineEntries[];
 
 #ifdef __cplusplus
 }

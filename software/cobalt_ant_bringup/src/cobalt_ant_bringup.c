@@ -35,6 +35,7 @@
 #include <print.h>
 #include <ringbuffers.h>
 #include <cmdline.h>
+#include <ticks.h>
 
 
 /*****************************************************************************
@@ -45,7 +46,7 @@ const char str_crlf[2] = "\r\n";
 const char str_space[1] = " ";
 const char str_separator[1] = ";";
 
-volatile uint32_t systick;
+
 
 
 /*****************************************************************************
@@ -66,21 +67,12 @@ void UART_IRQHandler(void)
 }
 
 /**
- * @brief	Handle interrupt from SysTick timer
- * @return	Nothing
- */
-void SysTick_Handler(void)
-{
-	systick++;
-}
-
-/**
  * @brief	main routine for blinky example
  * @return	Function should not exit.
  */
 int main(void)
 {
-	systick = 0;
+	ticksSet(0);
 	SystemCoreClockUpdate();
 
 	/* Enable and setup SysTick Timer at a periodic rate */

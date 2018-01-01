@@ -20,24 +20,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-*/
+ */
 
-#include <stdint.h>
-#include <stdio.h>
-#include <cmdline.h>
-#include <results.h>
-#include <print.h>
 #include <ticks.h>
 
-const char strCmdGetticksTrigger[] = "getticks";
-const char strGetticksHelp[] = "getticks - Get current ticks: getticks\n";
-const char strCurrentTicks[] = "Current ticks are: ";
-const char str_crlf_local[] = "\r\n";
+volatile uint32_t systick;
 
-result CmdGetticksHandler(int * arglist)
+void SysTick_Handler(void)
 {
-	print_line(strCurrentTicks, sizeof(strCurrentTicks));
-	print_dec_u32(ticksGet());
-	print_line(str_crlf_local, sizeof(str_crlf_local));
-    return noError;
+	systick++;
 }
+
+
