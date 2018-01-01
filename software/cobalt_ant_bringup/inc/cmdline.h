@@ -27,6 +27,7 @@ SOFTWARE.
 
 #include <stdint.h>
 #include "results.h"
+#include <ringbuffers.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -36,14 +37,18 @@ extern "C" {
 #define CMDLINE_MAX_ARGS    6
 #define STRTOK_DELIM        (" \n\r")
 
+//
+#define	CHAR_AVAIL() (RingBuffer_IsEmpty(&rxring))
+#define CHAR_GET(cpointer) (Chip_UART_ReadRB(LPC_USART, &rxring, cpointer, 1))
+
 typedef result (*cmdlineHandler)(int * arglist);
 
 // all the data one command should include
 typedef struct {
     // trigger string
-    char * strTrigger;
+    const char * strTrigger;
     // help string
-    char * strHelp;
+    const char * strHelp;
     // argument count for command
     uint8_t argCnt;
     // function(int arglist)
@@ -54,6 +59,7 @@ result cmdlineParseInt(char * token, int * value);
 result cmdlineParseHex(char * token, int * value);
 result cmdlineParseArg(char * token, int * value);
 result cmdlineParse(char * line);
+void cmdlineProcess(void);
 
 #ifdef __cplusplus
 }

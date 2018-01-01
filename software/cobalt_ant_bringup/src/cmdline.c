@@ -142,3 +142,24 @@ result cmdlineParse(char * line)
     return cmdlineNotFound;
 }
 
+// call periodically to fetch received characters
+void cmdlineProcess(void)
+{
+	static char commandline[CMDLINE_MAX_LENGTH];
+	static int commandlineIndex = 0;
+	while(CHAR_AVAIL() == 0)
+	{
+		CHAR_GET(&commandline[commandlineIndex]);
+		if(commandline[commandlineIndex] == '\r')
+		{
+			// terminate string
+			commandline[commandlineIndex+1] = 0;
+			// call handler
+			cmdlineParse(commandline);
+			commandlineIndex = 0;
+		}
+		else
+			commandlineIndex++;
+	}
+}
+

@@ -102,7 +102,7 @@ void printuart_char(uint8_t c)
 	PRINT(&c, 1);
 }
 
-void print_line(uint8_t *s, uint16_t len)
+void print_line(const uint8_t *s, uint16_t len)
 {
 	PRINT(s, len);
 }

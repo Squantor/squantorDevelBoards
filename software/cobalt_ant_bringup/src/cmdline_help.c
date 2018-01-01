@@ -30,8 +30,8 @@ SOFTWARE.
 #include <cmdline_commands.h>
 #include <print.h>
 
-char strCmdHelpTrigger[] = "help";
-char strHelpHelp[] = "help - shows help information on all commands\n";
+const char strCmdHelpTrigger[] = "help";
+const char strHelpHelp[] = "help - shows help information on all commands\n";
 
 result CmdHelpHandler(int * arglist)
 {
