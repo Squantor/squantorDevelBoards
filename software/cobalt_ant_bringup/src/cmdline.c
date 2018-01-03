@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 #include <string.h>
-#include <stdio.h>
+#undef strlen
 
 #include "results.h"
 #include "cmdline.h"

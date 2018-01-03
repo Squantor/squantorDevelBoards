@@ -10,8 +10,9 @@
 
 GROUP (
   libgcc.a
-  libc.a
+  libc_nano.a
   libm.a
+  libnosys.a
 )
 
 MEMORY
