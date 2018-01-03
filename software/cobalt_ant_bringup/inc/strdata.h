@@ -25,9 +25,9 @@ SOFTWARE.
 #ifndef STRDATA_H
 #define STRDATA_H
 
-extern const char str_ready[8];
-extern const char str_crlf[2];
-extern const char str_space[1];
-extern const char str_separator[1];
+extern const char str_ready[9];
+extern const char str_crlf[3];
+extern const char str_space[2];
+extern const char str_separator[2];
 
 #endif
