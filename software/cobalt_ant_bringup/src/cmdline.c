@@ -29,6 +29,10 @@ SOFTWARE.
 #include "cmdline.h"
 #include "cmdline_commands.h"
 
+#define	ASCII_BS	(8)	// backspace
+#define ASCII_SPACE	(32)	// space
+#define	ASCII_CR	(13)	// Carriage Return
+
 result cmdlineParseInt(char * token, int * value)
 {
     int tokenLength = strlen(token);
@@ -147,19 +151,41 @@ void cmdlineProcess(void)
 {
 	static char commandline[CMDLINE_MAX_LENGTH];
 	static int commandlineIndex = 0;
+	char c;
 	while(CHAR_AVAIL() == 0)
 	{
-		CHAR_GET(&commandline[commandlineIndex]);
-		if(commandline[commandlineIndex] == '\r')
+		CHAR_GET(&c);
+		switch(c)
 		{
+		case ASCII_BS:
+			if(commandlineIndex)
+			{
+				commandline[--commandlineIndex] = 0;
+				CHAR_PUT(ASCII_BS);
+				CHAR_PUT(ASCII_SPACE);
+				CHAR_PUT(ASCII_BS);
+			}
+			break;
+		case ASCII_CR:
+			CHAR_PUT(ASCII_CR);
 			// terminate string
 			commandline[commandlineIndex+1] = 0;
 			// call handler
 			cmdlineParse(commandline);
 			commandlineIndex = 0;
+			break;
+		default:
+			if(commandlineIndex < (CMDLINE_MAX_LENGTH-1))
+			{
+				commandline[commandlineIndex++] = c;
+				//CHAR_PUT(c);
+				{
+					char c_char_put = c;
+					Chip_UART_SendRB(LPC_USART, &txring, &c_char_put, sizeof(c_char_put));
+				}
+			}
+			break;
 		}
-		else
-			commandlineIndex++;
 	}
 }
 

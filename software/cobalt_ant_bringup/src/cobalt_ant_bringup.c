@@ -37,6 +37,7 @@
 #include <cmdline.h>
 #include <ticks.h>
 #include <strdata.h>
+#include <driver_W25Q32BV.h>
 
 
 /*****************************************************************************
@@ -74,11 +75,6 @@ int main(void)
 
 	flashInit();
 
-	print_line(str_ready, sizeof(str_ready));
-
-	uint32_t current_systick = systick;
-	uint32_t counter = 0;
-	uint8_t sspTestBuf[4] = {0x55, 0xAA, 0x5A, 0xA5};
 	while (1) {
 		/*
 		if((current_systick + SYSTICKS_PER_S) < systick)
