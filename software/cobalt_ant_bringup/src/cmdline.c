@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 #include <string.h>
-#undef strlen
+#include <sqstring.h>
 
 #include "results.h"
 #include "cmdline.h"
@@ -35,7 +35,7 @@ SOFTWARE.
 
 result cmdlineParseInt(char * token, int * value)
 {
-    int tokenLength = strlen(token);
+    int tokenLength = sqstrlen(token);
     int multiplier = 1;
     int i = tokenLength;
     int parsedValue = 0;
@@ -69,7 +69,7 @@ result cmdlineParseInt(char * token, int * value)
 
 result cmdlineParseHex(char * token, int * value)
 {
-    int tokenLength = strlen(token);
+    int tokenLength = sqstrlen(token);
     unsigned int multiplier = 1;
     int i = tokenLength;
     unsigned parsedValue = 0;
@@ -104,7 +104,7 @@ result cmdlineParseHex(char * token, int * value)
 
 result cmdlineParseArg(char * token, int * value)
 {
-    int tokLen = strlen(token);
+    int tokLen = sqstrlen(token);
     // if the token is smaller then 3 then it is not hex
     if(tokLen > 2)
     {
