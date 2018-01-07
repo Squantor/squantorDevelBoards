@@ -9,9 +9,9 @@ src/cmdline/cmdline_help.c src/cmdline/cmdline_test.c src/cmdline/cmdline_gettic
 
 INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/" -I"src/sqlibc/inc/" -I"../squantlibraries/sqlibc/inc"
 LDSCRIPT = -T"ld/nxp_$(MCU).ld"
-RLIBDIR = -L"../lpc_chip_11cxx/bin/release" -L"../squantlibraries/sqlibc/bin/release"
-RLIBS = -llpc_chip_11cxx
-DLIBDIR = -L"../lpc_chip_11cxx/bin/debug" -L"../squantlibraries/sqlibc/bin/debug"
+RLIBDIR = -L"../lpc_chip_11cxx/bin/release" -L"../squantlibraries/sqlibc/arm-none-eabi_CM0/bin/release"
+RLIBS = -llpc_chip_11cxx -lsqlibc
+DLIBDIR = -L"../lpc_chip_11cxx/bin/debug" -L"../squantlibraries/sqlibc/arm-none-eabi_CM0/bin/debug"
 DLIBS = -llpc_chip_11cxx -lsqlibc
 
 
@@ -78,7 +78,7 @@ DEPS = $(OBJECTS:.o=.d)
 release: dirs
 	# make lpc_chip library if needed
 	$(MAKE) -C ../lpc_chip_11cxx release
-	$(MAKE) -C ../squantlibraries/sqlibc release
+	$(MAKE) -C ../squantlibraries/sqlibc/arm-none-eabi_CM0 release
 	$(MAKE) all --no-print-directory
 
 # Debug build for gdb debugging
@@ -86,7 +86,7 @@ release: dirs
 debug: dirs
 	# make lpc_chip library if needed
 	$(MAKE) -C ../lpc_chip_11cxx debug
-	$(MAKE) -C ../squantlibraries/sqlibc debug
+	$(MAKE) -C ../squantlibraries/sqlibc/arm-none-eabi_CM0 debug
 	$(MAKE) all --no-print-directory
 
 # Create the directories used in the build
