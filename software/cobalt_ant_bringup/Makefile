@@ -8,12 +8,12 @@ src/strdata.c \
 src/cmdline/cmdline_help.c src/cmdline/cmdline_test.c src/cmdline/cmdline_getticks.c src/cmdline/cmdline_setticks.c \
 # src/sqlibc/src/string/strlen.c
 
-INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/" -I"src/sqlibc/inc/"
+INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/" -I"src/sqlibc/inc/" -I"../squantlibraries/sqlibc/inc"
 LDSCRIPT = -T"ld/nxp_$(MCU).ld"
-RLIBDIR = -L"../lpc_chip_11cxx/bin/release"
+RLIBDIR = -L"../lpc_chip_11cxx/bin/release" -L"../squantlibraries/sqlibc/bin/release"
 RLIBS = -llpc_chip_11cxx
-DLIBDIR = -L"../lpc_chip_11cxx/bin/debug"
-DLIBS = -llpc_chip_11cxx
+DLIBDIR = -L"../lpc_chip_11cxx/bin/debug" -L"../squantlibraries/sqlibc/bin/debug"
+DLIBS = -llpc_chip_11cxx -lsqlibc
 
 
 # Toolchain settings
@@ -79,6 +79,7 @@ DEPS = $(OBJECTS:.o=.d)
 release: dirs
 	# make lpc_chip library if needed
 	$(MAKE) -C ../lpc_chip_11cxx release
+	$(MAKE) -C ../squantlibraries/sqlibc release
 	$(MAKE) all --no-print-directory
 
 # Debug build for gdb debugging
@@ -86,6 +87,7 @@ release: dirs
 debug: dirs
 	# make lpc_chip library if needed
 	$(MAKE) -C ../lpc_chip_11cxx debug
+	$(MAKE) -C ../squantlibraries/sqlibc debug
 	$(MAKE) all --no-print-directory
 
 # Create the directories used in the build
