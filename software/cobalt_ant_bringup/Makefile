@@ -7,7 +7,7 @@ src/print.c src/ringbuffers.c src/driver_W25Q32BV.c src/cmdline.c src/cmdline_co
 src/strdata.c \
 src/cmdline/cmdline_help.c src/cmdline/cmdline_test.c src/cmdline/cmdline_getticks.c src/cmdline/cmdline_setticks.c \
 
-INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/" -I"src/sqlibc/inc/" -I"../squantlibraries/sqlibc/inc"
+INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/" -I"../squantlibraries/sqlibc/inc"
 LDSCRIPT = -T"ld/nxp_$(MCU).ld"
 RLIBDIR = -L"../lpc_chip_11cxx/bin/release" -L"../squantlibraries/sqlibc/arm-none-eabi_CM0/bin/release"
 RLIBS = -llpc_chip_11cxx -lsqlibc
