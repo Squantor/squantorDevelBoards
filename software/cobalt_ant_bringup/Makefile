@@ -3,7 +3,7 @@ BIN_NAME = cobalt_ant_bringup
 MCU = lpc1114_323
 BOARD = BOARD_COBALT_ANT
 SOURCES = src/cobalt_ant_bringup.c src/sysinit.c src/cr_startup_lpc11xx.c src/boards/board_cobalt_ant_init.c \
-src/print.c src/ringbuffers.c src/driver_W25Q32BV.c src/cmdline.c src/cmdline_commands.c src/ticks.c \
+src/print.c src/ringbuffers.c src/driver_W25Q32BV.c src/cmdline_commands.c src/ticks.c \
 src/strdata.c \
 src/cmdline/cmdline_help.c src/cmdline/cmdline_test.c src/cmdline/cmdline_getticks.c src/cmdline/cmdline_setticks.c \
 
@@ -79,6 +79,7 @@ release: dirs
 	# make lpc_chip library if needed
 	$(MAKE) -C ../lpc_chip_11cxx release
 	$(MAKE) -C ../squantlibraries/sqlibc/arm-none-eabi_CM0 release
+	$(MAKE) -C ../squantlibraries/sqlibembedded/arm-none-eabi_CM0 release
 	$(MAKE) all --no-print-directory
 
 # Debug build for gdb debugging
@@ -87,6 +88,7 @@ debug: dirs
 	# make lpc_chip library if needed
 	$(MAKE) -C ../lpc_chip_11cxx debug
 	$(MAKE) -C ../squantlibraries/sqlibc/arm-none-eabi_CM0 debug
+	$(MAKE) -C ../squantlibraries/sqlibembedded/arm-none-eabi_CM0 debug
 	$(MAKE) all --no-print-directory
 
 # Create the directories used in the build
