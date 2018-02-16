@@ -26,7 +26,7 @@ SOFTWARE.
 #define CMDLINE_H
 
 #include <stdint.h>
-#include "results.h"
+#include <results.h>
 #include <ringbuffers.h>
 
 #ifdef __cplusplus
