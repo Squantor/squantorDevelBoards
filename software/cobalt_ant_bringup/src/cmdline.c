@@ -36,21 +36,21 @@ SOFTWARE.
 result cmdlineParse(char * line)
 {
     char commandline[CMDLINE_MAX_LENGTH];
-    sqstrncpy(commandline, line, sizeof(commandline));
-    char *trigger = sqstrtok(commandline,STRTOK_DELIM);
+    strncpy(commandline, line, sizeof(commandline));
+    char *trigger = strtok(commandline,STRTOK_DELIM);
     // match to the command table
     for(int i = 0; cmdLineEntries[i].strTrigger != NULL; i++)
     {
-        if(sqstrcmp(trigger, cmdLineEntries[i].strTrigger) == 0)
+        if(strcmp(trigger, cmdLineEntries[i].strTrigger) == 0)
         {
             int arguments[CMDLINE_MAX_ARGS];
             // matched, parse arguments of commandline
             for(int j = 0; j < cmdLineEntries[i].argCnt; j++)
             {
-                char *arg = sqstrtok(NULL,STRTOK_DELIM);
+                char *arg = strtok(NULL,STRTOK_DELIM);
                 if(arg == NULL)
                     return cmdlineInvalidArg;
-                arguments[j] = sqstrstol(arg);
+                arguments[j] = strstol(arg);
             }
             // call the matched command with the argument count
             cmdLineEntries[i].argHandler(arguments);
