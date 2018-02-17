@@ -5,6 +5,7 @@
 	<projects>
 		<project>lpc_chip_11cxx_lib</project>
 		<project>sqlibc</project>
+		<project>sqlibembedded</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
