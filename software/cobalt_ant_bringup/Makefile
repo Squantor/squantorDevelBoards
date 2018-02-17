@@ -3,17 +3,19 @@ BIN_NAME = cobalt_ant_bringup
 MCU = lpc1114_323
 BOARD = BOARD_COBALT_ANT
 SOURCES = src/cobalt_ant_bringup.c src/sysinit.c src/cr_startup_lpc11xx.c src/boards/board_cobalt_ant_init.c \
-src/print.c src/ringbuffers.c src/driver_W25Q32BV.c src/cmdline_commands.c src/ticks.c \
-src/strdata.c src/cmdline.c \
+src/ringbuffers.c src/driver_W25Q32BV.c src/cmdline_commands.c src/ticks.c \
+src/strdata.c \
 src/cmdline/cmdline_help.c src/cmdline/cmdline_test.c src/cmdline/cmdline_getticks.c src/cmdline/cmdline_setticks.c \
 src/stdstreams.c
 
 INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/" -I"../squantlibraries/sqlibc/inc" -I"../squantlibraries/sqlibembedded/inc"
 LDSCRIPT = -T"ld/nxp_$(MCU).ld"
-RLIBDIR = -L"../lpc_chip_11cxx/bin/release" -L"../squantlibraries/sqlibc/arm-none-eabi_CM0/bin/release"
-RLIBS = -llpc_chip_11cxx -lsqlibc
-DLIBDIR = -L"../lpc_chip_11cxx/bin/debug" -L"../squantlibraries/sqlibc/arm-none-eabi_CM0/bin/debug"
-DLIBS = -llpc_chip_11cxx -lsqlibc
+RLIBDIR = -L"../lpc_chip_11cxx/bin/release" -L"../squantlibraries/sqlibc/arm-none-eabi_CM0/bin/release" \
+-L"../squantlibraries/sqlibembedded/arm-none-eabi_CM0/bin/release"
+RLIBS = -llpc_chip_11cxx -lsqlibembedded -lsqlibc 
+DLIBDIR = -L"../lpc_chip_11cxx/bin/debug" -L"../squantlibraries/sqlibc/arm-none-eabi_CM0/bin/debug" \
+-L"../squantlibraries/sqlibembedded/arm-none-eabi_CM0/bin/debug"
+DLIBS = -llpc_chip_11cxx -lsqlibembedded -lsqlibc 
 
 
 # Toolchain settings

@@ -38,6 +38,7 @@
 #include <ticks.h>
 #include <strdata.h>
 #include <driver_W25Q32BV.h>
+#include <cmdline_commands.h>
 
 
 /*****************************************************************************
@@ -85,7 +86,7 @@ int main(void)
 			counter++;
 			Chip_GPIO_SetPinToggle(LPC_GPIO, LED_PORT, LED_PIN);
 		}*/
-		cmdlineProcess();
+		cmdlineProcess(&cmdLineEntries);
 	}
 
 	return 0;
