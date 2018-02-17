@@ -21,15 +21,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
-#include <chip.h>
 #include <board.h>
 #include <print.h>
+#include <sqstdio.h>
 
 const uint8_t hextable[] = "0123456789ABCDEF";
 
 void print_digit(uint8_t data)
 {
-	PRINT(&hextable[data & 0x0F], 1);
+	sqputchar(hextable[data & 0x0F]);
 }
 
 void print_hex_u8(uint8_t data)
@@ -97,13 +97,14 @@ void print_bin_u32(uint32_t data)
 	}
 }
 
-void printuart_char(uint8_t c)
+void printuart_char(const char c)
 {
-	PRINT(&c, 1);
+	sqputchar(c);
 }
 
-void print_line(const uint8_t *s, uint16_t len)
+void print_line(const char *s, uint16_t len)
 {
-	PRINT(s, len);
+	for(int i = 0; i < len; i++)
+		sqputchar(*s++);
 }
 

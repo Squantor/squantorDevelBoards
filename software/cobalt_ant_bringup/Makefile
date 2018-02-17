@@ -6,6 +6,7 @@ SOURCES = src/cobalt_ant_bringup.c src/sysinit.c src/cr_startup_lpc11xx.c src/bo
 src/print.c src/ringbuffers.c src/driver_W25Q32BV.c src/cmdline_commands.c src/ticks.c \
 src/strdata.c src/cmdline.c \
 src/cmdline/cmdline_help.c src/cmdline/cmdline_test.c src/cmdline/cmdline_getticks.c src/cmdline/cmdline_setticks.c \
+src/stdstreams.c
 
 INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/" -I"../squantlibraries/sqlibc/inc" -I"../squantlibraries/sqlibembedded/inc"
 LDSCRIPT = -T"ld/nxp_$(MCU).ld"

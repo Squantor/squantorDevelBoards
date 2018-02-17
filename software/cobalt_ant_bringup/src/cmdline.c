@@ -35,9 +35,10 @@ SOFTWARE.
 
 result cmdlineParse(char * line)
 {
+	char *strtok_state;
     char commandline[CMDLINE_MAX_LENGTH];
     sqstrncpy(commandline, line, sizeof(commandline));
-    char *trigger = sqstrtok(commandline,STRTOK_DELIM);
+    char *trigger = sqstrtok_r(commandline,STRTOK_DELIM, &strtok_state);
     // match to the command table
     for(int i = 0; cmdLineEntries[i].strTrigger != NULL; i++)
     {
@@ -47,7 +48,7 @@ result cmdlineParse(char * line)
             // matched, parse arguments of commandline
             for(int j = 0; j < cmdLineEntries[i].argCnt; j++)
             {
-                char *arg = sqstrtok(NULL,STRTOK_DELIM);
+                char *arg = sqstrtok_r(NULL,STRTOK_DELIM, &strtok_state);
                 if(arg == NULL)
                     return cmdlineInvalidArg;
                 arguments[j] = sqstrstol(arg);
@@ -75,13 +76,13 @@ void cmdlineProcess(void)
 			if(commandlineIndex)
 			{
 				commandline[--commandlineIndex] = 0;
-				CHAR_PUT(ASCII_BS);
-				CHAR_PUT(ASCII_SPACE);
-				CHAR_PUT(ASCII_BS);
+				sqputchar(ASCII_BS);
+				sqputchar(ASCII_SPACE);
+				sqputchar(ASCII_BS);
 			}
 			break;
 		case ASCII_CR:
-			CHAR_PUT(ASCII_CR);
+			sqputchar(ASCII_CR);
 			// terminate string
 			commandline[commandlineIndex] = 0;
 			// call handler
@@ -92,11 +93,7 @@ void cmdlineProcess(void)
 			if(commandlineIndex < (CMDLINE_MAX_LENGTH-1))
 			{
 				commandline[commandlineIndex++] = c;
-				//CHAR_PUT(c);
-				{
-					char c_char_put = c;
-					Chip_UART_SendRB(LPC_USART, &txring, &c_char_put, sizeof(c_char_put));
-				}
+				sqputchar(c);
 			}
 			break;
 		}

@@ -40,11 +40,6 @@ extern "C" {
 //
 #define	CHAR_AVAIL() (RingBuffer_IsEmpty(&rxring))
 #define CHAR_GET(cpointer) (Chip_UART_ReadRB(LPC_USART, &rxring, cpointer, 1))
-#define CHAR_PUT(character) \
-do{ \
-	char c = character; \
-	Chip_UART_SendRB(LPC_USART, &txring, &c, sizeof(c)); \
-}while(0) \
 
 typedef result (*cmdlineHandler)(int * arglist);
 
