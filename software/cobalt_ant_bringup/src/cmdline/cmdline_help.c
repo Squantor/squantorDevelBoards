@@ -39,7 +39,7 @@ result CmdHelpHandler(int * arglist)
     int i = 0;
     while(cmdLineEntries[i].strHelp != NULL)
     {
-    	print_line(cmdLineEntries[i].strHelp, strlen(cmdLineEntries[i].strHelp));
+    	print_line(cmdLineEntries[i].strHelp, sqstrlen(cmdLineEntries[i].strHelp));
         i++;
     }
     return noError;
