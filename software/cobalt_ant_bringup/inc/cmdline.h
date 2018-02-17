@@ -37,10 +37,6 @@ extern "C" {
 #define CMDLINE_MAX_ARGS    6
 #define STRTOK_DELIM        (" \n\r")
 
-//
-#define	CHAR_AVAIL() (RingBuffer_IsEmpty(&rxring))
-#define CHAR_GET(cpointer) (Chip_UART_ReadRB(LPC_USART, &rxring, cpointer, 1))
-
 typedef result (*cmdlineHandler)(int * arglist);
 
 // all the data one command should include

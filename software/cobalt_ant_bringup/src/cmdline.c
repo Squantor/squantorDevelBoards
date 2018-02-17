@@ -24,6 +24,7 @@ SOFTWARE.
 
 #include <sqstring.h>
 #include <sqstdlib.h>
+#include <sqstdio.h>
 
 #include "results.h"
 #include "cmdline.h"
@@ -66,37 +67,35 @@ void cmdlineProcess(void)
 {
 	static char commandline[CMDLINE_MAX_LENGTH];
 	static int commandlineIndex = 0;
-	char c;
-	while(CHAR_AVAIL() == 0)
+	int c = sqgetchar();
+	switch(c)
 	{
-		CHAR_GET(&c);
-		switch(c)
+	case ASCII_BS:
+		if(commandlineIndex)
 		{
-		case ASCII_BS:
-			if(commandlineIndex)
-			{
-				commandline[--commandlineIndex] = 0;
-				sqputchar(ASCII_BS);
-				sqputchar(ASCII_SPACE);
-				sqputchar(ASCII_BS);
-			}
-			break;
-		case ASCII_CR:
-			sqputchar(ASCII_CR);
-			// terminate string
-			commandline[commandlineIndex] = 0;
-			// call handler
-			cmdlineParse(commandline);
-			commandlineIndex = 0;
-			break;
-		default:
-			if(commandlineIndex < (CMDLINE_MAX_LENGTH-1))
-			{
-				commandline[commandlineIndex++] = c;
-				sqputchar(c);
-			}
-			break;
+			commandline[--commandlineIndex] = 0;
+			sqputchar(ASCII_BS);
+			sqputchar(ASCII_SPACE);
+			sqputchar(ASCII_BS);
 		}
+		break;
+	case ASCII_CR:
+		sqputchar(ASCII_CR);
+		// terminate string
+		commandline[commandlineIndex] = 0;
+		// call handler
+		cmdlineParse(commandline);
+		commandlineIndex = 0;
+		break;
+	case EOF:
+		break;
+	default:
+		if(commandlineIndex < (CMDLINE_MAX_LENGTH-1))
+		{
+			commandline[commandlineIndex++] = c;
+			sqputchar(c);
+		}
+		break;
 	}
 }
 

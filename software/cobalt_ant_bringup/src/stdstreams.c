@@ -6,11 +6,19 @@
 #include <sqstdlib.h>
 #include <sqstdio.h>
 
-
+int stdinRead(uint8_t *c)
+{
+	if(!RingBuffer_IsEmpty(&rxring))
+	{
+		Chip_UART_ReadRB(LPC_USART, &rxring, c, 1);
+	}
+	else
+		return EOF;
+}
 
 const sqFILE sqstdindef = {
     NULL,
-    NULL,
+	stdinRead,
 };
 
 int stdoutWrite(uint8_t c)
