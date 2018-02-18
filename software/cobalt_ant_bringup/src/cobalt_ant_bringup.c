@@ -86,7 +86,7 @@ int main(void)
 			counter++;
 			Chip_GPIO_SetPinToggle(LPC_GPIO, LED_PORT, LED_PIN);
 		}*/
-		cmdlineProcess(&cmdLineEntries);
+		cmdlineProcess(cmdLineEntries);
 	}
 
 	return 0;

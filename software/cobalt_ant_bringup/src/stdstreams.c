@@ -5,37 +5,32 @@
 #include <chip.h>
 #include <sqstdlib.h>
 #include <sqstdio.h>
+#include <results.h>
 
-int stdinRead(uint8_t *c)
+result stdinRead(uint8_t *c)
 {
 	if(!RingBuffer_IsEmpty(&rxring))
 	{
 		Chip_UART_ReadRB(LPC_USART, &rxring, c, 1);
+		return noError;
 	}
 	else
-		return EOF;
+		return streamEOF;
 }
 
-const sqFILE sqstdindef = {
-    NULL,
+const rStream sqstdindef = {
 	stdinRead,
 };
 
-int stdoutWrite(uint8_t c)
+result stdoutWrite(uint8_t c)
 {
 	if(Chip_UART_SendRB(LPC_USART, &txring, &c, 1) != 1)
-		return EOF;
+		return streamEOF;
 	else
-		return c;
+		return noError;
 }
 
-const sqFILE sqstdoutdef = {
+const wStream sqstdoutdef = {
 	stdoutWrite,
-    NULL,
-};
-
-const sqFILE sqsterrdef = {
-	stdoutWrite,
-    NULL,
 };
 
