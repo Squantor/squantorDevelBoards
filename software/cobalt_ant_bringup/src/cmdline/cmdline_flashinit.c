@@ -31,8 +31,14 @@ SOFTWARE.
 
 const char strCmdFlashInitTrigger[] = "flashinit";
 const char strFlashInitHelp[] = "flashinit\n";
+const char strFlashOk[] = "flash ID correct\n";
+const char strFlashNotOk[] = "flash ID INCORRECT!\n";
 
 result CmdFlashInitHandler(int * arglist)
 {
+	if(flashInit() == noError)
+		print_line(strFlashOk, sizeof(strFlashOk));
+	else
+		print_line(strFlashNotOk, sizeof(strFlashNotOk));
     return noError;
 }
