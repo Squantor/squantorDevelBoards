@@ -27,14 +27,52 @@ SOFTWARE.
 #include <cmdline.h>
 #include <results.h>
 #include <print.h>
+#include <strdata.h>
 #include <driver_W25Q32BV.h>
 
 const char strCmdFlashReadTrigger[] = "flashread";
-const char strFlashReadHelp[] = "flashread\n";
+const char strFlashReadHelp[] = "flashread Address Count\n";
 const char strFlashReadOk[] = "flash data at:";
-const char strFlashReadNotOkAddr[] = "invalid address\n";
+const char strFlashReadSeparator[] = " ";
+const char strFlashReadCR[] = "\n";
+const char strFlashReadError[] = "read Error, invalid address?\n";
+
 
 result CmdFlashReadHandler(int * arglist)
 {
+	uint8_t readBuf[16];
+	uint32_t address = arglist[0];
+	uint32_t size = arglist[1];
+	// read full blocks of 16
+	print_line(strFlashReadOk, sizeof(strFlashReadOk));
+	print_dec_u32(address);
+	print_line(strFlashReadSeparator, sizeof(strFlashReadSeparator));
+	print_hex_u32(address);
+	print_line(strFlashReadCR, sizeof(strFlashReadCR));
+	while(size > 16)
+	{
+		result r = flashRead(address, readBuf, 16);
+		if(r == noError)
+		{
+			for(int i; i < 16; i++)
+			{
+				print_hex_u8(readBuf[i]);
+				print_line(strFlashReadSeparator, sizeof(strFlashReadSeparator));
+			}
+			print_line(strFlashReadCR, sizeof(strFlashReadCR));
+		}
+		else
+		{
+			print_line(strFlashReadError, sizeof(strFlashReadError));
+			return noError;
+		}
+		size -= 16;
+		address += 16;
+	}
+	// read partial block of 16
+	if(size > 0)
+	{
+
+	}
     return noError;
 }
