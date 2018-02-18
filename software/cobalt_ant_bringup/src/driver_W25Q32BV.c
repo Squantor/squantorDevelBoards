@@ -17,7 +17,7 @@
  * Private types/enumerations/variables
  ****************************************************************************/
 const uint8_t	W25Q32BVCmdJedecID[] = {0x9F};
-const uint8_t   W25Q32BVJedecID[] = {JEDEC_MANU_WINBOND, 0x40, 0x16}
+const uint8_t   W25Q32BVJedecID[] = {JEDEC_MANU_WINBOND, 0x40, 0x16};
 
 /*****************************************************************************
  * Public types/enumerations/variables
@@ -50,7 +50,7 @@ result flashInit()
 	Chip_SSP_ReadFrames_Blocking(LPC_SSP0, jedecID, sizeof(jedecID));
 	flashDisable();
 	// check jedec ID
-	if(sqmemcmp(jedecID, W25Q32BVJedecID) == 0)
+	if(sqmemcmp(jedecID, W25Q32BVJedecID, sizeof(W25Q32BVJedecID)) == 0)
 		return noError;
 	else
 		return flashUnknownId;

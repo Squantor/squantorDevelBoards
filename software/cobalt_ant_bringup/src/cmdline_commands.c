@@ -30,6 +30,7 @@ SOFTWARE.
 #include "cmdline/cmdline_help.h"
 #include "cmdline/cmdline_getticks.h"
 #include "cmdline/cmdline_setticks.h"
+#include "cmdline/cmdline_flashinit.h"
 
 // table of allowed commands
 const cmdLineEntry cmdLineEntries[] =
@@ -38,5 +39,6 @@ const cmdLineEntry cmdLineEntries[] =
     {strCmdHelpTrigger, strHelpHelp, ARGCNTHELP, CmdHelpHandler},
 	{strCmdGetticksTrigger, strGetticksHelp, ARGCNTGETTICKS, CmdGetticksHandler},
 	{strCmdSetticksTrigger, strSetticksHelp, ARGCNTSETTICKS, CmdSetticksHandler},
+	{strCmdFlashInitTrigger, strFlashInitHelp, ARGCNTFLASHINIT, CmdFlashInitHandler},
     {NULL, NULL, 0, NULL},
 };
