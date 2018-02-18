@@ -32,6 +32,7 @@ SOFTWARE.
 #include "cmdline/cmdline_setticks.h"
 #include "cmdline/cmdline_flashinit.h"
 #include "cmdline/cmdline_flashread.h"
+#include "cmdline/cmdline_flashscan.h"
 
 // table of allowed commands
 const cmdLineEntry cmdLineEntries[] =
@@ -42,5 +43,6 @@ const cmdLineEntry cmdLineEntries[] =
 	{strCmdSetticksTrigger, strSetticksHelp, ARGCNTSETTICKS, CmdSetticksHandler},
 	{strCmdFlashInitTrigger, strFlashInitHelp, ARGCNTFLASHINIT, CmdFlashInitHandler},
 	{strCmdFlashReadTrigger, strFlashReadHelp, ARGCNTFLASHREAD, CmdFlashReadHandler},
+	{strCmdFlashScanTrigger, strFlashScanHelp, ARGCNTFLASHSCAN, CmdFlashScanHandler},
     {NULL, NULL, 0, NULL},
 };
