@@ -76,6 +76,11 @@ result flashRead(uint32_t address, uint8_t *s, uint32_t n)
 	return noError;
 }
 
+result flashWrite(uint32_t address, uint8_t *s, uint32_t n)
+{
+	return noError;
+}
+
 result flashErasePage(uint32_t page)
 {
 	return noError;
@@ -91,7 +96,4 @@ result flashEraseBlock(uint32_t block)
 	return noError;
 }
 
-result flashWrite()
-{
-	return noError;
-}
+
