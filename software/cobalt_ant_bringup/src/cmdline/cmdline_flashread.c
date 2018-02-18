@@ -54,7 +54,7 @@ result CmdFlashReadHandler(int * arglist)
 		result r = flashRead(address, readBuf, 16);
 		if(r == noError)
 		{
-			for(int i; i < 16; i++)
+			for(int i = 0; i < 16; i++)
 			{
 				print_hex_u8(readBuf[i]);
 				print_line(strFlashReadSeparator, sizeof(strFlashReadSeparator));
@@ -72,7 +72,21 @@ result CmdFlashReadHandler(int * arglist)
 	// read partial block of 16
 	if(size > 0)
 	{
-
+		result r = flashRead(address, readBuf, size);
+		if(r == noError)
+		{
+			for(int i = 0; i < size; i++)
+			{
+				print_hex_u8(readBuf[i]);
+				print_line(strFlashReadSeparator, sizeof(strFlashReadSeparator));
+			}
+			print_line(strFlashReadCR, sizeof(strFlashReadCR));
+		}
+		else
+		{
+			print_line(strFlashReadError, sizeof(strFlashReadError));
+			return noError;
+		}
 	}
     return noError;
 }

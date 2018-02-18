@@ -65,7 +65,7 @@ result flashInit()
 
 result flashRead(uint32_t address, uint8_t *s, uint32_t n)
 {
-	if(address > W25Q32BV_MAX_ADDR)
+	if((address + n) > W25Q32BV_MAX_ADDR)
 		return flashInvalidAddr;
 	uint8_t flashAddress[3] = {address>>16, address>>8, address};
 	flashEnable();
