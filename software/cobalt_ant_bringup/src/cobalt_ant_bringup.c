@@ -68,6 +68,7 @@ void UART_IRQHandler(void)
  */
 int main(void)
 {
+	uint32_t current_systick = 0;
 	ticksSet(0);
 	SystemCoreClockUpdate();
 
@@ -77,15 +78,12 @@ int main(void)
 	flashInit();
 
 	while (1) {
-		/*
-		if((current_systick + SYSTICKS_PER_S) < systick)
+		// blink the led to show the device works
+		if((current_systick + SYSTICKS_PER_S/4) < systick)
 		{
 			current_systick = systick;
-			print_dec_u32(counter);
-			Chip_UART_SendRB(LPC_USART, &txring, str_crlf, sizeof(str_crlf));
-			counter++;
 			Chip_GPIO_SetPinToggle(LPC_GPIO, LED_PORT, LED_PIN);
-		}*/
+		}
 		cmdlineProcess(cmdLineEntries);
 	}
 
