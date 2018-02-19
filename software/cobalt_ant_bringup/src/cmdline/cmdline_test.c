@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 #include <stdint.h>
-#include <stdio.h>
+#include <sqstdio.h>
 #include <cmdline.h>
 #include <results.h>
 #include <print.h>
@@ -35,6 +35,6 @@ const char strTestOutput[] = "Hello World!";
 result CmdTestHandler(int * arglist)
 {
 	for(int i = 0; i < 100; i++)
-		print_line(strTestOutput, sizeof(strTestOutput));
+		sqputs(strTestOutput);
     return noError;
 }
