@@ -26,12 +26,15 @@ SOFTWARE.
 #include <stdio.h>
 #include <cmdline.h>
 #include <results.h>
+#include <print.h>
 
 const char strCmdTestTrigger[] = "test";
 const char strTestHelp[] = "test\n";
+const char strTestOutput[] = "Hello World!";
 
 result CmdTestHandler(int * arglist)
 {
-    //printf("test arguments are %d and %d\n", arglist[0], arglist[1]);
+	for(int i = 0; i < 100; i++)
+		print_line(strTestOutput, sizeof(strTestOutput));
     return noError;
 }

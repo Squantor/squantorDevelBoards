@@ -24,6 +24,8 @@ const rStream sqstdindef = {
 
 result stdoutWrite(uint8_t c)
 {
+	while(RingBuffer_IsFull(&txring))
+		;
 	if(Chip_UART_SendRB(LPC_USART, &txring, &c, 1) != 1)
 		return streamEOF;
 	else
