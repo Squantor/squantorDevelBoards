@@ -33,6 +33,7 @@ SOFTWARE.
 #include "cmdline/cmdline_flashinit.h"
 #include "cmdline/cmdline_flashread.h"
 #include "cmdline/cmdline_flashscan.h"
+#include "cmdline/cmdline_flashwrite.h"
 
 // table of allowed commands
 const cmdLineEntry cmdLineEntries[] =
@@ -44,5 +45,6 @@ const cmdLineEntry cmdLineEntries[] =
 	{strCmdFlashInitTrigger, strFlashInitHelp, ARGCNTFLASHINIT, CmdFlashInitHandler},
 	{strCmdFlashReadTrigger, strFlashReadHelp, ARGCNTFLASHREAD, CmdFlashReadHandler},
 	{strCmdFlashScanTrigger, strFlashScanHelp, ARGCNTFLASHSCAN, CmdFlashScanHandler},
+	{strCmdFlashWriteTrigger, strFlashWriteHelp, ARGCNTFLASHWRITE, CmdFlashWriteHandler},
     {NULL, NULL, 0, NULL},
 };
