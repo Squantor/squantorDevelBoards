@@ -7,7 +7,7 @@ src/ringbuffers.c src/driver_W25Q32BV.c src/cmdline_commands.c src/ticks.c \
 src/strdata.c \
 src/cmdline/cmdline_help.c src/cmdline/cmdline_test.c src/cmdline/cmdline_getticks.c src/cmdline/cmdline_setticks.c \
 src/cmdline/cmdline_flashinit.c src/cmdline/cmdline_flashread.c src/cmdline/cmdline_flashscan.c \
-src/cmdline/cmdline_flashwrite.c \
+src/cmdline/cmdline_flashwrite.c src/cmdline/cmdline_flashserasesect.c \
 src/stdstreams.c
 
 INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/" -I"../squantlibraries/sqlibembedded/inc"
