@@ -32,8 +32,10 @@ SOFTWARE.
 
 const char strCmdFlashWriteTrigger[] = "flashwrite";
 const char strFlashWriteHelp[] = "flashwrite <address> <byte>\n";
-const char strFlashWriteOk[] = "Writing to:";
+const char strFlashWriteOk[] = "Writing to:0x";
+const char strFlashWriteOkSep[] = " 0x";
 const char strFlashWriteError[] = "write Error, invalid address?\n";
+
 
 result CmdFlashWriteHandler(int * arglist)
 {
@@ -41,8 +43,8 @@ result CmdFlashWriteHandler(int * arglist)
 	uint8_t data = (uint8_t) arglist[1];
 	sqputsn(strFlashWriteOk);
 	print_hex_u32(address);
-	sqputsn(str_space);
-	print_hex_u8(address);
+	sqputsn(strFlashWriteOkSep);
+	print_hex_u8(data);
 	sqputsn(str_crlf);
 	if(flashWrite(address, &data, sizeof(data)) != noError)
 		sqputs(strFlashWriteError);

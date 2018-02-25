@@ -22,6 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+#include <stdbool.h>
 #include <stdint.h>
 #include <sqstdio.h>
 #include <cmdline.h>
@@ -34,8 +35,6 @@ SOFTWARE.
 const char strCmdFlashScanTrigger[] = "flashscan";
 const char strFlashScanHelp[] = "flashscan\n";
 const char strFlashScanOk[] = "Scanning flash";
-const char strFlashScanSeparator[] = " ";
-const char strFlashScanCR[] = "\n";
 const char strFlashScanInterest[] = "Found something at:";
 const char strFlashScanTiming[] = "Duration in Ticks:";
 
@@ -45,7 +44,8 @@ result CmdFlashScanHandler(int * arglist)
 	uint8_t readBuf[16];
 	uint32_t address = 0;
 	uint32_t size = 4194304u;
-	uint8_t found = 0;
+	bool found = false;
+	bool startprint = false;
 	// read full blocks of 16
 	sqputs(strFlashScanOk);
 	uint32_t startticks = ticksGet();
@@ -59,34 +59,38 @@ result CmdFlashScanHandler(int * arglist)
 			{
 				if(readBuf[i] != 0xFF)
 				{
-					found = 1;
+					found = true;
 				}
 			}
-			if(found == 0)
-			{
 
-			}
-			else
+			if(found && !startprint)
 			{
 				sqputsn(strFlashScanInterest);
 				print_hex_u32(address);
-				sqputsn(strFlashScanCR);
+				sqputsn(str_crlf);
+				startprint = true;
+			}
+
+			if(found)
+			{
 				for(int i = 0; i < 16; i++)
 				{
-					if(readBuf[i] != 0xFF)
-					{
-						print_hex_u8(readBuf[i]);
-					}
-					//print_line(strFlashScanSeparator, sizeof(strFlashScanSeparator));
+					print_hex_u8(readBuf[i]);
+					sqputsn(str_space);
 				}
-				sqputsn(strFlashScanCR);
+				sqputsn(str_crlf);
 			}
+			else
+			{
+				startprint = false;
+			}
+			found = false;
 		}
 		size -= 16;
 		address += 16;
 	}
 	sqputsn(strFlashScanTiming);
 	print_dec_u32(ticksGet() - startticks);
-	sqputsn(strFlashScanCR);
+	sqputsn(str_crlf);
     return noError;
 }
