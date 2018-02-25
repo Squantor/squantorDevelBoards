@@ -74,7 +74,7 @@ void boardCobaltAntInit(void)
 	Chip_IOCON_PinMuxSet(LPC_IOCON, FLASH_MISO_IOCON, IOCON_FUNC1);
 	Chip_IOCON_PinMuxSet(LPC_IOCON, IOCON_PIO0_2, IOCON_FUNC1);
 	Chip_SSP_Init(LPC_SSP0);
-	Chip_SSP_SetBitRate(LPC_SSP0, 24000000);
+	Chip_SSP_SetBitRate(LPC_SSP0, 1000000);
 	Chip_SSP_Enable(LPC_SSP0);
 
     // setup the systick timer
