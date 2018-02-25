@@ -31,6 +31,7 @@ const uint8_t 	W25Q32BVCmdReadStatus2[] = {0x35};
 const uint8_t 	W25Q32BVCmdWriteEnable[] = {0x06};
 const uint8_t 	W25Q32BVCmdWriteDisable[] = {0x04};
 const uint8_t 	W25Q32BVCmdPageProgram[] = {0x02};
+const uint8_t 	W25Q32BVCmdEraseSect[] = {0x20};
 const uint8_t   W25Q32BVJedecID[] = {JEDEC_MANU_WINBOND, 0x40, 0x16};
 
 /*****************************************************************************
@@ -113,7 +114,7 @@ result flashWrite(uint32_t address, uint8_t *s, uint32_t n)
 	if((address + n) > W25Q32BV_MAX_ADDR)
 		return flashInvalidAddr;
 	uint8_t flashAddress[3] = {address>>16, address>>8, address};
-	uint16_t ready_count = 0;
+	uint32_t ready_count = 0;
 
 	// page program
 	flashWriteEnable(true);
@@ -129,13 +130,17 @@ result flashWrite(uint32_t address, uint8_t *s, uint32_t n)
 	return noError;
 }
 
-result flashErasePage(uint32_t page)
+result flashEraseSector(uint32_t address)
 {
-	return noError;
-}
+	uint32_t ready_count = 0;
+	flashWriteEnable(true);
+	flashEnable();
+	Chip_SSP_WriteFrames_Blocking(LPC_SSP0, W25Q32BVCmdEraseSect, sizeof(W25Q32BVCmdEraseSect));
+	Chip_SSP_WriteFrames_Blocking(LPC_SSP0, address, sizeof(address));
+	flashDisable();
 
-result flashEraseSect(uint32_t sect)
-{
+	while(flashBusy())
+		ready_count++;
 	return noError;
 }
 

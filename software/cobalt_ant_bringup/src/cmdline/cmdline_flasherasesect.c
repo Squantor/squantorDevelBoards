@@ -36,7 +36,7 @@ const char strFlashEraseSectOk[] = "Erasing sector at :0x";
 const char strFlashEraseSectError[] = "Erase sector error, invalid address?\n";
 
 
-result CmdFlashWriteHandler(int * arglist)
+result CmdFlashEraseSectHandler(int * arglist)
 {
 	uint32_t address = (uint32_t) arglist[0];
 	sqputsn(strFlashEraseSectOk);

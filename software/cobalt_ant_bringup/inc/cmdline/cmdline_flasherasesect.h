@@ -22,8 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#ifndef CMDLINE_FLASHSECTERASE_H
-#define CMDLINE_FLASHSECTERASE_H
+#ifndef CMDLINE_FLASHERASESECT_H
+#define CMDLINE_FLASHERASESECT_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -31,9 +31,9 @@ extern "C" {
 
 extern char strCmdFlashEraseSectTrigger[];
 extern char strFlashEraseSectHelp[];
-#define ARGCNTFLASHSECTERASE  1
+#define ARGCNTFLASHERASESECT  1
 
-result CmdFlashSectEraseHandler(int * arglist);
+result CmdFlashEraseSectHandler(int * arglist);
 
 #ifdef __cplusplus
 }

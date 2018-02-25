@@ -34,7 +34,7 @@ SOFTWARE.
 #include "cmdline/cmdline_flashread.h"
 #include "cmdline/cmdline_flashscan.h"
 #include "cmdline/cmdline_flashwrite.h"
-#include "cmdline/cmdline_flashsecterase.h"
+#include "cmdline/cmdline_flasherasesect.h"
 
 // table of allowed commands
 const cmdLineEntry cmdLineEntries[] =
@@ -47,6 +47,6 @@ const cmdLineEntry cmdLineEntries[] =
 	{strCmdFlashReadTrigger, strFlashReadHelp, ARGCNTFLASHREAD, CmdFlashReadHandler},
 	{strCmdFlashScanTrigger, strFlashScanHelp, ARGCNTFLASHSCAN, CmdFlashScanHandler},
 	{strCmdFlashWriteTrigger, strFlashWriteHelp, ARGCNTFLASHWRITE, CmdFlashWriteHandler},
-	{strCmdFlashEraseSectTrigger, strFlashEraseSectHelp, ARGCNTFLASHSECTERASE, CmdFlashSectEraseHandler},
+	{strCmdFlashEraseSectTrigger, strFlashEraseSectHelp, ARGCNTFLASHERASESECT, CmdFlashEraseSectHandler},
     {NULL, NULL, 0, NULL},
 };
