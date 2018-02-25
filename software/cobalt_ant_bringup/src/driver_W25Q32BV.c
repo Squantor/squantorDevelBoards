@@ -133,10 +133,11 @@ result flashWrite(uint32_t address, uint8_t *s, uint32_t n)
 result flashEraseSector(uint32_t address)
 {
 	uint32_t ready_count = 0;
+	uint8_t flashAddress[3] = {address>>16, address>>8, address};
 	flashWriteEnable(true);
 	flashEnable();
 	Chip_SSP_WriteFrames_Blocking(LPC_SSP0, W25Q32BVCmdEraseSect, sizeof(W25Q32BVCmdEraseSect));
-	Chip_SSP_WriteFrames_Blocking(LPC_SSP0, address, sizeof(address));
+	Chip_SSP_WriteFrames_Blocking(LPC_SSP0, flashAddress, sizeof(flashAddress));
 	flashDisable();
 
 	while(flashBusy())
