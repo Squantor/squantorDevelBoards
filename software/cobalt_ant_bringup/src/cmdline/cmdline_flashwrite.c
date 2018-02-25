@@ -23,16 +23,29 @@ SOFTWARE.
 */
 
 #include <stdint.h>
-#include <stdio.h>
+#include <sqstdio.h>
 #include <cmdline.h>
 #include <results.h>
 #include <print.h>
 #include <driver_W25Q32BV.h>
+#include <strdata.h>
 
 const char strCmdFlashWriteTrigger[] = "flashwrite";
-const char strFlashWriteHelp[] = "flashwrite address byte\n";
+const char strFlashWriteHelp[] = "flashwrite <address> <byte>\n";
+const char strFlashWriteOk[] = "Writing to:";
+const char strFlashWriteError[] = "write Error, invalid address?\n";
 
 result CmdFlashWriteHandler(int * arglist)
 {
+	uint32_t address = (uint32_t) arglist[0];
+	uint8_t data = (uint8_t) arglist[1];
+	sqputsn(strFlashWriteOk);
+	print_hex_u32(address);
+	sqputsn(str_space);
+	print_hex_u8(address);
+	sqputsn(str_crlf);
+	if(flashWrite(address, &data, sizeof(data)) != noError)
+		sqputs(strFlashWriteError);
+
     return noError;
 }
