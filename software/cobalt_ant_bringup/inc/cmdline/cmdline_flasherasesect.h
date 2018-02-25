@@ -29,8 +29,8 @@ SOFTWARE.
 extern "C" {
 #endif
 
-extern char strCmdFlashSectEraseTrigger[];
-extern char strFlashSectEraseHelp[];
+extern char strCmdFlashEraseSectTrigger[];
+extern char strFlashEraseSectHelp[];
 #define ARGCNTFLASHSECTERASE  1
 
 result CmdFlashSectEraseHandler(int * arglist);

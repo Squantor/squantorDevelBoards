@@ -47,6 +47,6 @@ const cmdLineEntry cmdLineEntries[] =
 	{strCmdFlashReadTrigger, strFlashReadHelp, ARGCNTFLASHREAD, CmdFlashReadHandler},
 	{strCmdFlashScanTrigger, strFlashScanHelp, ARGCNTFLASHSCAN, CmdFlashScanHandler},
 	{strCmdFlashWriteTrigger, strFlashWriteHelp, ARGCNTFLASHWRITE, CmdFlashWriteHandler},
-	{strCmdFlashSectEraseTrigger, strFlashSectEraseHelp, ARGCNTFLASHSECTERASE, CmdFlashSectEraseHandler},
+	{strCmdFlashEraseSectTrigger, strFlashEraseSectHelp, ARGCNTFLASHSECTERASE, CmdFlashSectEraseHandler},
     {NULL, NULL, 0, NULL},
 };

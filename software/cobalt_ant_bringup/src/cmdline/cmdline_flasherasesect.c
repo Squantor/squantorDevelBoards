@@ -30,20 +30,19 @@ SOFTWARE.
 #include <driver_W25Q32BV.h>
 #include <strdata.h>
 
-const char strCmdFlashSectEraseTrigger[] = "flasherasesect";
-const char strFlashSectEraseHelp[] = "flasherasesect <address>\n";
-const char strFlashSectEraseOk[] = "Erasing sector at :0x";
-const char strFlashSectEraseError[] = "Erase sector error, invalid address?\n";
+const char strCmdFlashEraseSectTrigger[] = "flasherasesect";
+const char strFlashEraseSectHelp[] = "flasherasesect <address>\n";
+const char strFlashEraseSectOk[] = "Erasing sector at :0x";
+const char strFlashEraseSectError[] = "Erase sector error, invalid address?\n";
 
 
 result CmdFlashWriteHandler(int * arglist)
 {
 	uint32_t address = (uint32_t) arglist[0];
-	sqputsn(strFlashSectEraseOk);
+	sqputsn(strFlashEraseSectOk);
 	print_hex_u32(address & 0xFFFFF000);
 	sqputsn(str_crlf);
-	if(flashEraseSector(address, &data, sizeof(data)) != noError)
-		sqputs(strFlashSectEraseError);
-
+	if(flashEraseSector(address) != noError)
+		sqputs(strFlashEraseSectError);
     return noError;
 }
