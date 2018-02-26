@@ -29,11 +29,20 @@ SOFTWARE.
 #include <print.h>
 #include <driver_W25Q32BV.h>
 #include <strdata.h>
+#include <logfs.h>
 
 const char strCmdFileCreateTrigger[] = "filecreate";
 const char strFileCreateHelp[] = "filecreate <uint32_t fileid> <uint32_t size>\n";
+const char strFileCreatePrompt[] = "Creating file ";
+const char strFileCreateSep[] = " of size ";
 
 result CmdFileCreateHandler(int * arglist)
 {
+	sqputsn(strFileCreatePrompt);
+	print_dec_u32(arglist[0]);
+	sqputsn(str_space);
+	print_dec_u32(arglist[1]);
+	sqputsn(str_crlf);
+	fsFileCreate(arglist[0], arglist[1]);
     return noError;
 }
