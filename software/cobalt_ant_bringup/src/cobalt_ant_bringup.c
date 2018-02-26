@@ -39,6 +39,7 @@
 #include <strdata.h>
 #include <driver_W25Q32BV.h>
 #include <cmdline_commands.h>
+#include <logfs.h>
 
 
 /*****************************************************************************
@@ -76,6 +77,7 @@ int main(void)
 	SysTick_Config(SystemCoreClock / SYSTICKS_PER_S);
 
 	flashInit();
+	fsInit();
 
 	while (1) {
 		// blink the led to show the device works
