@@ -8,7 +8,9 @@ src/strdata.c \
 src/cmdline/cmdline_help.c src/cmdline/cmdline_test.c src/cmdline/cmdline_getticks.c src/cmdline/cmdline_setticks.c \
 src/cmdline/cmdline_flashinit.c src/cmdline/cmdline_flashread.c src/cmdline/cmdline_flashscan.c \
 src/cmdline/cmdline_flashwrite.c src/cmdline/cmdline_flasherasesect.c \
+src/cmdline/cmdline_filecreate.c src/cmdline/cmdline_filelist.c src/cmdline/cmdline_filedelete.c \
 src/stdstreams.c
+
 
 INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/" -I"../squantlibraries/sqlibembedded/inc"
 LDSCRIPT = -T"ld/nxp_$(MCU).ld"
