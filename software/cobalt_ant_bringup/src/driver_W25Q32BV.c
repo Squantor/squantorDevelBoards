@@ -71,7 +71,7 @@ result flashInit()
 		return flashUnknownId;
 }
 
-result flashRead(uint32_t address, uint8_t *s, uint32_t n)
+result flashRead(uint32_t address, void *s, uint32_t n)
 {
 	// TODO Assert macro here, this should not happen!
 	if((address + n) > W25Q32BV_MAX_ADDR)
@@ -108,7 +108,7 @@ void flashWriteEnable(bool enable)
 	flashDisable();
 }
 
-result flashWrite(uint32_t address, uint8_t *s, uint32_t n)
+result flashWrite(uint32_t address, void *s, uint32_t n)
 {
 	// TODO Assert macro here, this should not happen!
 	if((address + n) > W25Q32BV_MAX_ADDR)

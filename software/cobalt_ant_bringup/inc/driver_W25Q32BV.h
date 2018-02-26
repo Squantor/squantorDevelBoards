@@ -5,8 +5,8 @@
 #include <stdint.h>
 
 result flashInit();
-result flashRead(uint32_t address, uint8_t *s, uint32_t n);
-result flashWrite(uint32_t address, uint8_t *s, uint32_t n);
+result flashRead(uint32_t address, void *s, uint32_t n);
+result flashWrite(uint32_t address, void *s, uint32_t n);
 result flashEraseSector(uint32_t address);
 
 #endif

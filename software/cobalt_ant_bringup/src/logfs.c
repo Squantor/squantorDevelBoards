@@ -25,12 +25,12 @@ result fsInit()
 	// init the housekeeping structures
 	// walk through flash to find free space
 	fsINode file;
-	flashRead(freeSpaceLocation, ( uint8_t * ) &file, sizeof(file));
+	flashRead(freeSpaceLocation, &file, sizeof(file));
 	while(file.magic == LOGFS_MAGIC_USED)
 	{
 		// add 4096 for the inode sector
 		freeSpaceLocation += LOGFS_NEXTSECTADDR(file.size + 4096) ;
-		flashRead(freeSpaceLocation, ( uint8_t * ) &file, sizeof(file));
+		flashRead(freeSpaceLocation, &file, sizeof(file));
 	}
 
 	return noError;
@@ -44,7 +44,7 @@ result fsFileCreate(uint32_t fileId, uint32_t fileSize)
 	newFile.size = fileSize;
 	newFile.flags = 0;
 
-	flashWrite(freeSpaceLocation, ( uint8_t * ) &newFile, sizeof(newFile));
+	flashWrite(freeSpaceLocation, &newFile, sizeof(newFile));
 
 	// add 4096 for the inode sector
 	freeSpaceLocation = LOGFS_NEXTSECTADDR(freeSpaceLocation + fileSize + 4096);
