@@ -35,7 +35,7 @@ SOFTWARE.
 const char strCmdFlashScanTrigger[] = "flashscan";
 const char strFlashScanHelp[] = "flashscan\n";
 const char strFlashScanOk[] = "Scanning flash";
-const char strFlashScanInterest[] = "Found something at:";
+const char strFlashScanInterest[] = "Found something at:0x";
 const char strFlashScanTiming[] = "Duration in Ticks:";
 
 
