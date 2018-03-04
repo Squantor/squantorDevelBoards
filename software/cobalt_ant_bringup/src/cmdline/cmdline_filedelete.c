@@ -29,11 +29,22 @@ SOFTWARE.
 #include <print.h>
 #include <driver_W25Q32BV.h>
 #include <strdata.h>
+#include <logfs.h>
 
 const char strCmdFileDeleteTrigger[] = "filedelete";
 const char strFileDeleteHelp[] = "filedelete <uint32_t fileid>\n";
+const char strFileDeletePrompt[] = "deleting file: ";
+const char strFileDeleteNotFound[] = "File not found";
 
 result CmdFileDeleteHandler(int * arglist)
 {
+	sqputsn(strFileDeletePrompt);
+	print_dec_u32(arglist[0]);
+	sqputsn(str_crlf);
+	result r = fsFileDelete(arglist[0]);
+	if(r == fileNotFound)
+	{
+		sqputs(strFileDeleteNotFound);
+	}
     return noError;
 }

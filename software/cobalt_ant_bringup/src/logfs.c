@@ -79,10 +79,10 @@ result fsFileCreate(uint16_t fileId, uint32_t fileSize)
 result fsFileDelete(uint16_t fileId)
 {
 	fsINode file;
-	for(int i; i < MAX_INODESIZE; i += sizeof(fsINode))
+	for(int i = 0; i < MAX_INODESIZE; i += sizeof(fsINode))
 	{
 		flashRead(i, &file, sizeof(file));
-		if(file.id == fileId)
+		if((file.id == fileId) && (file.magic == LOGFS_MAGIC_USED))
 		{
 			file.magic = LOGFS_MAGIC_STALE;
 			flashWrite(i, &file, sizeof(file));
