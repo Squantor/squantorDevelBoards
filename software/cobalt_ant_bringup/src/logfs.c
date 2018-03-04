@@ -26,7 +26,8 @@ result fsInit()
 	if(file.magic != LOGFS_MAGIC_EMPTY)
 	{
 		lastEntryUsed = true;
-		freeSpaceLocation = LOGFS_NEXTSECTADDR(file.location + file.size);
+		if(file.magic == LOGFS_MAGIC_USED)
+			freeSpaceLocation = LOGFS_NEXTSECTADDR(file.location + file.size);
 	}
 
 	FsInodePos += sizeof(fsINode);
@@ -48,9 +49,11 @@ result fsInit()
 				FsInodeFirst = FsInodePos;
 			lastEntryUsed = true;
 			// update to the highest location of free space
-			if(freeSpaceLocation < LOGFS_NEXTSECTADDR(file.location + file.size))
-				freeSpaceLocation = LOGFS_NEXTSECTADDR(file.location + file.size);
+			if(file.magic == LOGFS_MAGIC_USED)
+				if(freeSpaceLocation < LOGFS_NEXTSECTADDR(file.location + file.size))
+					freeSpaceLocation = LOGFS_NEXTSECTADDR(file.location + file.size);
 		}
+
 
 		FsInodePos+= sizeof(fsINode);
 	}
