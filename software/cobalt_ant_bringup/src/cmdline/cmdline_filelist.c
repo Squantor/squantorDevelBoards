@@ -29,6 +29,7 @@ SOFTWARE.
 #include <print.h>
 #include <driver_W25Q32BV.h>
 #include <strdata.h>
+#include <logfs.h>
 
 const char strCmdFileListTrigger[] = "filelist";
 const char strFileListHelp[] = "filelist\n";
