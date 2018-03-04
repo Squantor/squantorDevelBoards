@@ -94,3 +94,14 @@ result fsFileDelete(uint16_t fileId)
 	}
 	return fileNotFound;
 }
+
+result fsFileFindFirst(uint16_t * fileId)
+{
+	result noError;
+}
+
+result fsFileFindNext(uint16_t * fileId)
+{
+
+	result noError;
+}

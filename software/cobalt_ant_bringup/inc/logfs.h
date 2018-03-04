@@ -7,10 +7,8 @@ result fsInit();
 
 result fsFileCreate(uint16_t fileId, uint32_t fileSize);
 result fsFileDelete(uint16_t fileId);
-// TODO File listing
-// first file in dir
-// next file in dir
-
+result fsFileFindFirst(uint16_t * fileId);
+result fsFileFindNext(uint16_t * fileId);
 
 
 #endif

@@ -32,8 +32,21 @@ SOFTWARE.
 
 const char strCmdFileListTrigger[] = "filelist";
 const char strFileListHelp[] = "filelist\n";
+const char strFileListFound[] = "Found file:";
 
 result CmdFileListHandler(int * arglist)
 {
+	uint16_t fileId;
+	result fileStatus = fsFileFindFirst( &fileId);
+	if(fileStatus == noError)
+	{
+		sqputsn(strFileListFound);
+		print_dec_u16(fileId);
+		sqputsn(str_crlf);
+		while(fileStatus == noError)
+		{
+			fileStatus = fsFileFindNext( &fileId);
+		}
+	}
     return noError;
 }
