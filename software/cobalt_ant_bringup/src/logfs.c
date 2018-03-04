@@ -66,16 +66,28 @@ result fsFileCreate(uint16_t fileId, uint32_t fileSize)
 	newFile.size = fileSize;
 	newFile.id = fileId;
 	// TODO check if we can add next file or the table is full?
+	// TODO check if the file exists
 	// move to next empty node
-	FsInodeFirst = LOGFS_TABLE_MASK(FsInodeFirst + sizeof(fsINode));
+	FsInodeLast = LOGFS_TABLE_MASK(FsInodeLast + sizeof(fsINode));
 	// write inode and update freespace
-	flashWrite(FsInodeFirst, &newFile, sizeof(newFile));
+	flashWrite(FsInodeLast, &newFile, sizeof(newFile));
 	freeSpaceLocation = LOGFS_NEXTSECTADDR(freeSpaceLocation + fileSize);
 
 	return noError;
 }
 
-result fsFileDelete(uint32_t fileId)
+result fsFileDelete(uint16_t fileId)
 {
-	return noError;
+	fsINode file;
+	for(int i; i < MAX_INODESIZE; i += sizeof(fsINode))
+	{
+		flashRead(i, &file, sizeof(file));
+		if(file.id == fileId)
+		{
+			file.magic = LOGFS_MAGIC_STALE;
+			flashWrite(i, &file, sizeof(file));
+			return noError;
+		}
+	}
+	return fileNotFound;
 }
