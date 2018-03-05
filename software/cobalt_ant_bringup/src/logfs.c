@@ -3,7 +3,6 @@
 #include <logfs.h>
 #include <logfsint.h>
 #include <results.h>
-#include <driver_W25Q32BV.h>
 
 uint32_t freeSpaceLocation;	// point to the start of free space
 uint32_t fsInodeFirst;	// First Inode entry
@@ -22,7 +21,7 @@ result fsInit()
 	int FsInodePos = 0;
 	bool lastEntryUsed = false;
 	// check first inode
-	flashRead(FsInodePos, &file, sizeof(file));
+	logfsRead(FsInodePos, &file, sizeof(file));
 	if(file.magic != LOGFS_MAGIC_EMPTY)
 	{
 		lastEntryUsed = true;
@@ -34,7 +33,7 @@ result fsInit()
 	// check the rest of the inodes
 	while (FsInodePos < MAX_INODESIZE )
 	{
-		flashRead(FsInodePos, &file, sizeof(file));
+		logfsRead(FsInodePos, &file, sizeof(file));
 		if(file.magic == LOGFS_MAGIC_EMPTY)
 		{
 			// found the boundary from used to empty, so the end
@@ -71,7 +70,7 @@ result fsFileCreate(uint16_t fileId, uint32_t fileSize)
 	// TODO check if we can add next file or the table is full?
 	// TODO check if the file exists
 	// write inode and update freespace
-	flashWrite(fsInodeLast, &newFile, sizeof(newFile));
+	logfsWrite(fsInodeLast, &newFile, sizeof(newFile));
 	freeSpaceLocation = LOGFS_NEXTSECTADDR(freeSpaceLocation + fileSize);
 	// move to next empty node
 	fsInodeLast = LOGFS_TABLE_MASK(fsInodeLast + sizeof(fsINode));
@@ -84,11 +83,11 @@ result fsFileDelete(uint16_t fileId)
 	fsINode file;
 	for(int i = 0; i < MAX_INODESIZE; i += sizeof(fsINode))
 	{
-		flashRead(i, &file, sizeof(file));
+		logfsRead(i, &file, sizeof(file));
 		if((file.id == fileId) && (file.magic == LOGFS_MAGIC_USED))
 		{
 			file.magic = LOGFS_MAGIC_STALE;
-			flashWrite(i, &file, sizeof(file));
+			logfsWrite(i, &file, sizeof(file));
 			return noError;
 		}
 	}
@@ -102,7 +101,7 @@ result fsFileFindFirst(uint16_t * fileId, uint32_t * fsInodeFind)
 	do {
 		if(*fsInodeFind == fsInodeLast)
 			return fileNotFound;
-		flashRead(*fsInodeFind, &file, sizeof(file));
+		logfsRead(*fsInodeFind, &file, sizeof(file));
 		*fsInodeFind = LOGFS_TABLE_MASK(*fsInodeFind + sizeof(fsINode));
 	} while(file.magic != LOGFS_MAGIC_USED);
 	*fileId = file.id;
@@ -115,7 +114,7 @@ result fsFileFindNext(uint16_t * fileId, uint32_t * fsInodeFind)
 	do {
 		if(*fsInodeFind == fsInodeLast)
 			return fileNotFound;
-		flashRead(*fsInodeFind, &file, sizeof(file));
+		logfsRead(*fsInodeFind, &file, sizeof(file));
 		*fsInodeFind = LOGFS_TABLE_MASK(*fsInodeFind + sizeof(fsINode));
 	} while(file.magic != LOGFS_MAGIC_USED);
 	*fileId = file.id;
