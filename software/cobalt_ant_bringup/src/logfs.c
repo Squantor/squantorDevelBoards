@@ -8,7 +8,6 @@
 uint32_t freeSpaceLocation;	// point to the start of free space
 uint32_t fsInodeFirst;	// First Inode entry
 uint32_t fsInodeLast;	// Border of Inode list, first empty one!
-uint32_t fsInodeFind;	// used by finding all files
 
 
 result fsInit()
@@ -16,7 +15,7 @@ result fsInit()
 	// init the housekeeping structures
 	freeSpaceLocation = 0;
 	// assume empty list
-	fsInodeFind = fsInodeFirst = fsInodeLast = 0;
+	fsInodeFirst = fsInodeLast = 0;
 
 	// scan the table for the file entries start and beginning
 	fsINode file;
@@ -96,28 +95,28 @@ result fsFileDelete(uint16_t fileId)
 	return fileNotFound;
 }
 
-result fsFileFindFirst(uint16_t * fileId)
+result fsFileFindFirst(uint16_t * fileId, uint32_t * fsInodeFind)
 {
-	fsInodeFind = fsInodeFirst;
+	*fsInodeFind = fsInodeFirst;
 	fsINode file;
 	do {
-		if(fsInodeFind == fsInodeLast)
+		if(*fsInodeFind == fsInodeLast)
 			return fileNotFound;
-		flashRead(fsInodeFind, &file, sizeof(file));
-		fsInodeFind = LOGFS_TABLE_MASK(fsInodeFind + sizeof(fsINode));
+		flashRead(*fsInodeFind, &file, sizeof(file));
+		*fsInodeFind = LOGFS_TABLE_MASK(*fsInodeFind + sizeof(fsINode));
 	} while(file.magic != LOGFS_MAGIC_USED);
 	*fileId = file.id;
 	return noError;
 }
 
-result fsFileFindNext(uint16_t * fileId)
+result fsFileFindNext(uint16_t * fileId, uint32_t * fsInodeFind)
 {
 	fsINode file;
 	do {
-		if(fsInodeFind == fsInodeLast)
+		if(*fsInodeFind == fsInodeLast)
 			return fileNotFound;
-		flashRead(fsInodeFind, &file, sizeof(file));
-		fsInodeFind = LOGFS_TABLE_MASK(fsInodeFind + sizeof(fsINode));
+		flashRead(*fsInodeFind, &file, sizeof(file));
+		*fsInodeFind = LOGFS_TABLE_MASK(*fsInodeFind + sizeof(fsINode));
 	} while(file.magic != LOGFS_MAGIC_USED);
 	*fileId = file.id;
 	return noError;

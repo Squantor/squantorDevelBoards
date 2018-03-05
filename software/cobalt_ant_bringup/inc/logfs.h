@@ -7,8 +7,8 @@ result fsInit();
 
 result fsFileCreate(uint16_t fileId, uint32_t fileSize);
 result fsFileDelete(uint16_t fileId);
-result fsFileFindFirst(uint16_t * fileId);
-result fsFileFindNext(uint16_t * fileId);
+result fsFileFindFirst(uint16_t * fileId, uint32_t * fsInodeFind);
+result fsFileFindNext(uint16_t * fileId, uint32_t * fsInodeFind);
 
 
 #endif

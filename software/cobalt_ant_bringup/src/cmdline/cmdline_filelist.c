@@ -38,13 +38,14 @@ const char strFileListFound[] = "Found file:";
 result CmdFileListHandler(int * arglist)
 {
 	uint16_t fileId;
-	result fileStatus = fsFileFindFirst( &fileId );
-	while (fileStatus == noError)
+	uint32_t findFileState;
+	result fileStatus = fsFileFindFirst( &fileId, &findFileState );
+	while ( fileStatus == noError )
 	{
-		sqputsn(strFileListFound);
-		print_dec_u16(fileId);
-		sqputsn(str_crlf);
-		fileStatus = fsFileFindNext( &fileId );
+		sqputsn( strFileListFound );
+		print_dec_u16( fileId );
+		sqputsn( str_crlf );
+		fileStatus = fsFileFindNext( &fileId, &findFileState );
 	}
     return noError;
 }
