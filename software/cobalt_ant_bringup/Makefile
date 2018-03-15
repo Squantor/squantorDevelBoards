@@ -4,7 +4,7 @@ MCU = lpc1114_323
 BOARD = BOARD_COBALT_ANT
 SOURCES = src/cobalt_ant_bringup.c src/sysinit.c src/cr_startup_lpc11xx.c src/boards/board_cobalt_ant_init.c \
 src/ringbuffers.c src/driver_W25Q32BV.c src/cmdline_commands.c src/ticks.c \
-src/strdata.c src/setupstdio.c src/logfs.c src/setuplogfs.c src/emptylogfs.c \
+src/strdata.c src/setup_stdio.c src/setup_logfs.c \
 src/cmdline/cmdline_help.c src/cmdline/cmdline_test.c src/cmdline/cmdline_getticks.c src/cmdline/cmdline_setticks.c \
 src/cmdline/cmdline_flashinit.c src/cmdline/cmdline_flashread.c src/cmdline/cmdline_flashscan.c \
 src/cmdline/cmdline_flashwrite.c src/cmdline/cmdline_flasherasesect.c \
