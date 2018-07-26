@@ -1,6 +1,9 @@
 [submodule "lpc_chip_11cxx"]
 	path = lpc_chip_11cxx
-	url = git@github.com:Squantor/lpc_chip_11cxx.git
+	url = https://github.com/Squantor/lpc_chip_11cxx.git
 [submodule "squantlibraries"]
 	path = squantlibraries
 	url = git@github.com:Squantor/squantorCodeLibraries.git
+[submodule "squantorCodeLibraries"]
+	path = squantorCodeLibraries
+	url = https://github.com/Squantor/squantorCodeLibraries.git
