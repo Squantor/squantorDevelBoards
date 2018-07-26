@@ -1,63 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:SquantorButtons
-LIBS:SquantorConnectors
-LIBS:SquantorLabels
-LIBS:SquantorPCBOutline
-LIBS:SquantorProto
-LIBS:SquantorAtmel
-LIBS:SquantorCrystal
-LIBS:SquantorDevice
-LIBS:SquantorDiodes
-LIBS:SquantorGenericAnalog
-LIBS:SquantorIC
-LIBS:SquantorLinearTechnology
-LIBS:SquantorLogic
-LIBS:SquantorMaxim
-LIBS:SquantorMicrochip
-LIBS:SquantorModules
-LIBS:SquantorNxp
-LIBS:SquantorOnSemi
-LIBS:SquantorOpto
-LIBS:SquantorRCL
-LIBS:SquantorST
-LIBS:SquantorTexasInstruments
-LIBS:SquantorTransformer
-LIBS:SquantorUsb
-LIBS:SquantorWinbond
+EESchema Schematic File Version 4
 LIBS:nickel_beetle_mainboard-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -72,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L VYYYYMMDD N2
+L SquantorLabels:VYYYYMMDD N2
 U 1 1 5A1357A5
 P 850 7700
 F 0 "N2" H 850 7800 60  0000 C CNN
@@ -83,7 +26,7 @@ F 3 "" H 850 7700 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L OHWLOGO N1
+L SquantorLabels:OHWLOGO N1
 U 1 1 5A135869
 P 850 7350
 F 0 "N1" H 850 7500 60  0000 C CNN
@@ -94,7 +37,7 @@ F 3 "" H 850 7350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Drill_Hole_no_metal H1
+L SquantorPCBOutline:Drill_Hole_no_metal H1
 U 1 1 5B1CFFB9
 P 1450 7450
 F 0 "H1" H 1450 7200 60  0000 C CNN
@@ -105,7 +48,7 @@ F 3 "" H 1450 7450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Drill_Hole_no_metal H2
+L SquantorPCBOutline:Drill_Hole_no_metal H2
 U 1 1 5B1D000C
 P 2350 7450
 F 0 "H2" H 2350 7200 60  0000 C CNN
@@ -116,7 +59,7 @@ F 3 "" H 2350 7450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_02x10_Odd_Even J1
+L nickel_beetle_mainboard-rescue:Conn_02x10_Odd_Even J1
 U 1 1 5B1D0821
 P 1350 1150
 F 0 "J1" H 1400 1650 50  0000 C CNN
@@ -127,7 +70,7 @@ F 3 "" H 1350 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VSSA #PWR20
+L power:VSSA #PWR20
 U 1 1 5B1D0A66
 P 1850 850
 F 0 "#PWR20" H 1850 700 50  0001 C CNN
@@ -138,7 +81,7 @@ F 3 "" H 1850 850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VSSA #PWR4
+L power:VSSA #PWR4
 U 1 1 5B1D0A8A
 P 950 850
 F 0 "#PWR4" H 950 700 50  0001 C CNN
@@ -149,7 +92,7 @@ F 3 "" H 950 850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VDDA #PWR14
+L power:VDDA #PWR14
 U 1 1 5B1D0AA3
 P 1700 750
 F 0 "#PWR14" H 1700 600 50  0001 C CNN
@@ -160,7 +103,7 @@ F 3 "" H 1700 750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDDA #PWR6
+L power:VDDA #PWR6
 U 1 1 5B1D0AC7
 P 1100 750
 F 0 "#PWR6" H 1100 600 50  0001 C CNN
@@ -171,7 +114,7 @@ F 3 "" H 1100 750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VDD #PWR15
+L power:VDD #PWR15
 U 1 1 5B1D0E6A
 P 1700 1950
 F 0 "#PWR15" H 1700 1800 50  0001 C CNN
@@ -182,7 +125,7 @@ F 3 "" H 1700 1950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDD #PWR7
+L power:VDD #PWR7
 U 1 1 5B1D0E8E
 P 1100 1950
 F 0 "#PWR7" H 1100 1800 50  0001 C CNN
@@ -193,7 +136,7 @@ F 3 "" H 1100 1950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VSS #PWR19
+L power:VSS #PWR19
 U 1 1 5B1D15B4
 P 1800 2050
 F 0 "#PWR19" H 1800 1900 50  0001 C CNN
@@ -204,7 +147,7 @@ F 3 "" H 1800 2050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VSS #PWR5
+L power:VSS #PWR5
 U 1 1 5B1D15EA
 P 950 2050
 F 0 "#PWR5" H 950 1900 50  0001 C CNN
@@ -215,7 +158,7 @@ F 3 "" H 950 2050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Conn_02x10_Odd_Even J2
+L nickel_beetle_mainboard-rescue:Conn_02x10_Odd_Even J2
 U 1 1 5B1D18B3
 P 1350 2350
 F 0 "J2" H 1400 2850 50  0000 C CNN
@@ -290,7 +233,7 @@ DIGITAL_13
 Text Label 1700 2850 0    60   ~ 0
 DIGITAL_15
 $Comp
-L USB-ID J3
+L SquantorUsb:USB-ID J3
 U 1 1 5B40BE79
 P 1300 6400
 F 0 "J3" H 1150 6700 60  0000 C CNN
@@ -301,7 +244,7 @@ F 3 "" H 1450 6450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L nickel_beetle_mainboard-rescue:C C2
 U 1 1 5B40BF8F
 P 850 6600
 F 0 "C2" H 875 6700 50  0000 L CNN
@@ -312,7 +255,7 @@ F 3 "" H 850 6600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L nickel_beetle_mainboard-rescue:R R2
 U 1 1 5B40BFDE
 P 1700 6000
 F 0 "R2" V 1780 6000 50  0000 C CNN
@@ -323,7 +266,7 @@ F 3 "" H 1700 6000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VSS #PWR3
+L power:VSS #PWR3
 U 1 1 5B40C160
 P 850 6800
 F 0 "#PWR3" H 850 6650 50  0001 C CNN
@@ -334,7 +277,7 @@ F 3 "" H 850 6800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR17
+L power:+5V #PWR17
 U 1 1 5B40C543
 P 1700 5750
 F 0 "#PWR17" H 1700 5600 50  0001 C CNN
@@ -345,7 +288,7 @@ F 3 "" H 1700 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG1
+L power:PWR_FLAG #FLG1
 U 1 1 5B40C58E
 P 1450 5750
 F 0 "#FLG1" H 1450 5825 50  0001 C CNN
@@ -356,7 +299,7 @@ F 3 "" H 1450 5750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L nickel_beetle_mainboard-rescue:R R1
 U 1 1 5B40C8BF
 P 1600 6900
 F 0 "R1" V 1680 6900 50  0000 C CNN
@@ -367,7 +310,7 @@ F 3 "" H 1600 6900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VSS #PWR10
+L power:VSS #PWR10
 U 1 1 5B40C98E
 P 1400 6900
 F 0 "#PWR10" H 1400 6750 50  0001 C CNN
@@ -378,7 +321,7 @@ F 3 "" H 1400 6900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R3
+L nickel_beetle_mainboard-rescue:R R3
 U 1 1 5B40C9FF
 P 2000 6900
 F 0 "R3" V 2080 6900 50  0000 C CNN
@@ -389,7 +332,7 @@ F 3 "" H 2000 6900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR24
+L power:+5V #PWR24
 U 1 1 5B40CA44
 P 2200 6900
 F 0 "#PWR24" H 2200 6750 50  0001 C CNN
@@ -400,7 +343,7 @@ F 3 "" H 2200 6900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VSS #PWR18
+L power:VSS #PWR18
 U 1 1 5B40CAC6
 P 1700 6650
 F 0 "#PWR18" H 1700 6500 50  0001 C CNN
@@ -411,7 +354,7 @@ F 3 "" H 1700 6650 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L USBLC6-2 U2
+L SquantorST:USBLC6-2 U2
 U 1 1 5B40CD06
 P 2350 6350
 F 0 "U2" H 2350 6600 60  0000 C CNN
@@ -508,7 +451,7 @@ Wire Wire Line
 Wire Wire Line
 	850  6400 1000 6400
 Wire Wire Line
-	1700 5750 1700 5850
+	1700 5750 1700 5800
 Wire Wire Line
 	1450 5750 1450 5800
 Wire Wire Line
@@ -527,14 +470,14 @@ Wire Wire Line
 Wire Wire Line
 	1800 6500 1800 6900
 Wire Wire Line
-	1750 6900 1850 6900
+	1750 6900 1800 6900
 Connection ~ 1800 6900
 Wire Wire Line
 	2150 6900 2200 6900
 Wire Wire Line
 	1450 6900 1400 6900
 $Comp
-L VSS #PWR21
+L power:VSS #PWR21
 U 1 1 5B40CE94
 P 1900 6350
 F 0 "#PWR21" H 1900 6200 50  0001 C CNN
@@ -545,7 +488,7 @@ F 3 "" H 1900 6350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +5V #PWR25
+L power:+5V #PWR25
 U 1 1 5B40CEC3
 P 2800 6350
 F 0 "#PWR25" H 2800 6200 50  0001 C CNN
@@ -580,7 +523,7 @@ USB_D-
 Text Label 2900 6450 0    60   ~ 0
 USB_D+
 $Comp
-L MCP1702-MB U1
+L SquantorMicrochip:MCP1702-MB U1
 U 1 1 5B40D61C
 P 1600 4600
 F 0 "U1" H 1600 4850 60  0000 C CNN
@@ -591,7 +534,7 @@ F 3 "" H 1600 4600 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C3
+L nickel_beetle_mainboard-rescue:C C3
 U 1 1 5B40D718
 P 1200 4700
 F 0 "C3" H 1225 4800 50  0000 L CNN
@@ -602,7 +545,7 @@ F 3 "" H 1200 4700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR12
+L power:+5V #PWR12
 U 1 1 5B40D943
 P 1600 4250
 F 0 "#PWR12" H 1600 4100 50  0001 C CNN
@@ -613,7 +556,7 @@ F 3 "" H 1600 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR13
+L power:+5V #PWR13
 U 1 1 5B40D978
 P 1600 4950
 F 0 "#PWR13" H 1600 4800 50  0001 C CNN
@@ -624,7 +567,7 @@ F 3 "" H 1600 4950 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L VSS #PWR11
+L power:VSS #PWR11
 U 1 1 5B40DB83
 P 1500 5000
 F 0 "#PWR11" H 1500 4850 50  0001 C CNN
@@ -643,7 +586,7 @@ Wire Wire Line
 Wire Wire Line
 	1600 4300 1600 4250
 $Comp
-L VSS #PWR9
+L power:VSS #PWR9
 U 1 1 5B40DD35
 P 1200 4900
 F 0 "#PWR9" H 1200 4750 50  0001 C CNN
@@ -654,7 +597,7 @@ F 3 "" H 1200 4900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR8
+L power:+5V #PWR8
 U 1 1 5B40DD6A
 P 1200 4500
 F 0 "#PWR8" H 1200 4350 50  0001 C CNN
@@ -665,7 +608,7 @@ F 3 "" H 1200 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L nickel_beetle_mainboard-rescue:C C1
 U 1 1 5B40DE1B
 P 850 4700
 F 0 "C1" H 875 4800 50  0000 L CNN
@@ -676,7 +619,7 @@ F 3 "" H 850 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VSS #PWR2
+L power:VSS #PWR2
 U 1 1 5B40DEFB
 P 850 4900
 F 0 "#PWR2" H 850 4750 50  0001 C CNN
@@ -687,7 +630,7 @@ F 3 "" H 850 4900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR1
+L power:+5V #PWR1
 U 1 1 5B40DF33
 P 850 4500
 F 0 "#PWR1" H 850 4350 50  0001 C CNN
@@ -706,7 +649,7 @@ Wire Wire Line
 Wire Wire Line
 	1200 4850 1200 4900
 $Comp
-L C C4
+L nickel_beetle_mainboard-rescue:C C4
 U 1 1 5B40E161
 P 2050 4700
 F 0 "C4" H 2075 4800 50  0000 L CNN
@@ -717,7 +660,7 @@ F 3 "" H 2050 4700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L VSS #PWR23
+L power:VSS #PWR23
 U 1 1 5B40E167
 P 2050 4900
 F 0 "#PWR23" H 2050 4750 50  0001 C CNN
@@ -732,7 +675,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 4850 2050 4900
 $Comp
-L VDD #PWR16
+L power:VDD #PWR16
 U 1 1 5B40E27E
 P 1700 5000
 F 0 "#PWR16" H 1700 4850 50  0001 C CNN
@@ -743,7 +686,7 @@ F 3 "" H 1700 5000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L VDD #PWR22
+L power:VDD #PWR22
 U 1 1 5B40E349
 P 2050 4500
 F 0 "#PWR22" H 2050 4350 50  0001 C CNN
@@ -753,4 +696,8 @@ F 3 "" H 2050 4500 50  0001 C CNN
 	1    2050 4500
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	1700 5800 1700 5850
+Wire Wire Line
+	1800 6900 1850 6900
 $EndSCHEMATC
