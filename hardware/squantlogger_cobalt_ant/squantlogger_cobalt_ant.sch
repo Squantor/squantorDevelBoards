@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L squantlogger_cobalt_ant-rescue:JTAG_2X05 J4
+L SquantorConnectors:JTAG_2X05 J4
 U 1 1 5921F65D
 P 2250 1100
 F 0 "J4" H 2250 1450 60  0000 C CNN
@@ -26,7 +26,7 @@ F 3 "" H 2250 1250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R8
+L Device:R R8
 U 1 1 5921F706
 P 1500 900
 F 0 "R8" V 1580 900 50  0000 C CNN
@@ -37,7 +37,7 @@ F 3 "" H 1500 900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R4
+L Device:R R4
 U 1 1 5921F77B
 P 1250 1000
 F 0 "R4" V 1330 1000 50  0000 C CNN
@@ -65,36 +65,36 @@ SWDCLK
 Text GLabel 1000 1300 0    60   Input ~ 0
 nRESET
 $Comp
-L squantlogger_cobalt_ant-rescue:Drill_Hole_no_metal H1
+L SquantorPCBOutline:Drill_Hole_no_metal H1
 U 1 1 592DD359
-P 1700 6350
-F 0 "H1" H 1700 6100 60  0000 C CNN
-F 1 "Drill_Hole_no_metal" H 1700 6600 60  0000 C CNN
-F 2 "SquantorPcbOutline:MountingHole_2.2mm_no_metal" H 1700 6350 60  0000 C CNN
-F 3 "" H 1700 6350 60  0001 C CNN
-	1    1700 6350
+P 950 6350
+F 0 "H1" H 950 6100 60  0000 C CNN
+F 1 "Drill_Hole_no_metal" H 950 6600 60  0000 C CNN
+F 2 "SquantorPcbOutline:MountingHole_2.2mm_no_metal" H 950 6350 60  0001 C CNN
+F 3 "" H 950 6350 60  0001 C CNN
+	1    950  6350
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:Drill_Hole_no_metal H2
+L SquantorPCBOutline:Drill_Hole_no_metal H2
 U 1 1 592DD3BE
-P 1700 6950
-F 0 "H2" H 1700 6700 60  0000 C CNN
-F 1 "Drill_Hole_no_metal" H 1700 7200 60  0000 C CNN
-F 2 "SquantorPcbOutline:MountingHole_3.2mm_no_metal" H 1700 6950 60  0000 C CNN
-F 3 "" H 1700 6950 60  0001 C CNN
-	1    1700 6950
+P 950 6950
+F 0 "H2" H 950 6700 60  0000 C CNN
+F 1 "Drill_Hole_no_metal" H 950 7200 60  0000 C CNN
+F 2 "SquantorPcbOutline:MountingHole_3.2mm_no_metal" H 950 6950 60  0001 C CNN
+F 3 "" H 950 6950 60  0001 C CNN
+	1    950  6950
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:Drill_Hole_no_metal H3
+L SquantorPCBOutline:Drill_Hole_no_metal H3
 U 1 1 592DD415
-P 1700 7550
-F 0 "H3" H 1700 7300 60  0000 C CNN
-F 1 "Drill_Hole_no_metal" H 1700 7800 60  0000 C CNN
-F 2 "SquantorPcbOutline:MountingHole_3.2mm_no_metal" H 1700 7550 60  0000 C CNN
-F 3 "" H 1700 7550 60  0001 C CNN
-	1    1700 7550
+P 950 7550
+F 0 "H3" H 950 7300 60  0000 C CNN
+F 1 "Drill_Hole_no_metal" H 950 7800 60  0000 C CNN
+F 2 "SquantorPcbOutline:MountingHole_3.2mm_no_metal" H 950 7550 60  0001 C CNN
+F 3 "" H 950 7550 60  0001 C CNN
+	1    950  7550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -142,7 +142,7 @@ F 3 "" H 3300 7200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C2
+L Device:C C2
 U 1 1 5939A5DB
 P 3500 7200
 F 0 "C2" H 3525 7300 50  0000 L CNN
@@ -153,7 +153,7 @@ F 3 "" H 3500 7200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C1
+L Device:C C1
 U 1 1 5939A905
 P 3500 6950
 F 0 "C1" H 3525 7050 50  0000 L CNN
@@ -164,7 +164,7 @@ F 3 "" H 3500 6950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R1
+L Device:R R1
 U 1 1 5939AF21
 P 1150 4950
 F 0 "R1" V 1230 4950 50  0000 C CNN
@@ -186,7 +186,7 @@ F 3 "" H 1600 4850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R2
+L Device:R R2
 U 1 1 5939B13C
 P 1150 5150
 F 0 "R2" V 1230 5150 50  0000 C CNN
@@ -197,7 +197,7 @@ F 3 "" H 1150 5150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R6
+L Device:R R6
 U 1 1 5939B1A1
 P 1450 5250
 F 0 "R6" V 1530 5250 50  0000 C CNN
@@ -208,7 +208,7 @@ F 3 "" H 1450 5250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R3
+L Device:R R3
 U 1 1 5939B1F9
 P 1150 5350
 F 0 "R3" V 1230 5350 50  0000 C CNN
@@ -288,7 +288,7 @@ SERIAL_RXD
 Text GLabel 1800 5350 2    60   Input ~ 0
 SERIAL_RTS
 $Comp
-L squantlogger_cobalt_ant-rescue:C C3
+L Device:C C3
 U 1 1 5939CE3B
 P 3500 7450
 F 0 "C3" H 3525 7550 50  0000 L CNN
@@ -325,7 +325,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 7450 3300 7450
 $Comp
-L squantlogger_cobalt_ant-rescue:MCP1702-MB U3
+L SquantorMicrochip:MCP1702-MB U3
 U 1 1 5939DC57
 P 4450 6850
 F 0 "U3" H 4450 7100 60  0000 C CNN
@@ -388,7 +388,7 @@ $EndComp
 Wire Wire Line
 	4450 6500 4450 6550
 $Comp
-L squantlogger_cobalt_ant-rescue:C C6
+L Device:C C6
 U 1 1 593A0E6C
 P 4900 1250
 F 0 "C6" H 4925 1350 50  0000 L CNN
@@ -399,7 +399,7 @@ F 3 "" H 4900 1250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C7
+L Device:C C7
 U 1 1 593A0F4B
 P 5100 1250
 F 0 "C7" H 5125 1350 50  0000 L CNN
@@ -410,7 +410,7 @@ F 3 "" H 5100 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C8
+L Device:C C8
 U 1 1 593A0FB0
 P 5300 1250
 F 0 "C8" H 5325 1350 50  0000 L CNN
@@ -421,7 +421,7 @@ F 3 "" H 5300 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C9
+L Device:C C9
 U 1 1 593A1005
 P 5500 1250
 F 0 "C9" H 5525 1350 50  0000 L CNN
@@ -547,7 +547,7 @@ F 3 "" H 2800 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R5
+L Device:R R5
 U 1 1 593A24D8
 P 1250 1200
 F 0 "R5" V 1330 1200 50  0000 C CNN
@@ -558,7 +558,7 @@ F 3 "" H 1250 1200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R7
+L Device:R R7
 U 1 1 593A25FF
 P 1500 700
 F 0 "R7" V 1580 700 50  0000 C CNN
@@ -605,7 +605,7 @@ Wire Wire Line
 	1050 1200 1050 1000
 Connection ~ 1050 1000
 $Comp
-L squantlogger_cobalt_ant-rescue:FTDI_PINS_1X06 J1
+L SquantorConnectors:FTDI_PINS_1X06 J1
 U 1 1 59499772
 P 750 5100
 F 0 "J1" H 700 5500 60  0000 C CNN
@@ -624,7 +624,7 @@ I2C_SDA
 Text GLabel 6050 1100 0    60   Input ~ 0
 I2C_SCL
 $Comp
-L squantlogger_cobalt_ant-rescue:R R10
+L Device:R R10
 U 1 1 5949C785
 P 6250 950
 F 0 "R10" V 6330 950 50  0000 C CNN
@@ -635,7 +635,7 @@ F 3 "" H 6250 950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R11
+L Device:R R11
 U 1 1 5949C806
 P 6250 1100
 F 0 "R11" V 6330 1100 50  0000 C CNN
@@ -726,7 +726,7 @@ Wire Wire Line
 Wire Wire Line
 	1150 3950 1550 3950
 $Comp
-L squantlogger_cobalt_ant-rescue:W25Q32BV U4
+L SquantorWinbond:W25Q32BV U4
 U 1 1 595545DA
 P 9150 5050
 F 0 "U4" H 8950 5300 60  0000 C CNN
@@ -739,7 +739,7 @@ $EndComp
 Text GLabel 8200 4900 0    60   Input ~ 0
 FLASH_CE
 $Comp
-L squantlogger_cobalt_ant-rescue:R R12
+L Device:R R12
 U 1 1 59554929
 P 8600 4900
 F 0 "R12" V 8680 4900 50  0000 C CNN
@@ -750,7 +750,7 @@ F 3 "" H 8600 4900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R13
+L Device:R R13
 U 1 1 5955498E
 P 8600 5000
 F 0 "R13" V 8680 5000 50  0000 C CNN
@@ -761,7 +761,7 @@ F 3 "" H 8600 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R14
+L Device:R R14
 U 1 1 595549FD
 P 8600 5100
 F 0 "R14" V 8680 5100 50  0000 C CNN
@@ -802,7 +802,7 @@ Wire Wire Line
 Wire Wire Line
 	9550 4900 9500 4900
 $Comp
-L squantlogger_cobalt_ant-rescue:R R15
+L Device:R R15
 U 1 1 59555150
 P 9700 5000
 F 0 "R15" V 9780 5000 50  0000 C CNN
@@ -813,7 +813,7 @@ F 3 "" H 9700 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R16
+L Device:R R16
 U 1 1 595551BF
 P 9700 5100
 F 0 "R16" V 9780 5100 50  0000 C CNN
@@ -824,7 +824,7 @@ F 3 "" H 9700 5100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R17
+L Device:R R17
 U 1 1 5955521E
 P 9700 5200
 F 0 "R17" V 9780 5200 50  0000 C CNN
@@ -887,7 +887,7 @@ Wire Wire Line
 Wire Wire Line
 	9550 5200 9500 5200
 $Comp
-L squantlogger_cobalt_ant-rescue:C C10
+L Device:C C10
 U 1 1 595562F6
 P 9150 4600
 F 0 "C10" H 9175 4700 50  0000 L CNN
@@ -924,7 +924,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 4600 8950 4600
 $Comp
-L squantlogger_cobalt_ant-rescue:Crystal Y1
+L Device:Crystal Y1
 U 1 1 59559130
 P 4500 2400
 F 0 "Y1" H 4500 2550 50  0000 C CNN
@@ -943,7 +943,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 2200 4500 2200
 $Comp
-L squantlogger_cobalt_ant-rescue:C C5
+L Device:C C5
 U 1 1 59559AAE
 P 4150 2600
 F 0 "C5" H 4175 2700 50  0000 L CNN
@@ -954,7 +954,7 @@ F 3 "" H 4150 2600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C4
+L Device:C C4
 U 1 1 59559B3D
 P 4150 2200
 F 0 "C4" H 4175 2300 50  0000 L CNN
@@ -1037,7 +1037,7 @@ Wire Wire Line
 Wire Wire Line
 	1150 4350 1550 4350
 $Comp
-L squantlogger_cobalt_ant-rescue:Cobalt_Ant_Digital J2
+L SquantorConnectors:Cobalt_Ant_Digital J2
 U 1 1 5956C995
 P 900 2250
 F 0 "J2" H 900 2950 60  0000 C CNN
@@ -1048,7 +1048,7 @@ F 3 "" H 1050 2800 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:Cobalt_Ant_Analog J3
+L SquantorConnectors:Cobalt_Ant_Analog J3
 U 1 1 5956CBBF
 P 900 3800
 F 0 "J3" H 900 4500 60  0000 C CNN
@@ -1085,7 +1085,7 @@ Wire Wire Line
 Wire Wire Line
 	3750 6050 3800 6050
 $Comp
-L squantlogger_cobalt_ant-rescue:POWER_JOINER U1
+L SquantorRCL:POWER_JOINER U1
 U 1 1 59578FC8
 P 3500 6050
 F 0 "U1" H 3500 6200 60  0000 C CNN
@@ -1096,7 +1096,7 @@ F 3 "" H 3500 6050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:POWER_JOINER U2
+L SquantorRCL:POWER_JOINER U2
 U 1 1 59579087
 P 3500 6450
 F 0 "U2" H 3500 6600 60  0000 C CNN
@@ -1159,7 +1159,7 @@ Wire Wire Line
 Wire Wire Line
 	6600 2250 6400 2250
 $Comp
-L squantlogger_cobalt_ant-rescue:R R9
+L Device:R R9
 U 1 1 595ED496
 P 1500 1300
 F 0 "R9" V 1580 1300 50  0000 C CNN
@@ -1350,7 +1350,7 @@ F 3 "" H 3950 2600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R27
+L Device:R R27
 U 1 1 59D13941
 P 1700 3550
 F 0 "R27" V 1780 3550 50  0000 C CNN
@@ -1379,7 +1379,7 @@ Wire Wire Line
 Wire Wire Line
 	1850 4350 1900 4350
 $Comp
-L squantlogger_cobalt_ant-rescue:R R18
+L Device:R R18
 U 1 1 59D1552B
 P 1350 3650
 F 0 "R18" V 1430 3650 50  0000 C CNN
@@ -1390,7 +1390,7 @@ F 3 "" H 1350 3650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R28
+L Device:R R28
 U 1 1 59D15601
 P 1700 3750
 F 0 "R28" V 1780 3750 50  0000 C CNN
@@ -1401,7 +1401,7 @@ F 3 "" H 1700 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R19
+L Device:R R19
 U 1 1 59D156CB
 P 1350 3850
 F 0 "R19" V 1430 3850 50  0000 C CNN
@@ -1412,7 +1412,7 @@ F 3 "" H 1350 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R29
+L Device:R R29
 U 1 1 59D15799
 P 1700 3950
 F 0 "R29" V 1780 3950 50  0000 C CNN
@@ -1423,7 +1423,7 @@ F 3 "" H 1700 3950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R20
+L Device:R R20
 U 1 1 59D1586B
 P 1350 4050
 F 0 "R20" V 1430 4050 50  0000 C CNN
@@ -1434,7 +1434,7 @@ F 3 "" H 1350 4050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R30
+L Device:R R30
 U 1 1 59D15941
 P 1700 4150
 F 0 "R30" V 1780 4150 50  0000 C CNN
@@ -1445,7 +1445,7 @@ F 3 "" H 1700 4150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R21
+L Device:R R21
 U 1 1 59D15A1B
 P 1350 4250
 F 0 "R21" V 1430 4250 50  0000 C CNN
@@ -1456,7 +1456,7 @@ F 3 "" H 1350 4250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R31
+L Device:R R31
 U 1 1 59D15AF9
 P 1700 4350
 F 0 "R31" V 1780 4350 50  0000 C CNN
@@ -1467,7 +1467,7 @@ F 3 "" H 1700 4350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R22
+L Device:R R22
 U 1 1 59D1655D
 P 1450 2000
 F 0 "R22" V 1530 2000 50  0000 C CNN
@@ -1478,7 +1478,7 @@ F 3 "" H 1450 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R32
+L Device:R R32
 U 1 1 59D167B5
 P 1800 2100
 F 0 "R32" V 1880 2100 50  0000 C CNN
@@ -1489,7 +1489,7 @@ F 3 "" H 1800 2100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R23
+L Device:R R23
 U 1 1 59D16909
 P 1450 2200
 F 0 "R23" V 1530 2200 50  0000 C CNN
@@ -1500,7 +1500,7 @@ F 3 "" H 1450 2200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R33
+L Device:R R33
 U 1 1 59D16A2B
 P 1800 2300
 F 0 "R33" V 1880 2300 50  0000 C CNN
@@ -1511,7 +1511,7 @@ F 3 "" H 1800 2300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R24
+L Device:R R24
 U 1 1 59D16BDE
 P 1450 2400
 F 0 "R24" V 1530 2400 50  0000 C CNN
@@ -1522,7 +1522,7 @@ F 3 "" H 1450 2400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R34
+L Device:R R34
 U 1 1 59D16C94
 P 1800 2500
 F 0 "R34" V 1880 2500 50  0000 C CNN
@@ -1533,7 +1533,7 @@ F 3 "" H 1800 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R25
+L Device:R R25
 U 1 1 59D16D5F
 P 1450 2600
 F 0 "R25" V 1530 2600 50  0000 C CNN
@@ -1544,7 +1544,7 @@ F 3 "" H 1450 2600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R35
+L Device:R R35
 U 1 1 59D16E25
 P 1800 2700
 F 0 "R35" V 1880 2700 50  0000 C CNN
@@ -1555,7 +1555,7 @@ F 3 "" H 1800 2700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R26
+L Device:R R26
 U 1 1 59D16EEC
 P 1450 2800
 F 0 "R26" V 1530 2800 50  0000 C CNN
@@ -1620,7 +1620,7 @@ ADC_7
 Text GLabel 3200 4350 2    60   Input ~ 0
 ADC_8
 $Comp
-L squantlogger_cobalt_ant-rescue:C C15
+L Device:C C15
 U 1 1 59DA8161
 P 3000 3550
 F 0 "C15" H 3025 3650 50  0000 L CNN
@@ -1631,7 +1631,7 @@ F 3 "" H 3000 3550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C11
+L Device:C C11
 U 1 1 59DA82F2
 P 2700 3650
 F 0 "C11" H 2725 3750 50  0000 L CNN
@@ -1642,7 +1642,7 @@ F 3 "" H 2700 3650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C16
+L Device:C C16
 U 1 1 59DA83C4
 P 3000 3750
 F 0 "C16" H 3025 3850 50  0000 L CNN
@@ -1653,7 +1653,7 @@ F 3 "" H 3000 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C12
+L Device:C C12
 U 1 1 59DA8495
 P 2700 3850
 F 0 "C12" H 2725 3950 50  0000 L CNN
@@ -1664,7 +1664,7 @@ F 3 "" H 2700 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C17
+L Device:C C17
 U 1 1 59DA8569
 P 3000 3950
 F 0 "C17" H 3025 4050 50  0000 L CNN
@@ -1675,7 +1675,7 @@ F 3 "" H 3000 3950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C13
+L Device:C C13
 U 1 1 59DA8640
 P 2700 4050
 F 0 "C13" H 2725 4150 50  0000 L CNN
@@ -1686,7 +1686,7 @@ F 3 "" H 2700 4050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C18
+L Device:C C18
 U 1 1 59DA871C
 P 3000 4150
 F 0 "C18" H 3025 4250 50  0000 L CNN
@@ -1697,7 +1697,7 @@ F 3 "" H 3000 4150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C14
+L Device:C C14
 U 1 1 59DA8807
 P 2700 4250
 F 0 "C14" H 2725 4350 50  0000 L CNN
@@ -1708,7 +1708,7 @@ F 3 "" H 2700 4250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:C C19
+L Device:C C19
 U 1 1 59DA88ED
 P 3000 4350
 F 0 "C19" H 3025 4450 50  0000 L CNN
@@ -1852,7 +1852,7 @@ Wire Wire Line
 Wire Wire Line
 	2850 3550 2500 3550
 $Comp
-L squantlogger_cobalt_ant-rescue:2pin_tact_switch S1
+L SquantorButtons:2pin_tact_switch S1
 U 1 1 5A1060A0
 P 5400 6650
 F 0 "S1" H 5400 6900 60  0000 C CNN
@@ -1863,7 +1863,7 @@ F 3 "" H 5400 6650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:2pin_tact_switch S2
+L SquantorButtons:2pin_tact_switch S2
 U 1 1 5A106189
 P 5400 7100
 F 0 "S2" H 5400 7350 60  0000 C CNN
@@ -1900,7 +1900,7 @@ Wire Wire Line
 Wire Wire Line
 	5100 7100 5150 7100
 $Comp
-L squantlogger_cobalt_ant-rescue:R R37
+L Device:R R37
 U 1 1 5A1069FF
 P 5900 6650
 F 0 "R37" V 5980 6650 50  0000 C CNN
@@ -1911,7 +1911,7 @@ F 3 "" H 5900 6650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:R R38
+L Device:R R38
 U 1 1 5A106EF1
 P 5900 7100
 F 0 "R38" V 5980 7100 50  0000 C CNN
@@ -1972,7 +1972,7 @@ LED
 Text GLabel 4550 6050 0    60   Input ~ 0
 LED
 $Comp
-L squantlogger_cobalt_ant-rescue:R R36
+L Device:R R36
 U 1 1 5A10C5F4
 P 4750 6050
 F 0 "R36" V 4830 6050 50  0000 C CNN
@@ -1985,7 +1985,7 @@ $EndComp
 Wire Wire Line
 	4550 6050 4600 6050
 $Comp
-L squantlogger_cobalt_ant-rescue:LED D1
+L Device:LED D1
 U 1 1 5A10CA30
 P 5100 6050
 F 0 "D1" H 5100 6150 50  0000 C CNN
@@ -2023,7 +2023,7 @@ Wire Wire Line
 Text GLabel 2000 2400 2    60   Input ~ 0
 GPIO2_7
 $Comp
-L squantlogger_cobalt_ant-rescue:OHWLOGO N1
+L SquantorLabels:OHWLOGO N1
 U 1 1 5A10C53F
 P 900 5750
 F 0 "N1" H 900 5900 60  0000 C CNN
@@ -2034,18 +2034,18 @@ F 3 "" H 900 5750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:VYYYYMMDD N2
+L SquantorLabels:VYYYYMMDD N2
 U 1 1 5A10C61C
 P 1700 5800
 F 0 "N2" H 1700 5900 60  0000 C CNN
-F 1 "V20171120" H 1700 5800 60  0000 C CNN
+F 1 "V20180726" H 1700 5800 60  0000 C CNN
 F 2 "SquantorLabels:Label_version" H 1700 5800 60  0001 C CNN
 F 3 "" H 1700 5800 60  0001 C CNN
 	1    1700 5800
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:LPC1114FBD48_302 U5
+L SquantorNxp:LPC1114FBD48_302 U5
 U 1 1 5A10F853
 P 5700 3050
 F 0 "U5" H 5100 4550 45  0000 L BNN
@@ -2056,7 +2056,7 @@ F 3 "" H 5700 3050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:testpad TP1
+L SquantorProto:testpad TP1
 U 1 1 5A118D43
 P 4200 3250
 F 0 "TP1" H 4200 3400 60  0000 C CNN
@@ -2073,7 +2073,7 @@ Wire Wire Line
 Wire Wire Line
 	5000 4050 4000 4050
 $Comp
-L squantlogger_cobalt_ant-rescue:testpad TP3
+L SquantorProto:testpad TP3
 U 1 1 5A11A3CF
 P 3800 3050
 F 0 "TP3" H 3800 3200 60  0000 C CNN
@@ -2084,7 +2084,7 @@ F 3 "" H 3800 3050 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:testpad TP4
+L SquantorProto:testpad TP4
 U 1 1 5A11A54B
 P 4450 3850
 F 0 "TP4" H 4450 4000 60  0000 C CNN
@@ -2095,7 +2095,7 @@ F 3 "" H 4450 3850 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:testpad TP5
+L SquantorProto:testpad TP5
 U 1 1 5A11A707
 P 4800 3950
 F 0 "TP5" H 4800 4100 60  0000 C CNN
@@ -2106,7 +2106,7 @@ F 3 "" H 4800 3950 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:testpad TP2
+L SquantorProto:testpad TP2
 U 1 1 5A11A867
 P 3850 4050
 F 0 "TP2" H 3850 4200 60  0000 C CNN
@@ -2123,7 +2123,7 @@ Wire Wire Line
 Wire Wire Line
 	5000 3050 3950 3050
 $Comp
-L squantlogger_cobalt_ant-rescue:testpad TP7
+L SquantorProto:testpad TP7
 U 1 1 5A11C546
 P 4200 1850
 F 0 "TP7" H 4200 2000 60  0000 C CNN
@@ -2134,7 +2134,7 @@ F 3 "" H 4200 1850 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L squantlogger_cobalt_ant-rescue:testpad TP6
+L SquantorProto:testpad TP6
 U 1 1 5A11C893
 P 3900 1750
 F 0 "TP6" H 3900 1900 60  0000 C CNN
@@ -2174,4 +2174,6 @@ Wire Wire Line
 	5700 7100 5750 7100
 Wire Wire Line
 	5700 6650 5750 6650
+NoConn ~ 1750 1100
+NoConn ~ 1750 1200
 $EndSCHEMATC
