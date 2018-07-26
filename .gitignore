@@ -7,7 +7,6 @@
 *.bak
 *.kicad_pcb-bak
 *.net
-*.lib
 
 #executables
 bin/
