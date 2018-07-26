@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name nickel_beetle_breakout-rescue)(type Legacy)(uri ${KIPRJMOD}/nickel_beetle_breakout-rescue.lib)(options "")(descr ""))
+)
