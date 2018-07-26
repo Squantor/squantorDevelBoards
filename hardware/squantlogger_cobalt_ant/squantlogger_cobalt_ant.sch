@@ -1,44 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:SquantorPCBOutline
-LIBS:SquantorConnectors
-LIBS:SquantorButtons
-LIBS:SquantorNxp
-LIBS:SquantorMicrochip
-LIBS:SquantorWinbond
-LIBS:SquantorRCL
-LIBS:SquantorLabels
-LIBS:SquantorProto
+EESchema Schematic File Version 4
 LIBS:squantlogger_cobalt_ant-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -53,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L JTAG_2X05 J4
+L squantlogger_cobalt_ant-rescue:JTAG_2X05 J4
 U 1 1 5921F65D
 P 2250 1100
 F 0 "J4" H 2250 1450 60  0000 C CNN
@@ -64,7 +26,7 @@ F 3 "" H 2250 1250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R8
+L squantlogger_cobalt_ant-rescue:R R8
 U 1 1 5921F706
 P 1500 900
 F 0 "R8" V 1580 900 50  0000 C CNN
@@ -75,7 +37,7 @@ F 3 "" H 1500 900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R4
+L squantlogger_cobalt_ant-rescue:R R4
 U 1 1 5921F77B
 P 1250 1000
 F 0 "R4" V 1330 1000 50  0000 C CNN
@@ -86,7 +48,7 @@ F 3 "" H 1250 1000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 5921F82A
 P 2800 1350
 F 0 "#PWR01" H 2800 1100 50  0001 C CNN
@@ -103,7 +65,7 @@ SWDCLK
 Text GLabel 1000 1300 0    60   Input ~ 0
 nRESET
 $Comp
-L Drill_Hole_no_metal H1
+L squantlogger_cobalt_ant-rescue:Drill_Hole_no_metal H1
 U 1 1 592DD359
 P 1700 6350
 F 0 "H1" H 1700 6100 60  0000 C CNN
@@ -114,7 +76,7 @@ F 3 "" H 1700 6350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Drill_Hole_no_metal H2
+L squantlogger_cobalt_ant-rescue:Drill_Hole_no_metal H2
 U 1 1 592DD3BE
 P 1700 6950
 F 0 "H2" H 1700 6700 60  0000 C CNN
@@ -125,7 +87,7 @@ F 3 "" H 1700 6950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Drill_Hole_no_metal H3
+L squantlogger_cobalt_ant-rescue:Drill_Hole_no_metal H3
 U 1 1 592DD415
 P 1700 7550
 F 0 "H3" H 1700 7300 60  0000 C CNN
@@ -136,7 +98,7 @@ F 3 "" H 1700 7550 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDA #PWR02
+L power:GNDA #PWR02
 U 1 1 5939A617
 P 3700 7200
 F 0 "#PWR02" H 3700 6950 50  0001 C CNN
@@ -147,7 +109,7 @@ F 3 "" H 3700 7200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 5939A647
 P 3700 6950
 F 0 "#PWR03" H 3700 6700 50  0001 C CNN
@@ -158,7 +120,7 @@ F 3 "" H 3700 6950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VDD #PWR04
+L power:VDD #PWR04
 U 1 1 5939AA02
 P 3300 6950
 F 0 "#PWR04" H 3300 6800 50  0001 C CNN
@@ -169,7 +131,7 @@ F 3 "" H 3300 6950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VDDA #PWR05
+L power:VDDA #PWR05
 U 1 1 5939AA2B
 P 3300 7200
 F 0 "#PWR05" H 3300 7050 50  0001 C CNN
@@ -180,7 +142,7 @@ F 3 "" H 3300 7200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C2
+L squantlogger_cobalt_ant-rescue:C C2
 U 1 1 5939A5DB
 P 3500 7200
 F 0 "C2" H 3525 7300 50  0000 L CNN
@@ -191,7 +153,7 @@ F 3 "" H 3500 7200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C1
+L squantlogger_cobalt_ant-rescue:C C1
 U 1 1 5939A905
 P 3500 6950
 F 0 "C1" H 3525 7050 50  0000 L CNN
@@ -202,7 +164,7 @@ F 3 "" H 3500 6950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R1
+L squantlogger_cobalt_ant-rescue:R R1
 U 1 1 5939AF21
 P 1150 4950
 F 0 "R1" V 1230 4950 50  0000 C CNN
@@ -213,7 +175,7 @@ F 3 "" H 1150 4950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR06
+L power:GND #PWR06
 U 1 1 5939B024
 P 1600 4850
 F 0 "#PWR06" H 1600 4600 50  0001 C CNN
@@ -224,7 +186,7 @@ F 3 "" H 1600 4850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L R R2
+L squantlogger_cobalt_ant-rescue:R R2
 U 1 1 5939B13C
 P 1150 5150
 F 0 "R2" V 1230 5150 50  0000 C CNN
@@ -235,7 +197,7 @@ F 3 "" H 1150 5150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R6
+L squantlogger_cobalt_ant-rescue:R R6
 U 1 1 5939B1A1
 P 1450 5250
 F 0 "R6" V 1530 5250 50  0000 C CNN
@@ -246,7 +208,7 @@ F 3 "" H 1450 5250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R3
+L squantlogger_cobalt_ant-rescue:R R3
 U 1 1 5939B1F9
 P 1150 5350
 F 0 "R3" V 1230 5350 50  0000 C CNN
@@ -257,7 +219,7 @@ F 3 "" H 1150 5350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +BATT #PWR07
+L power:+BATT #PWR07
 U 1 1 5939B2CB
 P 1600 5050
 F 0 "#PWR07" H 1600 4900 50  0001 C CNN
@@ -274,15 +236,15 @@ Wire Wire Line
 Wire Wire Line
 	2800 1300 2750 1300
 Wire Wire Line
-	2800 1000 2800 1350
+	2800 1000 2800 1100
 Wire Wire Line
 	1750 900  1650 900 
 Wire Wire Line
 	1750 1000 1400 1000
 Wire Wire Line
-	1000 900  1350 900 
+	1000 900  1300 900 
 Wire Wire Line
-	1000 1000 1100 1000
+	1000 1000 1050 1000
 Wire Wire Line
 	2750 1000 2800 1000
 Connection ~ 2800 1300
@@ -326,7 +288,7 @@ SERIAL_RXD
 Text GLabel 1800 5350 2    60   Input ~ 0
 SERIAL_RTS
 $Comp
-L C C3
+L squantlogger_cobalt_ant-rescue:C C3
 U 1 1 5939CE3B
 P 3500 7450
 F 0 "C3" H 3525 7550 50  0000 L CNN
@@ -337,7 +299,7 @@ F 3 "" H 3500 7450 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR08
+L power:GND #PWR08
 U 1 1 5939CE84
 P 3700 7450
 F 0 "#PWR08" H 3700 7200 50  0001 C CNN
@@ -348,7 +310,7 @@ F 3 "" H 3700 7450 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L +BATT #PWR09
+L power:+BATT #PWR09
 U 1 1 5939CEC2
 P 3300 7450
 F 0 "#PWR09" H 3300 7300 50  0001 C CNN
@@ -363,7 +325,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 7450 3300 7450
 $Comp
-L MCP1702-MB U3
+L squantlogger_cobalt_ant-rescue:MCP1702-MB U3
 U 1 1 5939DC57
 P 4450 6850
 F 0 "U3" H 4450 7100 60  0000 C CNN
@@ -374,7 +336,7 @@ F 3 "" H 4450 6850 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR010
+L power:GND #PWR010
 U 1 1 5939DD9E
 P 4350 7200
 F 0 "#PWR010" H 4350 6950 50  0001 C CNN
@@ -385,7 +347,7 @@ F 3 "" H 4350 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +BATT #PWR011
+L power:+BATT #PWR011
 U 1 1 5939DDED
 P 4450 7300
 F 0 "#PWR011" H 4450 7150 50  0001 C CNN
@@ -396,7 +358,7 @@ F 3 "" H 4450 7300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L VDD #PWR012
+L power:VDD #PWR012
 U 1 1 5939DE2B
 P 4550 7200
 F 0 "#PWR012" H 4550 7050 50  0001 C CNN
@@ -413,7 +375,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 7150 4550 7200
 $Comp
-L +BATT #PWR013
+L power:+BATT #PWR013
 U 1 1 5939E0E5
 P 4450 6500
 F 0 "#PWR013" H 4450 6350 50  0001 C CNN
@@ -426,7 +388,7 @@ $EndComp
 Wire Wire Line
 	4450 6500 4450 6550
 $Comp
-L C C6
+L squantlogger_cobalt_ant-rescue:C C6
 U 1 1 593A0E6C
 P 4900 1250
 F 0 "C6" H 4925 1350 50  0000 L CNN
@@ -437,7 +399,7 @@ F 3 "" H 4900 1250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C7
+L squantlogger_cobalt_ant-rescue:C C7
 U 1 1 593A0F4B
 P 5100 1250
 F 0 "C7" H 5125 1350 50  0000 L CNN
@@ -448,7 +410,7 @@ F 3 "" H 5100 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C8
+L squantlogger_cobalt_ant-rescue:C C8
 U 1 1 593A0FB0
 P 5300 1250
 F 0 "C8" H 5325 1350 50  0000 L CNN
@@ -459,7 +421,7 @@ F 3 "" H 5300 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C9
+L squantlogger_cobalt_ant-rescue:C C9
 U 1 1 593A1005
 P 5500 1250
 F 0 "C9" H 5525 1350 50  0000 L CNN
@@ -470,7 +432,7 @@ F 3 "" H 5500 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VDD #PWR014
+L power:VDD #PWR014
 U 1 1 593A1072
 P 4900 1050
 F 0 "#PWR014" H 4900 900 50  0001 C CNN
@@ -481,7 +443,7 @@ F 3 "" H 4900 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VDD #PWR015
+L power:VDD #PWR015
 U 1 1 593A10BF
 P 5100 1050
 F 0 "#PWR015" H 5100 900 50  0001 C CNN
@@ -492,7 +454,7 @@ F 3 "" H 5100 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VDDA #PWR016
+L power:VDDA #PWR016
 U 1 1 593A110C
 P 5300 1050
 F 0 "#PWR016" H 5300 900 50  0001 C CNN
@@ -503,7 +465,7 @@ F 3 "" H 5300 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VDDA #PWR017
+L power:VDDA #PWR017
 U 1 1 593A1159
 P 5500 1050
 F 0 "#PWR017" H 5500 900 50  0001 C CNN
@@ -514,7 +476,7 @@ F 3 "" H 5500 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDA #PWR018
+L power:GNDA #PWR018
 U 1 1 593A11A6
 P 5500 1450
 F 0 "#PWR018" H 5500 1200 50  0001 C CNN
@@ -525,7 +487,7 @@ F 3 "" H 5500 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDA #PWR019
+L power:GNDA #PWR019
 U 1 1 593A11F3
 P 5300 1450
 F 0 "#PWR019" H 5300 1200 50  0001 C CNN
@@ -536,7 +498,7 @@ F 3 "" H 5300 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR020
+L power:GND #PWR020
 U 1 1 593A1240
 P 5100 1450
 F 0 "#PWR020" H 5100 1200 50  0001 C CNN
@@ -547,7 +509,7 @@ F 3 "" H 5100 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR021
+L power:GND #PWR021
 U 1 1 593A128D
 P 4900 1450
 F 0 "#PWR021" H 4900 1200 50  0001 C CNN
@@ -574,7 +536,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 1400 4900 1450
 $Comp
-L VDD #PWR022
+L power:VDD #PWR022
 U 1 1 593A1F36
 P 2800 850
 F 0 "#PWR022" H 2800 700 50  0001 C CNN
@@ -585,7 +547,7 @@ F 3 "" H 2800 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R5
+L squantlogger_cobalt_ant-rescue:R R5
 U 1 1 593A24D8
 P 1250 1200
 F 0 "R5" V 1330 1200 50  0000 C CNN
@@ -596,7 +558,7 @@ F 3 "" H 1250 1200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R7
+L squantlogger_cobalt_ant-rescue:R R7
 U 1 1 593A25FF
 P 1500 700
 F 0 "R7" V 1580 700 50  0000 C CNN
@@ -607,7 +569,7 @@ F 3 "" H 1500 700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDD #PWR023
+L power:VDD #PWR023
 U 1 1 593A27CA
 P 1700 700
 F 0 "#PWR023" H 1700 550 50  0001 C CNN
@@ -625,7 +587,7 @@ Connection ~ 1300 900
 Wire Wire Line
 	1700 700  1650 700 
 $Comp
-L GND #PWR024
+L power:GND #PWR024
 U 1 1 593A2A47
 P 1450 1200
 F 0 "#PWR024" H 1450 950 50  0001 C CNN
@@ -643,7 +605,7 @@ Wire Wire Line
 	1050 1200 1050 1000
 Connection ~ 1050 1000
 $Comp
-L FTDI_PINS_1X06 J1
+L squantlogger_cobalt_ant-rescue:FTDI_PINS_1X06 J1
 U 1 1 59499772
 P 750 5100
 F 0 "J1" H 700 5500 60  0000 C CNN
@@ -662,7 +624,7 @@ I2C_SDA
 Text GLabel 6050 1100 0    60   Input ~ 0
 I2C_SCL
 $Comp
-L R R10
+L squantlogger_cobalt_ant-rescue:R R10
 U 1 1 5949C785
 P 6250 950
 F 0 "R10" V 6330 950 50  0000 C CNN
@@ -673,7 +635,7 @@ F 3 "" H 6250 950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R11
+L squantlogger_cobalt_ant-rescue:R R11
 U 1 1 5949C806
 P 6250 1100
 F 0 "R11" V 6330 1100 50  0000 C CNN
@@ -684,7 +646,7 @@ F 3 "" H 6250 1100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDD #PWR025
+L power:VDD #PWR025
 U 1 1 5949C86D
 P 6450 950
 F 0 "#PWR025" H 6450 800 50  0001 C CNN
@@ -695,7 +657,7 @@ F 3 "" H 6450 950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDD #PWR026
+L power:VDD #PWR026
 U 1 1 5949C8C6
 P 6450 1100
 F 0 "#PWR026" H 6450 950 50  0001 C CNN
@@ -714,7 +676,7 @@ Wire Wire Line
 Wire Wire Line
 	6450 950  6400 950 
 $Comp
-L GNDA #PWR027
+L power:GNDA #PWR027
 U 1 1 59499C03
 P 1300 3250
 F 0 "#PWR027" H 1300 3000 50  0001 C CNN
@@ -725,7 +687,7 @@ F 3 "" H 1300 3250 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VDDA #PWR028
+L power:VDDA #PWR028
 U 1 1 5949A092
 P 1400 3350
 F 0 "#PWR028" H 1400 3200 50  0001 C CNN
@@ -764,7 +726,7 @@ Wire Wire Line
 Wire Wire Line
 	1150 3950 1550 3950
 $Comp
-L W25Q32BV U4
+L squantlogger_cobalt_ant-rescue:W25Q32BV U4
 U 1 1 595545DA
 P 9150 5050
 F 0 "U4" H 8950 5300 60  0000 C CNN
@@ -777,7 +739,7 @@ $EndComp
 Text GLabel 8200 4900 0    60   Input ~ 0
 FLASH_CE
 $Comp
-L R R12
+L squantlogger_cobalt_ant-rescue:R R12
 U 1 1 59554929
 P 8600 4900
 F 0 "R12" V 8680 4900 50  0000 C CNN
@@ -788,7 +750,7 @@ F 3 "" H 8600 4900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R13
+L squantlogger_cobalt_ant-rescue:R R13
 U 1 1 5955498E
 P 8600 5000
 F 0 "R13" V 8680 5000 50  0000 C CNN
@@ -799,7 +761,7 @@ F 3 "" H 8600 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R14
+L squantlogger_cobalt_ant-rescue:R R14
 U 1 1 595549FD
 P 8600 5100
 F 0 "R14" V 8680 5100 50  0000 C CNN
@@ -810,7 +772,7 @@ F 3 "" H 8600 5100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR029
+L power:GND #PWR029
 U 1 1 59554BC2
 P 8750 5250
 F 0 "#PWR029" H 8750 5000 50  0001 C CNN
@@ -821,7 +783,7 @@ F 3 "" H 8750 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VDD #PWR030
+L power:VDD #PWR030
 U 1 1 59554E4D
 P 9550 4850
 F 0 "#PWR030" H 9550 4700 50  0001 C CNN
@@ -840,7 +802,7 @@ Wire Wire Line
 Wire Wire Line
 	9550 4900 9500 4900
 $Comp
-L R R15
+L squantlogger_cobalt_ant-rescue:R R15
 U 1 1 59555150
 P 9700 5000
 F 0 "R15" V 9780 5000 50  0000 C CNN
@@ -851,7 +813,7 @@ F 3 "" H 9700 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R16
+L squantlogger_cobalt_ant-rescue:R R16
 U 1 1 595551BF
 P 9700 5100
 F 0 "R16" V 9780 5100 50  0000 C CNN
@@ -862,7 +824,7 @@ F 3 "" H 9700 5100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R17
+L squantlogger_cobalt_ant-rescue:R R17
 U 1 1 5955521E
 P 9700 5200
 F 0 "R17" V 9780 5200 50  0000 C CNN
@@ -873,7 +835,7 @@ F 3 "" H 9700 5200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDD #PWR031
+L power:VDD #PWR031
 U 1 1 5955531A
 P 9900 5000
 F 0 "#PWR031" H 9900 4850 50  0001 C CNN
@@ -894,7 +856,7 @@ Wire Wire Line
 Text GLabel 8200 5000 0    60   Input ~ 0
 FLASH_MISO
 $Comp
-L VDD #PWR032
+L power:VDD #PWR032
 U 1 1 5955568A
 P 8400 5100
 F 0 "#PWR032" H 8400 4950 50  0001 C CNN
@@ -925,7 +887,7 @@ Wire Wire Line
 Wire Wire Line
 	9550 5200 9500 5200
 $Comp
-L C C10
+L squantlogger_cobalt_ant-rescue:C C10
 U 1 1 595562F6
 P 9150 4600
 F 0 "C10" H 9175 4700 50  0000 L CNN
@@ -936,7 +898,7 @@ F 3 "" H 9150 4600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDD #PWR033
+L power:VDD #PWR033
 U 1 1 5955644C
 P 9350 4600
 F 0 "#PWR033" H 9350 4450 50  0001 C CNN
@@ -947,7 +909,7 @@ F 3 "" H 9350 4600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR034
+L power:GND #PWR034
 U 1 1 595564E7
 P 8950 4600
 F 0 "#PWR034" H 8950 4350 50  0001 C CNN
@@ -962,7 +924,7 @@ Wire Wire Line
 Wire Wire Line
 	9000 4600 8950 4600
 $Comp
-L Crystal Y1
+L squantlogger_cobalt_ant-rescue:Crystal Y1
 U 1 1 59559130
 P 4500 2400
 F 0 "Y1" H 4500 2550 50  0000 C CNN
@@ -975,13 +937,13 @@ $EndComp
 Wire Wire Line
 	4500 2550 4500 2600
 Wire Wire Line
-	4300 2600 4700 2600
+	4300 2600 4500 2600
 Wire Wire Line
 	4500 2250 4500 2200
 Wire Wire Line
-	4300 2200 4700 2200
+	4300 2200 4500 2200
 $Comp
-L C C5
+L squantlogger_cobalt_ant-rescue:C C5
 U 1 1 59559AAE
 P 4150 2600
 F 0 "C5" H 4175 2700 50  0000 L CNN
@@ -992,7 +954,7 @@ F 3 "" H 4150 2600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L C C4
+L squantlogger_cobalt_ant-rescue:C C4
 U 1 1 59559B3D
 P 4150 2200
 F 0 "C4" H 4175 2300 50  0000 L CNN
@@ -1017,7 +979,7 @@ FLASH_MOSI
 Text GLabel 6650 3650 2    60   Input ~ 0
 FLASH_SCK
 $Comp
-L GND #PWR035
+L power:GND #PWR035
 U 1 1 5955D015
 P 1450 1800
 F 0 "#PWR035" H 1450 1550 50  0001 C CNN
@@ -1028,7 +990,7 @@ F 3 "" H 1450 1800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VDD #PWR036
+L power:VDD #PWR036
 U 1 1 5955D3A1
 P 1550 1900
 F 0 "#PWR036" H 1550 1750 50  0001 C CNN
@@ -1039,7 +1001,7 @@ F 3 "" H 1550 1900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDDA #PWR037
+L power:VDDA #PWR037
 U 1 1 595637B5
 P 3800 6450
 F 0 "#PWR037" H 3800 6300 50  0001 C CNN
@@ -1050,7 +1012,7 @@ F 3 "" H 3800 6450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDD #PWR038
+L power:VDD #PWR038
 U 1 1 5956383B
 P 3200 6450
 F 0 "#PWR038" H 3200 6300 50  0001 C CNN
@@ -1071,11 +1033,11 @@ Wire Wire Line
 Wire Wire Line
 	1300 3250 1150 3250
 Wire Wire Line
-	1150 3350 1400 3350
+	1150 3350 1200 3350
 Wire Wire Line
 	1150 4350 1550 4350
 $Comp
-L Cobalt_Ant_Digital J2
+L squantlogger_cobalt_ant-rescue:Cobalt_Ant_Digital J2
 U 1 1 5956C995
 P 900 2250
 F 0 "J2" H 900 2950 60  0000 C CNN
@@ -1086,7 +1048,7 @@ F 3 "" H 1050 2800 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Cobalt_Ant_Analog J3
+L squantlogger_cobalt_ant-rescue:Cobalt_Ant_Analog J3
 U 1 1 5956CBBF
 P 900 3800
 F 0 "J3" H 900 4500 60  0000 C CNN
@@ -1097,7 +1059,7 @@ F 3 "" H 950 4350 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR039
+L power:GND #PWR039
 U 1 1 5956F45B
 P 3200 6050
 F 0 "#PWR039" H 3200 5800 50  0001 C CNN
@@ -1108,7 +1070,7 @@ F 3 "" H 3200 6050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GNDA #PWR040
+L power:GNDA #PWR040
 U 1 1 5956F4E7
 P 3800 6050
 F 0 "#PWR040" H 3800 5800 50  0001 C CNN
@@ -1123,7 +1085,7 @@ Wire Wire Line
 Wire Wire Line
 	3750 6050 3800 6050
 $Comp
-L POWER_JOINER U1
+L squantlogger_cobalt_ant-rescue:POWER_JOINER U1
 U 1 1 59578FC8
 P 3500 6050
 F 0 "U1" H 3500 6200 60  0000 C CNN
@@ -1134,7 +1096,7 @@ F 3 "" H 3500 6050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L POWER_JOINER U2
+L squantlogger_cobalt_ant-rescue:POWER_JOINER U2
 U 1 1 59579087
 P 3500 6450
 F 0 "U2" H 3500 6600 60  0000 C CNN
@@ -1145,7 +1107,7 @@ F 3 "" H 3500 6450 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR041
+L power:GND #PWR041
 U 1 1 595EC15F
 P 4950 2250
 F 0 "#PWR041" H 4950 2000 50  0001 C CNN
@@ -1156,7 +1118,7 @@ F 3 "" H 4950 2250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDD #PWR042
+L power:VDD #PWR042
 U 1 1 595EC98A
 P 4950 2550
 F 0 "#PWR042" H 4950 2400 50  0001 C CNN
@@ -1167,7 +1129,7 @@ F 3 "" H 4950 2550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GNDA #PWR043
+L power:GNDA #PWR043
 U 1 1 595ECBBD
 P 6600 2550
 F 0 "#PWR043" H 6600 2300 50  0001 C CNN
@@ -1178,7 +1140,7 @@ F 3 "" H 6600 2550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L VDDA #PWR044
+L power:VDDA #PWR044
 U 1 1 595ECC52
 P 6600 2250
 F 0 "#PWR044" H 6600 2100 50  0001 C CNN
@@ -1197,7 +1159,7 @@ Wire Wire Line
 Wire Wire Line
 	6600 2250 6400 2250
 $Comp
-L R R9
+L squantlogger_cobalt_ant-rescue:R R9
 U 1 1 595ED496
 P 1500 1300
 F 0 "R9" V 1580 1300 50  0000 C CNN
@@ -1313,7 +1275,7 @@ Wire Wire Line
 Wire Wire Line
 	4800 3150 5000 3150
 $Comp
-L +BATT #PWR045
+L power:+BATT #PWR045
 U 1 1 595F65C7
 P 1550 1700
 F 0 "#PWR045" H 1550 1550 50  0001 C CNN
@@ -1366,7 +1328,7 @@ GPIO0_2
 Wire Wire Line
 	1150 4150 1550 4150
 $Comp
-L GND #PWR046
+L power:GND #PWR046
 U 1 1 59D12714
 P 3950 2200
 F 0 "#PWR046" H 3950 1950 50  0001 C CNN
@@ -1377,7 +1339,7 @@ F 3 "" H 3950 2200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR047
+L power:GND #PWR047
 U 1 1 59D12797
 P 3950 2600
 F 0 "#PWR047" H 3950 2350 50  0001 C CNN
@@ -1388,7 +1350,7 @@ F 3 "" H 3950 2600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R27
+L squantlogger_cobalt_ant-rescue:R R27
 U 1 1 59D13941
 P 1700 3550
 F 0 "R27" V 1780 3550 50  0000 C CNN
@@ -1417,7 +1379,7 @@ Wire Wire Line
 Wire Wire Line
 	1850 4350 1900 4350
 $Comp
-L R R18
+L squantlogger_cobalt_ant-rescue:R R18
 U 1 1 59D1552B
 P 1350 3650
 F 0 "R18" V 1430 3650 50  0000 C CNN
@@ -1428,7 +1390,7 @@ F 3 "" H 1350 3650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R28
+L squantlogger_cobalt_ant-rescue:R R28
 U 1 1 59D15601
 P 1700 3750
 F 0 "R28" V 1780 3750 50  0000 C CNN
@@ -1439,7 +1401,7 @@ F 3 "" H 1700 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R19
+L squantlogger_cobalt_ant-rescue:R R19
 U 1 1 59D156CB
 P 1350 3850
 F 0 "R19" V 1430 3850 50  0000 C CNN
@@ -1450,7 +1412,7 @@ F 3 "" H 1350 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R29
+L squantlogger_cobalt_ant-rescue:R R29
 U 1 1 59D15799
 P 1700 3950
 F 0 "R29" V 1780 3950 50  0000 C CNN
@@ -1461,7 +1423,7 @@ F 3 "" H 1700 3950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R20
+L squantlogger_cobalt_ant-rescue:R R20
 U 1 1 59D1586B
 P 1350 4050
 F 0 "R20" V 1430 4050 50  0000 C CNN
@@ -1472,7 +1434,7 @@ F 3 "" H 1350 4050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R30
+L squantlogger_cobalt_ant-rescue:R R30
 U 1 1 59D15941
 P 1700 4150
 F 0 "R30" V 1780 4150 50  0000 C CNN
@@ -1483,7 +1445,7 @@ F 3 "" H 1700 4150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R21
+L squantlogger_cobalt_ant-rescue:R R21
 U 1 1 59D15A1B
 P 1350 4250
 F 0 "R21" V 1430 4250 50  0000 C CNN
@@ -1494,7 +1456,7 @@ F 3 "" H 1350 4250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R31
+L squantlogger_cobalt_ant-rescue:R R31
 U 1 1 59D15AF9
 P 1700 4350
 F 0 "R31" V 1780 4350 50  0000 C CNN
@@ -1505,7 +1467,7 @@ F 3 "" H 1700 4350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R22
+L squantlogger_cobalt_ant-rescue:R R22
 U 1 1 59D1655D
 P 1450 2000
 F 0 "R22" V 1530 2000 50  0000 C CNN
@@ -1516,7 +1478,7 @@ F 3 "" H 1450 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R32
+L squantlogger_cobalt_ant-rescue:R R32
 U 1 1 59D167B5
 P 1800 2100
 F 0 "R32" V 1880 2100 50  0000 C CNN
@@ -1527,7 +1489,7 @@ F 3 "" H 1800 2100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R23
+L squantlogger_cobalt_ant-rescue:R R23
 U 1 1 59D16909
 P 1450 2200
 F 0 "R23" V 1530 2200 50  0000 C CNN
@@ -1538,7 +1500,7 @@ F 3 "" H 1450 2200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R33
+L squantlogger_cobalt_ant-rescue:R R33
 U 1 1 59D16A2B
 P 1800 2300
 F 0 "R33" V 1880 2300 50  0000 C CNN
@@ -1549,7 +1511,7 @@ F 3 "" H 1800 2300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R24
+L squantlogger_cobalt_ant-rescue:R R24
 U 1 1 59D16BDE
 P 1450 2400
 F 0 "R24" V 1530 2400 50  0000 C CNN
@@ -1560,7 +1522,7 @@ F 3 "" H 1450 2400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R34
+L squantlogger_cobalt_ant-rescue:R R34
 U 1 1 59D16C94
 P 1800 2500
 F 0 "R34" V 1880 2500 50  0000 C CNN
@@ -1571,7 +1533,7 @@ F 3 "" H 1800 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R25
+L squantlogger_cobalt_ant-rescue:R R25
 U 1 1 59D16D5F
 P 1450 2600
 F 0 "R25" V 1530 2600 50  0000 C CNN
@@ -1582,7 +1544,7 @@ F 3 "" H 1450 2600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R35
+L squantlogger_cobalt_ant-rescue:R R35
 U 1 1 59D16E25
 P 1800 2700
 F 0 "R35" V 1880 2700 50  0000 C CNN
@@ -1593,7 +1555,7 @@ F 3 "" H 1800 2700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R26
+L squantlogger_cobalt_ant-rescue:R R26
 U 1 1 59D16EEC
 P 1450 2800
 F 0 "R26" V 1530 2800 50  0000 C CNN
@@ -1658,7 +1620,7 @@ ADC_7
 Text GLabel 3200 4350 2    60   Input ~ 0
 ADC_8
 $Comp
-L C C15
+L squantlogger_cobalt_ant-rescue:C C15
 U 1 1 59DA8161
 P 3000 3550
 F 0 "C15" H 3025 3650 50  0000 L CNN
@@ -1669,7 +1631,7 @@ F 3 "" H 3000 3550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C11
+L squantlogger_cobalt_ant-rescue:C C11
 U 1 1 59DA82F2
 P 2700 3650
 F 0 "C11" H 2725 3750 50  0000 L CNN
@@ -1680,7 +1642,7 @@ F 3 "" H 2700 3650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C16
+L squantlogger_cobalt_ant-rescue:C C16
 U 1 1 59DA83C4
 P 3000 3750
 F 0 "C16" H 3025 3850 50  0000 L CNN
@@ -1691,7 +1653,7 @@ F 3 "" H 3000 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C12
+L squantlogger_cobalt_ant-rescue:C C12
 U 1 1 59DA8495
 P 2700 3850
 F 0 "C12" H 2725 3950 50  0000 L CNN
@@ -1702,7 +1664,7 @@ F 3 "" H 2700 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C17
+L squantlogger_cobalt_ant-rescue:C C17
 U 1 1 59DA8569
 P 3000 3950
 F 0 "C17" H 3025 4050 50  0000 L CNN
@@ -1713,7 +1675,7 @@ F 3 "" H 3000 3950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C13
+L squantlogger_cobalt_ant-rescue:C C13
 U 1 1 59DA8640
 P 2700 4050
 F 0 "C13" H 2725 4150 50  0000 L CNN
@@ -1724,7 +1686,7 @@ F 3 "" H 2700 4050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C18
+L squantlogger_cobalt_ant-rescue:C C18
 U 1 1 59DA871C
 P 3000 4150
 F 0 "C18" H 3025 4250 50  0000 L CNN
@@ -1735,7 +1697,7 @@ F 3 "" H 3000 4150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C14
+L squantlogger_cobalt_ant-rescue:C C14
 U 1 1 59DA8807
 P 2700 4250
 F 0 "C14" H 2725 4350 50  0000 L CNN
@@ -1746,7 +1708,7 @@ F 3 "" H 2700 4250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C C19
+L squantlogger_cobalt_ant-rescue:C C19
 U 1 1 59DA88ED
 P 3000 4350
 F 0 "C19" H 3025 4450 50  0000 L CNN
@@ -1757,7 +1719,7 @@ F 3 "" H 3000 4350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GNDA #PWR048
+L power:GNDA #PWR048
 U 1 1 59DA8B2E
 P 2500 3550
 F 0 "#PWR048" H 2500 3300 50  0001 C CNN
@@ -1768,7 +1730,7 @@ F 3 "" H 2500 3550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GNDA #PWR049
+L power:GNDA #PWR049
 U 1 1 59DA8E2B
 P 2500 3650
 F 0 "#PWR049" H 2500 3400 50  0001 C CNN
@@ -1779,7 +1741,7 @@ F 3 "" H 2500 3650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GNDA #PWR050
+L power:GNDA #PWR050
 U 1 1 59DA8EFF
 P 2500 3750
 F 0 "#PWR050" H 2500 3500 50  0001 C CNN
@@ -1790,7 +1752,7 @@ F 3 "" H 2500 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GNDA #PWR051
+L power:GNDA #PWR051
 U 1 1 59DA8FD3
 P 2500 3850
 F 0 "#PWR051" H 2500 3600 50  0001 C CNN
@@ -1801,7 +1763,7 @@ F 3 "" H 2500 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GNDA #PWR052
+L power:GNDA #PWR052
 U 1 1 59DA90A7
 P 2500 3950
 F 0 "#PWR052" H 2500 3700 50  0001 C CNN
@@ -1812,7 +1774,7 @@ F 3 "" H 2500 3950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GNDA #PWR053
+L power:GNDA #PWR053
 U 1 1 59DA917B
 P 2500 4050
 F 0 "#PWR053" H 2500 3800 50  0001 C CNN
@@ -1823,7 +1785,7 @@ F 3 "" H 2500 4050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GNDA #PWR054
+L power:GNDA #PWR054
 U 1 1 59DA924F
 P 2500 4150
 F 0 "#PWR054" H 2500 3900 50  0001 C CNN
@@ -1834,7 +1796,7 @@ F 3 "" H 2500 4150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GNDA #PWR055
+L power:GNDA #PWR055
 U 1 1 59DA9323
 P 2500 4250
 F 0 "#PWR055" H 2500 4000 50  0001 C CNN
@@ -1845,7 +1807,7 @@ F 3 "" H 2500 4250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GNDA #PWR056
+L power:GNDA #PWR056
 U 1 1 59DA93F7
 P 2500 4350
 F 0 "#PWR056" H 2500 4100 50  0001 C CNN
@@ -1890,7 +1852,7 @@ Wire Wire Line
 Wire Wire Line
 	2850 3550 2500 3550
 $Comp
-L 2pin_tact_switch S1
+L squantlogger_cobalt_ant-rescue:2pin_tact_switch S1
 U 1 1 5A1060A0
 P 5400 6650
 F 0 "S1" H 5400 6900 60  0000 C CNN
@@ -1901,7 +1863,7 @@ F 3 "" H 5400 6650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 2pin_tact_switch S2
+L squantlogger_cobalt_ant-rescue:2pin_tact_switch S2
 U 1 1 5A106189
 P 5400 7100
 F 0 "S2" H 5400 7350 60  0000 C CNN
@@ -1912,7 +1874,7 @@ F 3 "" H 5400 7100 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR057
+L power:GND #PWR057
 U 1 1 5A106348
 P 5100 6650
 F 0 "#PWR057" H 5100 6400 50  0001 C CNN
@@ -1923,7 +1885,7 @@ F 3 "" H 5100 6650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR058
+L power:GND #PWR058
 U 1 1 5A106422
 P 5100 7100
 F 0 "#PWR058" H 5100 6850 50  0001 C CNN
@@ -1938,7 +1900,7 @@ Wire Wire Line
 Wire Wire Line
 	5100 7100 5150 7100
 $Comp
-L R R37
+L squantlogger_cobalt_ant-rescue:R R37
 U 1 1 5A1069FF
 P 5900 6650
 F 0 "R37" V 5980 6650 50  0000 C CNN
@@ -1949,7 +1911,7 @@ F 3 "" H 5900 6650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R38
+L squantlogger_cobalt_ant-rescue:R R38
 U 1 1 5A106EF1
 P 5900 7100
 F 0 "R38" V 5980 7100 50  0000 C CNN
@@ -1960,11 +1922,11 @@ F 3 "" H 5900 7100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5650 7100 5750 7100
+	5650 7100 5700 7100
 Wire Wire Line
-	5650 6650 5750 6650
+	5650 6650 5700 6650
 $Comp
-L VDD #PWR059
+L power:VDD #PWR059
 U 1 1 5A1072CF
 P 6100 6650
 F 0 "#PWR059" H 6100 6500 50  0001 C CNN
@@ -1975,7 +1937,7 @@ F 3 "" H 6100 6650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L VDD #PWR060
+L power:VDD #PWR060
 U 1 1 5A1074CB
 P 6100 7100
 F 0 "#PWR060" H 6100 6950 50  0001 C CNN
@@ -2010,7 +1972,7 @@ LED
 Text GLabel 4550 6050 0    60   Input ~ 0
 LED
 $Comp
-L R R36
+L squantlogger_cobalt_ant-rescue:R R36
 U 1 1 5A10C5F4
 P 4750 6050
 F 0 "R36" V 4830 6050 50  0000 C CNN
@@ -2023,7 +1985,7 @@ $EndComp
 Wire Wire Line
 	4550 6050 4600 6050
 $Comp
-L LED D1
+L squantlogger_cobalt_ant-rescue:LED D1
 U 1 1 5A10CA30
 P 5100 6050
 F 0 "D1" H 5100 6150 50  0000 C CNN
@@ -2036,7 +1998,7 @@ $EndComp
 Wire Wire Line
 	4900 6050 4950 6050
 $Comp
-L VDD #PWR061
+L power:VDD #PWR061
 U 1 1 5A10CCE6
 P 5300 6050
 F 0 "#PWR061" H 5300 5900 50  0001 C CNN
@@ -2061,7 +2023,7 @@ Wire Wire Line
 Text GLabel 2000 2400 2    60   Input ~ 0
 GPIO2_7
 $Comp
-L OHWLOGO N1
+L squantlogger_cobalt_ant-rescue:OHWLOGO N1
 U 1 1 5A10C53F
 P 900 5750
 F 0 "N1" H 900 5900 60  0000 C CNN
@@ -2072,7 +2034,7 @@ F 3 "" H 900 5750 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L VYYYYMMDD N2
+L squantlogger_cobalt_ant-rescue:VYYYYMMDD N2
 U 1 1 5A10C61C
 P 1700 5800
 F 0 "N2" H 1700 5900 60  0000 C CNN
@@ -2083,7 +2045,7 @@ F 3 "" H 1700 5800 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LPC1114FBD48/302 U5
+L squantlogger_cobalt_ant-rescue:LPC1114FBD48_302 U5
 U 1 1 5A10F853
 P 5700 3050
 F 0 "U5" H 5100 4550 45  0000 L BNN
@@ -2094,7 +2056,7 @@ F 3 "" H 5700 3050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L testpad TP1
+L squantlogger_cobalt_ant-rescue:testpad TP1
 U 1 1 5A118D43
 P 4200 3250
 F 0 "TP1" H 4200 3400 60  0000 C CNN
@@ -2111,7 +2073,7 @@ Wire Wire Line
 Wire Wire Line
 	5000 4050 4000 4050
 $Comp
-L testpad TP3
+L squantlogger_cobalt_ant-rescue:testpad TP3
 U 1 1 5A11A3CF
 P 3800 3050
 F 0 "TP3" H 3800 3200 60  0000 C CNN
@@ -2122,7 +2084,7 @@ F 3 "" H 3800 3050 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L testpad TP4
+L squantlogger_cobalt_ant-rescue:testpad TP4
 U 1 1 5A11A54B
 P 4450 3850
 F 0 "TP4" H 4450 4000 60  0000 C CNN
@@ -2133,7 +2095,7 @@ F 3 "" H 4450 3850 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L testpad TP5
+L squantlogger_cobalt_ant-rescue:testpad TP5
 U 1 1 5A11A707
 P 4800 3950
 F 0 "TP5" H 4800 4100 60  0000 C CNN
@@ -2144,7 +2106,7 @@ F 3 "" H 4800 3950 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L testpad TP2
+L squantlogger_cobalt_ant-rescue:testpad TP2
 U 1 1 5A11A867
 P 3850 4050
 F 0 "TP2" H 3850 4200 60  0000 C CNN
@@ -2161,7 +2123,7 @@ Wire Wire Line
 Wire Wire Line
 	5000 3050 3950 3050
 $Comp
-L testpad TP7
+L squantlogger_cobalt_ant-rescue:testpad TP7
 U 1 1 5A11C546
 P 4200 1850
 F 0 "TP7" H 4200 2000 60  0000 C CNN
@@ -2172,7 +2134,7 @@ F 3 "" H 4200 1850 60  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L testpad TP6
+L squantlogger_cobalt_ant-rescue:testpad TP6
 U 1 1 5A11C893
 P 3900 1750
 F 0 "TP6" H 3900 1900 60  0000 C CNN
@@ -2194,4 +2156,22 @@ Wire Wire Line
 	4950 1850 4950 1750
 Wire Wire Line
 	4950 1750 4050 1750
+Wire Wire Line
+	2800 1300 2800 1350
+Wire Wire Line
+	2800 1100 2800 1300
+Wire Wire Line
+	1300 900  1350 900 
+Wire Wire Line
+	1050 1000 1100 1000
+Wire Wire Line
+	4500 2600 4700 2600
+Wire Wire Line
+	4500 2200 4700 2200
+Wire Wire Line
+	1200 3350 1400 3350
+Wire Wire Line
+	5700 7100 5750 7100
+Wire Wire Line
+	5700 6650 5750 6650
 $EndSCHEMATC

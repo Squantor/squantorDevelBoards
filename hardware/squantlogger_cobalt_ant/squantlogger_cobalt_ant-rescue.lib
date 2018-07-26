@@ -1,80 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# power:+BATT
+# 2pin_tact_switch
 #
-DEF power:+BATT #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+BATT" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +BATT 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power:GND
-#
-DEF power:GND #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power:GNDA
-#
-DEF power:GNDA #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GNDA" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GNDA 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power:VDD
-#
-DEF power:VDD #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:VDD" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-C 0 75 25 0 1 0 N
-P 2 0 1 0 0 0 0 50 N
-X VDD 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power:VDDA
-#
-DEF power:VDDA #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:VDDA" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-C 0 75 25 0 1 0 N
-P 2 0 1 0 0 0 0 50 N
-X VDDA 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# squantlogger_cobalt_ant-rescue:2pin_tact_switch
-#
-DEF squantlogger_cobalt_ant-rescue:2pin_tact_switch S 0 40 Y Y 1 F N
+DEF 2pin_tact_switch S 0 40 Y Y 1 F N
 F0 "S" 0 250 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:2pin_tact_switch" 0 -100 60 H V C CNN
+F1 "2pin_tact_switch" 0 -100 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -87,11 +18,11 @@ X 2 2 250 0 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:C
+# C
 #
-DEF squantlogger_cobalt_ant-rescue:C C 0 10 N Y 1 F N
+DEF C C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "squantlogger_cobalt_ant-rescue:C" 25 -100 50 H V L CNN
+F1 "C" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -105,11 +36,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:Cobalt_Ant_Analog
+# Cobalt_Ant_Analog
 #
-DEF squantlogger_cobalt_ant-rescue:Cobalt_Ant_Analog J 0 40 Y Y 1 F N
+DEF Cobalt_Ant_Analog J 0 40 Y Y 1 F N
 F0 "J" 0 700 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:Cobalt_Ant_Analog" 0 -700 60 H V C CNN
+F1 "Cobalt_Ant_Analog" 0 -700 60 H V C CNN
 F2 "" 50 550 60 H I C CNN
 F3 "" 50 550 60 H I C CNN
 DRAW
@@ -129,11 +60,11 @@ X ADC5 9 250 -250 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:Cobalt_Ant_Digital
+# Cobalt_Ant_Digital
 #
-DEF squantlogger_cobalt_ant-rescue:Cobalt_Ant_Digital J 0 40 Y Y 1 F N
+DEF Cobalt_Ant_Digital J 0 40 Y Y 1 F N
 F0 "J" 0 700 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:Cobalt_Ant_Digital" 0 -700 60 H V C CNN
+F1 "Cobalt_Ant_Digital" 0 -700 60 H V C CNN
 F2 "" 150 550 60 H I C CNN
 F3 "" 150 550 60 H I C CNN
 DRAW
@@ -153,11 +84,11 @@ X GPIO6 9 350 -250 100 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:Crystal
+# Crystal
 #
-DEF squantlogger_cobalt_ant-rescue:Crystal Y 0 40 N N 1 F N
+DEF Crystal Y 0 40 N N 1 F N
 F0 "Y" 0 150 50 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:Crystal" 0 -150 50 H V C CNN
+F1 "Crystal" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -174,11 +105,11 @@ X 2 2 150 0 50 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:Drill_Hole_no_metal
+# Drill_Hole_no_metal
 #
-DEF squantlogger_cobalt_ant-rescue:Drill_Hole_no_metal H 0 40 Y Y 1 F N
+DEF Drill_Hole_no_metal H 0 40 Y Y 1 F N
 F0 "H" 0 -250 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:Drill_Hole_no_metal" 0 250 60 H V C CNN
+F1 "Drill_Hole_no_metal" 0 250 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -187,11 +118,11 @@ C 0 0 150 0 1 0 N
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:FTDI_PINS_1X06
+# FTDI_PINS_1X06
 #
-DEF squantlogger_cobalt_ant-rescue:FTDI_PINS_1X06 J 0 40 Y Y 1 F N
+DEF FTDI_PINS_1X06 J 0 40 Y Y 1 F N
 F0 "J" -50 400 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:FTDI_PINS_1X06" 0 -400 60 H V C CNN
+F1 "FTDI_PINS_1X06" 0 -400 60 H V C CNN
 F2 "" 0 250 60 H I C CNN
 F3 "" 0 250 60 H I C CNN
 DRAW
@@ -205,11 +136,11 @@ X /RTS 6 200 -250 100 L 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:JTAG_2X05
+# JTAG_2X05
 #
-DEF squantlogger_cobalt_ant-rescue:JTAG_2X05 J 0 40 Y Y 1 F N
+DEF JTAG_2X05 J 0 40 Y Y 1 F N
 F0 "J" 0 350 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:JTAG_2X05" 0 -350 60 H V C CNN
+F1 "JTAG_2X05" 0 -350 60 H V C CNN
 F2 "" 0 150 60 H I C CNN
 F3 "" 0 150 60 H I C CNN
 DRAW
@@ -227,11 +158,11 @@ X GNDDET 9 500 -200 100 L 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:LED
+# LED
 #
-DEF squantlogger_cobalt_ant-rescue:LED D 0 40 Y N 1 F N
+DEF LED D 0 40 Y N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:LED" 0 -100 50 H V C CNN
+F1 "LED" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -248,11 +179,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:LPC1114FBD48_302
+# LPC1114FBD48_302
 #
-DEF squantlogger_cobalt_ant-rescue:LPC1114FBD48_302 M 0 40 Y Y 1 L N
+DEF LPC1114FBD48_302 M 0 40 Y Y 1 L N
 F0 "M" -600 1500 45 H V L BNN
-F1 "squantlogger_cobalt_ant-rescue:LPC1114FBD48_302" -600 -1500 45 H V L BNN
+F1 "LPC1114FBD48_302" -600 -1500 45 H V L BNN
 F2 "SquantorNxp_SOT313-2" 30 150 20 H I C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -314,11 +245,11 @@ X PIO1_8 9 -700 400 100 R 40 40 1 1 B
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:MCP1702-MB
+# MCP1702-MB
 #
-DEF squantlogger_cobalt_ant-rescue:MCP1702-MB U 0 40 Y Y 1 F N
+DEF MCP1702-MB U 0 40 Y Y 1 F N
 F0 "U" 0 250 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:MCP1702-MB" 0 -250 60 H V C CNN
+F1 "MCP1702-MB" 0 -250 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -330,11 +261,11 @@ X Vin TAB 300 0 100 L 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:OHWLOGO
+# OHWLOGO
 #
-DEF squantlogger_cobalt_ant-rescue:OHWLOGO N 0 40 Y Y 1 F N
+DEF OHWLOGO N 0 40 Y Y 1 F N
 F0 "N" 0 150 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:OHWLOGO" 0 -150 60 H V C CNN
+F1 "OHWLOGO" 0 -150 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -343,11 +274,11 @@ C 0 0 100 0 1 0 N
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:POWER_JOINER
+# POWER_JOINER
 #
-DEF squantlogger_cobalt_ant-rescue:POWER_JOINER U 0 40 Y Y 1 F N
+DEF POWER_JOINER U 0 40 Y Y 1 F N
 F0 "U" 0 150 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:POWER_JOINER" 0 -150 60 H V C CNN
+F1 "POWER_JOINER" 0 -150 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -357,11 +288,11 @@ X OUT 2 250 0 100 L 40 40 1 1 w
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:R
+# R
 #
-DEF squantlogger_cobalt_ant-rescue:R R 0 0 N Y 1 F N
+DEF R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "squantlogger_cobalt_ant-rescue:R" 0 0 50 V V C CNN
+F1 "R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -375,11 +306,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:VYYYYMMDD
+# VYYYYMMDD
 #
-DEF squantlogger_cobalt_ant-rescue:VYYYYMMDD N 0 40 Y Y 1 F N
+DEF VYYYYMMDD N 0 40 Y Y 1 F N
 F0 "N" 0 100 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:VYYYYMMDD" 0 0 60 H V C CNN
+F1 "VYYYYMMDD" 0 0 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -387,11 +318,11 @@ S 300 -50 -300 150 0 1 0 N
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:W25Q32BV
+# W25Q32BV
 #
-DEF squantlogger_cobalt_ant-rescue:W25Q32BV U 0 40 Y Y 1 F N
+DEF W25Q32BV U 0 40 Y Y 1 F N
 F0 "U" -200 250 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:W25Q32BV" 0 -250 60 H V C CNN
+F1 "W25Q32BV" 0 -250 60 H V C CNN
 F2 "" -50 0 60 H I C CNN
 F3 "" -50 0 60 H I C CNN
 DRAW
@@ -407,11 +338,11 @@ X VCC 8 350 150 100 L 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# squantlogger_cobalt_ant-rescue:testpad
+# testpad
 #
-DEF squantlogger_cobalt_ant-rescue:testpad TP 0 40 Y Y 1 F N
+DEF testpad TP 0 40 Y Y 1 F N
 F0 "TP" 0 150 60 H V C CNN
-F1 "squantlogger_cobalt_ant-rescue:testpad" 0 -150 60 H V C CNN
+F1 "testpad" 0 -150 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
