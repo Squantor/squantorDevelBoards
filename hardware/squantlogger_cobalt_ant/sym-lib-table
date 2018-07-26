@@ -1,5 +1,4 @@
 (sym_lib_table
-  (lib (name squantlogger_cobalt_ant-rescue)(type Legacy)(uri ${KIPRJMOD}/squantlogger_cobalt_ant-rescue.lib)(options "")(descr ""))
   (lib (name SquantorAtmel)(type Legacy)(uri ${KICAD_USER_SYMBOL_DIR}/SquantorAtmel.lib)(options "")(descr ""))
   (lib (name SquantorButtons)(type Legacy)(uri ${KICAD_USER_SYMBOL_DIR}/SquantorButtons.lib)(options "")(descr ""))
   (lib (name SquantorConnectors)(type Legacy)(uri ${KICAD_USER_SYMBOL_DIR}/SquantorConnectors.lib)(options "")(descr ""))
