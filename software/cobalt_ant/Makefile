@@ -10,11 +10,11 @@ src/cmdline/cmdline_flashinit.c src/cmdline/cmdline_flashread.c src/cmdline/cmdl
 src/cmdline/cmdline_flashwrite.c src/cmdline/cmdline_flasherasesect.c \
 src/cmdline/cmdline_filecreate.c src/cmdline/cmdline_filelist.c src/cmdline/cmdline_filedelete.c
 
-INCLUDES = -Iinc -I"../../lpc_chip_11cxx/inc/" -I"../../squantorCodeLibraries/sqlibembedded/inc"
+INCLUDES = -Iinc -I"../lpc_chip_11cxx/inc/" -I"../codelibraries/sqlibembedded/inc"
 LDSCRIPT = -T"ld/nxp_$(MCU).ld"
-RLIBDIR = -L"../../lpc_chip_11cxx/bin/release" -L"../../squantorCodeLibraries/sqlibembedded/arm-none-eabi_CM0/bin/release"
+RLIBDIR = -L"../lpc_chip_11cxx/bin/release" -L"../codelibraries/sqlibembedded/arm-none-eabi_CM0/bin/release"
 RLIBS = -llpc_chip_11cxx -lsqlibembedded
-DLIBDIR = -L"../../lpc_chip_11cxx/bin/debug" -L"../../squantorCodeLibraries/sqlibembedded/arm-none-eabi_CM0/bin/debug"
+DLIBDIR = -L"../lpc_chip_11cxx/bin/debug" -L"../codelibraries/sqlibembedded/arm-none-eabi_CM0/bin/debug"
 DLIBS = -llpc_chip_11cxx -lsqlibembedded 
 
 
@@ -80,16 +80,16 @@ DEPS = $(OBJECTS:.o=.d)
 .PHONY: release
 release: dirs
 	# make lpc_chip library if needed
-	$(MAKE) -C ../../lpc_chip_11cxx release
-	$(MAKE) -C ../../squantorCodeLibraries/sqlibembedded/arm-none-eabi_CM0 release
+	$(MAKE) -C ../lpc_chip_11cxx release
+	$(MAKE) -C ../codelibraries/sqlibembedded/arm-none-eabi_CM0 release
 	$(MAKE) all --no-print-directory
 
 # Debug build for gdb debugging
 .PHONY: debug
 debug: dirs
 	# make lpc_chip library if needed
-	$(MAKE) -C ../../lpc_chip_11cxx debug
-	$(MAKE) -C ../../squantorCodeLibraries/sqlibembedded/arm-none-eabi_CM0 debug
+	$(MAKE) -C ../lpc_chip_11cxx debug
+	$(MAKE) -C ../codelibraries/sqlibembedded/arm-none-eabi_CM0 debug
 	$(MAKE) all --no-print-directory
 
 # Create the directories used in the build
