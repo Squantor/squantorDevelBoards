@@ -939,28 +939,6 @@ F 3 "" H 8800 4350 60  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L SquantorRCL:POWER_JOINER U2
-U 1 1 5BC8182D
-P 7450 5350
-F 0 "U2" H 7450 5637 60  0000 C CNN
-F 1 "POWER_JOINER" H 7450 5531 60  0000 C CNN
-F 2 "SquantorSpecial:power_joiner_05mm" H 7450 5350 60  0001 C CNN
-F 3 "" H 7450 5350 60  0001 C CNN
-	1    7450 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L SquantorRCL:POWER_JOINER U1
-U 1 1 5BC819B4
-P 7450 4900
-F 0 "U1" H 7450 5187 60  0000 C CNN
-F 1 "POWER_JOINER" H 7450 5081 60  0000 C CNN
-F 2 "SquantorSpecial:power_joiner_05mm" H 7450 4900 60  0001 C CNN
-F 3 "" H 7450 4900 60  0001 C CNN
-	1    7450 4900
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0132
 U 1 1 5BC86E20
 P 7150 4900
@@ -1033,17 +1011,6 @@ F 2 "" H 8800 4800 50  0001 C CNN
 F 3 "" H 8800 4800 50  0001 C CNN
 	1    8800 4800
 	-1   0    0    1   
-$EndComp
-$Comp
-L SquantorRCL:POWER_JOINER U4
-U 1 1 5BC9D12F
-P 9200 4700
-F 0 "U4" H 9200 4850 60  0000 C CNN
-F 1 "POWER_JOINER" H 9400 4550 60  0000 C CNN
-F 2 "SquantorSpecial:power_joiner_05mm" H 9200 4700 60  0001 C CNN
-F 3 "" H 9200 4700 60  0001 C CNN
-	1    9200 4700
-	1    0    0    -1  
 $EndComp
 $Comp
 L power:VDD #PWR0138
@@ -1319,5 +1286,38 @@ F 2 "SquantorRcl:C_0805" H 7638 4250 50  0001 C CNN
 F 3 "~" H 7600 4400 50  0001 C CNN
 	1    7600 4400
 	0    1    1    0   
+$EndComp
+$Comp
+L SquantorSpecial:POWER_JOINER U1
+U 1 1 5BC3440E
+P 7450 4900
+F 0 "U1" H 7450 5187 60  0000 C CNN
+F 1 "POWER_JOINER" H 7450 5081 60  0000 C CNN
+F 2 "SquantorSpecial:power_joiner_05mm" H 7450 4900 60  0001 C CNN
+F 3 "" H 7450 4900 60  0001 C CNN
+	1    7450 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorSpecial:POWER_JOINER U2
+U 1 1 5BC34537
+P 7450 5350
+F 0 "U2" H 7450 5637 60  0000 C CNN
+F 1 "POWER_JOINER" H 7450 5531 60  0000 C CNN
+F 2 "SquantorSpecial:power_joiner_05mm" H 7450 5350 60  0001 C CNN
+F 3 "" H 7450 5350 60  0001 C CNN
+	1    7450 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorSpecial:POWER_JOINER U4
+U 1 1 5BC34597
+P 9200 4700
+F 0 "U4" H 9200 4987 60  0000 C CNN
+F 1 "POWER_JOINER" H 9200 4881 60  0000 C CNN
+F 2 "SquantorSpecial:power_joiner_05mm" H 9200 4700 60  0001 C CNN
+F 3 "" H 9200 4700 60  0001 C CNN
+	1    9200 4700
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

@@ -8,6 +8,7 @@
 *.kicad_pcb-bak
 *.net
 rescue-backup/
+_autosave*
 
 #executables
 bin/
