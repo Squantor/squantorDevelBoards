@@ -887,7 +887,7 @@ Wire Wire Line
 Wire Wire Line
 	9800 1200 9750 1200
 $Comp
-L SquantorConnectors:POWER_IN J4
+L SquantorConnectors:POWER_IN_2PIN J4
 U 1 1 5BC56C4A
 P 1350 3750
 F 0 "J4" H 1350 3550 60  0000 C CNN
