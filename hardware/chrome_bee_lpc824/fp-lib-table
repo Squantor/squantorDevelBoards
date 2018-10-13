@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name SquantorSpecial)(type KiCad)(uri ${KIPRJMOD}/../pcblibrary/SquantorSpecial.pretty)(options "")(descr ""))
+)
