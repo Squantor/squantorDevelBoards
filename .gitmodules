@@ -7,3 +7,9 @@
 [submodule "squantorCodeLibraries"]
 	path = squantorCodeLibraries
 	url = https://github.com/Squantor/squantorCodeLibraries.git
+[submodule "software/codelibraries"]
+	path = software/codelibraries
+	url = https://github.com/Squantor/squantorCodeLibraries.git
+[submodule "hardware/pcblibrary"]
+	path = hardware/pcblibrary
+	url = https://github.com/Squantor/squantorPcbLibrary.git
