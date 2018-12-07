@@ -86,7 +86,7 @@ int main(void)
 			current_systick = systick;
 			Chip_GPIO_SetPinToggle(LPC_GPIO, LED_PORT, LED_PIN);
 		}
-		cmdlineProcess(cmdLineEntries);
+		promptProcess(cmdLineEntries);
 	}
 
 	return 0;
