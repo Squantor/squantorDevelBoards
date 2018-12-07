@@ -46,6 +46,10 @@
  * Private types/enumerations/variables
  ****************************************************************************/
 
+char CmdlineHistoryBuffer[128];
+t_queueString CmdlineHistory = {.len = sizeof(CmdlineHistoryBuffer)-1, .head = 0, .tail = 0, .data = CmdlineHistoryBuffer};
+
+
 /*****************************************************************************
  * Public types/enumerations/variables
  ****************************************************************************/
@@ -72,6 +76,7 @@ int main(void)
 	uint32_t current_systick = 0;
 	ticksSet(0);
 	SystemCoreClockUpdate();
+	promptInit(&CmdlineHistory);
 
 	/* Enable and setup SysTick Timer at a periodic rate */
 	SysTick_Config(SystemCoreClock / SYSTICKS_PER_S);
