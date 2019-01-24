@@ -1,9 +1,8 @@
-# Hammond 1551G development board description
-This development board fits a [Hammond 1551G project box](http://www.hammondmfg.com/pdf/1551G.pdf).
+# Hammond 1551G development board Lithium Polymer charger
+This development board fits a [Hammond 1551G project box](http://www.hammondmfg.com/pdf/1551G.pdf) and contains a lithium polymer charger and some other connections for testing.
 ## TODO's
 Still some things need to be done:
-* Think of a project description
-* schematic entry
+* schematic entry and component definitions
 * PCB layout
 * Review with one night in between
 * Produce at [OSHPARK](https://oshpark.com/)
