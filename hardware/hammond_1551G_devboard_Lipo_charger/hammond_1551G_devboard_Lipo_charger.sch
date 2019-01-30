@@ -473,25 +473,6 @@ Wire Wire Line
 	5000 5400 5000 5550
 Wire Wire Line
 	5000 5100 5000 5000
-Wire Wire Line
-	950  4850 900  4850
-Wire Wire Line
-	950  5250 900  5250
-Connection ~ 900  5250
-Wire Wire Line
-	900  5250 900  5300
-Wire Wire Line
-	900  4850 900  4950
-Wire Wire Line
-	950  5050 900  5050
-Connection ~ 900  5050
-Wire Wire Line
-	900  5050 900  5250
-Wire Wire Line
-	950  4950 900  4950
-Connection ~ 900  4950
-Wire Wire Line
-	900  4950 900  5050
 $Comp
 L SquantorSpecial:power_joiner_2_nets U5
 U 1 1 5C4D93F3
@@ -657,12 +638,6 @@ NoConn ~ 1800 2900
 NoConn ~ 1800 2800
 NoConn ~ 1800 2700
 NoConn ~ 1800 2600
-Wire Wire Line
-	1750 4350 1750 4450
-Wire Wire Line
-	1650 4350 1750 4350
-Wire Wire Line
-	1650 4450 1750 4450
 Wire Wire Line
 	1750 3700 1750 3650
 Wire Wire Line
@@ -844,157 +819,23 @@ Wire Wire Line
 	5050 4200 5050 3950
 Wire Wire Line
 	5050 3950 5000 3950
-$Comp
-L power:VSS #PWR0123
-U 1 1 5C4DEF61
-P 900 5300
-F 0 "#PWR0123" H 900 5150 50  0001 C CNN
-F 1 "VSS" V 917 5428 50  0000 L CNN
-F 2 "" H 900 5300 50  0001 C CNN
-F 3 "" H 900 5300 50  0001 C CNN
-	1    900  5300
-	1    0    0    1   
-$EndComp
 Text Label 4400 4800 0    50   ~ 0
 VREG
-$Comp
-L SquantorConnectors:JTAG_2X05 J5
-U 1 1 5C4CBB75
-P 1450 5050
-F 0 "J5" H 1450 5537 60  0000 C CNN
-F 1 "JTAG_2X05" H 1450 5431 60  0000 C CNN
-F 2 "SquantorConnectors:Header-0127-2X05-H006" H 1450 5200 60  0001 C CNN
-F 3 "" H 1450 5200 60  0001 C CNN
-	1    1450 5050
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 1950 5050
-NoConn ~ 1950 5150
-$Comp
-L Device:R R6
-U 1 1 5C4EAB3B
-P 2150 5250
-F 0 "R6" V 1943 5250 50  0000 C CNN
-F 1 "100" V 2150 5250 50  0000 C CNN
-F 2 "SquantorRcl:R_0603_hand" V 2080 5250 50  0001 C CNN
-F 3 "~" H 2150 5250 50  0001 C CNN
-	1    2150 5250
-	0    1    -1   0   
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5C4EAC2F
-P 2150 4950
-F 0 "R5" V 1943 4950 50  0000 C CNN
-F 1 "100" V 2150 4950 50  0000 C CNN
-F 2 "SquantorRcl:R_0603_hand" V 2080 4950 50  0001 C CNN
-F 3 "~" H 2150 4950 50  0001 C CNN
-	1    2150 4950
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5C4EAC7D
-P 2150 4850
-F 0 "R4" V 1943 4850 50  0000 C CNN
-F 1 "100" V 2150 4850 50  0000 C CNN
-F 2 "SquantorRcl:R_0603_hand" V 2080 4850 50  0001 C CNN
-F 3 "~" H 2150 4850 50  0001 C CNN
-	1    2150 4850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 5C4EB3C6
-P 2700 4850
-F 0 "R7" V 2493 4850 50  0000 C CNN
-F 1 "100k" V 2700 4850 50  0000 C CNN
-F 2 "SquantorRcl:R_0603_hand" V 2630 4850 50  0001 C CNN
-F 3 "~" H 2700 4850 50  0001 C CNN
-	1    2700 4850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R8
-U 1 1 5C4EB461
-P 2700 4950
-F 0 "R8" V 2493 4950 50  0000 C CNN
-F 1 "100k" V 2700 4950 50  0000 C CNN
-F 2 "SquantorRcl:R_0603_hand" V 2630 4950 50  0001 C CNN
-F 3 "~" H 2700 4950 50  0001 C CNN
-	1    2700 4950
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R9
-U 1 1 5C4EB4AD
-P 2700 5250
-F 0 "R9" V 2493 5250 50  0000 C CNN
-F 1 "100k" V 2700 5250 50  0000 C CNN
-F 2 "SquantorRcl:R_0603_hand" V 2630 5250 50  0001 C CNN
-F 3 "~" H 2700 5250 50  0001 C CNN
-	1    2700 5250
-	0    1    1    0   
-$EndComp
-$Comp
-L power:VSS #PWR0134
-U 1 1 5C4EB541
-P 2900 4950
-F 0 "#PWR0134" H 2900 4800 50  0001 C CNN
-F 1 "VSS" V 2917 5078 50  0000 L CNN
-F 2 "" H 2900 4950 50  0001 C CNN
-F 3 "" H 2900 4950 50  0001 C CNN
-	1    2900 4950
-	0    1    -1   0   
-$EndComp
-$Comp
-L power:VDD #PWR0135
-U 1 1 5C4EB663
-P 2900 4850
-F 0 "#PWR0135" H 2900 4700 50  0001 C CNN
-F 1 "VDD" V 2917 4978 50  0000 L CNN
-F 2 "" H 2900 4850 50  0001 C CNN
-F 3 "" H 2900 4850 50  0001 C CNN
-	1    2900 4850
-	0    1    1    0   
-$EndComp
-$Comp
-L power:VDD #PWR0136
-U 1 1 5C4EB728
-P 2900 5250
-F 0 "#PWR0136" H 2900 5100 50  0001 C CNN
-F 1 "VDD" V 2917 5378 50  0000 L CNN
-F 2 "" H 2900 5250 50  0001 C CNN
-F 3 "" H 2900 5250 50  0001 C CNN
-	1    2900 5250
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1950 5250 2000 5250
-Wire Wire Line
-	2300 5250 2550 5250
-Wire Wire Line
-	2850 5250 2900 5250
-Wire Wire Line
-	2900 4950 2850 4950
-Wire Wire Line
-	2850 4850 2900 4850
-Wire Wire Line
-	2550 4850 2300 4850
-Wire Wire Line
-	2000 4850 1950 4850
-Wire Wire Line
-	1950 4950 2000 4950
-Wire Wire Line
-	2300 4950 2550 4950
-Text Label 2350 4850 0    50   ~ 0
-TMS
-Text Label 2350 4950 0    50   ~ 0
-TCK
-Text Label 2350 5250 0    50   ~ 0
-RESET
 Text Label 1850 2200 0    50   ~ 0
 VREG
 Text Label 950  2200 2    50   ~ 0
 VREG
+$Comp
+L SquantorProto:Proto J6
+U 1 1 5C52AB89
+P 7150 1950
+F 0 "J6" H 7328 2003 60  0000 L CNN
+F 1 "Proto" H 7328 1897 60  0000 L CNN
+F 2 "SquantorProto:proto-TH-0254-09X05-P020SQ-H010" H 7150 1950 60  0001 C CNN
+F 3 "" H 7150 1950 60  0001 C CNN
+	1    7150 1950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1650 4350
+NoConn ~ 1650 4450
 $EndSCHEMATC
