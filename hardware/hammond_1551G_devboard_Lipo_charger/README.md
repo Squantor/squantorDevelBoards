@@ -4,8 +4,8 @@ This development board fits a [Hammond 1551G project box](http://www.hammondmfg.
 Still some things need to be done:
 * schematic entry and component definitions (Done)
 * PCB layout (Done)
-* Review with one night in between
-* Produce at [OSHPARK](https://oshpark.com/)
+* Review with one night in between (Done)
+* Produce at [OSHPARK](https://oshpark.com/) (in progress)
 * Assemble
 * Test & characterise
 * update Readme.md with pictures and BOM
