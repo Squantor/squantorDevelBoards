@@ -46,9 +46,6 @@ void Reset_Handler(void);
 } // extern "C"
 #endif
 
-#include <cortexm_irqs.cpp>
-#include <mcu_irq.cpp>
-
 void Reset_Handler(void) 
 {
     uint32_t *src, *dst;
@@ -63,9 +60,7 @@ void Reset_Handler(void)
     dst = &_start_bss;
     while (dst < &_end_bss)
         *dst++ = 0;
-    
-    
-    #ifdef __cplusplus
+        
     /* execute c++ constructors */
     auto preInitFunc = __preinit_array_start;
     while(preInitFunc < __preinit_array_end)
@@ -79,7 +74,6 @@ void Reset_Handler(void)
         (*initFunc)();
         initFunc++;
     }
-    #endif
 
     // Patch the AEABI integer divide functions to use MCU's romdivide library
 #ifdef __USE_ROMDIVIDE
@@ -93,13 +87,7 @@ void Reset_Handler(void)
 
     main();
     
-    #ifdef __cplusplus
     /* we omit executing destructors so gcc can optimize them away*/
-    #endif
     
-    while (1);
-}
-
-void Dummy_Handler(void) {
     while (1);
 }
