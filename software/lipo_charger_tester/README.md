@@ -22,6 +22,20 @@ To use the software you need the following hardware:
 * [Black magic probe](https://github.com/blacksphere/blackmagic)
 * [LPC824 TSSOP20](https://github.com/Squantor/LPC-breakout-boards/tree/master/kicad/LPC82X_JDH20) test board soldered onto the Hammond1551G lithium charger evaluator board (located in hardware directory of this repository)
 * Usb to serial converter, output from the tester is given via UART.
+## HSI (Hardware Software Interface)
+The following GPIO pins of the LPC824 microcontroller are used:
+* Pin 11: PIO_15: Charger power enable output, Low disabled, High Enabled, Pulled down by 10K
+* Pin 19: PIO_00: Charge status sense input, Low charging, High Done, Pulled up by 10K
+* Pin 12: PIO_01: Enable dummy load output, Low disabled, High Enabled, Pulled down by 10K
+Reserved pins for other uses besides programming:
+* Pin 7: SWCLK: Pin used for programming
+* Pin 8: SWDIO: Pin used for programming
+* Pin 5: RESET: Pin used for programming
+Still undefined:
+* Maybe use I2C SCL pin? UART RX
+* Maybe use I2C SDA pin? UART TX
+* VBAT monitor, Needs to be analog input, high impedance divider with capacitor, do not sample more then 10Hz 
+* VREG monitor, Needs to be analog input, high impedance divider with capacitor, do not sample more then 10Hz 
 ## Tests
 A set of tests is performed to verify functionality.
 ### Idle mode
