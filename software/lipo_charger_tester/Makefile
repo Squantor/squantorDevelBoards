@@ -82,7 +82,7 @@ DEPS = $(OBJECTS:.o=.d)
 
 # Standard, non-optimized release build
 release: dirs
-	# make lpc_chip library if needed
+	$(MAKE) -C ../lpc_chip_82x release
 	$(MAKE) all --no-print-directory
 
 # Debug build for gdb debugging
