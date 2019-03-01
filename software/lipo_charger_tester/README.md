@@ -27,15 +27,18 @@ The following GPIO pins of the LPC824 microcontroller are used:
 * Pin 11: PIO_15: Charger power enable output, Low disabled, High Enabled, Pulled down by 10K
 * Pin 19: PIO_00: Charge status sense input, Low charging, High Done, Pulled up by 10K
 * Pin 12: PIO_01: Enable dummy load output, Low disabled, High Enabled, Pulled down by 10K
-Reserved pins for other uses besides programming:
+* PIN 6: PIO_04: UART RX pin, connected to USB to serial TX
+* PIN 4: PIO_12: UART TX pin, connected to USB to serial RX
+Reserved pins for other uses:
 * Pin 7: SWCLK: Pin used for programming
 * Pin 8: SWDIO: Pin used for programming
 * Pin 5: RESET: Pin used for programming
 Still undefined:
-* Maybe use I2C SCL pin? UART RX
-* Maybe use I2C SDA pin? UART TX
 * VBAT monitor, Needs to be analog input, high impedance divider with capacitor, do not sample more then 10Hz 
 * VREG monitor, Needs to be analog input, high impedance divider with capacitor, do not sample more then 10Hz 
+* VIN monitor, Needs to be analog input
+* VREF? Maybe to increase measurement precision?
+Note: Cant really use I2C pins as they are open drain only, how annoying.
 ## Tests
 A set of tests is performed to verify functionality.
 ### Idle mode

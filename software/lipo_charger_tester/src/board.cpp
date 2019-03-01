@@ -34,8 +34,9 @@ void boardInit(void)
 {
     // setup clocking
     SystemCoreClockUpdate();
-    // setup GPIOs
+    // setup GPIOs, look at HSI how to setup
     // setup UART
+    
     // setup timer tick
     SysTick_Config(SystemCoreClock / TICKS_PER_S);  
 }
