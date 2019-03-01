@@ -48,11 +48,11 @@ void delayTicks(timeTicks ticksToWait)
 
 int main()
 {
+    char string[] = "hello\n\r";
     boardInit();
     while (1) {
         delayTicks(TICKS_PER_S);
-        Chip_GPIO_SetPortToggle(LPC_GPIO_PORT, 0, CHARGER_POWER_EN);
-        __NOP();
-        __WFI();
+        Chip_UART_SendBlocking(LPC_USART0, &string, sizeof(string));
+        Chip_GPIO_SetPinToggle(LPC_GPIO_PORT, 0, CHARGER_POWER_EN);
     }
 }

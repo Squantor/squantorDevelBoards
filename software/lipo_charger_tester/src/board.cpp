@@ -53,10 +53,10 @@ void boardInit(void)
     Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_IOCON);
     // setup GPIOs, look at HSI how to setup
     Chip_GPIO_Init(LPC_GPIO_PORT);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, CHARGER_POWER_EN);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
     Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 0, CHARGER_STATUS);
     // setup external crystal oscillator
     Chip_SetupXtalClocking();
