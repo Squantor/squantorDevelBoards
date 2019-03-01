@@ -20,13 +20,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
- */
+*/
+/*
+Main execution file
+*/
 #include <stdint.h>
 #include <chip.h>
+#include <board.hpp>
 
-const uint32_t OscRateIn = 12000000;
-const uint32_t ExtRateIn = 0;
 typedef uint32_t timeTicks;
 volatile timeTicks ticks = 0;
 
@@ -47,8 +48,7 @@ void delayTicks(timeTicks ticksToWait)
 
 int main()
 {
-    SystemCoreClockUpdate();
-    SysTick_Config(SystemCoreClock / 6);    
+    boardInit();
     while (1) {
         __NOP();
         __WFI();
