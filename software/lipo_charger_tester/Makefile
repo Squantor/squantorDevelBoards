@@ -2,12 +2,12 @@
 include src/Makefile.mk
 include platform/$(MCU).mk
 
-INCLUDES += -Iplatform -I../lpc_chip_82x/inc
+INCLUDES += -Iplatform
 LIBDIR += -L"./ld"
-LIBS += -llpc_chip_82x
-RLIBDIR += $(LIBDIR) -L"../lpc_chip_82x/bin/release"
+LIBS += 
+RLIBDIR += $(LIBDIR) 
 RLIBS += $(LIBS)
-DLIBDIR += $(LIBDIR) -L"../lpc_chip_82x/bin/debug"
+DLIBDIR += $(LIBDIR) 
 DLIBS += $(LIBS)
 
 # Toolchain settings
@@ -83,11 +83,13 @@ DEPS = $(OBJECTS:.o=.d)
 # Standard, non-optimized release build
 release: dirs
 	$(MAKE) -C ../lpc_chip_82x release
+	$(MAKE) -C ../squantorLibC/arm-none-eabi_CM0 release
 	$(MAKE) all --no-print-directory
 
 # Debug build for gdb debugging
 debug: dirs
 	$(MAKE) -C ../lpc_chip_82x debug
+	$(MAKE) -C ../squantorLibC/arm-none-eabi_CM0 debug
 	$(MAKE) all --no-print-directory
 
 # Create the directories used in the build
@@ -100,6 +102,7 @@ clean_debug:
 clean_release:
 clean:
 	$(MAKE) -C ../lpc_chip_82x clean
+	$(MAKE) -C ../squantorLibC/arm-none-eabi_CM0 clean
 	$(RM) -r build
 	$(RM) -r bin
 
