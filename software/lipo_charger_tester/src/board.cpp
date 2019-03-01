@@ -34,16 +34,23 @@ void boardInit(void)
 {
     // setup switch matrix
     Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_SWM);
+    // disable ADC pins used for digital IOs
+    Chip_SWM_DisableFixedPin(SWM_FIXED_ADC11);
+    Chip_SWM_DisableFixedPin(SWM_FIXED_ACMP_I1);
+    Chip_SWM_DisableFixedPin(SWM_FIXED_ACMP_I2);
     // setup crystal functionality
-    Chip_SWM_DisableFixedPin(SWM_FIXED_ADC8);
-    Chip_SWM_DisableFixedPin(SWM_FIXED_ADC0);
     Chip_SWM_FixedPinEnable(SWM_FIXED_XTALIN, true);
     Chip_SWM_FixedPinEnable(SWM_FIXED_XTALOUT, true);
-    Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_SWM);
     // use UART0 for debug output
     Chip_SWM_MovablePinAssign(SWM_U0_TXD_O, 12);
     Chip_SWM_MovablePinAssign(SWM_U0_RXD_I, 4);
     Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_SWM);
+    // setup IO control
+    Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_IOCON);
+    // setup pins for crystal functionality
+    Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO8, PIN_MODE_INACTIVE);
+    Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO9, PIN_MODE_INACTIVE);
+    Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_IOCON);
     // setup GPIOs, look at HSI how to setup
     Chip_GPIO_Init(LPC_GPIO_PORT);
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
