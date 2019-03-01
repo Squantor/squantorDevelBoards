@@ -23,12 +23,13 @@ SOFTWARE.
 */
 
 /*
-
 Linker file for the LPC824 microcontroller from NXP.
-
 Based on the unified cortex startup code by Paul Sokolovsky.
-
 */
+
+GROUP (
+  "libgcc.a"
+)
 
 /* UM10600 Ch.2 p.9 */
 MEMORY

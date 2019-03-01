@@ -30,6 +30,13 @@ Board setup routines
 void boardInit(void);
 
 // how many ticks per second
-#define TICKS_PER_S     100
+#define TICKS_PER_S     1000
+
+// GPIO pin definitions as copied from the HSI
+// outputs
+#define CHARGER_POWER_EN    15
+#define DUMMY_LOAD_EN       1
+// inputs
+#define CHARGER_STATUS      0
 
 #endif
