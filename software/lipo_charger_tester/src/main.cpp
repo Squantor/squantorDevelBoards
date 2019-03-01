@@ -48,11 +48,20 @@ void delayTicks(timeTicks ticksToWait)
 
 int main()
 {
-    char string[] = "hello\n\r";
+    char noCharge[] = "not charging\n\r";
+    char yesCharge[] = "charging\n\r";
     boardInit();
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
     while (1) {
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
         delayTicks(TICKS_PER_S);
-        Chip_UART_SendBlocking(LPC_USART0, &string, sizeof(string));
-        Chip_GPIO_SetPinToggle(LPC_GPIO_PORT, 0, CHARGER_POWER_EN);
+        if(Chip_GPIO_GetPinState(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE) == true)
+            Chip_UART_SendBlocking(LPC_USART0, noCharge, sizeof(noCharge));
+        else
+            Chip_UART_SendBlocking(LPC_USART0, yesCharge, sizeof(yesCharge));       
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, true);
+        delayTicks(TICKS_PER_S);
+        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
     }
 }

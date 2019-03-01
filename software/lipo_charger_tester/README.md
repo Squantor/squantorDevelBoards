@@ -27,8 +27,8 @@ The following GPIO pins of the LPC824 microcontroller are used:
 * Pin 11: PIO_15: Charger power enable output, Low disabled, High Enabled, Pulled down by 10K
 * Pin 19: PIO_00: Charge status sense input, Low charging, High Done, Pulled up by 10K
 * Pin 12: PIO_01: Enable dummy load output, Low disabled, High Enabled, Pulled down by 10K
-* PIN 6: PIO_04: UART RX pin, connected to USB to serial TX
-* PIN 4: PIO_12: UART TX pin, connected to USB to serial RX
+* PIN 6: PIO_04: UART TX pin, connected to USB to serial RX
+* PIN 4: PIO_12: UART RX pin, connected to USB to serial TX
 Reserved pins for other uses:
 * Pin 7: SWCLK: Pin used for programming
 * Pin 8: SWDIO: Pin used for programming

@@ -37,6 +37,6 @@ void boardInit(void);
 #define CHARGER_POWER_EN    15
 #define DUMMY_LOAD_EN       1
 // inputs
-#define CHARGER_STATUS      0
+#define CHARGER_STATUS_DONE 0
 
 #endif
