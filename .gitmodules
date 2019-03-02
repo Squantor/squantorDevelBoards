@@ -19,6 +19,3 @@
 [submodule "software/lpc_chip_82x"]
 	path = software/lpc_chip_82x
 	url = https://github.com/Squantor/lpc_chip_82x.git
-[submodule "software/squantorLibC"]
-	path = software/squantorLibC
-	url = git@github.com:Squantor/squantorLibC.git
