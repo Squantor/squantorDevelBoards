@@ -16,7 +16,7 @@ DLIBDIR = -L"../lpc_chip_82x/bin/debug" \
 -L"../squantorLibC/bin/CortexM0/debug/" \
 -L"../squantorLibEmbeddedC/bin/CortexM0/debug/"
 DEFINES = -DCORE_M0PLUS -D__USE_ROMDIVIDE
-COMPILE_C_FLAGS = -mcpu=cortex-m0 -mthumb
-COMPILE_CXX_FLAGS = -mcpu=cortex-m0 -mthumb
-COMPILE_ASM_FLAGS =
+COMPILE_C_FLAGS = -std=gnu11 -Wall -Wextra -Werror -Wno-main -fno-common -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections
+COMPILE_CXX_FLAGS = -std=c++17 -Wall -Wextra -Werror -Wno-main -fno-common -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions
+COMPILE_ASM_FLAGS = -c -x assembler-with-cpp
 LINK_FLAGS = -mcpu=cortex-m0 -mthumb

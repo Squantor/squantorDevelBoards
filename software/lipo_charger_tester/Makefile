@@ -3,12 +3,12 @@ include src/Makefile.mk
 include platform/$(MCU).mk
 
 INCLUDES += -Iplatform
-LIBDIR += -L"./ld"
-LIBS += 
-RLIBDIR += $(LIBDIR) 
-RLIBS += $(LIBS)
-DLIBDIR += $(LIBDIR) 
-DLIBS += $(LIBS)
+ALIBS +=
+RLIBS += 
+DLIBS += 
+ALIBDIR += -L"./ld"
+RLIBDIR +=
+DLIBDIR +=
 
 # Toolchain settings
 MAKE = make
@@ -24,14 +24,14 @@ OBJDUMP = objdump
 OBJCOPY = objcopy
 
 # Toolchain flags
-COMPILE_C_FLAGS += -std=gnu11 -Wall -Wextra -Wno-main -fno-common -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections 
-COMPILE_CXX_FLAGS += -std=c++17 -Wall -Wextra -Wno-main -fno-common -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions 
-COMPILE_ASM_FLAGS += -c -x assembler-with-cpp
+COMPILE_C_FLAGS +=  
+COMPILE_CXX_FLAGS +=  
+COMPILE_ASM_FLAGS += 
 DEFINES += -DMCU_$(MCU)
 DEFINES_RELEASE = -DNDEBUG
 DEFINES_DEBUG = -DDEBUG
 C_RELEASE_COMPILE_FLAGS = -Os -g  
-C_RELEASE_COMPILE_FLAGS = -Og -g3 
+C_DEBUG_COMPILE_FLAGS = -Og -g3 
 CXX_RELEASE_COMPILE_FLAGS = -Os -g 
 CXX_DEBUG_COMPILE_FLAGS = -Og -g3
 ASM_RELEASE_COMPILE_FLAGS = 
@@ -54,13 +54,13 @@ print-%: ; @echo $*=$($*)
 release: export CFLAGS := $(COMPILE_C_FLAGS) $(C_RELEASE_COMPILE_FLAGS) $(DEFINES_RELEASE) $(DEFINES)
 release: export CXXFLAGS := $(COMPILE_CXX_FLAGS) $(CXX_RELEASE_COMPILE_FLAGS) $(DEFINES_RELEASE) $(DEFINES)
 release: export ASMFLAGS := $(COMPILE_ASM_FLAGS) $(ASM_RELEASE_COMPILE_FLAGS) $(DEFINES_RELEASE) $(DEFINES)
-release: export LDFLAGS := $(LINK_FLAGS) $(LINK_FLAGS_RELEASE) $(LIBDIR) $(RLIBDIR) $(LDSCRIPT)
-release: export LIBS := $(LIBS) $(RLIBS)
+release: export LDFLAGS := $(LINK_FLAGS) $(LINK_FLAGS_RELEASE) $(ALIBDIR) $(RLIBDIR) $(LDSCRIPT)
+release: export LIBS := $(ALIBS) $(RLIBS)
 debug: export CFLAGS := $(COMPILE_C_FLAGS) $(C_DEBUG_COMPILE_FLAGS) $(DEFINES_DEBUG) $(DEFINES)
 debug: export CXXFLAGS := $(COMPILE_CXX_FLAGS) $(CXX_DEBUG_COMPILE_FLAGS) $(DEFINES_DEBUG) $(DEFINES)
 debug: export ASMFLAGS := $(COMPILE_ASM_FLAGS) $(ASM_DEBUG_COMPILE_FLAGS) $(DEFINES_DEBUG) $(DEFINES)
-debug: export LDFLAGS := $(LINK_FLAGS) $(LINK_FLAGS_DEBUG) $(LIBDIR) $(DLIBDIR) $(LDSCRIPT)
-debug: export LIBS := $(LIBS) $(DLIBS)
+debug: export LDFLAGS := $(LINK_FLAGS) $(LINK_FLAGS_DEBUG) $(ALIBDIR) $(DLIBDIR) $(LDSCRIPT)
+debug: export LIBS := $(ALIBS) $(DLIBS)
 
 # Build and output paths
 release: export BUILD_PATH := build/release
@@ -130,15 +130,16 @@ $(BIN_PATH)/$(BIN_NAME).elf: $(OBJECTS)
 # After the first compilation they will be joined with the rules from the
 # dependency files to provide header dependencies
 # if the source file is in a subdir, create this subdir in the build dir
-$(BUILD_PATH)/%.c.o: ./%.c
+# additional dependency on Makefile and more importantly the include in src
+$(BUILD_PATH)/%.c.o: ./%.c Makefile ./src/Makefile.mk
 	$(MKDIR) -p $(dir $@) 
 	$(TOOLCHAIN_PREFIX)$(C_COMPILER) $(CFLAGS) $(INCLUDES) -MP -MMD -c $< -o $@
 
-$(BUILD_PATH)/%.cpp.o: ./%.cpp
+$(BUILD_PATH)/%.cpp.o: ./%.cpp Makefile ./src/Makefile.mk
 	$(MKDIR) -p $(dir $@) 
 	$(TOOLCHAIN_PREFIX)$(CXX_COMPILER) $(CXXFLAGS) $(INCLUDES) -MP -MMD -c $< -o $@
 
-$(BUILD_PATH)/%.s.o: ./%.s
+$(BUILD_PATH)/%.s.o: ./%.s Makefile ./src/Makefile.mk
 	$(MKDIR) -p $(dir $@) 
 	$(TOOLCHAIN_PREFIX)$(C_COMPILER) $(ASMFLAGS) $(INCLUDES) -MP -MMD -c $< -o $@
 
