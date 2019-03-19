@@ -84,12 +84,14 @@ DEPS = $(OBJECTS:.o=.d)
 release: dirs
 	$(MAKE) -C ../lpc_chip_82x release
 	$(MAKE) -C ../squantorLibC release PLATFORM=CortexM0
+	$(MAKE) -C ../squantorLibEmbeddedC release PLATFORM=CortexM0
 	$(MAKE) all --no-print-directory
 
 # Debug build for gdb debugging
 debug: dirs
 	$(MAKE) -C ../lpc_chip_82x debug
 	$(MAKE) -C ../squantorLibC debug PLATFORM=CortexM0
+	$(MAKE) -C ../squantorLibEmbeddedC debug PLATFORM=CortexM0
 	$(MAKE) all --no-print-directory
 
 # Create the directories used in the build
@@ -103,6 +105,7 @@ clean_release:
 clean:
 	$(MAKE) -C ../lpc_chip_82x clean
 	$(MAKE) -C ../squantorLibC clean
+	$(MAKE) -C ../squantorLibEmbeddedC clean
 	$(RM) -r build
 	$(RM) -r bin
 
