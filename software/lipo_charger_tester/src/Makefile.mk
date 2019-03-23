@@ -1,3 +1,4 @@
+# update per change V0002
 # Project settings
 BIN_NAME = lipo_charger_tester
 MCU = LPC824
@@ -37,3 +38,4 @@ pre-debug:
 	$(MAKE) -C ../lpc_chip_82x debug
 	$(MAKE) -C ../squantorLibC debug PLATFORM=CortexM0
 	$(MAKE) -C ../squantorLibEmbeddedC debug PLATFORM=CortexM0
+
