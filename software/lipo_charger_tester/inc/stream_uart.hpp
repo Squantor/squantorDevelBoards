@@ -21,14 +21,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-/*
-Board setup routines
-*/
 #ifndef STREAM_UART_HPP
 #define STREAM_UART_HPP
 
 #include <datastream.h>
 
-extern stre
+extern datastreamChar_t streamUart;
 
 #endif
