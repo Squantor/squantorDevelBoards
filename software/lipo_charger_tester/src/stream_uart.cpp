@@ -27,6 +27,7 @@ Datastream that points to the user facing UART interface
 
 #include <results.h>
 #include <stream_uart.hpp>
+#include <chip.h>
 
 static char streamUartName[] = "uartStream";
 result writeUart(const char *c);
@@ -35,13 +36,16 @@ datastreamChar_t streamUart = {writeUart, readUart, streamUartName};
 
 result writeUart(const char *c)
 {
-    
+    Chip_UART_SendBlocking(LPC_USART0, c, 1);
     return noError;
 }
 
 result readUart(char *c)
 {
-    
-    return noError;
+    int readChars = Chip_UART_Read(LPC_USART0, c, 1);
+    if(readChars != 1)
+        return streamEmtpy;
+    else
+        return noError;
 }
 

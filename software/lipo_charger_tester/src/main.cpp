@@ -27,6 +27,8 @@ Main execution file
 #include <stdint.h>
 #include <chip.h>
 #include <board.hpp>
+#include <datastream.h>
+#include <stream_uart.hpp>
 
 typedef uint32_t timeTicks;
 volatile timeTicks ticks = 0;
@@ -50,6 +52,8 @@ int main()
 {
     char noCharge[] = "not charging\n\r";
     char yesCharge[] = "charging\n\r";
+    char c;
+    result streamResult = noError;
     boardInit();
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
     while (1) {
@@ -63,5 +67,11 @@ int main()
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, true);
         delayTicks(TICKS_PER_S);
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
+        do {
+            streamResult = dsReadChar(&c, &streamUart);
+            if(streamResult != noError)
+                break;
+            dsWriteChar(c, &streamUart);
+        } while(streamResult == noError);
     }
 }
