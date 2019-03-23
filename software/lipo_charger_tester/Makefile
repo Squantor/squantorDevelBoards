@@ -1,8 +1,8 @@
-# update per change V0002
-# get platform settings
-include platform/$(MCU).mk
+# update per change V0003
 # get project settings
 include src/Makefile.mk
+# get platform settings
+include platform/$(MCU).mk
 
 INCLUDES += -Iplatform
 ALIBS +=
@@ -83,17 +83,11 @@ OBJECTS += $(S_SOURCES:%.s=$(BUILD_PATH)/%.s.o)
 DEPS = $(OBJECTS:.o=.d)
 
 # Standard, non-optimized release build
-release: dirs
-	$(MAKE) -C ../lpc_chip_82x release
-	$(MAKE) -C ../squantorLibC release PLATFORM=CortexM0
-	$(MAKE) -C ../squantorLibEmbeddedC release PLATFORM=CortexM0
+release: dirs pre-release
 	$(MAKE) all --no-print-directory
 
 # Debug build for gdb debugging
-debug: dirs
-	$(MAKE) -C ../lpc_chip_82x debug
-	$(MAKE) -C ../squantorLibC debug PLATFORM=CortexM0
-	$(MAKE) -C ../squantorLibEmbeddedC debug PLATFORM=CortexM0
+debug: dirs pre-debug
 	$(MAKE) all --no-print-directory
 
 # Create the directories used in the build
@@ -102,12 +96,7 @@ dirs:
 	$(MKDIR) -p $(BIN_PATH)
 
 # Removes all build files
-clean_debug:
-clean_release:
-clean:
-	$(MAKE) -C ../lpc_chip_82x clean
-	$(MAKE) -C ../squantorLibC clean
-	$(MAKE) -C ../squantorLibEmbeddedC clean
+clean: pre-clean
 	$(RM) -r build
 	$(RM) -r bin
 
