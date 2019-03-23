@@ -3,7 +3,8 @@ BIN_NAME = lipo_charger_tester
 MCU = LPC824
 BOARD = 
 C_SOURCES = 
-CXX_SOURCES = src/startup.cpp src/main.cpp src/board.cpp
+CXX_SOURCES = src/startup.cpp src/main.cpp src/board.cpp \
+src/stream_uart.cpp
 S_SOURCES = src/aeabi_romdiv_patch.s
 INCLUDES = -Iinc -I../lpc_chip_82x/inc -I../cortexM_startup_code/inc \
 -I../squantorLibC/inc/ -I../squantorLibEmbeddedC/inc/
