@@ -22,55 +22,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 /*
-Main execution file
+Common used strings
 */
-#include <stdint.h>
-#include <chip.h>
-#include <board.hpp>
-#include <datastream.h>
-#include <stream_uart.hpp>
-#include <cmdline_prompt.h>
-#include <strings.hpp>
+#ifndef STRINGS_HPP
+#define STRINGS_HPP
 
-char lipochargerPromptStringBuffer[32];
-t_queueString lipochargerPromptStringQueue = {
-    .mask = sizeof(lipochargerPromptStringBuffer)-1,
-    .head = 0,
-    .tail = 0,
-    .data = lipochargerPromptStringBuffer,
-    };
+extern char strHello[];
+extern char strProcessing[];
+extern char strProcessingColon[];
 
-typedef uint32_t timeTicks;
-volatile timeTicks ticks = 0;
-
-extern "C"
-{
-    void SysTick_Handler(void)
-    {
-        ticks++;
-    }
-}
-
-void delayTicks(timeTicks ticksToWait)
-{
-    timeTicks ticksMax = ticks + ticksToWait;
-    while(ticks < ticksMax)
-        ;
-}
-
-result cmdlineParse(char *cmdline)
-{
-    dsPuts(&streamUart, strProcessingColon);
-    dsPuts(&streamUart, cmdline);
-    return noError;
-}
-
-int main()
-{
-    boardInit();
-    cmdlinePromptInit(&lipochargerPromptStringQueue);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
-    while (1) {
-        cmdlinePromptProcess(&streamUart, cmdlineParse);
-    }
-}
+#endif
