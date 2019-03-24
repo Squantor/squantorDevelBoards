@@ -10,7 +10,7 @@ S_SOURCES = src/aeabi_romdiv_patch.s
 INCLUDES = -Iinc -I../lpc_chip_82x/inc -I../cortexM_startup_code/inc \
 -I../squantorLibC/inc/ -I../squantorLibEmbeddedC/inc/
 LIBDIR = 
-LIBS = -llpc_chip_82x -lsqlibc -lsqlibembeddedc
+LIBS = -llpc_chip_82x -lsqlibembeddedc -lsqlibc
 RLIBDIR = -L"../lpc_chip_82x/bin/release" \
 -L"../squantorLibC/bin/CortexM0/release/" \
 -L"../squantorLibEmbeddedC/bin/CortexM0/release/"

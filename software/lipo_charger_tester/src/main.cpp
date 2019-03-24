@@ -29,6 +29,15 @@ Main execution file
 #include <board.hpp>
 #include <datastream.h>
 #include <stream_uart.hpp>
+#include <cmdline_prompt.h>
+
+char lipochargerPromptStringBuffer[32];
+t_queueString lipochargerPromptStringQueue = {
+    .mask = sizeof(lipochargerPromptStringBuffer)-1,
+    .head = 0,
+    .tail = 0,
+    .data = lipochargerPromptStringBuffer,
+    };
 
 typedef uint32_t timeTicks;
 volatile timeTicks ticks = 0;
@@ -48,32 +57,18 @@ void delayTicks(timeTicks ticksToWait)
         ;
 }
 
+result cmdlineParse(char *cmdline)
+{
+    dsPuts(&streamUart, cmdline);
+    return noError;
+}
+
 int main()
 {
-    char noCharge[] = "not charging";
-    char yesCharge[] = "charging";
-    char c;
-    result streamResult = noError;
     boardInit();
+    cmdlinePromptInit(&lipochargerPromptStringQueue);
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
     while (1) {
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
-        delayTicks(TICKS_PER_S);
-        if(Chip_GPIO_GetPinState(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE) == true)
-            //Chip_UART_SendBlocking(LPC_USART0, noCharge, sizeof(noCharge));
-            dsPuts(&streamUart, noCharge);
-        else
-            //Chip_UART_SendBlocking(LPC_USART0, yesCharge, sizeof(yesCharge));       
-            dsPuts(&streamUart, yesCharge);
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, true);
-        delayTicks(TICKS_PER_S);
-        Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
-        do {
-            streamResult = dsReadChar(&streamUart, &c);
-            if(streamResult != noError)
-                break;
-            dsWriteChar(&streamUart, c);
-        } while(streamResult == noError);
+        cmdlinePromptProcess(&streamUart, cmdlineParse);
     }
 }
