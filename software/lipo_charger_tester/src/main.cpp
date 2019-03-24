@@ -50,8 +50,8 @@ void delayTicks(timeTicks ticksToWait)
 
 int main()
 {
-    char noCharge[] = "not charging\n\r";
-    char yesCharge[] = "charging\n\r";
+    char noCharge[] = "not charging";
+    char yesCharge[] = "charging";
     char c;
     result streamResult = noError;
     boardInit();
@@ -60,18 +60,20 @@ int main()
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
         delayTicks(TICKS_PER_S);
         if(Chip_GPIO_GetPinState(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE) == true)
-            Chip_UART_SendBlocking(LPC_USART0, noCharge, sizeof(noCharge));
+            //Chip_UART_SendBlocking(LPC_USART0, noCharge, sizeof(noCharge));
+            dsPuts(&streamUart, noCharge);
         else
-            Chip_UART_SendBlocking(LPC_USART0, yesCharge, sizeof(yesCharge));       
+            //Chip_UART_SendBlocking(LPC_USART0, yesCharge, sizeof(yesCharge));       
+            dsPuts(&streamUart, yesCharge);
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, true);
         delayTicks(TICKS_PER_S);
         Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
         do {
-            streamResult = dsReadChar(&c, &streamUart);
+            streamResult = dsReadChar(&streamUart, &c);
             if(streamResult != noError)
                 break;
-            dsWriteChar(c, &streamUart);
+            dsWriteChar(&streamUart, c);
         } while(streamResult == noError);
     }
 }
