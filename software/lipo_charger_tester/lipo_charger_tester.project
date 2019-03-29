@@ -45,7 +45,7 @@
       </Compiler>
       <Linker Options="" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
-      <General OutputFile="./bin/debug/cortexM_startup_code.elf" IntermediateDirectory="./build/debug" Command="./bin/debug/cortexM_startup_code.elf" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="." PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <General OutputFile="./bin/debug/breakout_tester.elf" IntermediateDirectory="./build/debug" Command="./bin/debug/breakout_tester.elf" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="." PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
       <Environment EnvVarSetName="Default" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
@@ -91,7 +91,7 @@ compare-sections</PostConnectCommands>
       </Compiler>
       <Linker Options="-O2" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
-      <General OutputFile="./bin/release/cortexM_startup_code.elf" IntermediateDirectory="./build/release" Command="./bin/release/cortexM_startup_code.elf" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="." PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <General OutputFile="./bin/release/breakout_tester.elf" IntermediateDirectory="./build/release" Command="./bin/release/breakout_tester.elf" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="." PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>

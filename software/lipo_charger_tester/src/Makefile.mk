@@ -22,7 +22,7 @@ DEFINES = -DCORE_M0PLUS -D__USE_ROMDIVIDE
 COMPILE_C_FLAGS = -std=gnu11 -Wall -Wextra -Werror -Wno-main -fno-common -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections
 COMPILE_CXX_FLAGS = -std=c++17 -Wall -Wextra -Werror -Wno-main -fno-common -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions
 COMPILE_ASM_FLAGS = -c -x assembler-with-cpp
-LINK_FLAGS = -mcpu=cortex-m0 -mthumb
+LINK_FLAGS = -nostdlib -Xlinker --gc-sections -Xlinker -print-memory-usage
 
 #custom build rules
 pre-clean:
