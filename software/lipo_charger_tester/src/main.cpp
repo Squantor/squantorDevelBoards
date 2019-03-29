@@ -29,16 +29,39 @@ Main execution file
 #include <board.hpp>
 #include <datastream.h>
 #include <stream_uart.hpp>
-#include <cmdline_prompt.h>
+#include <prompt_mini.h>
+#include <command_mini.h>
 #include <strings.hpp>
 
-char lipochargerPromptStringBuffer[32];
-t_queueString lipochargerPromptStringQueue = {
-    .mask = sizeof(lipochargerPromptStringBuffer)-1,
-    .head = 0,
-    .tail = 0,
-    .data = lipochargerPromptStringBuffer,
-    };
+char promptBuf[5];
+result cmdlineParse(char *cmdline);
+
+result cmdHandleChrgEn(void);
+result cmdHandleChrgDis(void);
+result cmdHandleLoadEn(void);
+result cmdHandleLoadDis(void);
+    
+promptData_t lipoChargerPromptData = 
+{
+    promptBuf,
+    0,
+    sizeof(promptBuf),
+    cmdlineParse,
+};
+
+const char cmdChargeEnable[] = "ce";
+const char cmdChargeDisable[] = "cd";
+const char cmdLoadEnable[] = "le";
+const char cmdLoadDisable[] = "ld";
+
+commandEntry_t lipoChargerCommands[] = 
+{
+    {cmdChargeEnable, cmdHandleChrgEn},
+    {cmdChargeDisable, cmdHandleChrgDis},
+    {cmdLoadEnable, cmdHandleLoadEn},
+    {cmdLoadDisable, cmdHandleLoadDis},
+    {NULL, NULL},
+};
 
 typedef uint32_t timeTicks;
 volatile timeTicks ticks = 0;
@@ -58,19 +81,40 @@ void delayTicks(timeTicks ticksToWait)
         ;
 }
 
-result cmdlineParse(char *cmdline)
+result cmdlineParse(char *const cmdline)
 {
-    dsPuts(&streamUart, strProcessingColon);
-    dsPuts(&streamUart, cmdline);
+    return commandInterpret(lipoChargerCommands, cmdline);
+}
+
+result cmdHandleChrgEn(void)
+{
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
+    return noError;
+}
+
+result cmdHandleChrgDis(void)
+{
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
+    return noError;
+}
+
+result cmdHandleLoadEn(void)
+{
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, true);
+    return noError;
+}
+
+result cmdHandleLoadDis(void)
+{
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
     return noError;
 }
 
 int main()
 {
     boardInit();
-    cmdlinePromptInit(&lipochargerPromptStringQueue);
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
     while (1) {
-        cmdlinePromptProcess(&streamUart, cmdlineParse);
+        promptProcess(&lipoChargerPromptData, &streamUart);
     }
 }
