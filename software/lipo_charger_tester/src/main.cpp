@@ -114,7 +114,6 @@ int main()
 {
     boardInit();
     dsPuts(&streamUart, strHello);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
     while (1) {
         promptProcess(&lipoChargerPromptData, &streamUart);
     }
