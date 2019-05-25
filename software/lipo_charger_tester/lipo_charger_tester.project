@@ -6,6 +6,7 @@
     </Plugin>
   </Plugins>
   <VirtualDirectory Name="inc">
+    <File Name="inc/commands.hpp"/>
     <File Name="inc/strings.hpp"/>
     <File Name="inc/stream_uart.hpp"/>
     <File Name="inc/board.hpp"/>
@@ -21,6 +22,7 @@
     <File Name="platform/isr_lpc81X.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="src">
+    <File Name="src/commands.cpp"/>
     <File Name="src/strings.cpp"/>
     <File Name="src/stream_uart.cpp"/>
     <File Name="src/board.cpp"/>

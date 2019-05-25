@@ -22,57 +22,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 /*
-Main execution file
+Commandline command prototypes
 */
-#include <stdint.h>
-#include <chip.h>
-#include <board.hpp>
-#include <datastream.h>
-#include <stream_uart.hpp>
-#include <prompt_mini.h>
+#ifndef COMMANDS_HPP
+#define COMMANDS_HPP
+
 #include <command_mini.h>
-#include <strings.hpp>
-#include <commands.hpp>
 
-char promptBuf[5];
-result cmdlineParse(char *cmdline);
-    
-promptData_t lipoChargerPromptData = 
-{
-    promptBuf,
-    0,
-    sizeof(promptBuf),
-    cmdlineParse,
-};
+extern commandEntry_t lipoChargerCommands[];
 
-typedef uint32_t timeTicks;
-volatile timeTicks ticks = 0;
-
-extern "C"
-{
-    void SysTick_Handler(void)
-    {
-        ticks++;
-    }
-}
-
-void delayTicks(timeTicks ticksToWait)
-{
-    timeTicks ticksMax = ticks + ticksToWait;
-    while(ticks < ticksMax)
-        ;
-}
-
-result cmdlineParse(char *const cmdline)
-{
-    return commandInterpret(lipoChargerCommands, cmdline);
-}
-
-int main()
-{
-    boardInit();
-    dsPuts(&streamUart, strHello);
-    while (1) {
-        promptProcess(&lipoChargerPromptData, &streamUart);
-    }
-}
+#endif

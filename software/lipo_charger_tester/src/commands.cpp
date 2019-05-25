@@ -21,58 +21,50 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-/*
-Main execution file
-*/
-#include <stdint.h>
-#include <chip.h>
-#include <board.hpp>
-#include <datastream.h>
-#include <stream_uart.hpp>
-#include <prompt_mini.h>
 #include <command_mini.h>
-#include <strings.hpp>
-#include <commands.hpp>
+#include <stddef.h>
+#include <board.hpp>
+#include <chip.h>
 
-char promptBuf[5];
-result cmdlineParse(char *cmdline);
-    
-promptData_t lipoChargerPromptData = 
+result cmdHandleChrgEn(void);
+result cmdHandleChrgDis(void);
+result cmdHandleLoadEn(void);
+result cmdHandleLoadDis(void);
+
+const char cmdChargeEnable[] = "ce";
+const char cmdChargeDisable[] = "cd";
+const char cmdLoadEnable[] = "le";
+const char cmdLoadDisable[] = "ld";
+
+commandEntry_t lipoChargerCommands[] = 
 {
-    promptBuf,
-    0,
-    sizeof(promptBuf),
-    cmdlineParse,
+    {cmdChargeEnable, cmdHandleChrgEn},
+    {cmdChargeDisable, cmdHandleChrgDis},
+    {cmdLoadEnable, cmdHandleLoadEn},
+    {cmdLoadDisable, cmdHandleLoadDis},
+    {NULL, NULL},
 };
 
-typedef uint32_t timeTicks;
-volatile timeTicks ticks = 0;
-
-extern "C"
+result cmdHandleChrgEn(void)
 {
-    void SysTick_Handler(void)
-    {
-        ticks++;
-    }
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
+    return noError;
 }
 
-void delayTicks(timeTicks ticksToWait)
+result cmdHandleChrgDis(void)
 {
-    timeTicks ticksMax = ticks + ticksToWait;
-    while(ticks < ticksMax)
-        ;
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
+    return noError;
 }
 
-result cmdlineParse(char *const cmdline)
+result cmdHandleLoadEn(void)
 {
-    return commandInterpret(lipoChargerCommands, cmdline);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, true);
+    return noError;
 }
 
-int main()
+result cmdHandleLoadDis(void)
 {
-    boardInit();
-    dsPuts(&streamUart, strHello);
-    while (1) {
-        promptProcess(&lipoChargerPromptData, &streamUart);
-    }
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
+    return noError;
 }
