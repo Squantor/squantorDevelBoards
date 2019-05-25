@@ -30,6 +30,26 @@ Board setup routines
 const uint32_t OscRateIn = 12000000;
 const uint32_t ExtRateIn = 0;
 
+void boardAdcInit(void)
+{
+    Chip_ADC_StartCalibration(LPC_ADC);
+    while (!(Chip_ADC_IsCalibrationDone(LPC_ADC))) {}
+    Chip_ADC_SetClockRate(LPC_ADC, 1000000);
+    // setup sampling sequencer
+    Chip_ADC_SetupSequencer(LPC_ADC, ADC_SEQA_IDX, (
+        ADC_SEQ_CTRL_CHANSEL(9) | 
+        ADC_SEQ_CTRL_CHANSEL(10) |
+        ADC_SEQ_CTRL_MODE_EOS ));
+    // enable fixed pins after the sequencer
+    // TODO investigate this as it is not according to the datasheet
+    Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_SWM);
+    Chip_SWM_EnableFixedPin(SWM_FIXED_ADC9);
+    Chip_SWM_EnableFixedPin(SWM_FIXED_ADC10);
+    Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_SWM);
+    
+    Chip_ADC_ClearFlags(LPC_ADC, Chip_ADC_GetFlags(LPC_ADC));
+}
+
 void boardInit(void)
 {
     // setup switch matrix
@@ -68,6 +88,11 @@ void boardInit(void)
     Chip_UART_SetBaud(LPC_USART0, 115200);
     Chip_UART_Enable(LPC_USART0);
     Chip_UART_TXEnable(LPC_USART0);
+    // setup ADC
+    Chip_ADC_Init(LPC_ADC, 0);
+    boardAdcInit();
+    Chip_ADC_EnableInt(LPC_ADC, (ADC_INTEN_SEQA_ENABLE));
+    //NVIC_EnableIRQ(ADC_SEQA_IRQn);
     // setup timer tick
     SysTick_Config(SystemCoreClock / TICKS_PER_S);  
 }
