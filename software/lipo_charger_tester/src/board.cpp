@@ -37,8 +37,8 @@ void boardAdcInit(void)
     Chip_ADC_SetClockRate(LPC_ADC, 1000000);
     // setup sampling sequencer
     Chip_ADC_SetupSequencer(LPC_ADC, ADC_SEQA_IDX, (
-        ADC_SEQ_CTRL_CHANSEL(VREG_ACHAN) | 
-        ADC_SEQ_CTRL_CHANSEL(VBATT_ACHAN) |
+        ADC_SEQ_CTRL_CHANSEL(10) | 
+        ADC_SEQ_CTRL_CHANSEL(9) |
         ADC_SEQ_CTRL_MODE_EOS ));
     // enable fixed pins after the sequencer
     // TODO investigate this as it is not according to the datasheet
@@ -100,7 +100,7 @@ void boardInit(void)
     Chip_ADC_Init(LPC_ADC, 0);
     boardAdcInit();
     Chip_ADC_EnableInt(LPC_ADC, (ADC_INTEN_SEQA_ENABLE));
-    //NVIC_EnableIRQ(ADC_SEQA_IRQn);
+    NVIC_EnableIRQ(ADC_SEQA_IRQn);
     // setup timer tick
     SysTick_Config(SystemCoreClock / TICKS_PER_S);  
 }

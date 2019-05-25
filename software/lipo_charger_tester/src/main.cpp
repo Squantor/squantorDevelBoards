@@ -32,6 +32,7 @@ Main execution file
 #include <prompt_mini.h>
 #include <command_mini.h>
 #include <strings.hpp>
+#include <print.h>
 #include <commands.hpp>
 
 char promptBuf[5];
@@ -47,12 +48,31 @@ promptData_t lipoChargerPromptData =
 
 typedef uint32_t timeTicks;
 volatile timeTicks ticks = 0;
+volatile bool sequenceComplete;
 
 extern "C"
 {
     void SysTick_Handler(void)
     {
         ticks++;
+        /* Manual start for ADC conversion sequence A */
+        Chip_ADC_StartSequencer(LPC_ADC, ADC_SEQA_IDX);
+    }
+    
+    void ADC_SEQA_IRQHandler(void)
+    {
+        uint32_t pending;
+
+        /* Get pending interrupts */
+        pending = Chip_ADC_GetFlags(LPC_ADC);
+
+        /* Sequence A completion interrupt */
+        if (pending & ADC_FLAGS_SEQA_INT_MASK) {
+            sequenceComplete = true;
+        }
+
+        /* Clear any pending interrupts */
+        Chip_ADC_ClearFlags(LPC_ADC, pending);
     }
 }
 
@@ -74,5 +94,26 @@ int main()
     dsPuts(&streamUart, strHello);
     while (1) {
         promptProcess(&lipoChargerPromptData, &streamUart);
+        
+        /* Is a conversion sequence complete? */
+        if(sequenceComplete) 
+        {
+            sequenceComplete = false;
+
+            /* Get raw sample data for channels 0-11 */
+            for (uint16_t i = 0; i < 12; i++) {
+                uint32_t rawSample = Chip_ADC_GetDataReg(LPC_ADC, i);
+
+                /* Show some ADC data */
+                if (rawSample & (ADC_DR_OVERRUN | ADC_SEQ_GDAT_DATAVALID)) 
+                {
+                    printDecNzU16(&streamUart, i);
+                    dsPuts(&streamUart, strIs);
+                    printDecU16(&streamUart, ADC2MV(ADC_DR_RESULT(rawSample)));
+                    dsPuts(&streamUart, strSep);
+                }
+            }
+            dsPuts(&streamUart, strCrLf);
+        }
     }
 }

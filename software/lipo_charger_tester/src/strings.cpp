@@ -28,3 +28,6 @@ Common used strings
 char strHello[] = "Lithium Polymer charger V0001";
 char strProcessing[] = "Processing";
 char strProcessingColon[] = "Processing:";
+char strIs[] = " = ";
+char strSep[] = " | ";
+char strCrLf[] = "\r\n";

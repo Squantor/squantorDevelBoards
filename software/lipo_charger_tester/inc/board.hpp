@@ -31,7 +31,7 @@ Board setup routines
 void boardInit(void);
 
 // how many ticks per second
-#define TICKS_PER_S     1000
+#define TICKS_PER_S     2
 
 // GPIO pin definitions as copied from the HSI
 // outputs
@@ -45,5 +45,9 @@ void boardInit(void);
 #define VREG_PIO    17
 #define VREG_ACHAN  9
 
+// taking into account also the 1M/3.3MOhm divider
+#define ADCUVPERLSB 1050u
+
+#define ADC2MV(adcValue) (((adcValue * ADCUVPERLSB) / 1000u))
 
 #endif

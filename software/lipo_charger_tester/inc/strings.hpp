@@ -30,5 +30,8 @@ Common used strings
 extern char strHello[];
 extern char strProcessing[];
 extern char strProcessingColon[];
+extern char strIs[];
+extern char strSep[];
+extern char strCrLf[];
 
 #endif
