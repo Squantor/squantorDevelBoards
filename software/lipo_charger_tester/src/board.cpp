@@ -37,8 +37,8 @@ void boardAdcInit(void)
     Chip_ADC_SetClockRate(LPC_ADC, 1000000);
     // setup sampling sequencer
     Chip_ADC_SetupSequencer(LPC_ADC, ADC_SEQA_IDX, (
-        ADC_SEQ_CTRL_CHANSEL(9) | 
-        ADC_SEQ_CTRL_CHANSEL(10) |
+        ADC_SEQ_CTRL_CHANSEL(VREG_ACHAN) | 
+        ADC_SEQ_CTRL_CHANSEL(VBATT_ACHAN) |
         ADC_SEQ_CTRL_MODE_EOS ));
     // enable fixed pins after the sequencer
     // TODO investigate this as it is not according to the datasheet
@@ -70,6 +70,14 @@ void boardInit(void)
     // setup pins for crystal functionality
     Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO8, PIN_MODE_INACTIVE);
     Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO9, PIN_MODE_INACTIVE);
+    // disable all pullups on analog pins
+    Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO17, PIN_MODE_INACTIVE);
+    Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO13, PIN_MODE_INACTIVE);
+    // disable all pullups on outputs and inputs
+    Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO4, PIN_MODE_INACTIVE);
+    Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO15, PIN_MODE_INACTIVE);
+    Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO1, PIN_MODE_INACTIVE);
+    Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO0, PIN_MODE_INACTIVE);
     Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_IOCON);
     // setup GPIOs, look at HSI how to setup
     Chip_GPIO_Init(LPC_GPIO_PORT);

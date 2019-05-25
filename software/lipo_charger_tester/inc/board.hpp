@@ -26,6 +26,7 @@ Board setup routines
 */
 #ifndef BOARD_HPP
 #define BOARD_HPP
+#include <chip.h>
 
 void boardInit(void);
 
@@ -38,5 +39,11 @@ void boardInit(void);
 #define DUMMY_LOAD_EN       1
 // inputs
 #define CHARGER_STATUS_DONE 0
+// analog inputs
+#define VBATT_PIO   13
+#define VBATT_ACHAN 10
+#define VREG_PIO    17
+#define VREG_ACHAN  9
+
 
 #endif
