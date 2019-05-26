@@ -26,10 +26,10 @@ SOFTWARE.
 #include <board.hpp>
 #include <chip.h>
 
-result cmdHandleChrgEn(void);
-result cmdHandleChrgDis(void);
-result cmdHandleLoadEn(void);
-result cmdHandleLoadDis(void);
+result cmdHandleChrgEn(int *argument);
+result cmdHandleChrgDis(int *argument);
+result cmdHandleLoadEn(int *argument);
+result cmdHandleLoadDis(int *argument);
 
 const char cmdChargeEnable[] = "ce";
 const char cmdChargeDisable[] = "cd";
@@ -45,28 +45,31 @@ commandEntry_t lipoChargerCommands[] =
     {NULL, NULL},
 };
 
-result cmdHandleChrgEn(void)
+// commands may not use an argument and this is fine, ignore warning
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+
+result cmdHandleChrgEn(int *argument)
 {
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
     Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
     return noError;
 }
 
-result cmdHandleChrgDis(void)
+result cmdHandleChrgDis(int *argument)
 {
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
     Chip_ADC_DisableSequencer(LPC_ADC, ADC_SEQA_IDX);
     return noError;
 }
 
-result cmdHandleLoadEn(void)
+result cmdHandleLoadEn(int *argument)
 {
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, true);
     Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
     return noError;
 }
 
-result cmdHandleLoadDis(void)
+result cmdHandleLoadDis(int *argument)
 {
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
     Chip_ADC_DisableSequencer(LPC_ADC, ADC_SEQA_IDX);
