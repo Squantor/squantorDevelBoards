@@ -35,7 +35,7 @@ Main execution file
 #include <print.h>
 #include <commands.hpp>
 
-char promptBuf[5];
+char promptBuf[16];
 result cmdlineParse(char *cmdline);
     
 promptData_t lipoChargerPromptData = 

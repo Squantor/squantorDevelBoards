@@ -31,3 +31,5 @@ char strProcessingColon[] = "Processing:";
 char strIs[] = " = ";
 char strSep[] = " | ";
 char strCrLf[] = "\r\n";
+char strChargeStopVolt[] = "Charge voltage";
+char strChargeCount[] = "Charge count";

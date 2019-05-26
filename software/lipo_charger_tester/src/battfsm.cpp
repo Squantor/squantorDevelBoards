@@ -24,3 +24,13 @@ SOFTWARE.
 /*
 Battery statemachine
 */
+
+void battFsmSetVoltage(int millivolt)
+{
+    
+}
+
+void battFsmSetCount(int count)
+{
+    
+}
