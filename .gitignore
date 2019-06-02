@@ -10,6 +10,9 @@
 rescue-backup/
 _autosave*
 
+# kicad caches
+fp-info-cache
+
 #executables
 bin/
 
