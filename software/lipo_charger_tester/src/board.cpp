@@ -101,6 +101,7 @@ void boardInit(void)
     boardAdcInit();
     Chip_ADC_EnableInt(LPC_ADC, (ADC_INTEN_SEQA_ENABLE));
     NVIC_EnableIRQ(ADC_SEQA_IRQn);
+    Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
     // setup timer tick
     SysTick_Config(SystemCoreClock / TICKS_PER_S);  
 }
@@ -108,23 +109,19 @@ void boardInit(void)
 void boardChargerEnable(void)
 {
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
-    Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
 }
 
 void boardChargerDisable(void)
 {
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
-    Chip_ADC_DisableSequencer(LPC_ADC, ADC_SEQA_IDX);
 }
 
 void boardLoadEnable(void)
 {
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, true);
-    Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
 }
 
 void boardLoadDisable(void)
 {
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
-    Chip_ADC_DisableSequencer(LPC_ADC, ADC_SEQA_IDX);
 }

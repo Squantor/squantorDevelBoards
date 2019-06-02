@@ -27,10 +27,14 @@ Battery statemachine public functions
 #ifndef BATTFSM_HPP
 #define BATTFSM_HPP
 
-void battFsmSetVoltage(int millivolt);
+void battFsmSetMaxVoltage(int voltage);
+void battFsmSetMinVoltage(int voltage);
 void battFsmSetCount(int count);
 
+// state manipulating functions
 void battFsmStart(void);
 void battFsmStop(void);
+void battFsmBattVoltage(int voltage);
+
 
 #endif

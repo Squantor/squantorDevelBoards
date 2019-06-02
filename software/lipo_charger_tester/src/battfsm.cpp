@@ -25,32 +25,42 @@ SOFTWARE.
 Battery statemachine
 */
 #include <battfsm.hpp>
+#include <board.hpp>
 
 typedef enum {
     idle = 0,
-    Charging,
-    Discharging,
+    charging,
+    discharging,
 } battFsmStates;
 
 typedef enum {
     none = 0,
     start,
     stop,
+    measure,
     // event for battery voltage
     } battFsmEvent;
 
 static battFsmStates battFsmState = idle;
 static int battFsmMaxVoltage;
+static int battFsmMinVoltage;
 static int battFsmChargeCount;
+
+static int batteryVoltage = 0;
 
 void battFsmHandleEvent(battFsmEvent event);
 void battFsmIdleHandler(battFsmEvent event);
 void battFsmChargingHandler(battFsmEvent event);
 void battFsmDischargingHandler(battFsmEvent event);
 
-void battFsmSetVoltage(int millivolt)
+void battFsmSetMaxVoltage(int millivolt)
 {
     battFsmMaxVoltage = millivolt;
+}
+
+void battFsmSetMinVoltage(int millivolt)
+{
+    battFsmMinVoltage = millivolt;
 }
 
 void battFsmSetCount(int count)
@@ -68,6 +78,14 @@ void battFsmStop(void)
     battFsmHandleEvent(stop);
 }
 
+void battFsmBattVoltage(int voltage)
+{
+    // we use a static var to communicate with the FSM,
+    // not really pretty.
+    batteryVoltage = voltage;
+    battFsmHandleEvent(measure);
+}
+
 // handler multiplexer
 void battFsmHandleEvent(battFsmEvent event)
 {
@@ -76,10 +94,10 @@ void battFsmHandleEvent(battFsmEvent event)
         case idle:
             battFsmIdleHandler(event);
         break;
-        case Charging:
+        case charging:
             battFsmChargingHandler(event);
         break;
-        case Discharging:
+        case discharging:
             battFsmDischargingHandler(event);
         break;
         default:
@@ -93,11 +111,14 @@ void battFsmIdleHandler(battFsmEvent event)
     switch(event)
     {
         case start:
-            // TODO enable charging HW
-            battFsmState = Charging;
+            boardChargerEnable();
+            battFsmState = charging;
         break;
         case stop:
             // we are already in idle, ignore
+        break;
+        case measure:
+            // ignore measurements in Idle
         break;
         default:
             // TODO assert here
@@ -113,8 +134,21 @@ void battFsmChargingHandler(battFsmEvent event)
             // we are already active, ignore
         break;
         case stop:
-            // TODO, stop charging HW
+            boardChargerDisable();
             battFsmState = idle;
+        break;
+        case measure:
+            if(batteryVoltage > battFsmMaxVoltage)
+            {
+                battFsmChargeCount--;
+                boardChargerDisable();
+                if(battFsmChargeCount == 0)
+                {
+                    battFsmState = idle;
+                }
+                boardLoadEnable();
+                battFsmState = discharging;
+            }              
         break;
         default:
         break;
@@ -126,11 +160,19 @@ void battFsmDischargingHandler(battFsmEvent event)
     switch(event)
     {
         case start:
-            // we are already doing something
+            // we are already doing something, ignore
         break;
         case stop:
-            // TODO, stop discharging HW
+            boardLoadDisable();
             battFsmState = idle;
+        break;
+        case measure:
+            if(batteryVoltage < battFsmMinVoltage)
+            {
+                boardLoadDisable();
+                boardChargerEnable();
+                battFsmState = charging;
+            }              
         break;
         default:
         break;

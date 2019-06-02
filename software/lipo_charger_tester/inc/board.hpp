@@ -29,22 +29,23 @@ Board setup routines
 #include <chip.h>
 
 // how many ticks per second
-#define TICKS_PER_S     2
+#define TICKS_PER_S     (2)
 
 // GPIO pin definitions as copied from the HSI
 // outputs
-#define CHARGER_POWER_EN    15
-#define DUMMY_LOAD_EN       1
+#define CHARGER_POWER_EN    (15)
+#define DUMMY_LOAD_EN       (1)
 // inputs
-#define CHARGER_STATUS_DONE 0
+#define CHARGER_STATUS_DONE (0)
 // analog inputs
-#define VBATT_PIO   13
-#define VBATT_ACHAN 10
-#define VREG_PIO    17
-#define VREG_ACHAN  9
+#define VBATT_PIO   (13)
+#define VBATT_ACHAN (10)
+#define VBATT_MUXNO (1)
+#define VREG_PIO    (17)
+#define VREG_ACHAN  (9)
 
 // taking into account also the 1M/3.3MOhm divider
-#define ADCUVPERLSB 1050u
+#define ADCUVPERLSB (1050u)
 
 #define ADC2MV(adcValue) (((adcValue * ADCUVPERLSB) / 1000u))
 

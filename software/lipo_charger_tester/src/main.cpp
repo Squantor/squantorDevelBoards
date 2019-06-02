@@ -34,6 +34,7 @@ Main execution file
 #include <strings.hpp>
 #include <print.h>
 #include <commands.hpp>
+#include <battfsm.hpp>
 
 char promptBuf[16];
 result cmdlineParse(char *cmdline);
@@ -111,6 +112,11 @@ int main()
                     dsPuts(&streamUart, strIs);
                     printDecU16(&streamUart, ADC2MV(ADC_DR_RESULT(rawSample)));
                     dsPuts(&streamUart, strSep);
+                }
+                if (rawSample & (ADC_DR_OVERRUN | ADC_SEQ_GDAT_DATAVALID) && 
+                    (i == VBATT_MUXNO) ) 
+                {
+                    battFsmBattVoltage(ADC2MV(ADC_DR_RESULT(rawSample)));
                 }
             }
             dsPuts(&streamUart, strCrLf);

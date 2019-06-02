@@ -93,7 +93,7 @@ result cmdHandleChargeVolt(int *argument)
     dsPuts(&streamUart, strIs);
     printDecU16(&streamUart, (int16_t) *argument);
     dsPuts(&streamUart, strCrLf);
-    battFsmSetVoltage(*argument);
+    battFsmSetMaxVoltage(*argument);
     return noError;
 }
 
