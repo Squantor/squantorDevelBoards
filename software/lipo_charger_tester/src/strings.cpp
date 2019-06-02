@@ -41,4 +41,5 @@ char strFsmIdle[] = "Idle\r\n";
 char strFsmCharging[] = "Charging\r\n";
 char strFsmDischarging[] = "Discharging\r\n";
 char strChargeCycle[] = "Cycle number: ";
-char strBattVoltage[] = "Battery Voltage: ";
+char strChargeVoltage[] = "Charging Voltage: ";
+char strDischargeVoltage[] = "Discharging Voltage: ";

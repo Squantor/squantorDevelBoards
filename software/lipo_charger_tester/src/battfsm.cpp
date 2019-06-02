@@ -143,7 +143,7 @@ void battFsmChargingHandler(battFsmEvent event)
             battFsmState = idle;
         break;
         case measure:
-            dsPuts(&streamUart, strBattVoltage);
+            dsPuts(&streamUart, strChargeVoltage);
             printDecU16(&streamUart, batteryVoltage);
             dsPuts(&streamUart, strCrLf);
             if(batteryVoltage > battFsmMaxVoltage)
@@ -184,7 +184,7 @@ void battFsmDischargingHandler(battFsmEvent event)
             battFsmState = idle;
         break;
         case measure:
-            dsPuts(&streamUart, strBattVoltage);
+            dsPuts(&streamUart, strDischargeVoltage);
             printDecU16(&streamUart, batteryVoltage);
             dsPuts(&streamUart, strCrLf);
             if(batteryVoltage < battFsmMinVoltage)
