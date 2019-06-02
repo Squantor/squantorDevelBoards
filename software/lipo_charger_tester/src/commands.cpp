@@ -60,29 +60,25 @@ commandEntry_t lipoChargerCommands[] =
 
 result cmdHandleChrgEn(int *argument)
 {
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
-    Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
+    boardChargerEnable();
     return noError;
 }
 
 result cmdHandleChrgDis(int *argument)
 {
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
-    Chip_ADC_DisableSequencer(LPC_ADC, ADC_SEQA_IDX);
+    boardChargerDisable();
     return noError;
 }
 
 result cmdHandleLoadEn(int *argument)
 {
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, true);
-    Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
+    boardLoadEnable();
     return noError;
 }
 
 result cmdHandleLoadDis(int *argument)
 {
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
-    Chip_ADC_DisableSequencer(LPC_ADC, ADC_SEQA_IDX);
+    boardLoadDisable();
     return noError;
 }
 

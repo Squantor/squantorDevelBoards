@@ -28,8 +28,6 @@ Board setup routines
 #define BOARD_HPP
 #include <chip.h>
 
-void boardInit(void);
-
 // how many ticks per second
 #define TICKS_PER_S     2
 
@@ -49,5 +47,12 @@ void boardInit(void);
 #define ADCUVPERLSB 1050u
 
 #define ADC2MV(adcValue) (((adcValue * ADCUVPERLSB) / 1000u))
+
+
+void boardInit(void);
+void boardChargerEnable(void);
+void boardChargerDisable(void);
+void boardLoadEnable(void);
+void boardLoadDisable(void);
 
 #endif
