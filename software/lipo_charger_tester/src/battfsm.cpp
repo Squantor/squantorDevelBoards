@@ -26,6 +26,9 @@ Battery statemachine
 */
 #include <battfsm.hpp>
 #include <board.hpp>
+#include <stream_uart.hpp>
+#include <strings.hpp>
+#include <print.h>
 
 typedef enum {
     idle = 0,
@@ -44,7 +47,7 @@ typedef enum {
 static battFsmStates battFsmState = idle;
 static int battFsmMaxVoltage;
 static int battFsmMinVoltage;
-static int battFsmChargeCount;
+static uint16_t battFsmChargeCount;
 
 static int batteryVoltage = 0;
 
@@ -63,7 +66,7 @@ void battFsmSetMinVoltage(int millivolt)
     battFsmMinVoltage = millivolt;
 }
 
-void battFsmSetCount(int count)
+void battFsmSetCount(uint16_t count)
 {
     battFsmChargeCount = count;
 }
@@ -112,6 +115,7 @@ void battFsmIdleHandler(battFsmEvent event)
     {
         case start:
             boardChargerEnable();
+            dsPuts(&streamUart, strFsmCharging);
             battFsmState = charging;
         break;
         case stop:
@@ -135,19 +139,31 @@ void battFsmChargingHandler(battFsmEvent event)
         break;
         case stop:
             boardChargerDisable();
+            dsPuts(&streamUart, strFsmIdle);
             battFsmState = idle;
         break;
         case measure:
+            dsPuts(&streamUart, strBattVoltage);
+            printDecU16(&streamUart, batteryVoltage);
+            dsPuts(&streamUart, strCrLf);
             if(batteryVoltage > battFsmMaxVoltage)
             {
                 battFsmChargeCount--;
                 boardChargerDisable();
                 if(battFsmChargeCount == 0)
                 {
+                    dsPuts(&streamUart, strFsmIdle);
                     battFsmState = idle;
                 }
-                boardLoadEnable();
-                battFsmState = discharging;
+                else
+                {
+                    dsPuts(&streamUart, strChargeCycle);
+                    printDecU16(&streamUart, battFsmChargeCount);
+                    dsPuts(&streamUart, strCrLf);
+                    boardLoadEnable();
+                    dsPuts(&streamUart, strFsmDischarging);
+                    battFsmState = discharging;
+                }
             }              
         break;
         default:
@@ -164,13 +180,18 @@ void battFsmDischargingHandler(battFsmEvent event)
         break;
         case stop:
             boardLoadDisable();
+            dsPuts(&streamUart, strFsmIdle);
             battFsmState = idle;
         break;
         case measure:
+            dsPuts(&streamUart, strBattVoltage);
+            printDecU16(&streamUart, batteryVoltage);
+            dsPuts(&streamUart, strCrLf);
             if(batteryVoltage < battFsmMinVoltage)
             {
                 boardLoadDisable();
                 boardChargerEnable();
+                dsPuts(&streamUart, strFsmCharging);
                 battFsmState = charging;
             }              
         break;

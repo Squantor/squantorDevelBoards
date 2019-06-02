@@ -29,20 +29,27 @@ SOFTWARE.
 #include <stream_uart.hpp>
 #include <strings.hpp>
 #include <print.h>
+#include <battfsm.hpp>
 
 result cmdHandleChrgEn(int *argument);
 result cmdHandleChrgDis(int *argument);
 result cmdHandleLoadEn(int *argument);
 result cmdHandleLoadDis(int *argument);
-result cmdHandleChargeVolt(int *argument);
+result cmdHandleChargeVoltMax(int *argument);
+result cmdHandleChargeVoltMin(int *argument);
 result cmdHandleChargeCount(int *argument);
+result cmdHandleStart(int *argument);
+result cmdHandleStop(int *argument);
 
 const char cmdChargeEnable[] = "ce";
 const char cmdChargeDisable[] = "cd";
 const char cmdLoadEnable[] = "le";
 const char cmdLoadDisable[] = "ld";
-const char cmdChargeVolt[] = "cv";
+const char cmdChargeVoltMax[] = "cvmax";
+const char cmdChargeVoltMin[] = "cvmin";
 const char cmdChargeCount[] = "cc";
+const char cmdChargeStart[] = "start";
+const char cmdChargeStop[] = "stop";
 
 commandEntry_t lipoChargerCommands[] = 
 {
@@ -50,8 +57,11 @@ commandEntry_t lipoChargerCommands[] =
     {cmdChargeDisable, cmdHandleChrgDis},
     {cmdLoadEnable, cmdHandleLoadEn},
     {cmdLoadDisable, cmdHandleLoadDis},
-    {cmdChargeVolt, cmdHandleChargeVolt},
+    {cmdChargeVoltMax, cmdHandleChargeVoltMax},
+    {cmdChargeVoltMin, cmdHandleChargeVoltMin},
     {cmdChargeCount, cmdHandleChargeCount},
+    {cmdChargeStart, cmdHandleStart},
+    {cmdChargeStop, cmdHandleStop},
     {NULL, NULL},
 };
 
@@ -82,18 +92,46 @@ result cmdHandleLoadDis(int *argument)
     return noError;
 }
 
+result cmdHandleStart(int *argument)
+{
+    dsPuts(&streamUart, strStart);
+    dsPuts(&streamUart, strCrLf);
+    battFsmStart();
+    return noError;
+}
+
+result cmdHandleStop(int *argument)
+{
+    dsPuts(&streamUart, strStop);
+    dsPuts(&streamUart, strCrLf);
+    battFsmStop();
+    return noError;
+}
+
 // now we want warnings on arguments missing again
 #pragma GCC diagnostic pop
 
-result cmdHandleChargeVolt(int *argument)
+result cmdHandleChargeVoltMax(int *argument)
 {
     if(argument == NULL)
         return invalidArg;
-    dsPuts(&streamUart, strChargeStopVolt);
+    dsPuts(&streamUart, strDischargeVolt);
     dsPuts(&streamUart, strIs);
     printDecU16(&streamUart, (int16_t) *argument);
     dsPuts(&streamUart, strCrLf);
     battFsmSetMaxVoltage(*argument);
+    return noError;
+}
+
+result cmdHandleChargeVoltMin(int *argument)
+{
+    if(argument == NULL)
+        return invalidArg;
+    dsPuts(&streamUart, strChargeVolt);
+    dsPuts(&streamUart, strIs);
+    printDecU16(&streamUart, (int16_t) *argument);
+    dsPuts(&streamUart, strCrLf);
+    battFsmSetMinVoltage(*argument);
     return noError;
 }
 

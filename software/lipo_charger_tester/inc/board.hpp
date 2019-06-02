@@ -40,7 +40,6 @@ Board setup routines
 // analog inputs
 #define VBATT_PIO   (13)
 #define VBATT_ACHAN (10)
-#define VBATT_MUXNO (1)
 #define VREG_PIO    (17)
 #define VREG_ACHAN  (9)
 

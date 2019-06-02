@@ -102,10 +102,10 @@ int main()
             sequenceComplete = false;
 
             /* Get raw sample data for channels 0-11 */
+            /*
             for (uint16_t i = 0; i < 12; i++) {
                 uint32_t rawSample = Chip_ADC_GetDataReg(LPC_ADC, i);
 
-                /* Show some ADC data */
                 if (rawSample & (ADC_DR_OVERRUN | ADC_SEQ_GDAT_DATAVALID)) 
                 {
                     printDecNzU16(&streamUart, i);
@@ -113,13 +113,18 @@ int main()
                     printDecU16(&streamUart, ADC2MV(ADC_DR_RESULT(rawSample)));
                     dsPuts(&streamUart, strSep);
                 }
+            }
+            dsPuts(&streamUart, strCrLf);
+            */
+            for (uint16_t i = 0; i < 12; i++) {
+                uint32_t rawSample = Chip_ADC_GetDataReg(LPC_ADC, i);
+                // send to statemachine
                 if (rawSample & (ADC_DR_OVERRUN | ADC_SEQ_GDAT_DATAVALID) && 
-                    (i == VBATT_MUXNO) ) 
+                    (i == VBATT_ACHAN) ) 
                 {
                     battFsmBattVoltage(ADC2MV(ADC_DR_RESULT(rawSample)));
                 }
             }
-            dsPuts(&streamUart, strCrLf);
         }
     }
 }

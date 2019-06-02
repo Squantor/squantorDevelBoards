@@ -33,7 +33,15 @@ extern char strProcessingColon[];
 extern char strIs[];
 extern char strSep[];
 extern char strCrLf[];
-extern char strChargeStopVolt[];
+extern char strDischargeVolt[];
+extern char strChargeVolt[];
 extern char strChargeCount[];
+extern char strStart[];
+extern char strStop[];
+extern char strFsmIdle[];
+extern char strFsmCharging[];
+extern char strFsmDischarging[];
+extern char strChargeCycle[];
+extern char strBattVoltage[];
 
 #endif

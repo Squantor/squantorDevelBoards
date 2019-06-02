@@ -31,5 +31,14 @@ char strProcessingColon[] = "Processing:";
 char strIs[] = " = ";
 char strSep[] = " | ";
 char strCrLf[] = "\r\n";
-char strChargeStopVolt[] = "Charge voltage";
+char strDischargeVolt[] = "Discharge voltage";
+char strChargeVolt[] = "Charge voltage";
 char strChargeCount[] = "Charge count";
+char strStart[] = "Starting";
+char strStop[] = "Stopping";
+// state transitions
+char strFsmIdle[] = "Idle\r\n";
+char strFsmCharging[] = "Charging\r\n";
+char strFsmDischarging[] = "Discharging\r\n";
+char strChargeCycle[] = "Cycle number: ";
+char strBattVoltage[] = "Battery Voltage: ";
