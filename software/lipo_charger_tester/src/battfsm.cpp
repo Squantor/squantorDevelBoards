@@ -24,13 +24,81 @@ SOFTWARE.
 /*
 Battery statemachine
 */
+#include <battfsm.hpp>
+
+typedef enum {
+    idle = 0,
+    Charging,
+    Discharging,
+} battFsmStates;
+
+static battFsmStates battFsmState = idle;
+static int battFsmMaxVoltage;
+static int battFsmChargeCount;
+
+void battFsmHandleEvent(battFsmEvent event);
+void battFsmIdleHandler(battFsmEvent event);
+void battFsmChargingHandler(battFsmEvent event);
+void battFsmDischargingHandler(battFsmEvent event);
 
 void battFsmSetVoltage(int millivolt)
 {
-    
+    battFsmMaxVoltage = millivolt;
 }
 
 void battFsmSetCount(int count)
 {
-    
+    battFsmChargeCount = count;
+}
+
+void battFsmStart()
+{
+    battFsmHandleEvent(start);
+}
+
+// handler multiplexer
+void battFsmHandleEvent(battFsmEvent event)
+{
+    switch(battFsmState)
+    {
+        case idle:
+            battFsmIdleHandler(event);
+        break;
+        case Charging:
+            battFsmChargingHandler(event);
+        break;
+        case Discharging:
+            battFsmDischargingHandler(event);
+        break;
+        default:
+            // TODO assert here
+        break;
+    }
+}
+
+void battFsmIdleHandler(battFsmEvent event)
+{
+    switch(event)
+    {
+        default:
+        break;
+    }
+}
+
+void battFsmChargingHandler(battFsmEvent event)
+{
+    switch(event)
+    {
+        default:
+        break;
+    }
+}
+
+void battFsmDischargingHandler(battFsmEvent event)
+{
+    switch(event)
+    {
+        default:
+        break;
+    }
 }

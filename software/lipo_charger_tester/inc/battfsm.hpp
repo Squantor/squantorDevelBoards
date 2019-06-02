@@ -31,4 +31,10 @@ void battFsmSetVoltage(int millivolt);
 
 void battFsmSetCount(int count);
 
+typedef enum {
+    none = 0,
+    start,
+    stop,
+    } battFsmEvent;
+
 #endif
