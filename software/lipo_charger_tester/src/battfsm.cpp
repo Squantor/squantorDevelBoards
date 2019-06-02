@@ -32,6 +32,13 @@ typedef enum {
     Discharging,
 } battFsmStates;
 
+typedef enum {
+    none = 0,
+    start,
+    stop,
+    // event for battery voltage
+    } battFsmEvent;
+
 static battFsmStates battFsmState = idle;
 static int battFsmMaxVoltage;
 static int battFsmChargeCount;
@@ -51,9 +58,14 @@ void battFsmSetCount(int count)
     battFsmChargeCount = count;
 }
 
-void battFsmStart()
+void battFsmStart(void)
 {
     battFsmHandleEvent(start);
+}
+
+void battFsmStop(void)
+{
+    battFsmHandleEvent(stop);
 }
 
 // handler multiplexer
@@ -80,7 +92,15 @@ void battFsmIdleHandler(battFsmEvent event)
 {
     switch(event)
     {
+        case start:
+            // TODO enable charging HW
+            battFsmState = Charging;
+        break;
+        case stop:
+            // we are already in idle, ignore
+        break;
         default:
+            // TODO assert here
         break;
     }
 }
@@ -89,6 +109,13 @@ void battFsmChargingHandler(battFsmEvent event)
 {
     switch(event)
     {
+        case start:
+            // we are already active, ignore
+        break;
+        case stop:
+            // TODO, stop charging HW
+            battFsmState = idle;
+        break;
         default:
         break;
     }
@@ -98,6 +125,13 @@ void battFsmDischargingHandler(battFsmEvent event)
 {
     switch(event)
     {
+        case start:
+            // we are already doing something
+        break;
+        case stop:
+            // TODO, stop discharging HW
+            battFsmState = idle;
+        break;
         default:
         break;
     }

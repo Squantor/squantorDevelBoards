@@ -28,13 +28,9 @@ Battery statemachine public functions
 #define BATTFSM_HPP
 
 void battFsmSetVoltage(int millivolt);
-
 void battFsmSetCount(int count);
 
-typedef enum {
-    none = 0,
-    start,
-    stop,
-    } battFsmEvent;
+void battFsmStart(void);
+void battFsmStop(void);
 
 #endif

@@ -104,3 +104,4 @@ void boardInit(void)
     // setup timer tick
     SysTick_Config(SystemCoreClock / TICKS_PER_S);  
 }
+
