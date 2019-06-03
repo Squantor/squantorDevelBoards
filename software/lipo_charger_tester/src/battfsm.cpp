@@ -187,7 +187,6 @@ void battFsmChargingHandler(battFsmEvent event)
                     printDecU16(&streamUart, battFsmChargeCount);
                     dsPuts(&streamUart, strCrLf);
                     boardLoadEnable();
-                    dsPuts(&streamUart, strFsmDischarging);
                     battFsmState = discharging;
                 }
             }              
