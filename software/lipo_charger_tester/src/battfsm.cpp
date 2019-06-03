@@ -45,9 +45,9 @@ typedef enum {
     } battFsmEvent;
 
 static battFsmStates battFsmState = idle;
-static int battFsmMaxVoltage;
-static int battFsmMinVoltage;
-static uint16_t battFsmChargeCount;
+static int battFsmMaxVoltage = 4500;
+static int battFsmMinVoltage = 4000;
+static uint16_t battFsmChargeCount = 1;
 
 static int batteryVoltage = 0;
 static int regulatorVoltage = 0;
@@ -91,6 +91,19 @@ void battFsmMeasurements(int battVoltage, int reguVoltage, bool chrgDone)
     regulatorVoltage = reguVoltage;
     chargeDone = chrgDone;
     battFsmHandleEvent(measure);
+}
+
+void battFsmPrintStatus(void)
+{
+    printDecU16(&streamUart, batteryVoltage);
+    dsPuts(&streamUart, strSep);
+    printDecU16(&streamUart, regulatorVoltage);
+    dsPuts(&streamUart, strSep);
+    if(chargeDone)
+        dsPuts(&streamUart, strTrue);
+    else
+        dsPuts(&streamUart, strFalse);
+    dsPuts(&streamUart, strCrLf);
 }
 
 // handler multiplexer
@@ -147,10 +160,9 @@ void battFsmChargingHandler(battFsmEvent event)
             battFsmState = idle;
         break;
         case measure:
-            dsPuts(&streamUart, strChargeVoltage);
-            printDecU16(&streamUart, batteryVoltage);
-            dsPuts(&streamUart, strCrLf);
-            if(batteryVoltage > battFsmMaxVoltage)
+            battFsmPrintStatus();
+            if( (batteryVoltage > battFsmMaxVoltage) ||
+                (chargeDone == true))
             {
                 battFsmChargeCount--;
                 boardChargerDisable();
@@ -188,9 +200,7 @@ void battFsmDischargingHandler(battFsmEvent event)
             battFsmState = idle;
         break;
         case measure:
-            dsPuts(&streamUart, strDischargeVoltage);
-            printDecU16(&streamUart, batteryVoltage);
-            dsPuts(&streamUart, strCrLf);
+            battFsmPrintStatus();
             if(batteryVoltage < battFsmMinVoltage)
             {
                 boardLoadDisable();

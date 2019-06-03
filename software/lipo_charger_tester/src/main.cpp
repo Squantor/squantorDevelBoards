@@ -116,16 +116,15 @@ int main()
             }
             dsPuts(&streamUart, strCrLf);
             */
-            int battVoltage, reguVoltage;
+            int battVoltage=0, reguVoltage=0;
             for (uint16_t i = 0; i < 12; i++) {
                 uint32_t rawSample = Chip_ADC_GetDataReg(LPC_ADC, i);
                 // send to statemachine
-                if (rawSample & (ADC_DR_OVERRUN | ADC_SEQ_GDAT_DATAVALID) && 
-                    (i == VBATT_ACHAN) ) 
+                if (rawSample & (ADC_DR_OVERRUN | ADC_SEQ_GDAT_DATAVALID)) 
                 {
                     if(i == VBATT_ACHAN)
                         battVoltage = ADC2MV(ADC_DR_RESULT(rawSample));
-                    else if(i == VREG_ACHAN)
+                    if(i == VREG_ACHAN)
                         reguVoltage = ADC2MV(ADC_DR_RESULT(rawSample));
                 }
             }

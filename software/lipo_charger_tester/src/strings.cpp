@@ -43,3 +43,5 @@ char strFsmDischarging[] = "Discharging\r\n";
 char strChargeCycle[] = "Cycle number: ";
 char strChargeVoltage[] = "Charging Voltage: ";
 char strDischargeVoltage[] = "Discharging Voltage: ";
+char strTrue[] = "True";
+char strFalse[] = "False";

@@ -45,5 +45,7 @@ extern char strChargeCycle[];
 extern char strBattVoltage[];
 extern char strDischargeVoltage[];
 extern char strChargeVoltage[];
+extern char strTrue[];
+extern char strFalse[];
 
 #endif
