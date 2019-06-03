@@ -54,5 +54,7 @@ void boardChargerEnable(void);
 void boardChargerDisable(void);
 void boardLoadEnable(void);
 void boardLoadDisable(void);
+// true for done
+bool boardChargerDone(void);
 
 #endif

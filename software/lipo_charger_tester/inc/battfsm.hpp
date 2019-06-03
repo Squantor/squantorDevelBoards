@@ -35,7 +35,7 @@ void battFsmSetCount(uint16_t count);
 // state manipulating functions
 void battFsmStart(void);
 void battFsmStop(void);
-void battFsmBattVoltage(int voltage);
+void battFsmMeasurements(int battVoltage, int reguVoltage, bool chrgDone);
 
 
 #endif

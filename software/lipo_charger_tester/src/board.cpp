@@ -125,3 +125,8 @@ void boardLoadDisable(void)
 {
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
 }
+
+bool boardChargerDone(void)
+{
+    return Chip_GPIO_GetPinState(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE);
+}

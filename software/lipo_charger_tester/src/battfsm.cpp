@@ -50,6 +50,8 @@ static int battFsmMinVoltage;
 static uint16_t battFsmChargeCount;
 
 static int batteryVoltage = 0;
+static int regulatorVoltage = 0;
+static bool chargeDone = false;
 
 void battFsmHandleEvent(battFsmEvent event);
 void battFsmIdleHandler(battFsmEvent event);
@@ -81,11 +83,13 @@ void battFsmStop(void)
     battFsmHandleEvent(stop);
 }
 
-void battFsmBattVoltage(int voltage)
+void battFsmMeasurements(int battVoltage, int reguVoltage, bool chrgDone)
 {
     // we use a static var to communicate with the FSM,
     // not really pretty.
-    batteryVoltage = voltage;
+    batteryVoltage = battVoltage;
+    regulatorVoltage = reguVoltage;
+    chargeDone = chrgDone;
     battFsmHandleEvent(measure);
 }
 
