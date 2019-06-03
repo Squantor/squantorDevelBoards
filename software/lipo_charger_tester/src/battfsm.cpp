@@ -95,6 +95,19 @@ void battFsmMeasurements(int battVoltage, int reguVoltage, bool chrgDone)
 
 void battFsmPrintStatus(void)
 {
+    switch(battFsmState)
+    {
+        case idle:
+            dsPuts(&streamUart, strFsmIdle);
+        break;
+        case charging:
+            dsPuts(&streamUart, strFsmCharging);
+        break;
+        case discharging:
+            dsPuts(&streamUart, strFsmDischarging);
+        break;
+    }
+    dsPuts(&streamUart, strSep);
     printDecU16(&streamUart, batteryVoltage);
     dsPuts(&streamUart, strSep);
     printDecU16(&streamUart, regulatorVoltage);
@@ -132,7 +145,6 @@ void battFsmIdleHandler(battFsmEvent event)
     {
         case start:
             boardChargerEnable();
-            dsPuts(&streamUart, strFsmCharging);
             battFsmState = charging;
         break;
         case stop:
@@ -156,7 +168,6 @@ void battFsmChargingHandler(battFsmEvent event)
         break;
         case stop:
             boardChargerDisable();
-            dsPuts(&streamUart, strFsmIdle);
             battFsmState = idle;
         break;
         case measure:
@@ -168,7 +179,6 @@ void battFsmChargingHandler(battFsmEvent event)
                 boardChargerDisable();
                 if(battFsmChargeCount == 0)
                 {
-                    dsPuts(&streamUart, strFsmIdle);
                     battFsmState = idle;
                 }
                 else
@@ -196,7 +206,6 @@ void battFsmDischargingHandler(battFsmEvent event)
         break;
         case stop:
             boardLoadDisable();
-            dsPuts(&streamUart, strFsmIdle);
             battFsmState = idle;
         break;
         case measure:
@@ -205,7 +214,6 @@ void battFsmDischargingHandler(battFsmEvent event)
             {
                 boardLoadDisable();
                 boardChargerEnable();
-                dsPuts(&streamUart, strFsmCharging);
                 battFsmState = charging;
             }              
         break;
