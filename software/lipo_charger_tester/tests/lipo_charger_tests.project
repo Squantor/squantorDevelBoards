@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="lipo_charger_tests" Version="10.0.0" InternalType="">
+  <VirtualDirectory Name="inc">
+    <File Name="inc/mock_datastreamchar.h"/>
+    <File Name="inc/chip.h"/>
+    <File Name="inc/test_dummy.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="src">
+    <File Name="src/test_dummy.c"/>
+    <File Name="src/mock_datastreamchar.c"/>
+    <File Name="src/board.cpp"/>
+    <File Name="src/main.c"/>
+  </VirtualDirectory>
   <Plugins>
     <Plugin Name="qmake">
       <![CDATA[00030001N0005Debug0000000000000001N0005debug0000000000000001N0007release000000000000]]>
     </Plugin>
   </Plugins>
-  <VirtualDirectory Name="inc">
-    <File Name="inc/tests1.h"/>
-    <File Name="inc/sqMinUnitC.h"/>
-    <VirtualDirectory Name="rt0">
-      <File Name="inc/rt0/syscall.h"/>
-      <File Name="inc/rt0/sys64.h"/>
-      <File Name="inc/rt0/rt0.h"/>
-    </VirtualDirectory>
-  </VirtualDirectory>
-  <VirtualDirectory Name="src">
-    <File Name="src/main_PC.c"/>
-    <File Name="src/syscall.c"/>
-    <File Name="src/tests1.c"/>
-    <File Name="src/00_start.c"/>
-    <File Name="src/_exit.c"/>
-    <File Name="src/main_bare_PC.c"/>
-  </VirtualDirectory>
   <Description/>
   <Dependencies/>
   <Dependencies Name="Debug"/>

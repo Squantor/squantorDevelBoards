@@ -6,9 +6,9 @@ PLATFORM ?= PC
 
 # project settings
 C_SOURCES += src/mock_datastreamchar.c
-CXX_SOURCES +=
+CXX_SOURCES += ../src/battfsm.cpp src/board.cpp
 S_SOURCES +=
-INCLUDES += -Iinc -I../../squantorMinUnitC/inc -I../../squantorLibEmbeddedC/inc
+INCLUDES += -Iinc -I../inc -I../../squantorMinUnitC/inc -I../../squantorLibEmbeddedC/inc
 DEFINES +=
 ALIBS += -lsqlibembeddedc
 RLIBS += 
