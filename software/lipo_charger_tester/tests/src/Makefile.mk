@@ -5,7 +5,7 @@ BIN_NAME = lipo_charger_tester
 PLATFORM ?= PC
 
 # project settings
-C_SOURCES +=
+C_SOURCES += src/mock_datastreamchar.c
 CXX_SOURCES +=
 S_SOURCES +=
 INCLUDES += -Iinc -I../../squantorMinUnitC/inc -I../../squantorLibEmbeddedC/inc
