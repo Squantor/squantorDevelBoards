@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="lipo_charger_tests" Version="10.0.0" InternalType="">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00030001N0005Debug0000000000000001N0005debug0000000000000001N0007release000000000000]]>
+    </Plugin>
+  </Plugins>
   <VirtualDirectory Name="inc">
     <File Name="inc/tests1.h"/>
     <File Name="inc/sqMinUnitC.h"/>
@@ -17,17 +22,10 @@
     <File Name="src/_exit.c"/>
     <File Name="src/main_bare_PC.c"/>
   </VirtualDirectory>
-  <Plugins>
-    <Plugin Name="qmake">
-      <![CDATA[00020001N0005Debug0000000000000001N0005debug000000000000]]>
-    </Plugin>
-  </Plugins>
   <Description/>
   <Dependencies/>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>
-  <Dependencies Name="debug"/>
-  <Dependencies Name="release"/>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -44,7 +42,7 @@
       </Compiler>
       <Linker Options="" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
-      <General OutputFile="./bin/PC/debug/squantorMinUnitCexample.elf" IntermediateDirectory="./build/PC/debug" Command="./bin/PC/debug/squantorMinUnitCexample.elf" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="." PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <General OutputFile="./bin/PC/debug/lipo_charger_tester.elf" IntermediateDirectory="./build/PC/debug" Command="./bin/PC/debug/lipo_charger_tester.elf" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="." PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="GNU makefile onestep build"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
@@ -83,7 +81,7 @@
       </Compiler>
       <Linker Options="-O2" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
-      <General OutputFile="./bin/$(WorkspaceConfiguration)/$(ProjectName)" IntermediateDirectory="./build/$(WorkspaceConfiguration)" Command="./bin/$(WorkspaceConfiguration)/$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="." PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <General OutputFile="./bin/PC/release/lipo_charger_tester.elf" IntermediateDirectory="./build/PC/release" Command="./bin/PC/release/lipo_charger_tester.elf" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="." PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="GNU makefile onestep build"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
