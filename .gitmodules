@@ -25,3 +25,6 @@
 [submodule "software/squantorLibEmbeddedC"]
 	path = software/squantorLibEmbeddedC
 	url = https://github.com/Squantor/squantorLibEmbeddedC.git
+[submodule "software/squantorMinUnitC"]
+	path = software/squantorMinUnitC
+	url = https://github.com/Squantor/squantorMinUnitC.git
