@@ -34,15 +34,17 @@ typedef enum {
     idle = 0,
     charging,
     discharging,
+    laststate,
 } battFsmStates;
 
 typedef enum {
-    none = 0,
     start,
     stop,
     measure,
-    // event for battery voltage
+    lastevent,
     } battFsmEvent;
+    
+typedef void (*fsmTransitionHandler)(void);
 
 static battFsmStates battFsmState = idle;
 static int battFsmMaxVoltage = 4500;
@@ -57,6 +59,20 @@ void battFsmHandleEvent(battFsmEvent event);
 void battFsmIdleHandler(battFsmEvent event);
 void battFsmChargingHandler(battFsmEvent event);
 void battFsmDischargingHandler(battFsmEvent event);
+void battFsmNop(void);
+void battFsmAssert(void);
+void idleStart();
+void chargingStop();
+void chargingMeasure();
+void dischargeStop();
+void dischargeMeasure();
+
+const fsmTransitionHandler battFsmTable[lastevent][laststate] = {
+//   idle       ,charging   ,discharging
+    {idleStart  ,battFsmNop ,battFsmNop}, // start
+    {battFsmNop ,chargingStop ,dischargeStop}, // stop
+    {battFsmNop ,chargingMeasure ,dischargeMeasure}, // measure
+    };
 
 void battFsmSetMaxVoltage(int millivolt)
 {
@@ -106,6 +122,9 @@ void battFsmPrintStatus(void)
         case discharging:
             dsPuts(&streamUart, strFsmDischarging);
         break;
+        default:
+        
+        break;
     }
     dsPuts(&streamUart, strSep);
     printDecU16(&streamUart, batteryVoltage);
@@ -122,101 +141,66 @@ void battFsmPrintStatus(void)
 // handler multiplexer
 void battFsmHandleEvent(battFsmEvent event)
 {
-    switch(battFsmState)
-    {
-        case idle:
-            battFsmIdleHandler(event);
-        break;
-        case charging:
-            battFsmChargingHandler(event);
-        break;
-        case discharging:
-            battFsmDischargingHandler(event);
-        break;
-        default:
-            // TODO assert here
-        break;
-    }
+    battFsmTable[event][battFsmState]();
 }
 
-void battFsmIdleHandler(battFsmEvent event)
+void idleStart()
 {
-    switch(event)
-    {
-        case start:
-            boardChargerEnable();
-            battFsmState = charging;
-        break;
-        case stop:
-            // we are already in idle, ignore
-        break;
-        case measure:
-            // ignore measurements in Idle
-        break;
-        default:
-            // TODO assert here
-        break;
-    }
+    boardChargerEnable();
+    battFsmState = charging;
 }
 
-void battFsmChargingHandler(battFsmEvent event)
+void chargingStop()
 {
-    switch(event)
+    boardChargerDisable();
+    battFsmState = idle;
+}
+
+void chargingMeasure()
+{
+    battFsmPrintStatus();
+    if( (batteryVoltage > battFsmMaxVoltage) ||
+        (chargeDone == true))
     {
-        case start:
-            // we are already active, ignore
-        break;
-        case stop:
-            boardChargerDisable();
+        battFsmChargeCount--;
+        boardChargerDisable();
+        if(battFsmChargeCount == 0)
+        {
             battFsmState = idle;
-        break;
-        case measure:
-            battFsmPrintStatus();
-            if( (batteryVoltage > battFsmMaxVoltage) ||
-                (chargeDone == true))
-            {
-                battFsmChargeCount--;
-                boardChargerDisable();
-                if(battFsmChargeCount == 0)
-                {
-                    battFsmState = idle;
-                }
-                else
-                {
-                    dsPuts(&streamUart, strChargeCycle);
-                    printDecU16(&streamUart, battFsmChargeCount);
-                    dsPuts(&streamUart, strCrLf);
-                    boardLoadEnable();
-                    battFsmState = discharging;
-                }
-            }              
-        break;
-        default:
-        break;
-    }
+        }
+        else
+        {
+            dsPuts(&streamUart, strChargeCycle);
+            printDecU16(&streamUart, battFsmChargeCount);
+            dsPuts(&streamUart, strCrLf);
+            boardLoadEnable();
+            battFsmState = discharging;
+        }
+    }        
 }
 
-void battFsmDischargingHandler(battFsmEvent event)
+void dischargeStop()
 {
-    switch(event)
+    boardLoadDisable();
+    battFsmState = idle;
+}
+
+void dischargeMeasure()
+{
+    battFsmPrintStatus();
+    if(batteryVoltage < battFsmMinVoltage)
     {
-        case start:
-            // we are already doing something, ignore
-        break;
-        case stop:
-            boardLoadDisable();
-            battFsmState = idle;
-        break;
-        case measure:
-            battFsmPrintStatus();
-            if(batteryVoltage < battFsmMinVoltage)
-            {
-                boardLoadDisable();
-                boardChargerEnable();
-                battFsmState = charging;
-            }              
-        break;
-        default:
-        break;
-    }
+        boardLoadDisable();
+        boardChargerEnable();
+        battFsmState = charging;
+    }     
+}
+
+void battFsmNop(void)
+{
+}
+
+void battFsmAssert(void)
+{
+    // assertion function here
 }
