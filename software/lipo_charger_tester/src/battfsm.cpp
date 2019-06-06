@@ -108,6 +108,8 @@ void battFsmPrintStatus(void)
         break;
     }
     dsPuts(&streamUart, strSep);
+    printDecU16(&streamUart, battFsmChargeCount);
+    dsPuts(&streamUart, strSep);
     printDecU16(&streamUart, batteryVoltage);
     dsPuts(&streamUart, strSep);
     printDecU16(&streamUart, regulatorVoltage);
@@ -183,9 +185,6 @@ void battFsmChargingHandler(battFsmEvent event)
                 }
                 else
                 {
-                    dsPuts(&streamUart, strChargeCycle);
-                    printDecU16(&streamUart, battFsmChargeCount);
-                    dsPuts(&streamUart, strCrLf);
                     boardLoadEnable();
                     battFsmState = discharging;
                 }

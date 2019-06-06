@@ -41,7 +41,6 @@ extern char strStop[];
 extern char strFsmIdle[];
 extern char strFsmCharging[];
 extern char strFsmDischarging[];
-extern char strChargeCycle[];
 extern char strBattVoltage[];
 extern char strDischargeVoltage[];
 extern char strChargeVoltage[];
