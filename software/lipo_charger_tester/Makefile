@@ -1,13 +1,13 @@
-# update per change V0003
+# update per change V0010
 # get project settings
 include src/Makefile.mk
 # get platform settings
-include platform/$(MCU).mk
+include platform/$(PLATFORM).mk
 
 INCLUDES += -Iplatform
 ALIBS +=
-RLIBS += 
-DLIBS += 
+RLIBS +=
+DLIBS +=
 ALIBDIR += -L"./ld"
 RLIBDIR +=
 DLIBDIR +=
@@ -19,30 +19,28 @@ RM = rm
 C_COMPILER = gcc
 CXX_COMPILER = g++
 GDB = gdb
-TOOLCHAIN_PREFIX = arm-none-eabi-
 SIZE = size
 AR = ar
 OBJDUMP = objdump
 OBJCOPY = objcopy
 
 # Toolchain flags
-COMPILE_C_FLAGS +=  
-COMPILE_CXX_FLAGS +=  
-COMPILE_ASM_FLAGS += 
-DEFINES += -DMCU_$(MCU)
+COMPILE_C_FLAGS +=
+COMPILE_CXX_FLAGS +=
+COMPILE_ASM_FLAGS +=
+DEFINES +=
 DEFINES_RELEASE = -DNDEBUG
 DEFINES_DEBUG = -DDEBUG
-C_RELEASE_COMPILE_FLAGS = -Os -g  
-C_DEBUG_COMPILE_FLAGS = -Og -g3 
-CXX_RELEASE_COMPILE_FLAGS = -Os -g 
+C_RELEASE_COMPILE_FLAGS = -Os -g
+C_DEBUG_COMPILE_FLAGS = -Og -g3
+CXX_RELEASE_COMPILE_FLAGS = -Os -g
 CXX_DEBUG_COMPILE_FLAGS = -Og -g3
-ASM_RELEASE_COMPILE_FLAGS = 
+ASM_RELEASE_COMPILE_FLAGS =
 ASM_DEBUG_COMPILE_FLAGS = -g3
 
 LINK_FLAGS +=
-LINK_FLAGS_RELEASE =
-LINK_FLAGS_DEBUG =
-LDSCRIPT = -T"ld/$(MCU).ld"
+LINK_FLAGS_RELEASE +=
+LINK_FLAGS_DEBUG +=
 
 # Clear built-in rules
 .SUFFIXES:
@@ -76,7 +74,7 @@ debug: export BUILD_TARGET := debug
 
 # Set the object file names, with the source directory stripped
 # from the path, and the build path prepended in its place
-OBJECTS = $(C_SOURCES:%.c=$(BUILD_PATH)/%.c.o)
+OBJECTS += $(C_SOURCES:%.c=$(BUILD_PATH)/%.c.o)
 OBJECTS += $(CXX_SOURCES:%.cpp=$(BUILD_PATH)/%.cpp.o)
 OBJECTS += $(S_SOURCES:%.s=$(BUILD_PATH)/%.s.o)
 # Set the dependency files that will be used to add header dependencies
@@ -100,7 +98,7 @@ clean: pre-clean
 	$(RM) -r build
 	$(RM) -r bin
 
-# Main rule, checks the executable and symlinks to the output
+# Main rule
 all: $(BIN_PATH)/$(BIN_NAME).elf
 
 # create the executable
@@ -134,19 +132,5 @@ $(BUILD_PATH)/%.s.o: ./%.s Makefile ./src/Makefile.mk
 	$(MKDIR) -p $(dir $@) 
 	$(TOOLCHAIN_PREFIX)$(C_COMPILER) $(ASMFLAGS) $(INCLUDES) -MP -MMD -c $< -o $@
 
-# debugging lines
-gdbftdidebug: debug
-	$(TOOLCHAIN_PREFIX)$(GDB) -x ./gdb_scripts/bmpFTDIdebug.txt
-
-gdbftdirelease: release
-	$(TOOLCHAIN_PREFIX)$(GDB) -x ./gdb_scripts/bmpFTDIrelease.txt
-
-gdbusbdebug: debug
-	$(TOOLCHAIN_PREFIX)$(GDB) -x ./gdb_scripts/bmpUSBdebug.txt
-
-gdbusbrelease: debug
-	$(TOOLCHAIN_PREFIX)$(GDB) -x ./gdb_scripts/bmpUSBrelease.txt
-
-
-.PHONY: release debug dirs all clean clean_debug clean_release gdbftdidebug gdbftdirelease gdbusbdebug gdbusbrelease
+.PHONY: release debug dirs all clean clean_debug clean_release
 

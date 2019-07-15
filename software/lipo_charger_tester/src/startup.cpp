@@ -1,11 +1,34 @@
 /*
+MIT License
+
+Copyright (c) 2019 Bart Bilos
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+/*
  * Unified Cortex Startup - C++ startup file
  *
  * This file is in public domain
  *
  * Put together by Paul Sokolovsky based on article by Vanya Sergeev
  * http://dev.frozeneskimo.com/notes/cortex_cmsis/ , GNU ld documentation
- * and numerous other public resources.
+ * and numerous other public resources. Modified and extended by Bart Bilos.
  *
  */
 
@@ -26,7 +49,6 @@ extern uint32_t _end_bss;
 extern void _end_stack(void);
 extern void (*__preinit_array_start []) (void);
 extern void (*__preinit_array_end []) (void);
-void _init(void);
 extern void (*__init_array_start []) (void);
 extern void (*__init_array_end []) (void);
 
@@ -39,7 +61,7 @@ unsigned int *pDivRom_idiv;
 unsigned int *pDivRom_uidiv;
 #endif
 
-void Dummy_Handler(void);
+
 void Reset_Handler(void);
 
 #if defined (__cplusplus)
