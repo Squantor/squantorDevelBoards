@@ -62,8 +62,8 @@ void boardInit(void)
     Chip_SWM_FixedPinEnable(SWM_FIXED_XTALIN, true);
     Chip_SWM_FixedPinEnable(SWM_FIXED_XTALOUT, true);
     // use UART0 for debug output
-    Chip_SWM_MovablePinAssign(SWM_U0_TXD_O, 4);
-    Chip_SWM_MovablePinAssign(SWM_U0_RXD_I, 12);
+    Chip_SWM_MovablePinAssign(SWM_U0_TXD_O, UART_TX);
+    Chip_SWM_MovablePinAssign(SWM_U0_RXD_I, UART_RX);
     Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_SWM);
     // setup IO control
     Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_IOCON);
@@ -81,11 +81,11 @@ void boardInit(void)
     Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_IOCON);
     // setup GPIOs, look at HSI how to setup
     Chip_GPIO_Init(LPC_GPIO_PORT);
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, CHARGER_POWER_EN);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
-    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
-    Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE);
+    //Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, CHARGER_POWER_EN);
+    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
+    //Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN);
+    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
+    //Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE);
     // setup external crystal oscillator
     Chip_SetupXtalClocking();
     SystemCoreClockUpdate();
@@ -97,11 +97,11 @@ void boardInit(void)
     Chip_UART_Enable(LPC_USART0);
     Chip_UART_TXEnable(LPC_USART0);
     // setup ADC
-    Chip_ADC_Init(LPC_ADC, 0);
-    boardAdcInit();
-    Chip_ADC_EnableInt(LPC_ADC, (ADC_INTEN_SEQA_ENABLE));
-    NVIC_EnableIRQ(ADC_SEQA_IRQn);
-    Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
+    //Chip_ADC_Init(LPC_ADC, 0);
+    //boardAdcInit();
+    //Chip_ADC_EnableInt(LPC_ADC, (ADC_INTEN_SEQA_ENABLE));
+    //NVIC_EnableIRQ(ADC_SEQA_IRQn);
+    //Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
     // setup timer tick
     SysTick_Config(SystemCoreClock / TICKS_PER_S);  
 }

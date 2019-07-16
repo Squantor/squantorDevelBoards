@@ -1,8 +1,8 @@
 # update per change V0008
 
 # project name
-BIN_NAME = template_microcontroller
-BOARD = proto_v1
+BIN_NAME = lipo_charger_tester
+BOARD = proto_v2
 
 #include board specific settings/rules
 include src/$(BOARD).mk

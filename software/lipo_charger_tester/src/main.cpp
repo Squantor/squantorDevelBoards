@@ -116,6 +116,7 @@ int main()
             }
             dsPuts(&streamUart, strCrLf);
             */
+            /*
             int battVoltage=0, reguVoltage=0;
             for (uint16_t i = 0; i < 12; i++) {
                 uint32_t rawSample = Chip_ADC_GetDataReg(LPC_ADC, i);
@@ -130,6 +131,7 @@ int main()
             }
             bool chargerDone = boardChargerDone();
             battFsmMeasurements(battVoltage, reguVoltage, chargerDone);
+            */
         }
     }
 }
