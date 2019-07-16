@@ -22,30 +22,29 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 /*
-Board setup routines
+Board setup routines for hardware prototype V1
 */
-#ifndef BOARD_HPP
-#define BOARD_HPP
-#include <chip.h>
+#ifndef PROTO_V1_HPP
+#define PROTO_V1_HPP
 
-// how many ticks per second
-#define TICKS_PER_S     (2)
+#define UART_TX 4
+#define UART_RX 12
 
-#if defined(BOARD_proto_v1)
-    #include <proto_v1.hpp>
-#elif defined(BOARD_proto_v2)
-    #include <proto_v2.hpp>
-#else
-    #error No proper board definition found!
-#endif
+// GPIO pin definitions as copied from the HSI
+// outputs
+#define CHARGER_POWER_EN    (15)
+#define DUMMY_LOAD_EN       (1)
+// inputs
+#define CHARGER_STATUS_DONE (0)
+// analog inputs
+#define VBATT_PIO   (13)
+#define VBATT_ACHAN (10)
+#define VREG_PIO    (17)
+#define VREG_ACHAN  (9)
 
+// taking into account also the 1M/3.3MOhm divider
+#define ADCUVPERLSB (1050u)
 
-void boardInit(void);
-void boardChargerEnable(void);
-void boardChargerDisable(void);
-void boardLoadEnable(void);
-void boardLoadDisable(void);
-// true for done
-bool boardChargerDone(void);
+#define ADC2MV(adcValue) (((adcValue * ADCUVPERLSB) / 1000u))
 
 #endif

@@ -62,8 +62,8 @@ void boardInit(void)
     Chip_SWM_FixedPinEnable(SWM_FIXED_XTALIN, true);
     Chip_SWM_FixedPinEnable(SWM_FIXED_XTALOUT, true);
     // use UART0 for debug output
-    Chip_SWM_MovablePinAssign(SWM_U0_TXD_O, 4);
-    Chip_SWM_MovablePinAssign(SWM_U0_RXD_I, 12);
+    Chip_SWM_MovablePinAssign(SWM_U0_TXD_O, UART_TX);
+    Chip_SWM_MovablePinAssign(SWM_U0_RXD_I, UART_RX);
     Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_SWM);
     // setup IO control
     Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_IOCON);

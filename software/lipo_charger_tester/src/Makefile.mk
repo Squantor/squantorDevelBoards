@@ -1,8 +1,8 @@
-# update per change V0007
+# update per change V0008
 
 # project name
 BIN_NAME = template_microcontroller
-BOARD = proto_v2
+BOARD = proto_v1
 
 #include board specific settings/rules
 include src/$(BOARD).mk
@@ -16,7 +16,7 @@ src/commands.cpp \
 src/battfsm.cpp
 S_SOURCES +=
 INCLUDES += -Iinc
-DEFINES +=
+DEFINES += -DBOARD_$(BOARD)
 ALIBS += -lgcc
 RLIBS +=
 DLIBS +=

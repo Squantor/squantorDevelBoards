@@ -22,30 +22,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 /*
-Board setup routines
+Board setup routines for hardware prototype V2
 */
-#ifndef BOARD_HPP
-#define BOARD_HPP
+#ifndef PROTO_V2_HPP
+#define PROTO_V2_HPP
 #include <chip.h>
-
-// how many ticks per second
-#define TICKS_PER_S     (2)
-
-#if defined(BOARD_proto_v1)
-    #include <proto_v1.hpp>
-#elif defined(BOARD_proto_v2)
-    #include <proto_v2.hpp>
-#else
-    #error No proper board definition found!
-#endif
-
-
-void boardInit(void);
-void boardChargerEnable(void);
-void boardChargerDisable(void);
-void boardLoadEnable(void);
-void boardLoadDisable(void);
-// true for done
-bool boardChargerDone(void);
 
 #endif
