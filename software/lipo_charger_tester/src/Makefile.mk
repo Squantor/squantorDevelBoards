@@ -2,7 +2,7 @@
 
 # project name
 BIN_NAME = template_microcontroller
-BOARD = proto_v1
+BOARD = proto_v2
 
 #include board specific settings/rules
 include src/$(BOARD).mk
