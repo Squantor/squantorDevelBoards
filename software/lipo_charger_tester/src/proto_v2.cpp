@@ -78,6 +78,8 @@ void boardInit(void)
     //Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO15, PIN_MODE_INACTIVE);
     //Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO1, PIN_MODE_INACTIVE);
     //Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO0, PIN_MODE_INACTIVE);
+    Chip_IOCON_PinSetMode(LPC_IOCON, CHARGER_STATUS_DONE_IOCON, PIN_MODE_PULLUP);
+    Chip_IOCON_PinSetMode(LPC_IOCON, CHARGER_PROG_IOCON, PIN_MODE_INACTIVE);
     Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_IOCON);
     // setup GPIOs, look at HSI how to setup
     Chip_GPIO_Init(LPC_GPIO_PORT);
@@ -85,7 +87,9 @@ void boardInit(void)
     //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
     //Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN);
     //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
-    //Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE);
+    Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, CHARGER_PROG_PIN);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_PROG_PIN, false);
+    Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE_PIN);
     // setup external crystal oscillator
     Chip_SetupXtalClocking();
     SystemCoreClockUpdate();

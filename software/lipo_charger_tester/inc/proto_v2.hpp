@@ -34,8 +34,12 @@ Board setup routines for hardware prototype V2
 // outputs
 #define CHARGER_POWER_EN    (15)
 #define DUMMY_LOAD_EN       (1)
+// GPIO connected to PROG pin via diode, high is disable MCP73831
+#define CHARGER_PROG_PIN    (4)
+#define CHARGER_PROG_IOCON  (IOCON_PIO4)
 // inputs
-#define CHARGER_STATUS_DONE (0)
+#define CHARGER_STATUS_DONE_PIN (12)
+#define CHARGER_STATUS_DONE_IOCON (IOCON_PIO12)
 // analog inputs
 #define VBATT_PIO   (13)
 #define VBATT_ACHAN (10)
