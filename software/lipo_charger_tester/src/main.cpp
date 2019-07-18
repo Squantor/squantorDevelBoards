@@ -102,7 +102,6 @@ int main()
             sequenceComplete = false;
 
             /* Get raw sample data for channels 0-11 */
-            /*
             for (uint16_t i = 0; i < 12; i++) {
                 uint32_t rawSample = Chip_ADC_GetDataReg(LPC_ADC, i);
 
@@ -115,7 +114,6 @@ int main()
                 }
             }
             dsPuts(&streamUart, strCrLf);
-            */
             /*
             int battVoltage=0, reguVoltage=0;
             for (uint16_t i = 0; i < 12; i++) {

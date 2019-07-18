@@ -37,16 +37,21 @@ void boardAdcInit(void)
     Chip_ADC_SetClockRate(LPC_ADC, 1000000);
     // setup sampling sequencer
     Chip_ADC_SetupSequencer(LPC_ADC, ADC_SEQA_IDX, (
-        ADC_SEQ_CTRL_CHANSEL(10) | 
-        ADC_SEQ_CTRL_CHANSEL(9) |
+        ADC_SEQ_CTRL_CHANSEL(VIN_ACHAN) | 
+        ADC_SEQ_CTRL_CHANSEL(VBUS_ACHAN) |
+        ADC_SEQ_CTRL_CHANSEL(VBATT_ACHAN) |
+        ADC_SEQ_CTRL_CHANSEL(VREG_ACHAN) |
         ADC_SEQ_CTRL_MODE_EOS ));
     // enable fixed pins after the sequencer
     // TODO investigate this as it is not according to the datasheet
+    // Theory: when enable clocking of the SWM it will apply analog settings?
     Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_SWM);
-    Chip_SWM_EnableFixedPin(SWM_FIXED_ADC9);
-    Chip_SWM_EnableFixedPin(SWM_FIXED_ADC10);
+    Chip_SWM_EnableFixedPin(VIN_SWM);
+    Chip_SWM_EnableFixedPin(VBUS_SWM);
+    Chip_SWM_EnableFixedPin(VBATT_SWM);
+    Chip_SWM_EnableFixedPin(VREG_SWM);
     Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_SWM);
-    
+
     Chip_ADC_ClearFlags(LPC_ADC, Chip_ADC_GetFlags(LPC_ADC));
 }
 
@@ -62,8 +67,8 @@ void boardInit(void)
     Chip_SWM_FixedPinEnable(SWM_FIXED_XTALIN, true);
     Chip_SWM_FixedPinEnable(SWM_FIXED_XTALOUT, true);
     // use UART0 for debug output
-    Chip_SWM_MovablePinAssign(SWM_U0_TXD_O, UART_TX);
-    Chip_SWM_MovablePinAssign(SWM_U0_RXD_I, UART_RX);
+    Chip_SWM_MovablePinAssign(SWM_U0_TXD_O, UART_TX_PIN);
+    Chip_SWM_MovablePinAssign(SWM_U0_RXD_I, UART_RX_PIN);
     Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_SWM);
     // setup IO control
     Chip_Clock_EnablePeriphClock(SYSCTL_CLOCK_IOCON);
@@ -71,22 +76,25 @@ void boardInit(void)
     Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO8, PIN_MODE_INACTIVE);
     Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO9, PIN_MODE_INACTIVE);
     // disable all pullups on analog pins
-    //Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO17, PIN_MODE_INACTIVE);
-    //Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO13, PIN_MODE_INACTIVE);
+    Chip_IOCON_PinSetMode(LPC_IOCON, VIN_IOCON, PIN_MODE_INACTIVE);
+    Chip_IOCON_PinSetMode(LPC_IOCON, VBUS_IOCON, PIN_MODE_INACTIVE);
+    Chip_IOCON_PinSetMode(LPC_IOCON, VBATT_IOCON, PIN_MODE_INACTIVE);
+    Chip_IOCON_PinSetMode(LPC_IOCON, VREG_IOCON, PIN_MODE_INACTIVE);
     // disable all pullups on outputs and inputs
-    //Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO4, PIN_MODE_INACTIVE);
-    //Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO15, PIN_MODE_INACTIVE);
-    //Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO1, PIN_MODE_INACTIVE);
-    //Chip_IOCON_PinSetMode(LPC_IOCON, IOCON_PIO0, PIN_MODE_INACTIVE);
+    //Chip_IOCON_PinSetMode(LPC_IOCON, DUMMY_LOAD_EN_IOCON, PIN_MODE_INACTIVE);
+    //Chip_IOCON_PinSetMode(LPC_IOCON, CHARGER_POWER_EN_IOCON, PIN_MODE_INACTIVE);
     Chip_IOCON_PinSetMode(LPC_IOCON, CHARGER_STATUS_DONE_IOCON, PIN_MODE_PULLUP);
     Chip_IOCON_PinSetMode(LPC_IOCON, CHARGER_PROG_IOCON, PIN_MODE_INACTIVE);
+    // setup UART pins
+    Chip_IOCON_PinSetMode(LPC_IOCON, UART_RX_IOCON, PIN_MODE_PULLUP);
+    Chip_IOCON_PinSetMode(LPC_IOCON, UART_TX_IOCON, PIN_MODE_INACTIVE);
     Chip_Clock_DisablePeriphClock(SYSCTL_CLOCK_IOCON);
     // setup GPIOs, look at HSI how to setup
     Chip_GPIO_Init(LPC_GPIO_PORT);
-    //Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, CHARGER_POWER_EN);
-    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
-    //Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN);
-    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
+    //Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, CHARGER_POWER_EN_PIN);
+    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN_PIN, false);
+    //Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN_PIN);
+    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN_PIN, false);
     Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 0, CHARGER_PROG_PIN);
     Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_PROG_PIN, false);
     Chip_GPIO_SetPinDIRInput(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE_PIN);
@@ -101,36 +109,46 @@ void boardInit(void)
     Chip_UART_Enable(LPC_USART0);
     Chip_UART_TXEnable(LPC_USART0);
     // setup ADC
-    //Chip_ADC_Init(LPC_ADC, 0);
-    //boardAdcInit();
-    //Chip_ADC_EnableInt(LPC_ADC, (ADC_INTEN_SEQA_ENABLE));
-    //NVIC_EnableIRQ(ADC_SEQA_IRQn);
-    //Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
+    Chip_ADC_Init(LPC_ADC, 0);
+    boardAdcInit();
+    Chip_ADC_EnableInt(LPC_ADC, (ADC_INTEN_SEQA_ENABLE));
+    NVIC_EnableIRQ(ADC_SEQA_IRQn);
+    Chip_ADC_EnableSequencer(LPC_ADC, ADC_SEQA_IDX);
     // setup timer tick
     SysTick_Config(SystemCoreClock / TICKS_PER_S);  
 }
 
+void boardPowerEnable(void)
+{
+    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN_PIN, true);
+}
+
+void boardPowerDisable(void)
+{
+    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN_PIN, false);
+}
+
 void boardChargerEnable(void)
 {
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, true);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_PROG_PIN, false);
 }
 
 void boardChargerDisable(void)
 {
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_POWER_EN, false);
+    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, CHARGER_PROG_PIN, true);
 }
 
 void boardLoadEnable(void)
 {
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, true);
+    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN_PIN, true);
 }
 
 void boardLoadDisable(void)
 {
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN, false);
+    //Chip_GPIO_SetPinState(LPC_GPIO_PORT, 0, DUMMY_LOAD_EN_PIN, false);
 }
 
 bool boardChargerDone(void)
 {
-    return Chip_GPIO_GetPinState(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE);
+    return Chip_GPIO_GetPinState(LPC_GPIO_PORT, 0, CHARGER_STATUS_DONE_PIN);
 }

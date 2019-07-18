@@ -27,13 +27,19 @@ Board setup routines for hardware prototype V2
 #ifndef PROTO_V2_HPP
 #define PROTO_V2_HPP
 
-#define UART_TX (26)
-#define UART_RX (27)
+#define UART_TX_PIN (26)
+#define UART_TX_IOCON (IOCON_PIO26)
+#define UART_RX_PIN (27)
+#define UART_RX_IOCON (IOCON_PIO27)
 
 // GPIO pin definitions as copied from the HSI
 // outputs
-#define CHARGER_POWER_EN    (15)
-#define DUMMY_LOAD_EN       (1)
+// power control pin
+#define CHARGER_POWER_EN_PIN    (15)
+#define CHARGER_POWER_EN_IOCON  (IOCON_PIO1)
+// dummy load control pin
+#define DUMMY_LOAD_EN_PIN       (1)
+#define DUMMY_LOAD_EN_IOCON     (IOCON_PIO1)
 // GPIO connected to PROG pin via diode, high is disable MCP73831
 #define CHARGER_PROG_PIN    (4)
 #define CHARGER_PROG_IOCON  (IOCON_PIO4)
@@ -41,13 +47,25 @@ Board setup routines for hardware prototype V2
 #define CHARGER_STATUS_DONE_PIN (12)
 #define CHARGER_STATUS_DONE_IOCON (IOCON_PIO12)
 // analog inputs
-#define VBATT_PIO   (13)
-#define VBATT_ACHAN (10)
-#define VREG_PIO    (17)
-#define VREG_ACHAN  (9)
+#define VIN_PIO     (23)
+#define VIN_ACHAN   (3)
+#define VIN_IOCON   (IOCON_PIO23)
+#define VIN_SWM     (SWM_FIXED_ADC3)
+#define VBUS_PIO    (22)
+#define VBUS_ACHAN  (4)
+#define VBUS_IOCON  (IOCON_PIO22)
+#define VBUS_SWM    (SWM_FIXED_ADC4)
+#define VBATT_PIO   (21)
+#define VBATT_ACHAN (5)
+#define VBATT_IOCON (IOCON_PIO21)
+#define VBATT_SWM   (SWM_FIXED_ADC5)
+#define VREG_PIO    (20)
+#define VREG_ACHAN  (6)
+#define VREG_IOCON  (IOCON_PIO20)
+#define VREG_SWM    (SWM_FIXED_ADC6)
 
-// taking into account also the 1M/3.3MOhm divider
-#define ADCUVPERLSB (1050u)
+// taking into account also the 1M/3.3MOhm divider and 3.3V reference
+#define ADCUVPERLSB (3464u)
 
 #define ADC2MV(adcValue) (((adcValue * ADCUVPERLSB) / 1000u))
 

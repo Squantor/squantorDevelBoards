@@ -31,6 +31,9 @@ SOFTWARE.
 #include <print.h>
 #include <battfsm.hpp>
 
+
+result cmdHandlePwrEn(int *argument);
+result cmdHandlePwrDis(int *argument);
 result cmdHandleChrgEn(int *argument);
 result cmdHandleChrgDis(int *argument);
 result cmdHandleLoadEn(int *argument);
@@ -41,6 +44,8 @@ result cmdHandleChargeCount(int *argument);
 result cmdHandleStart(int *argument);
 result cmdHandleStop(int *argument);
 
+const char cmdPowerEnable[] = "pe";
+const char cmdPowerDisable[] = "pd";
 const char cmdChargeEnable[] = "ce";
 const char cmdChargeDisable[] = "cd";
 const char cmdLoadEnable[] = "le";
@@ -48,11 +53,15 @@ const char cmdLoadDisable[] = "ld";
 const char cmdChargeVoltMax[] = "cvmax";
 const char cmdChargeVoltMin[] = "cvmin";
 const char cmdChargeCount[] = "cc";
+const char cmdStatus[] = "status";
+const char cmdSettings[] = "settings";
 const char cmdChargeStart[] = "start";
 const char cmdChargeStop[] = "stop";
 
 commandEntry_t lipoChargerCommands[] = 
 {
+    {cmdPowerEnable, cmdHandlePwrEn},
+    {cmdPowerDisable, cmdHandlePwrDis},  
     {cmdChargeEnable, cmdHandleChrgEn},
     {cmdChargeDisable, cmdHandleChrgDis},
     {cmdLoadEnable, cmdHandleLoadEn},
@@ -67,6 +76,16 @@ commandEntry_t lipoChargerCommands[] =
 
 // commands may not use an argument and this is fine, ignore warning
 #pragma GCC diagnostic ignored "-Wunused-parameter"
+
+result cmdHandlePwrEn(int *argument)
+{
+    return noError;
+}
+
+result cmdHandlePwrDis(int *argument)
+{
+    return noError;
+}
 
 result cmdHandleChrgEn(int *argument)
 {
