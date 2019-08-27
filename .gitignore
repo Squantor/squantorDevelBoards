@@ -12,6 +12,7 @@ _autosave*
 
 # kicad caches
 fp-info-cache
+*-cache.lib
 
 #executables
 bin/
