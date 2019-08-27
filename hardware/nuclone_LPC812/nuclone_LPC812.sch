@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -41,8 +41,8 @@ S 1000 2500 1000 1000
 U 5D658ECE
 F0 "Jtag connector" 50
 F1 "JTAG_connector.sch" 50
-F2 "VDD" I R 2000 2650 50 
-F3 "VSS" I R 2000 2750 50 
+F2 "VDD" I R 2000 2600 50 
+F3 "VSS" I R 2000 2700 50 
 F4 "TMS" O R 2000 3000 50 
 F5 "TCK" O R 2000 3100 50 
 F6 "TDO" O R 2000 3200 50 
@@ -54,11 +54,27 @@ S 1000 1000 1000 1000
 U 5D65975B
 F0 "USB input" 50
 F1 "usb_input.sch" 50
+F2 "VSS" I R 2000 1200 50 
+F3 "VUSB" I R 2000 1100 50 
 $EndSheet
 $Sheet
-S 3000 1000 1000 1000
+S 4000 1000 1000 1000
 U 5D6598AA
 F0 "nuclone power supply" 50
 F1 "nuclone_powersupply.sch" 50
 $EndSheet
+$Sheet
+S 4000 2500 1000 2000
+U 5D65B1D0
+F0 "LPC812M101JD20 base" 50
+F1 "nuclone_mcu_LPC812M101JD20.sch" 50
+$EndSheet
+Text Label 2050 1100 0    50   ~ 0
+VUSB
+Text Label 2050 1200 0    50   ~ 0
+VSS
+Wire Wire Line
+	2050 1100 2000 1100
+Wire Wire Line
+	2000 1200 2050 1200
 $EndSCHEMATC
