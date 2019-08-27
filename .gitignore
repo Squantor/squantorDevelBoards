@@ -9,6 +9,7 @@
 *.net
 rescue-backup/
 _autosave*
+*.sch-bak
 
 # kicad caches
 fp-info-cache
