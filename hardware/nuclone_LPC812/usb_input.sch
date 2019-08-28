@@ -25,7 +25,7 @@ F 3 "" H 1450 1550 60  0001 C CNN
 	1    1300 1500
 	1    0    0    -1  
 $EndComp
-Text HLabel 3850 1700 2    50   Input ~ 0
+Text HLabel 3850 1700 2    50   Output ~ 0
 VSS
 Wire Wire Line
 	1650 1700 1700 1700
@@ -48,7 +48,7 @@ F 3 "~" H 2150 1300 50  0001 C CNN
 $EndComp
 Text Label 3800 1600 2    50   ~ 0
 VUSB
-Text HLabel 3850 1600 2    50   Input ~ 0
+Text HLabel 3850 1600 2    50   Output ~ 0
 VUSB
 Wire Wire Line
 	3850 1600 3800 1600
