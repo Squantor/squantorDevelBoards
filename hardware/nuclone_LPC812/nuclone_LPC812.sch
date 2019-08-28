@@ -56,6 +56,8 @@ F0 "USB input" 50
 F1 "usb_input.sch" 50
 F2 "VSS" I R 2000 1200 50 
 F3 "VUSB" I R 2000 1100 50 
+F4 "USB_D-" B R 2000 1400 50 
+F5 "USB_D+" B R 2000 1500 50 
 $EndSheet
 $Sheet
 S 4000 1000 1000 1000
@@ -77,4 +79,6 @@ Wire Wire Line
 	2050 1100 2000 1100
 Wire Wire Line
 	2000 1200 2050 1200
+NoConn ~ 2000 1400
+NoConn ~ 2000 1500
 $EndSCHEMATC
