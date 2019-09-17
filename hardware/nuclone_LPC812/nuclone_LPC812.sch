@@ -53,6 +53,9 @@ S 4000 1000 1000 1000
 U 5D6598AA
 F0 "nuclone power supply" 50
 F1 "nuclone_powersupply.sch" 50
+F2 "VSS" B L 4000 1900 50 
+F3 "VBUS" I L 4000 1100 50 
+F4 "VDD" O R 5000 1100 50 
 $EndSheet
 $Sheet
 S 4000 2500 1000 2000
@@ -334,4 +337,16 @@ MCU_TDO
 NoConn ~ 2050 3300
 Text Label 2050 3400 0    50   ~ 0
 MCU_RESET
+Text Label 3950 1900 2    50   ~ 0
+VSS
+Text Label 3950 1100 2    50   ~ 0
+VBUS
+Wire Wire Line
+	4000 1100 3950 1100
+Wire Wire Line
+	3950 1900 4000 1900
+Text Label 5050 1100 0    50   ~ 0
+VDD
+Wire Wire Line
+	5000 1100 5050 1100
 $EndSCHEMATC
