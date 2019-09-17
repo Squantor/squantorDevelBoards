@@ -315,4 +315,23 @@ F 3 "" H 850 7700 60  0001 C CNN
 	1    850  7700
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2000 3000 2050 3000
+Wire Wire Line
+	2000 3100 2050 3100
+Wire Wire Line
+	2000 3200 2050 3200
+Wire Wire Line
+	2000 3300 2050 3300
+Wire Wire Line
+	2000 3400 2050 3400
+Text Label 2050 3000 0    50   ~ 0
+MCU_TMS
+Text Label 2050 3100 0    50   ~ 0
+MCU_TCK
+Text Label 2050 3200 0    50   ~ 0
+MCU_TDO
+NoConn ~ 2050 3300
+Text Label 2050 3400 0    50   ~ 0
+MCU_RESET
 $EndSCHEMATC
