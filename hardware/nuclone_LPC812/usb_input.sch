@@ -200,4 +200,8 @@ Wire Wire Line
 	2000 2150 1950 2150
 Wire Wire Line
 	1950 2150 1950 2100
+Text Label 1700 1400 0    50   ~ 0
+USB_IN_D-
+Text Label 1700 1500 0    50   ~ 0
+USB_IN_D+
 $EndSCHEMATC
