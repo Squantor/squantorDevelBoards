@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:nuclone_LPC812-cache
+LIBS:LPC81XJDH20-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -58,10 +59,12 @@ F3 "VBUS" I L 4000 1100 50
 F4 "VDD" O R 5000 1100 50 
 $EndSheet
 $Sheet
-S 4000 2500 1000 2000
+S 4000 2500 1050 2350
 U 5D65B1D0
 F0 "LPC812M101JD20 base" 50
 F1 "nuclone_mcu_LPC812M101JD20.sch" 50
+F2 "VSS" I L 4000 2600 50 
+F3 "VDD" I L 4000 2700 50 
 $EndSheet
 Text Label 2050 1100 0    50   ~ 0
 VBUS
@@ -349,4 +352,70 @@ Text Label 5050 1100 0    50   ~ 0
 VDD
 Wire Wire Line
 	5000 1100 5050 1100
+Text Label 3950 2600 2    50   ~ 0
+VSS
+Text Label 3950 2700 2    50   ~ 0
+VDD
+Wire Wire Line
+	3950 2600 4000 2600
+Wire Wire Line
+	4000 2700 3950 2700
+Text Label 3950 2850 2    50   ~ 0
+MCU_TMS
+Text Label 3950 2950 2    50   ~ 0
+MCU_TCK
+Text Label 3950 3050 2    50   ~ 0
+MCU_RESET
+Text Label 3950 3200 2    50   ~ 0
+GPIO_00
+Text Label 3950 3300 2    50   ~ 0
+GPIO_01
+Text Label 3950 3400 2    50   ~ 0
+GPIO_02
+Text Label 3950 3500 2    50   ~ 0
+GPIO_03
+Text Label 3950 3600 2    50   ~ 0
+GPIO_04
+Text Label 3950 3700 2    50   ~ 0
+GPIO_05
+Text Label 3950 3800 2    50   ~ 0
+GPIO_06
+Text Label 3950 3900 2    50   ~ 0
+GPIO_07
+Text Label 3950 4000 2    50   ~ 0
+GPIO_08
+Text Label 3950 4100 2    50   ~ 0
+GPIO_09
+Text Label 3950 4200 2    50   ~ 0
+GPIO_10
+Text Label 3950 4300 2    50   ~ 0
+GPIO_11
+Text Label 3950 4400 2    50   ~ 0
+GPIO_12
+Text Label 3950 4500 2    50   ~ 0
+GPIO_13
+Text Label 5100 3200 0    50   ~ 0
+I2C_SDA
+Text Label 5100 3300 0    50   ~ 0
+I2C_SCL
+Text Label 5100 3400 0    50   ~ 0
+SPI_MOSI
+Text Label 5100 3500 0    50   ~ 0
+SPI_MISO
+Text Label 5100 3600 0    50   ~ 0
+SPI_SCLK
+Text Label 5100 3700 0    50   ~ 0
+SPI_CE
+Text Label 5100 3950 0    50   ~ 0
+VREF
+Text Label 5100 4050 0    50   ~ 0
+AN_00
+Text Label 5100 4150 0    50   ~ 0
+AN_01
+Text Label 5100 4250 0    50   ~ 0
+AN_02
+Text Label 5100 4350 0    50   ~ 0
+AN_03
+Text Label 5100 4450 0    50   ~ 0
+AN_04
 $EndSCHEMATC
