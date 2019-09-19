@@ -331,56 +331,153 @@ Wire Wire Line
 	1050 1400 1100 1400
 Wire Wire Line
 	1100 1500 1050 1500
-Text HLabel 1050 1650 0    50   BiDi ~ 0
+Text HLabel 1050 1800 0    50   BiDi ~ 0
 GPIO_00
-Text HLabel 1050 1750 0    50   BiDi ~ 0
+Text HLabel 1050 1900 0    50   BiDi ~ 0
 GPIO_01
-Text HLabel 1050 1850 0    50   BiDi ~ 0
+Text HLabel 1050 2000 0    50   BiDi ~ 0
 GPIO_02
-Text HLabel 1700 1650 0    50   BiDi ~ 0
+Text HLabel 2350 1650 0    50   BiDi ~ 0
 I2C_SDA
-Text HLabel 1700 1750 0    50   BiDi ~ 0
+Text HLabel 2350 1750 0    50   BiDi ~ 0
 I2C_SCL
-Text HLabel 1700 1950 0    50   BiDi ~ 0
+Text HLabel 2350 1950 0    50   BiDi ~ 0
 SPI_MOSI
-Text HLabel 1700 2050 0    50   BiDi ~ 0
+Text HLabel 2350 2050 0    50   BiDi ~ 0
 SPI_MISO
-Text HLabel 1700 2150 0    50   BiDi ~ 0
+Text HLabel 2350 2150 0    50   BiDi ~ 0
 SPI_SCK
-Text HLabel 1700 2250 0    50   BiDi ~ 0
+Text HLabel 2350 2250 0    50   BiDi ~ 0
 SPI_CE
 $Comp
 L Device:R R?
 U 1 1 5D873A71
-P 1900 1650
-F 0 "R?" V 1850 1500 50  0000 C CNN
-F 1 "100" V 1900 1650 50  0000 C CNN
-F 2 "SquantorRcl:R_0603_hand" V 1830 1650 50  0001 C CNN
-F 3 "~" H 1900 1650 50  0001 C CNN
-	1    1900 1650
+P 2550 1650
+F 0 "R?" V 2500 1500 50  0000 C CNN
+F 1 "100" V 2550 1650 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 2480 1650 50  0001 C CNN
+F 3 "~" H 2550 1650 50  0001 C CNN
+	1    2550 1650
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1700 1650 1750 1650
+	2350 1650 2400 1650
 Wire Wire Line
-	2050 1650 2100 1650
-Text Label 2100 1650 0    50   ~ 0
+	2700 1650 2750 1650
+Text Label 2750 1650 0    50   ~ 0
 PIO0_10
 $Comp
 L Device:R R?
 U 1 1 5D876022
-P 1900 1750
-F 0 "R?" V 1850 1600 50  0000 C CNN
-F 1 "100" V 1900 1750 50  0000 C CNN
-F 2 "SquantorRcl:R_0603_hand" V 1830 1750 50  0001 C CNN
-F 3 "~" H 1900 1750 50  0001 C CNN
-	1    1900 1750
+P 2550 1750
+F 0 "R?" V 2500 1600 50  0000 C CNN
+F 1 "100" V 2550 1750 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 2480 1750 50  0001 C CNN
+F 3 "~" H 2550 1750 50  0001 C CNN
+	1    2550 1750
 	0    1    1    0   
 $EndComp
-Text Label 2100 1750 0    50   ~ 0
+Text Label 2750 1750 0    50   ~ 0
 PIO0_11
 Wire Wire Line
-	2050 1750 2100 1750
+	2700 1750 2750 1750
 Wire Wire Line
-	1700 1750 1750 1750
+	2350 1750 2400 1750
+$Comp
+L Device:R R?
+U 1 1 5D87ABA1
+P 2550 1950
+F 0 "R?" V 2500 1800 50  0000 C CNN
+F 1 "100" V 2550 1950 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 2480 1950 50  0001 C CNN
+F 3 "~" H 2550 1950 50  0001 C CNN
+	1    2550 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D87AE1D
+P 2550 2050
+F 0 "R?" V 2500 1900 50  0000 C CNN
+F 1 "100" V 2550 2050 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 2480 2050 50  0001 C CNN
+F 3 "~" H 2550 2050 50  0001 C CNN
+	1    2550 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D87AFA2
+P 2550 2150
+F 0 "R?" V 2500 2000 50  0000 C CNN
+F 1 "100" V 2550 2150 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 2480 2150 50  0001 C CNN
+F 3 "~" H 2550 2150 50  0001 C CNN
+	1    2550 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D87B1B5
+P 2550 2250
+F 0 "R?" V 2500 2100 50  0000 C CNN
+F 1 "100" V 2550 2250 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 2480 2250 50  0001 C CNN
+F 3 "~" H 2550 2250 50  0001 C CNN
+	1    2550 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2350 1950 2400 1950
+Wire Wire Line
+	2400 2050 2350 2050
+Wire Wire Line
+	2350 2150 2400 2150
+Wire Wire Line
+	2400 2250 2350 2250
+$Comp
+L Device:R R?
+U 1 1 5D880105
+P 1250 1800
+F 0 "R?" V 1200 1650 50  0000 C CNN
+F 1 "100" V 1250 1800 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1180 1800 50  0001 C CNN
+F 3 "~" H 1250 1800 50  0001 C CNN
+	1    1250 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D8807AB
+P 1250 1900
+F 0 "R?" V 1200 1750 50  0000 C CNN
+F 1 "100" V 1250 1900 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1180 1900 50  0001 C CNN
+F 3 "~" H 1250 1900 50  0001 C CNN
+	1    1250 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D880A53
+P 1250 2000
+F 0 "R?" V 1200 1850 50  0000 C CNN
+F 1 "100" V 1250 2000 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1180 2000 50  0001 C CNN
+F 3 "~" H 1250 2000 50  0001 C CNN
+	1    1250 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1050 1800 1100 1800
+Wire Wire Line
+	1100 1900 1050 1900
+Wire Wire Line
+	1050 2000 1100 2000
+Text HLabel 1050 1600 0    50   BiDi ~ 0
+MCU_RESET
+Text Label 1100 1600 0    50   ~ 0
+RESET
+Wire Wire Line
+	1050 1600 1100 1600
 $EndSCHEMATC
