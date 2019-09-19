@@ -1,10 +1,11 @@
 EESchema Schematic File Version 4
 LIBS:nuclone_LPC812-cache
+LIBS:LPC81XJDH20-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 5 5
 Title ""
 Date ""
 Rev ""
@@ -14,4 +15,308 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 950  1150 0    50   Input ~ 0
+VSS
+Text HLabel 950  1250 0    50   Input ~ 0
+VDD
+$Comp
+L Device:C C?
+U 1 1 5BD2CE0D
+P 6400 4950
+F 0 "C?" H 6515 4996 50  0000 L CNN
+F 1 "1u" H 6515 4905 50  0000 L CNN
+F 2 "SquantorRcl:C_0402" H 6438 4800 50  0001 C CNN
+F 3 "~" H 6400 4950 50  0001 C CNN
+	1    6400 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5BD2CE41
+P 6100 4950
+F 0 "C?" H 6215 4996 50  0000 L CNN
+F 1 "10u" H 6215 4905 50  0000 L CNN
+F 2 "SquantorRcl:C_0603" H 6138 4800 50  0001 C CNN
+F 3 "~" H 6100 4950 50  0001 C CNN
+	1    6100 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Ferrite_Bead_Small FB?
+U 1 1 5BD2CE7B
+P 5950 4750
+F 0 "FB?" V 5713 4750 50  0000 C CNN
+F 1 "FB" V 5804 4750 50  0000 C CNN
+F 2 "SquantorRcl:C_0402" V 5880 4750 50  0001 C CNN
+F 3 "~" H 5950 4750 50  0001 C CNN
+	1    5950 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 5050 6600 5050
+Wire Wire Line
+	6600 5050 6600 4750
+Wire Wire Line
+	6600 4750 6400 4750
+Wire Wire Line
+	5850 4750 5800 4750
+Wire Wire Line
+	6100 4800 6100 4750
+Connection ~ 6100 4750
+Wire Wire Line
+	6100 4750 6050 4750
+Wire Wire Line
+	6400 4800 6400 4750
+Connection ~ 6400 4750
+Wire Wire Line
+	6400 4750 6100 4750
+Wire Wire Line
+	6650 5150 6400 5150
+Wire Wire Line
+	6100 5100 6100 5150
+Connection ~ 6100 5150
+Wire Wire Line
+	6100 5150 5750 5150
+Wire Wire Line
+	6400 5100 6400 5150
+Connection ~ 6400 5150
+Wire Wire Line
+	6400 5150 6100 5150
+Text Label 6000 2600 2    50   ~ 0
+RESET
+Wire Wire Line
+	6050 2600 6000 2600
+Wire Wire Line
+	6050 2400 6000 2400
+Wire Wire Line
+	6050 2300 6000 2300
+Text Label 6000 3300 2    50   ~ 0
+PIO0_12
+Wire Wire Line
+	6050 3300 6000 3300
+Wire Wire Line
+	6050 2100 6000 2100
+Wire Wire Line
+	6050 2200 6000 2200
+Wire Wire Line
+	6050 2500 6000 2500
+Wire Wire Line
+	6050 2900 6000 2900
+Wire Wire Line
+	6000 3000 6050 3000
+Wire Wire Line
+	6050 3100 6000 3100
+Wire Wire Line
+	6050 3200 6000 3200
+Wire Wire Line
+	6050 3400 6000 3400
+Wire Wire Line
+	6050 3500 6000 3500
+Wire Wire Line
+	6050 3600 6000 3600
+Wire Wire Line
+	6050 3800 6000 3800
+Text Label 6000 2100 2    50   ~ 0
+PIO0_0
+Text Label 6000 2200 2    50   ~ 0
+PIO0_1
+Text Label 6000 2500 2    50   ~ 0
+PIO0_4
+Text Label 6000 2300 2    50   ~ 0
+PIO0_2
+Text Label 6000 2400 2    50   ~ 0
+PIO0_3
+Text Label 6000 2900 2    50   ~ 0
+PIO0_8
+Text Label 6000 3000 2    50   ~ 0
+PIO0_9
+Text Label 6000 3100 2    50   ~ 0
+PIO0_10
+Text Label 6000 3200 2    50   ~ 0
+PIO0_11
+Text Label 6000 3400 2    50   ~ 0
+PIO0_13
+Text Label 6000 3500 2    50   ~ 0
+PIO0_14
+Text Label 6000 3600 2    50   ~ 0
+PIO0_15
+Text Label 6000 3800 2    50   ~ 0
+PIO0_17
+$Comp
+L Device:C C?
+U 1 1 5BE10538
+P 6300 6500
+F 0 "C?" H 6415 6546 50  0000 L CNN
+F 1 "18p" H 6415 6455 50  0000 L CNN
+F 2 "SquantorRcl:C_0402" H 6338 6350 50  0001 C CNN
+F 3 "~" H 6300 6500 50  0001 C CNN
+	1    6300 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5BE10822
+P 5900 6500
+F 0 "C?" H 6015 6546 50  0000 L CNN
+F 1 "18p" H 6015 6455 50  0000 L CNN
+F 2 "SquantorRcl:C_0402" H 5938 6350 50  0001 C CNN
+F 3 "~" H 5900 6500 50  0001 C CNN
+	1    5900 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VSS #PWR?
+U 1 1 5BE1086A
+P 5900 6700
+F 0 "#PWR?" H 5900 6550 50  0001 C CNN
+F 1 "VSS" H 5918 6873 50  0000 C CNN
+F 2 "" H 5900 6700 50  0001 C CNN
+F 3 "" H 5900 6700 50  0001 C CNN
+	1    5900 6700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VSS #PWR?
+U 1 1 5BE10924
+P 6300 6700
+F 0 "#PWR?" H 6300 6550 50  0001 C CNN
+F 1 "VSS" H 6318 6873 50  0000 C CNN
+F 2 "" H 6300 6700 50  0001 C CNN
+F 3 "" H 6300 6700 50  0001 C CNN
+	1    6300 6700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5900 6650 5900 6700
+Wire Wire Line
+	6300 6650 6300 6700
+Wire Wire Line
+	5950 6100 5900 6100
+Wire Wire Line
+	5900 6100 5900 6350
+Wire Wire Line
+	6250 6100 6300 6100
+Wire Wire Line
+	6300 6100 6300 6350
+Wire Wire Line
+	5900 6100 5850 6100
+Connection ~ 5900 6100
+Wire Wire Line
+	6300 6100 6350 6100
+Connection ~ 6300 6100
+$Comp
+L power:VSS #PWR?
+U 1 1 5BE44749
+P 6100 6350
+F 0 "#PWR?" H 6100 6200 50  0001 C CNN
+F 1 "VSS" H 6000 6350 50  0000 C CNN
+F 2 "" H 6100 6350 50  0001 C CNN
+F 3 "" H 6100 6350 50  0001 C CNN
+	1    6100 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VSS #PWR?
+U 1 1 5BE44786
+P 6100 5850
+F 0 "#PWR?" H 6100 5700 50  0001 C CNN
+F 1 "VSS" H 6200 5850 50  0000 C CNN
+F 2 "" H 6100 5850 50  0001 C CNN
+F 3 "" H 6100 5850 50  0001 C CNN
+	1    6100 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 5900 6100 5850
+Wire Wire Line
+	6100 6350 6100 6300
+$Comp
+L Device:Crystal_GND24 Y?
+U 1 1 5BE1D5EF
+P 6100 6100
+F 0 "Y?" H 5900 6300 50  0000 L CNN
+F 1 "12MHz" H 6350 5900 50  0000 L CNN
+F 2 "SquantorCrystal:Crystal_3225_4" H 6100 6100 50  0001 C CNN
+F 3 "~" H 6100 6100 50  0001 C CNN
+	1    6100 6100
+	1    0    0    -1  
+$EndComp
+Text Label 5850 6100 2    50   ~ 0
+PIO0_9
+Text Label 6350 6100 0    50   ~ 0
+PIO0_8
+Wire Wire Line
+	5800 4750 5800 4700
+$Comp
+L SquantorSpecial:SolderJumper_2way_1conn SJ?
+U 1 1 5BDC2411
+P 5800 4500
+F 0 "SJ?" V 5754 4423 50  0000 R CNN
+F 1 "SolderJumper_2way_1conn" V 5845 4423 50  0000 R CNN
+F 2 "SquantorSpecial:solder_jumper_2way_conn" H 5800 4500 50  0001 C CNN
+F 3 "" H 5800 4500 50  0001 C CNN
+	1    5800 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 4300 5800 4250
+Wire Wire Line
+	5800 4250 5750 4250
+$Comp
+L SquantorNxp:LPC812M101JDH20 U?
+U 2 1 5C85ACA1
+P 6700 2950
+F 0 "U?" H 7419 2996 50  0000 L CNN
+F 1 "LPC812M101JDH20" H 7419 2905 50  0000 L CNN
+F 2 "SquantorIC:SOT360" H 6550 3200 50  0001 C CNN
+F 3 "" H 6550 3200 50  0001 C CNN
+	2    6700 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorNxp:LPC812M101JDH20 U?
+U 1 1 5C8610BF
+P 6850 5100
+F 0 "U?" H 6978 5146 50  0000 L CNN
+F 1 "LPC812M101JDH20" H 6978 5055 50  0000 L CNN
+F 2 "SquantorIC:SOT360" H 6700 5350 50  0001 C CNN
+F 3 "" H 6700 5350 50  0001 C CNN
+	1    6850 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2700 6000 2700
+Wire Wire Line
+	6050 2800 6000 2800
+Wire Wire Line
+	6050 3700 6000 3700
+Text Label 6000 2700 2    50   ~ 0
+PIO0_6
+Text Label 6000 2800 2    50   ~ 0
+PIO0_7
+Text Label 6000 3700 2    50   ~ 0
+PIO0_16
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5C8D2992
+P 6100 4750
+F 0 "#FLG?" H 6100 4825 50  0001 C CNN
+F 1 "PWR_FLAG" H 6100 4924 50  0000 C CNN
+F 2 "" H 6100 4750 50  0001 C CNN
+F 3 "~" H 6100 4750 50  0001 C CNN
+	1    6100 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  1150 1000 1150
+Wire Wire Line
+	950  1250 1000 1250
+Text Label 1000 1150 0    50   ~ 0
+VSS
+Text Label 1000 1250 0    50   ~ 0
+VDD
+Text Label 5750 5150 2    50   ~ 0
+VSS
+Text Label 5750 4250 2    50   ~ 0
+VDD
 $EndSCHEMATC
