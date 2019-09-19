@@ -15,9 +15,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 950  1150 0    50   Input ~ 0
+Text HLabel 1050 1150 0    50   Input ~ 0
 VSS
-Text HLabel 950  1250 0    50   Input ~ 0
+Text HLabel 1050 1250 0    50   Input ~ 0
 VDD
 $Comp
 L Device:C C?
@@ -308,15 +308,79 @@ F 3 "~" H 6100 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	950  1150 1000 1150
+	1050 1150 1100 1150
 Wire Wire Line
-	950  1250 1000 1250
-Text Label 1000 1150 0    50   ~ 0
+	1050 1250 1100 1250
+Text Label 1100 1150 0    50   ~ 0
 VSS
-Text Label 1000 1250 0    50   ~ 0
+Text Label 1100 1250 0    50   ~ 0
 VDD
 Text Label 5750 5150 2    50   ~ 0
 VSS
 Text Label 5750 4250 2    50   ~ 0
 VDD
+Text HLabel 1050 1400 0    50   BiDi ~ 0
+MCU_SWDIO
+Text HLabel 1050 1500 0    50   BiDi ~ 0
+MCU_SWCLK
+Text Label 1100 1400 0    50   ~ 0
+MCU_SWDIO
+Text Label 1100 1500 0    50   ~ 0
+MCU_SWCLK
+Wire Wire Line
+	1050 1400 1100 1400
+Wire Wire Line
+	1100 1500 1050 1500
+Text HLabel 1050 1650 0    50   BiDi ~ 0
+GPIO_00
+Text HLabel 1050 1750 0    50   BiDi ~ 0
+GPIO_01
+Text HLabel 1050 1850 0    50   BiDi ~ 0
+GPIO_02
+Text HLabel 1700 1650 0    50   BiDi ~ 0
+I2C_SDA
+Text HLabel 1700 1750 0    50   BiDi ~ 0
+I2C_SCL
+Text HLabel 1700 1950 0    50   BiDi ~ 0
+SPI_MOSI
+Text HLabel 1700 2050 0    50   BiDi ~ 0
+SPI_MISO
+Text HLabel 1700 2150 0    50   BiDi ~ 0
+SPI_SCK
+Text HLabel 1700 2250 0    50   BiDi ~ 0
+SPI_CE
+$Comp
+L Device:R R?
+U 1 1 5D873A71
+P 1900 1650
+F 0 "R?" V 1850 1500 50  0000 C CNN
+F 1 "100" V 1900 1650 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1830 1650 50  0001 C CNN
+F 3 "~" H 1900 1650 50  0001 C CNN
+	1    1900 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1700 1650 1750 1650
+Wire Wire Line
+	2050 1650 2100 1650
+Text Label 2100 1650 0    50   ~ 0
+PIO0_10
+$Comp
+L Device:R R?
+U 1 1 5D876022
+P 1900 1750
+F 0 "R?" V 1850 1600 50  0000 C CNN
+F 1 "100" V 1900 1750 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1830 1750 50  0001 C CNN
+F 3 "~" H 1900 1750 50  0001 C CNN
+	1    1900 1750
+	0    1    1    0   
+$EndComp
+Text Label 2100 1750 0    50   ~ 0
+PIO0_11
+Wire Wire Line
+	2050 1750 2100 1750
+Wire Wire Line
+	1700 1750 1750 1750
 $EndSCHEMATC
