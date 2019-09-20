@@ -647,17 +647,11 @@ Wire Wire Line
 Wire Wire Line
 	2400 2050 2450 2050
 Text Label 2450 1850 0    50   ~ 0
-GPIO_04
+GPIO_04_INT
 Text Label 2450 1950 0    50   ~ 0
-GPIO_05
+GPIO_05_INT
 Text Label 2450 2050 0    50   ~ 0
-GPIO_06
-Text Label 6500 850  2    50   ~ 0
-GPIO_04
-Text Label 7550 850  2    50   ~ 0
-GPIO_05
-Text Label 7550 1300 2    50   ~ 0
-GPIO_06
+GPIO_06_INT
 Text HLabel 2050 2150 0    50   BiDi ~ 0
 GPIO_07
 Text HLabel 2050 2250 0    50   BiDi ~ 0
@@ -703,4 +697,10 @@ Text Label 1100 950  0    50   ~ 0
 PIO0_2
 Text Label 1100 1050 0    50   ~ 0
 PIO0_3
+Text Label 6500 850  2    50   ~ 0
+GPIO_04_INT
+Text Label 7550 850  2    50   ~ 0
+GPIO_05_INT
+Text Label 7550 1300 2    50   ~ 0
+GPIO_06_INT
 $EndSCHEMATC
