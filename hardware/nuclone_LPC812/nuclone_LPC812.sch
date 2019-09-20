@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:nuclone_LPC812-cache
-LIBS:LPC81XJDH20-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -83,6 +82,17 @@ F18 "AN_01" B R 5050 4150 50
 F19 "AN_02" B R 5050 4250 50 
 F20 "AN_03" B R 5050 4350 50 
 F21 "AN_04" B R 5050 4450 50 
+F22 "GPIO_03" B L 4000 3500 50 
+F23 "GPIO_04" B L 4000 3600 50 
+F24 "GPIO_05" B L 4000 3700 50 
+F25 "GPIO_06" B L 4000 3800 50 
+F26 "GPIO_07" B L 4000 3900 50 
+F27 "GPIO_08" B L 4000 4000 50 
+F28 "GPIO_09" B L 4000 4100 50 
+F29 "GPIO_10" B L 4000 4200 50 
+F30 "GPIO_11" B L 4000 4300 50 
+F31 "GPIO_12" B L 4000 4400 50 
+F32 "GPIO_13" B L 4000 4500 50 
 $EndSheet
 Text Label 2050 1100 0    50   ~ 0
 VBUS
@@ -94,17 +104,6 @@ Wire Wire Line
 	2000 1200 2050 1200
 NoConn ~ 2000 1400
 NoConn ~ 2000 1500
-$Comp
-L SquantorConnectors:PINS_2X10 J3
-U 1 1 5D685CDA
-P 7650 1500
-F 0 "J3" H 7650 2237 60  0000 C CNN
-F 1 "PINS_2X10" H 7650 2131 60  0000 C CNN
-F 2 "SquantorConnectors:Header-0254-2X10-H010" H 7650 1900 60  0001 C CNN
-F 3 "" H 7650 1900 60  0001 C CNN
-	1    7650 1500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7900 1050 7950 1050
 Wire Wire Line
@@ -193,17 +192,6 @@ Text Label 7950 1650 0    50   ~ 0
 GPIO_11
 Text Label 7950 1750 0    50   ~ 0
 GPIO_13
-$Comp
-L SquantorConnectors:PINS_2X10 J4
-U 1 1 5D68DDE1
-P 7650 2850
-F 0 "J4" H 7650 3587 60  0000 C CNN
-F 1 "PINS_2X10" H 7650 3481 60  0000 C CNN
-F 2 "SquantorConnectors:Header-0254-2X10-H010" H 7650 3250 60  0001 C CNN
-F 3 "" H 7650 3250 60  0001 C CNN
-	1    7650 2850
-	1    0    0    -1  
-$EndComp
 Text Label 7350 2400 2    50   ~ 0
 VSS
 Text Label 7950 2400 0    50   ~ 0
@@ -346,8 +334,6 @@ Wire Wire Line
 Wire Wire Line
 	2000 3200 2050 3200
 Wire Wire Line
-	2000 3300 2050 3300
-Wire Wire Line
 	2000 3400 2050 3400
 Text Label 2050 3000 0    50   ~ 0
 MCU_TMS
@@ -355,7 +341,6 @@ Text Label 2050 3100 0    50   ~ 0
 MCU_TCK
 Text Label 2050 3200 0    50   ~ 0
 MCU_TDO
-NoConn ~ 2050 3300
 Text Label 2050 3400 0    50   ~ 0
 MCU_RESET
 Text Label 3950 1900 2    50   ~ 0
@@ -472,4 +457,48 @@ Wire Wire Line
 	5050 4350 5100 4350
 Wire Wire Line
 	5100 4450 5050 4450
+Wire Wire Line
+	3950 3500 4000 3500
+Wire Wire Line
+	4000 3600 3950 3600
+Wire Wire Line
+	3950 3700 4000 3700
+Wire Wire Line
+	4000 3800 3950 3800
+Wire Wire Line
+	3950 3900 4000 3900
+Wire Wire Line
+	4000 4000 3950 4000
+Wire Wire Line
+	3950 4100 4000 4100
+Wire Wire Line
+	4000 4200 3950 4200
+Wire Wire Line
+	3950 4300 4000 4300
+Wire Wire Line
+	4000 4400 3950 4400
+Wire Wire Line
+	3950 4500 4000 4500
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J3
+U 1 1 5D9A3737
+P 7600 1450
+F 0 "J3" H 7650 2067 50  0000 C CNN
+F 1 "Conn_02x10_Odd_Even" H 7650 1976 50  0000 C CNN
+F 2 "SquantorConnectors:Header-0254-2X10-H010" H 7600 1450 50  0001 C CNN
+F 3 "~" H 7600 1450 50  0001 C CNN
+	1    7600 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J4
+U 1 1 5D9A492F
+P 7600 2800
+F 0 "J4" H 7650 3417 50  0000 C CNN
+F 1 "Conn_02x10_Odd_Even" H 7650 3326 50  0000 C CNN
+F 2 "SquantorConnectors:Header-0254-2X10-H010" H 7600 2800 50  0001 C CNN
+F 3 "~" H 7600 2800 50  0001 C CNN
+	1    7600 2800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
