@@ -105,56 +105,56 @@ Wire Wire Line
 NoConn ~ 2000 1400
 NoConn ~ 2000 1500
 Wire Wire Line
-	7900 1050 7950 1050
+	8100 1050 8150 1050
 Wire Wire Line
-	7400 1050 7350 1050
+	7150 1050 7100 1050
 Wire Wire Line
-	7350 1150 7400 1150
+	7100 1150 7150 1150
 Wire Wire Line
-	7900 1150 7950 1150
+	8100 1150 8150 1150
 Wire Wire Line
-	7900 1950 7950 1950
+	8100 1950 8150 1950
 Wire Wire Line
-	7400 1950 7350 1950
+	7150 1950 7100 1950
 Wire Wire Line
-	7400 1850 7350 1850
+	7150 1850 7100 1850
 Wire Wire Line
-	7400 1750 7350 1750
+	7150 1750 7100 1750
 Wire Wire Line
-	7400 1650 7350 1650
+	7150 1650 7100 1650
 Wire Wire Line
-	7400 1550 7350 1550
+	7150 1550 7100 1550
 Wire Wire Line
-	7400 1450 7350 1450
+	7150 1450 7100 1450
 Wire Wire Line
-	7400 1350 7350 1350
+	7150 1350 7100 1350
 Wire Wire Line
-	7400 1250 7350 1250
+	7150 1250 7100 1250
 Wire Wire Line
-	7900 1250 7950 1250
+	8100 1250 8150 1250
 Wire Wire Line
-	7950 1350 7900 1350
+	8150 1350 8100 1350
 Wire Wire Line
-	7900 1450 7950 1450
+	8100 1450 8150 1450
 Wire Wire Line
-	7950 1550 7900 1550
+	8150 1550 8100 1550
 Wire Wire Line
-	7900 1650 7950 1650
+	8100 1650 8150 1650
 Wire Wire Line
-	7950 1750 7900 1750
+	8150 1750 8100 1750
 Wire Wire Line
-	7900 1850 7950 1850
-Text Label 7950 1050 0    50   ~ 0
+	8100 1850 8150 1850
+Text Label 8150 1050 0    50   ~ 0
 VSS
-Text Label 7350 1050 2    50   ~ 0
+Text Label 7100 1050 2    50   ~ 0
 VSS
-Text Label 7950 1950 0    50   ~ 0
+Text Label 8150 1950 0    50   ~ 0
 VBUS
-Text Label 7350 1950 2    50   ~ 0
+Text Label 7100 1950 2    50   ~ 0
 VBUS
-Text Label 7350 1850 2    50   ~ 0
+Text Label 7100 1850 2    50   ~ 0
 VDD
-Text Label 7950 1850 0    50   ~ 0
+Text Label 8150 1850 0    50   ~ 0
 VDD
 Text Label 2050 2700 0    50   ~ 0
 VSS
@@ -164,113 +164,113 @@ Wire Wire Line
 	2000 2600 2050 2600
 Wire Wire Line
 	2050 2700 2000 2700
-Text Label 7350 1150 2    50   ~ 0
+Text Label 7100 1150 2    50   ~ 0
 GPIO_00
-Text Label 7950 1150 0    50   ~ 0
+Text Label 8150 1150 0    50   ~ 0
 GPIO_01
-Text Label 7350 1250 2    50   ~ 0
+Text Label 7100 1250 2    50   ~ 0
 GPIO_02
-Text Label 7350 1350 2    50   ~ 0
+Text Label 7100 1350 2    50   ~ 0
 GPIO_04
-Text Label 7350 1450 2    50   ~ 0
+Text Label 7100 1450 2    50   ~ 0
 GPIO_06
-Text Label 7350 1550 2    50   ~ 0
+Text Label 7100 1550 2    50   ~ 0
 GPIO_08
-Text Label 7350 1650 2    50   ~ 0
+Text Label 7100 1650 2    50   ~ 0
 GPIO_10
-Text Label 7350 1750 2    50   ~ 0
+Text Label 7100 1750 2    50   ~ 0
 GPIO_12
-Text Label 7950 1250 0    50   ~ 0
+Text Label 8150 1250 0    50   ~ 0
 GPIO_03
-Text Label 7950 1350 0    50   ~ 0
+Text Label 8150 1350 0    50   ~ 0
 GPIO_05
-Text Label 7950 1450 0    50   ~ 0
+Text Label 8150 1450 0    50   ~ 0
 GPIO_07
-Text Label 7950 1550 0    50   ~ 0
+Text Label 8150 1550 0    50   ~ 0
 GPIO_09
-Text Label 7950 1650 0    50   ~ 0
+Text Label 8150 1650 0    50   ~ 0
 GPIO_11
-Text Label 7950 1750 0    50   ~ 0
+Text Label 8150 1750 0    50   ~ 0
 GPIO_13
-Text Label 7350 2400 2    50   ~ 0
+Text Label 7050 2350 2    50   ~ 0
 VSS
-Text Label 7950 2400 0    50   ~ 0
+Text Label 8200 2350 0    50   ~ 0
 VSS
-Text Label 7350 2800 2    50   ~ 0
+Text Label 7050 2750 2    50   ~ 0
 VDD
-Text Label 7950 2800 0    50   ~ 0
+Text Label 8200 2750 0    50   ~ 0
 VDD
 Wire Wire Line
-	7350 2400 7400 2400
+	7050 2350 7100 2350
 Wire Wire Line
-	7400 2500 7350 2500
+	7100 2450 7050 2450
 Wire Wire Line
-	7350 2600 7400 2600
+	7050 2550 7100 2550
 Wire Wire Line
-	7400 2700 7350 2700
+	7100 2650 7050 2650
 Wire Wire Line
-	7350 2800 7400 2800
+	7050 2750 7100 2750
 Wire Wire Line
-	7400 2900 7350 2900
+	7100 2850 7050 2850
 Wire Wire Line
-	7350 3000 7400 3000
+	7050 2950 7100 2950
 Wire Wire Line
-	7400 3100 7350 3100
+	7100 3050 7050 3050
 Wire Wire Line
-	7350 3200 7400 3200
+	7050 3150 7100 3150
 Wire Wire Line
-	7400 3300 7350 3300
+	7100 3250 7050 3250
 Wire Wire Line
-	7900 3300 7950 3300
+	8150 3250 8200 3250
 Wire Wire Line
-	7950 3200 7900 3200
+	8200 3150 8150 3150
 Wire Wire Line
-	7900 3100 7950 3100
+	8150 3050 8200 3050
 Wire Wire Line
-	7950 3000 7900 3000
+	8200 2950 8150 2950
 Wire Wire Line
-	7900 2900 7950 2900
+	8150 2850 8200 2850
 Wire Wire Line
-	7950 2800 7900 2800
+	8200 2750 8150 2750
 Wire Wire Line
-	7900 2700 7950 2700
+	8150 2650 8200 2650
 Wire Wire Line
-	7950 2600 7900 2600
+	8200 2550 8150 2550
 Wire Wire Line
-	7900 2500 7950 2500
+	8150 2450 8200 2450
 Wire Wire Line
-	7950 2400 7900 2400
-Text Label 7950 2900 0    50   ~ 0
+	8200 2350 8150 2350
+Text Label 8200 2850 0    50   ~ 0
 VSS
-Text Label 7350 2900 2    50   ~ 0
+Text Label 7050 2850 2    50   ~ 0
 VSS
-Text Label 7350 3300 2    50   ~ 0
+Text Label 7050 3250 2    50   ~ 0
 VDD
-Text Label 7950 3300 0    50   ~ 0
+Text Label 8200 3250 0    50   ~ 0
 VDD
-Text Label 7350 2500 2    50   ~ 0
+Text Label 7050 2450 2    50   ~ 0
 I2C_SDA
-Text Label 7950 2500 0    50   ~ 0
+Text Label 8200 2450 0    50   ~ 0
 I2C_SCL
-Text Label 7350 2600 2    50   ~ 0
+Text Label 7050 2550 2    50   ~ 0
 SPI_MOSI
-Text Label 7950 2600 0    50   ~ 0
+Text Label 8200 2550 0    50   ~ 0
 SPI_MISO
-Text Label 7350 2700 2    50   ~ 0
+Text Label 7050 2650 2    50   ~ 0
 SPI_SCLK
-Text Label 7950 2700 0    50   ~ 0
+Text Label 8200 2650 0    50   ~ 0
 SPI_CE
-Text Label 7350 3000 2    50   ~ 0
+Text Label 7050 2950 2    50   ~ 0
 VREF
-Text Label 7950 3000 0    50   ~ 0
+Text Label 8200 2950 0    50   ~ 0
 AN_00
-Text Label 7350 3100 2    50   ~ 0
+Text Label 7050 3050 2    50   ~ 0
 AN_01
-Text Label 7950 3100 0    50   ~ 0
+Text Label 8200 3050 0    50   ~ 0
 AN_02
-Text Label 7350 3200 2    50   ~ 0
+Text Label 7050 3150 2    50   ~ 0
 AN_03
-Text Label 7950 3200 0    50   ~ 0
+Text Label 8200 3150 0    50   ~ 0
 AN_04
 $Comp
 L Mechanical:MountingHole H4
@@ -480,24 +480,24 @@ Wire Wire Line
 Wire Wire Line
 	3950 4500 4000 4500
 $Comp
-L Connector_Generic:Conn_02x10_Odd_Even J3
-U 1 1 5D9A3737
-P 7600 1450
-F 0 "J3" H 7650 2067 50  0000 C CNN
-F 1 "Conn_02x10_Odd_Even" H 7650 1976 50  0000 C CNN
-F 2 "SquantorConnectors:Header-0254-2X10-H010" H 7600 1450 50  0001 C CNN
-F 3 "~" H 7600 1450 50  0001 C CNN
-	1    7600 1450
+L SquantorConnectorsNamed:nuclone_20pin_gpio J?
+U 1 1 5D87167A
+P 7600 1500
+F 0 "J?" H 7625 2215 50  0000 C CNN
+F 1 "nuclone_20pin_gpio" H 7625 2124 50  0000 C CNN
+F 2 "SquantorConnectors:Header-0254-2X10-H010" H 7750 1450 50  0001 C CNN
+F 3 "" H 7750 1450 50  0001 C CNN
+	1    7600 1500
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x10_Odd_Even J4
-U 1 1 5D9A492F
+L SquantorConnectorsNamed:nuclone_20pin_bus_analog U?
+U 1 1 5D886353
 P 7600 2800
-F 0 "J4" H 7650 3417 50  0000 C CNN
-F 1 "Conn_02x10_Odd_Even" H 7650 3326 50  0000 C CNN
-F 2 "SquantorConnectors:Header-0254-2X10-H010" H 7600 2800 50  0001 C CNN
-F 3 "~" H 7600 2800 50  0001 C CNN
+F 0 "U?" H 7625 3515 50  0000 C CNN
+F 1 "nuclone_20pin_bus_analog" H 7625 3424 50  0000 C CNN
+F 2 "SquantorConnectors:Header-0254-2X10-H010" H 7600 2750 50  0001 C CNN
+F 3 "" H 7600 2750 50  0001 C CNN
 	1    7600 2800
 	1    0    0    -1  
 $EndComp
