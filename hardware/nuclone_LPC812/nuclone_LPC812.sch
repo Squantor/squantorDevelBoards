@@ -485,18 +485,18 @@ U 1 1 5D87167A
 P 7600 1500
 F 0 "J3" H 7625 2215 50  0000 C CNN
 F 1 "nuclone_20pin_gpio" H 7625 2124 50  0000 C CNN
-F 2 "SquantorConnectors:Header-0254-2X10-H010" H 7750 1450 50  0001 C CNN
+F 2 "SquantorConnectorsNamed:Nuclone_20pin_gpio" H 7750 1450 50  0001 C CNN
 F 3 "" H 7750 1450 50  0001 C CNN
 	1    7600 1500
 	1    0    0    -1  
 $EndComp
 $Comp
-L SquantorConnectorsNamed:nuclone_20pin_bus_analog U4
-U 1 1 5D886353
+L SquantorConnectorsNamed:nuclone_20pin_bus_analog J4
+U 1 1 5D897E29
 P 7600 2800
-F 0 "U4" H 7625 3515 50  0000 C CNN
+F 0 "J4" H 7625 3515 50  0000 C CNN
 F 1 "nuclone_20pin_bus_analog" H 7625 3424 50  0000 C CNN
-F 2 "SquantorConnectors:Header-0254-2X10-H010" H 7600 2750 50  0001 C CNN
+F 2 "" H 7600 2750 50  0001 C CNN
 F 3 "" H 7600 2750 50  0001 C CNN
 	1    7600 2800
 	1    0    0    -1  
