@@ -739,10 +739,10 @@ Wire Wire Line
 Wire Wire Line
 	1400 1550 1450 1550
 $Comp
-L Device:R R?
+L Device:R R29
 U 1 1 5D89D555
 P 3150 750
-F 0 "R?" V 3100 600 50  0000 C CNN
+F 0 "R29" V 3100 600 50  0000 C CNN
 F 1 "2.2K" V 3150 750 50  0000 C CNN
 F 2 "SquantorRcl:R_0402_hand" V 3080 750 50  0001 C CNN
 F 3 "~" H 3150 750 50  0001 C CNN
@@ -750,18 +750,16 @@ F 3 "~" H 3150 750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R28
 U 1 1 5D89F34E
 P 3150 650
-F 0 "R?" V 3100 500 50  0000 C CNN
+F 0 "R28" V 3100 500 50  0000 C CNN
 F 1 "2.2K" V 3150 650 50  0000 C CNN
 F 2 "SquantorRcl:R_0402_hand" V 3080 650 50  0001 C CNN
 F 3 "~" H 3150 650 50  0001 C CNN
 	1    3150 650 
 	0    1    1    0   
 $EndComp
-Text Label 3400 650  0    50   ~ 0
-VSS
 Wire Wire Line
 	3400 650  3350 650 
 Wire Wire Line
@@ -775,4 +773,6 @@ Wire Wire Line
 	2550 650  3000 650 
 Wire Wire Line
 	2550 750  3000 750 
+Text Label 3400 650  0    50   ~ 0
+VDD
 $EndSCHEMATC
