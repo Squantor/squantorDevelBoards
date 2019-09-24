@@ -17,12 +17,12 @@ $EndDescr
 $Comp
 L SquantorLabels:OHWLOGO N1
 U 1 1 5A135869
-P 850 7350
-F 0 "N1" H 850 7500 60  0000 C CNN
-F 1 "OHWLOGO" H 850 7200 60  0000 C CNN
-F 2 "Symbols:OSHW-Symbol_6.7x6mm_SilkScreen" H 850 7350 60  0001 C CNN
-F 3 "" H 850 7350 60  0001 C CNN
-	1    850  7350
+P 900 6950
+F 0 "N1" H 900 7100 60  0000 C CNN
+F 1 "OHWLOGO" H 900 6800 60  0000 C CNN
+F 2 "Symbols:OSHW-Symbol_6.7x6mm_SilkScreen" H 900 6950 60  0001 C CNN
+F 3 "" H 900 6950 60  0001 C CNN
+	1    900  6950
 	1    0    0    -1  
 $EndComp
 $Sheet
@@ -319,12 +319,12 @@ $EndComp
 $Comp
 L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
-P 850 7700
-F 0 "N2" H 800 7800 60  0000 L CNN
-F 1 "20180918" H 600 7700 60  0000 L CNN
-F 2 "SquantorLabels:Label_version" H 850 7700 60  0001 C CNN
-F 3 "" H 850 7700 60  0001 C CNN
-	1    850  7700
+P 900 7300
+F 0 "N2" H 850 7400 60  0000 L CNN
+F 1 "20190924" H 650 7300 60  0000 L CNN
+F 2 "SquantorLabels:Label_version" H 900 7300 60  0001 C CNN
+F 3 "" H 900 7300 60  0001 C CNN
+	1    900  7300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -499,6 +499,17 @@ F 1 "nuclone_20pin_bus_analog" H 7625 3424 50  0000 C CNN
 F 2 "SquantorConnectorsNamed:Nuclone_20pin_bus_analog" H 7600 2750 50  0001 C CNN
 F 3 "" H 7600 2750 50  0001 C CNN
 	1    7600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorLabels:Label N3
+U 1 1 5D8B1B32
+P 900 7500
+F 0 "N3" H 850 7550 60  0000 L CNN
+F 1 "JLCJLCJLCJLC" H 600 7450 60  0000 L CNN
+F 2 "SquantorLabels:Label_Generic" H 900 7500 60  0001 C CNN
+F 3 "" H 900 7500 60  0001 C CNN
+	1    900  7500
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
