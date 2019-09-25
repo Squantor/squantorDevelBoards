@@ -10,6 +10,7 @@
 rescue-backup/
 _autosave*
 *.sch-bak
+plots/
 
 # kicad caches
 fp-info-cache
