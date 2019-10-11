@@ -300,4 +300,53 @@ Wire Notes Line
 	10700 3200 10700 3050
 Wire Notes Line
 	10700 3050 11200 3050
+$Comp
+L SquantorConnectorsNamed:DevBoardUartInput J1
+U 1 1 5DA1E6EC
+P 1050 1250
+F 0 "J1" H 1083 1665 50  0000 C CNN
+F 1 "DevBoardUartInput" H 1083 1574 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal" H 1050 1250 50  0001 C CNN
+F 3 "" H 1050 1250 50  0001 C CNN
+	1    1050 1250
+	1    0    0    -1  
+$EndComp
+Text Label 1300 1100 0    50   ~ 0
+VSS
+Text Label 1300 1200 0    50   ~ 0
+VBUS
+$Comp
+L SquantorProto:testpad TP1
+U 1 1 5DA20667
+P 1850 1300
+F 0 "TP1" H 1900 1300 60  0000 L CNN
+F 1 "testpad" H 2050 1300 60  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 1850 1300 60  0001 C CNN
+F 3 "" H 1850 1300 60  0001 C CNN
+	1    1850 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorProto:testpad TP2
+U 1 1 5DA20D16
+P 1850 1400
+F 0 "TP2" H 1900 1400 60  0000 L CNN
+F 1 "testpad" H 2050 1400 60  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm" H 1850 1400 60  0001 C CNN
+F 3 "" H 1850 1400 60  0001 C CNN
+	1    1850 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1300 1700 1300
+Wire Wire Line
+	1250 1400 1700 1400
+Text Label 1300 1300 0    50   ~ 0
+UART_RX
+Text Label 1300 1400 0    50   ~ 0
+UART_TX
+Wire Wire Line
+	1250 1100 1300 1100
+Wire Wire Line
+	1300 1200 1250 1200
 $EndSCHEMATC
