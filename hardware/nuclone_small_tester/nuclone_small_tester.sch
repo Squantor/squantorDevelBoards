@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:nuclone_expansion_small-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -17,12 +16,12 @@ $EndDescr
 $Comp
 L SquantorLabels:OHWLOGO N1
 U 1 1 5A135869
-P 5300 7000
-F 0 "N1" H 5300 7150 60  0000 C CNN
-F 1 "OHWLOGO" H 5300 6850 60  0000 C CNN
-F 2 "Symbols:OSHW-Symbol_6.7x6mm_SilkScreen" H 5300 7000 60  0001 C CNN
-F 3 "" H 5300 7000 60  0001 C CNN
-	1    5300 7000
+P 5550 6950
+F 0 "N1" H 5550 7100 60  0000 C CNN
+F 1 "OHWLOGO" H 5550 6800 60  0000 C CNN
+F 2 "Symbols:OSHW-Symbol_6.7x6mm_SilkScreen" H 5550 6950 60  0001 C CNN
+F 3 "" H 5550 6950 60  0001 C CNN
+	1    5550 6950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -186,56 +185,56 @@ AN_04
 $Comp
 L Mechanical:MountingHole H4
 U 1 1 5D6A0DE1
-P 5950 7400
-F 0 "H4" H 6050 7446 50  0000 L CNN
-F 1 "MountingHole" H 6050 7355 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 5950 7400 50  0001 C CNN
-F 3 "~" H 5950 7400 50  0001 C CNN
-	1    5950 7400
+P 6200 7350
+F 0 "H4" H 6300 7396 50  0000 L CNN
+F 1 "MountingHole" H 6300 7305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 6200 7350 50  0001 C CNN
+F 3 "~" H 6200 7350 50  0001 C CNN
+	1    6200 7350
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H3
 U 1 1 5D6A12DB
-P 5950 7250
-F 0 "H3" H 6050 7296 50  0000 L CNN
-F 1 "MountingHole" H 6050 7205 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 5950 7250 50  0001 C CNN
-F 3 "~" H 5950 7250 50  0001 C CNN
-	1    5950 7250
+P 6200 7200
+F 0 "H3" H 6300 7246 50  0000 L CNN
+F 1 "MountingHole" H 6300 7155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 6200 7200 50  0001 C CNN
+F 3 "~" H 6200 7200 50  0001 C CNN
+	1    6200 7200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 5D6A14DC
-P 5950 7100
-F 0 "H2" H 6050 7146 50  0000 L CNN
-F 1 "MountingHole" H 6050 7055 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 5950 7100 50  0001 C CNN
-F 3 "~" H 5950 7100 50  0001 C CNN
-	1    5950 7100
+P 6200 7050
+F 0 "H2" H 6300 7096 50  0000 L CNN
+F 1 "MountingHole" H 6300 7005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 6200 7050 50  0001 C CNN
+F 3 "~" H 6200 7050 50  0001 C CNN
+	1    6200 7050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 5D6A1740
-P 5950 6950
-F 0 "H1" H 6050 6996 50  0000 L CNN
-F 1 "MountingHole" H 6050 6905 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 5950 6950 50  0001 C CNN
-F 3 "~" H 5950 6950 50  0001 C CNN
-	1    5950 6950
+P 6200 6900
+F 0 "H1" H 6300 6946 50  0000 L CNN
+F 1 "MountingHole" H 6300 6855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 6200 6900 50  0001 C CNN
+F 3 "~" H 6200 6900 50  0001 C CNN
+	1    6200 6900
 	1    0    0    -1  
 $EndComp
 $Comp
 L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
-P 5300 7350
-F 0 "N2" H 5250 7450 60  0000 L CNN
-F 1 "20191004" H 5050 7350 60  0000 L CNN
-F 2 "SquantorLabels:Label_version" H 5300 7350 60  0001 C CNN
-F 3 "" H 5300 7350 60  0001 C CNN
-	1    5300 7350
+P 5550 7300
+F 0 "N2" H 5500 7400 60  0000 L CNN
+F 1 "20191011" H 5300 7300 60  0000 L CNN
+F 2 "SquantorLabels:Label_version" H 5550 7300 60  0001 C CNN
+F 3 "" H 5550 7300 60  0001 C CNN
+	1    5550 7300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -263,28 +262,28 @@ $EndComp
 $Comp
 L SquantorLabels:Label N3
 U 1 1 5D8B1B32
-P 5300 7550
-F 0 "N3" H 5250 7600 60  0000 L CNN
-F 1 "JLCJLCJLCJLC" H 5000 7500 60  0000 L CNN
-F 2 "SquantorLabels:Label_Generic" H 5300 7550 60  0001 C CNN
-F 3 "" H 5300 7550 60  0001 C CNN
-	1    5300 7550
+P 5550 7500
+F 0 "N3" H 5500 7550 60  0000 L CNN
+F 1 "JLCJLCJLCJLC" H 5250 7450 60  0000 L CNN
+F 2 "SquantorLabels:Label_Generic" H 5550 7500 60  0001 C CNN
+F 3 "" H 5550 7500 60  0001 C CNN
+	1    5550 7500
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	4950 6800 6600 6800
+	5200 6750 6850 6750
 Wire Notes Line
-	6600 6800 6600 7700
+	6850 6750 6850 7650
 Wire Notes Line
-	6600 7700 4950 7700
+	6850 7650 5200 7650
 Wire Notes Line
-	4950 7700 4950 6800
-Text Notes 5700 7650 0    50   ~ 0
+	5200 7650 5200 6750
+Text Notes 5950 7600 0    50   ~ 0
 Mechanical and labels
 Wire Notes Line
-	5650 7700 5650 7550
+	5900 7650 5900 7500
 Wire Notes Line
-	5650 7550 6600 7550
+	5900 7500 6850 7500
 Text Label 9700 800  2    50   ~ 0
 GPIO_00
 Wire Notes Line
