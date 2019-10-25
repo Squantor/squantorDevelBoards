@@ -501,10 +501,6 @@ Wire Wire Line
 Wire Wire Line
 	4450 4650 4500 4650
 Wire Wire Line
-	3450 4650 3400 4650
-Wire Wire Line
-	3400 4750 3450 4750
-Wire Wire Line
 	3450 5050 3400 5050
 Text Label 4450 4500 2    50   ~ 0
 VDD
@@ -518,10 +514,6 @@ Wire Wire Line
 	4450 5250 4500 5250
 Wire Wire Line
 	4500 5050 4500 5250
-Wire Wire Line
-	3450 4850 3400 4850
-Wire Wire Line
-	3450 4950 3400 4950
 $Comp
 L SquantorMicrochip:MCP1702-MB U1
 U 1 1 5D81CB9F
@@ -610,41 +602,41 @@ $EndComp
 Wire Wire Line
 	6550 7400 6550 7350
 Text Label 9450 5150 2    50   ~ 0
-PIO0_17
+PIO0_17_MCU
 Text Label 9450 5050 2    50   ~ 0
-PIO0_16
+PIO0_16_MCU
 Text Label 9450 4950 2    50   ~ 0
-PIO0_15
+PIO0_15_MCU
 Text Label 9450 4850 2    50   ~ 0
-PIO0_14
+PIO0_14_MCU
 Text Label 9450 4750 2    50   ~ 0
-PIO0_13
+PIO0_13_MCU
 Text Label 9450 4650 2    50   ~ 0
-PIO0_12
+PIO0_12_MCU
 Text Label 9450 4550 2    50   ~ 0
-PIO0_11
+PIO0_11_MCU
 Text Label 9450 4450 2    50   ~ 0
-PIO0_10
+PIO0_10_MCU
 Text Label 9450 4350 2    50   ~ 0
-PIO0_9
+PIO0_9_MCU
 Text Label 9450 4250 2    50   ~ 0
-PIO0_8
+PIO0_8_MCU
 Text Label 9450 4150 2    50   ~ 0
-PIO0_7
+PIO0_7_MCU
 Text Label 9450 4050 2    50   ~ 0
-PIO0_6
+PIO0_6_MCU
 Text Label 9450 3950 2    50   ~ 0
-PIO0_5
+PIO0_5_MCU
 Text Label 9450 3850 2    50   ~ 0
-PIO0_4
+PIO0_4_MCU
 Text Label 9450 3750 2    50   ~ 0
-PIO0_3
+PIO0_3_MCU
 Text Label 9450 3650 2    50   ~ 0
-PIO0_2
+PIO0_2_MCU
 Text Label 9450 3550 2    50   ~ 0
-PIO0_1
+PIO0_1_MCU
 Text Label 9450 3450 2    50   ~ 0
-PIO0_0
+PIO0_0_MCU
 Wire Wire Line
 	9500 5150 9450 5150
 Wire Wire Line
@@ -681,4 +673,158 @@ Wire Wire Line
 	9500 3550 9450 3550
 Wire Wire Line
 	9500 3450 9450 3450
+$Comp
+L SquantorSpecial:Solderjumper_3way_123conn JP?
+U 1 1 5DB9A1C1
+P 7450 5550
+F 0 "JP?" H 7450 5800 50  0000 C CNN
+F 1 "XTAL/PIO" H 7450 5300 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_3way_123conn" H 7450 5550 50  0001 C CNN
+F 3 "" H 7450 5550 50  0001 C CNN
+	1    7450 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorSpecial:Solderjumper_3way_123conn JP?
+U 1 1 5DB9F39C
+P 7450 6150
+F 0 "JP?" H 7450 6400 50  0000 C CNN
+F 1 "XTAL/PIO" H 7450 5900 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_3way_123conn" H 7450 6150 50  0001 C CNN
+F 3 "" H 7450 6150 50  0001 C CNN
+	1    7450 6150
+	1    0    0    -1  
+$EndComp
+Text Label 7700 5550 0    50   ~ 0
+PIO0_8_MCU
+Text Label 7700 6150 0    50   ~ 0
+PIO0_9_MCU
+Wire Wire Line
+	7700 5550 7650 5550
+Wire Wire Line
+	7700 6150 7650 6150
+Text Label 7200 6250 2    50   ~ 0
+XTAL_IN
+Text Label 7200 5650 2    50   ~ 0
+XTAL_OUT
+Text Label 7200 5450 2    50   ~ 0
+PIO0_8
+Text Label 7200 6050 2    50   ~ 0
+PIO0_9
+Wire Wire Line
+	7250 5450 7200 5450
+Wire Wire Line
+	7250 5650 7200 5650
+Wire Wire Line
+	7250 6050 7200 6050
+Wire Wire Line
+	7250 6250 7200 6250
+$Comp
+L SquantorSpecial:Solderjumper_2way_12conn JP?
+U 1 1 5DBC8EA5
+P 7450 5000
+F 0 "JP?" H 7450 5150 50  0000 C CNN
+F 1 "RESET/PIO" H 7450 4850 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_conn" H 7450 5000 50  0001 C CNN
+F 3 "" H 7450 5000 50  0001 C CNN
+	1    7450 5000
+	1    0    0    -1  
+$EndComp
+Text Label 7700 5000 0    50   ~ 0
+PIO0_5_MCU
+Text Label 7200 5000 2    50   ~ 0
+PIO0_5
+$Comp
+L SquantorSpecial:Solderjumper_2way_12conn JP?
+U 1 1 5DBCBA91
+P 7450 4600
+F 0 "JP?" H 7450 4750 50  0000 C CNN
+F 1 "TMS/PIO" H 7450 4450 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_conn" H 7450 4600 50  0001 C CNN
+F 3 "" H 7450 4600 50  0001 C CNN
+	1    7450 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorSpecial:Solderjumper_2way_12conn JP?
+U 1 1 5DBCC5A5
+P 7450 4200
+F 0 "JP?" H 7450 4350 50  0000 C CNN
+F 1 "TCK/PIO" H 7450 4050 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_conn" H 7450 4200 50  0001 C CNN
+F 3 "" H 7450 4200 50  0001 C CNN
+	1    7450 4200
+	1    0    0    -1  
+$EndComp
+Text Label 7700 4600 0    50   ~ 0
+PIO0_2_MCU
+Text Label 7700 4200 0    50   ~ 0
+PIO0_3_MCU
+Text Label 7200 4600 2    50   ~ 0
+PIO0_2
+Text Label 7200 4200 2    50   ~ 0
+PIO0_3
+NoConn ~ 3450 4950
+$Comp
+L Device:R_Pack04 RN?
+U 1 1 5DBD503E
+P 3200 4850
+F 0 "RN?" V 2783 4850 50  0000 C CNN
+F 1 "100" V 2874 4850 50  0000 C CNN
+F 2 "" V 3475 4850 50  0001 C CNN
+F 3 "~" H 3200 4850 50  0001 C CNN
+	1    3200 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 5050 3400 4950
+Wire Wire Line
+	3400 4850 3450 4850
+Wire Wire Line
+	3400 4750 3450 4750
+Wire Wire Line
+	3400 4650 3450 4650
+$Comp
+L Device:R_Pack04 RN?
+U 1 1 5DBF1A39
+P 2350 4850
+F 0 "RN?" V 1933 4850 50  0000 C CNN
+F 1 "47K" V 2024 4850 50  0000 C CNN
+F 2 "" V 2625 4850 50  0001 C CNN
+F 3 "~" H 2350 4850 50  0001 C CNN
+	1    2350 4850
+	0    1    1    0   
+$EndComp
+Text Label 2100 4650 2    50   ~ 0
+VDD
+Text Label 2100 4750 2    50   ~ 0
+VSS
+Text Label 2100 4950 2    50   ~ 0
+VDD
+Wire Wire Line
+	2100 4650 2150 4650
+Wire Wire Line
+	2150 4750 2100 4750
+Text Label 2100 4850 2    50   ~ 0
+VSS
+Wire Wire Line
+	2150 4850 2100 4850
+Wire Wire Line
+	2100 4950 2150 4950
+Wire Wire Line
+	2550 4650 3000 4650
+Wire Wire Line
+	3000 4750 2550 4750
+Wire Wire Line
+	2550 4850 3000 4850
+Wire Wire Line
+	3000 4950 2550 4950
+Text Label 2550 4650 0    50   ~ 0
+PIO0_2_MCU
+Text Label 2550 4750 0    50   ~ 0
+PIO0_3_MCU
+Text Label 2550 4950 0    50   ~ 0
+PIO0_5_MCU
+Text Label 2550 4850 0    50   ~ 0
+SWO_TDO
 $EndSCHEMATC
