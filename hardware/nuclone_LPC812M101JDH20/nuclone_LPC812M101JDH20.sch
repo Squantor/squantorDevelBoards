@@ -476,7 +476,7 @@ VDD
 Wire Wire Line
 	9750 5750 9700 5750
 $Comp
-L nuclone_LPC812M101JDH20-rescue:JTAG_2X05-SquantorConnectors J1
+L SquantorConnectorsNamed:JTAG_2X05_IN J1
 U 1 1 5D2859FE
 P 3950 4850
 F 0 "J1" H 3950 5337 60  0000 C CNN
