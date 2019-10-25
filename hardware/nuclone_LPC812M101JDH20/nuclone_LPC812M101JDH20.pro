@@ -1,4 +1,4 @@
-update=zo 22 sep 2019 21:37:52 CEST
+update=vr 25 okt 2019 19:00:27 CEST
 version=1
 last_client=kicad
 [cvpcb]
@@ -260,6 +260,28 @@ Enabled=0
 Name=Default
 Clearance=0.127
 TrackWidth=0.127
+ViaDiameter=0.6
+ViaDrill=0.3
+uViaDiameter=0.6
+uViaDrill=0.3
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/1]
+Name=Power
+Clearance=0.127
+TrackWidth=0.6
+ViaDiameter=1.1
+ViaDrill=0.8
+uViaDiameter=0.6
+uViaDrill=0.3
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/2]
+Name=Signal
+Clearance=0.127
+TrackWidth=0.3
 ViaDiameter=0.6
 ViaDrill=0.3
 uViaDiameter=0.6
