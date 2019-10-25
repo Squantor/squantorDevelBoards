@@ -1,5 +1,4 @@
 (sym_lib_table
-  (lib (name SquantorButtons)(type Legacy)(uri ${KIPRJMOD}/../squantorPcbLibrary/SquantorButtons.lib)(options "")(descr ""))
   (lib (name SquantorConnectors)(type Legacy)(uri ${KIPRJMOD}/../squantorPcbLibrary/SquantorConnectors.lib)(options "")(descr ""))
   (lib (name SquantorConnectorsNamed)(type Legacy)(uri ${KIPRJMOD}/../squantorPcbLibrary/SquantorConnectorsNamed.lib)(options "")(descr ""))
   (lib (name SquantorLabels)(type Legacy)(uri ${KIPRJMOD}/../squantorPcbLibrary/SquantorLabels.lib)(options "")(descr ""))
@@ -29,5 +28,4 @@
   (lib (name SquantorUsb)(type Legacy)(uri ${KIPRJMOD}/../squantorPcbLibrary/SquantorUsb.lib)(options "")(descr ""))
   (lib (name SquantorWCH)(type Legacy)(uri ${KIPRJMOD}/../squantorPcbLibrary/SquantorWCH.lib)(options "")(descr ""))
   (lib (name SquantorWinbond)(type Legacy)(uri ${KIPRJMOD}/../squantorPcbLibrary/SquantorWinbond.lib)(options "")(descr ""))
-  (lib (name nuclone_LPC812M101JDH20-rescue)(type Legacy)(uri ${KIPRJMOD}/nuclone_LPC812M101JDH20-rescue.lib)(options "")(descr ""))
 )

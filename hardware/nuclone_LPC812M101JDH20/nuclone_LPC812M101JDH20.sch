@@ -186,7 +186,7 @@ U 1 1 5D897E29
 P 8750 3750
 F 0 "J4" H 8750 4350 50  0000 C CNN
 F 1 "nuclone_small_right" H 8750 3150 50  0000 C CNN
-F 2 "SquantorConnectorsNamed:Nuclone_20pin_bus_analog" H 8750 3700 50  0001 C CNN
+F 2 "SquantorConnectorsNamed:nuclone_small_right" H 8750 3700 50  0001 C CNN
 F 3 "" H 8750 3700 50  0001 C CNN
 	1    8750 3750
 	1    0    0    -1  
@@ -208,7 +208,7 @@ U 1 1 5D87167A
 P 10200 1400
 F 0 "J3" H 10200 2000 50  0000 C CNN
 F 1 "nuclone_small_left" H 10200 800 50  0000 C CNN
-F 2 "SquantorConnectorsNamed:Nuclone_20pin_gpio" H 10350 1350 50  0001 C CNN
+F 2 "SquantorConnectorsNamed:nuclone_small_left" H 10350 1350 50  0001 C CNN
 F 3 "" H 10350 1350 50  0001 C CNN
 	1    10200 1400
 	1    0    0    -1  
