@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:nuclone_LPC812M101JDH20-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -26,21 +27,21 @@ F 3 "" H 900 6950 60  0001 C CNN
 $EndComp
 Text Label 3700 1200 0    50   ~ 0
 VSS
-Text Label 2750 1200 2    50   ~ 0
+Text Label 2700 1200 2    50   ~ 0
 VSS
 Text Label 3700 1100 0    50   ~ 0
 VBUS
-Text Label 2750 1100 2    50   ~ 0
+Text Label 2700 1100 2    50   ~ 0
 VBUS
-Text Label 2750 1000 2    50   ~ 0
+Text Label 2700 1000 2    50   ~ 0
 VDD
 Text Label 3700 1000 0    50   ~ 0
 VDD
-Text Label 3700 2600 0    50   ~ 0
+Text Label 3750 2600 0    50   ~ 0
 VSS
 Text Label 2750 2600 2    50   ~ 0
 VSS
-Text Label 3700 2500 0    50   ~ 0
+Text Label 3750 2500 0    50   ~ 0
 VDD
 Text Label 2750 2500 2    50   ~ 0
 VDD
@@ -733,7 +734,7 @@ Wire Wire Line
 	9000 2950 9050 2950
 Text Label 1200 1000 2    50   ~ 0
 PIO0_5
-Text Label 2750 1300 2    50   ~ 0
+Text Label 2700 1300 2    50   ~ 0
 PIO0_17_OUT
 Text Label 1600 800  0    50   ~ 0
 PIO0_13_OUT
@@ -745,7 +746,7 @@ Text Label 1600 700  0    50   ~ 0
 PIO0_17_OUT
 Text Label 3700 1300 0    50   ~ 0
 PIO0_13_OUT
-Text Label 2750 1400 2    50   ~ 0
+Text Label 2700 1400 2    50   ~ 0
 PIO0_12_OUT
 Text Label 3700 1400 0    50   ~ 0
 PIO0_5_OUT
@@ -776,11 +777,11 @@ Text Label 1600 1500 0    50   ~ 0
 PIO0_2_OUT
 Text Label 1600 1600 0    50   ~ 0
 PIO0_11_OUT
-Text Label 2750 1500 2    50   ~ 0
+Text Label 2700 1500 2    50   ~ 0
 PIO0_4_OUT
 Text Label 3700 1500 0    50   ~ 0
 PIO0_3_OUT
-Text Label 2750 1600 2    50   ~ 0
+Text Label 2700 1600 2    50   ~ 0
 PIO0_2_OUT
 Text Label 3700 1600 0    50   ~ 0
 PIO0_11_OUT
@@ -803,11 +804,11 @@ Text Label 1600 1900 0    50   ~ 0
 PIO0_10_OUT
 Text Label 1600 2000 0    50   ~ 0
 PIO0_16_OUT
-Text Label 2750 1700 2    50   ~ 0
+Text Label 2700 1700 2    50   ~ 0
 PIO0_10_OUT
 Text Label 3700 1700 0    50   ~ 0
 PIO0_16_OUT
-Text Label 2750 1800 2    50   ~ 0
+Text Label 2700 1800 2    50   ~ 0
 GPIO_10
 Text Label 3700 1800 0    50   ~ 0
 GPIO_11
@@ -873,9 +874,9 @@ Text Label 1600 3400 0    50   ~ 0
 PIO0_15_OUT
 Text Label 2750 2700 2    50   ~ 0
 PIO0_14_OUT
-Text Label 3700 2700 0    50   ~ 0
+Text Label 3750 2700 0    50   ~ 0
 PIO0_0_OUT
-NoConn ~ 2750 1900
+NoConn ~ 2700 1900
 NoConn ~ 3700 1900
 Text Label 2750 2800 2    50   ~ 0
 PIO0_6_OUT
@@ -883,20 +884,20 @@ Text Label 2750 2900 2    50   ~ 0
 PIO0_8_OUT
 Text Label 2750 3000 2    50   ~ 0
 PIO0_1_OUT
-Text Label 3700 3000 0    50   ~ 0
+Text Label 3750 3000 0    50   ~ 0
 PIO0_15_OUT
-Text Label 3700 2900 0    50   ~ 0
+Text Label 3750 2900 0    50   ~ 0
 PIO0_9_OUT
-Text Label 3700 2800 0    50   ~ 0
+Text Label 3750 2800 0    50   ~ 0
 PIO0_7_OUT
 NoConn ~ 2750 3100
 NoConn ~ 2750 3200
 NoConn ~ 2750 3300
 NoConn ~ 2750 3400
-NoConn ~ 3700 3400
-NoConn ~ 3700 3300
-NoConn ~ 3700 3200
-NoConn ~ 3700 3100
+NoConn ~ 3750 3400
+NoConn ~ 3750 3300
+NoConn ~ 3750 3200
+NoConn ~ 3750 3100
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5DC2B74B
