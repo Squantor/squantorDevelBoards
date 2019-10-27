@@ -1165,4 +1165,56 @@ Text Label 1500 5150 0    50   ~ 0
 GPIO_47
 Text Label 1500 5050 0    50   ~ 0
 GPIO_46
+$Comp
+L SquantorProto:Proto_1pin J?
+U 1 1 5DBCDDE6
+P 3000 5850
+F 0 "J?" H 3050 5850 60  0000 L CNN
+F 1 "Proto_1pin" H 3178 5797 60  0000 L CNN
+F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 3000 5850 60  0001 C CNN
+F 3 "" H 3000 5850 60  0001 C CNN
+	1    3000 5850
+	1    0    0    -1  
+$EndComp
+Text Label 2750 5850 2    50   ~ 0
+VSS
+$Comp
+L SquantorProto:Proto_1pin J?
+U 1 1 5DBD2931
+P 3000 6150
+F 0 "J?" H 3050 6150 60  0000 L CNN
+F 1 "Proto_1pin" H 3178 6097 60  0000 L CNN
+F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 3000 6150 60  0001 C CNN
+F 3 "" H 3000 6150 60  0001 C CNN
+	1    3000 6150
+	1    0    0    -1  
+$EndComp
+Text Label 2750 6150 2    50   ~ 0
+VSS
+$Comp
+L SquantorProto:Proto_1pin J?
+U 1 1 5DBDD839
+P 3000 6450
+F 0 "J?" H 3050 6450 60  0000 L CNN
+F 1 "Proto_1pin" H 3178 6397 60  0000 L CNN
+F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 3000 6450 60  0001 C CNN
+F 3 "" H 3000 6450 60  0001 C CNN
+	1    3000 6450
+	1    0    0    -1  
+$EndComp
+Text Label 2750 6450 2    50   ~ 0
+VSS
+$Comp
+L SquantorProto:Proto_1pin J?
+U 1 1 5DBDD844
+P 3000 6750
+F 0 "J?" H 3050 6750 60  0000 L CNN
+F 1 "Proto_1pin" H 3178 6697 60  0000 L CNN
+F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 3000 6750 60  0001 C CNN
+F 3 "" H 3000 6750 60  0001 C CNN
+	1    3000 6750
+	1    0    0    -1  
+$EndComp
+Text Label 2750 6750 2    50   ~ 0
+VSS
 $EndSCHEMATC
