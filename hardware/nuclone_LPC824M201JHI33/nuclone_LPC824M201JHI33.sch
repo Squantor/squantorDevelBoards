@@ -1008,31 +1008,31 @@ NoConn ~ 3600 2250
 NoConn ~ 3600 2150
 NoConn ~ 3600 2050
 NoConn ~ 3600 1950
-Text Label 1100 3300 2    50   ~ 0
+Text Label 1100 4450 2    50   ~ 0
 PIO0_7_MCU
-Text Label 1100 3400 2    50   ~ 0
+Text Label 1100 4350 2    50   ~ 0
 PIO0_6_MCU
-Text Label 1100 3700 2    50   ~ 0
+Text Label 1100 4250 2    50   ~ 0
 PIO0_0_MCU
-Text Label 1100 3800 2    50   ~ 0
+Text Label 1100 4000 2    50   ~ 0
 PIO0_14_MCU
 Text Label 1100 3900 2    50   ~ 0
 PIO0_23_MCU
-Text Label 1100 4000 2    50   ~ 0
+Text Label 1100 3800 2    50   ~ 0
 PIO0_22_MCU
-Text Label 1100 4250 2    50   ~ 0
+Text Label 1100 3700 2    50   ~ 0
 PIO0_21_MCU
-Text Label 1100 4350 2    50   ~ 0
+Text Label 1100 3400 2    50   ~ 0
 PIO0_20_MCU
-Text Label 1100 4450 2    50   ~ 0
+Text Label 1100 3300 2    50   ~ 0
 PIO0_19_MCU
-Text Label 1100 4550 2    50   ~ 0
-PIO0_18_MCU
-Text Label 1100 4850 2    50   ~ 0
-PIO0_17_MCU
-Text Label 1100 3100 2    50   ~ 0
-PIO0_9
 Text Label 1100 3200 2    50   ~ 0
+PIO0_18_MCU
+Text Label 1100 3100 2    50   ~ 0
+PIO0_17_MCU
+Text Label 1100 4850 2    50   ~ 0
+PIO0_9
+Text Label 1100 4550 2    50   ~ 0
 PIO0_8
 $Comp
 L Device:R_Pack04 RN7
