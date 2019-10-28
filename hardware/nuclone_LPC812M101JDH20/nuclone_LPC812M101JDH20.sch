@@ -955,10 +955,10 @@ VSS
 Text Label 4800 6500 0    50   ~ 0
 VSS
 $Comp
-L SquantorProto:Proto_1pin J?
+L SquantorProto:Proto_1pin J7
 U 1 1 5DB80F04
 P 4150 6900
-F 0 "J?" H 4150 6900 60  0000 L CNN
+F 0 "J7" H 4150 6900 60  0000 L CNN
 F 1 "Proto_1pin" H 4300 6800 60  0000 L CNN
 F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 4150 6900 60  0001 C CNN
 F 3 "" H 4150 6900 60  0001 C CNN
