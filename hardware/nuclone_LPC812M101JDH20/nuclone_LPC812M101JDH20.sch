@@ -928,4 +928,43 @@ Text Label 10300 3850 1    50   ~ 0
 VSS
 Text Label 10300 4400 2    50   ~ 0
 VSS
+$Comp
+L SquantorProto:Proto_1pin J5
+U 1 1 5DB76CB1
+P 3750 6500
+F 0 "J5" H 3750 6500 60  0000 L CNN
+F 1 "Proto_1pin" H 3900 6600 60  0000 L CNN
+F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 3750 6500 60  0001 C CNN
+F 3 "" H 3750 6500 60  0001 C CNN
+	1    3750 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorProto:Proto_1pin J6
+U 1 1 5DB77E83
+P 4550 6500
+F 0 "J6" H 4550 6500 60  0000 L CNN
+F 1 "Proto_1pin" H 4700 6400 60  0000 L CNN
+F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 4550 6500 60  0001 C CNN
+F 3 "" H 4550 6500 60  0001 C CNN
+	1    4550 6500
+	-1   0    0    -1  
+$EndComp
+Text Label 3500 6500 2    50   ~ 0
+VSS
+Text Label 4800 6500 0    50   ~ 0
+VSS
+$Comp
+L SquantorProto:Proto_1pin J?
+U 1 1 5DB80F04
+P 4150 6900
+F 0 "J?" H 4150 6900 60  0000 L CNN
+F 1 "Proto_1pin" H 4300 6800 60  0000 L CNN
+F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 4150 6900 60  0001 C CNN
+F 3 "" H 4150 6900 60  0001 C CNN
+	1    4150 6900
+	-1   0    0    -1  
+$EndComp
+Text Label 4400 6900 0    50   ~ 0
+VSS
 $EndSCHEMATC
