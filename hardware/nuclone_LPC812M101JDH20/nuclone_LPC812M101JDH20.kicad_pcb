@@ -1893,7 +1893,7 @@
     (fp_text reference N2 (at 0 0.1) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value 20191025 (at 0.8 0.1) (layer B.SilkS)
+    (fp_text value 20191028 (at 0.8 0.1) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text user V: (at 5.3 0.1) (layer B.SilkS)
