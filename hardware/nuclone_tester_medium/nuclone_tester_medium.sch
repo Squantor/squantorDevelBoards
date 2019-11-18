@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -98,17 +98,6 @@ F 2 "SquantorLabels:Label_version" H 900 7300 60  0001 C CNN
 F 3 "" H 900 7300 60  0001 C CNN
 	1    900  7300
 	1    0    0    -1  
-$EndComp
-$Comp
-L SquantorConnectorsNamed:nuclone_medium_right J4
-U 1 1 5D897E29
-P 3100 4050
-F 0 "J4" H 3100 2950 50  0000 C CNN
-F 1 "nuclone_small_right" H 3100 5150 50  0000 C CNN
-F 2 "SquantorConnectorsNamed:nuclone_medium_right" H 3100 4000 50  0001 C CNN
-F 3 "" H 3100 4000 50  0001 C CNN
-	1    3100 4050
-	-1   0    0    1   
 $EndComp
 $Comp
 L SquantorLabels:Label N3
@@ -384,34 +373,6 @@ Text Label 6650 6250 0    50   ~ 0
 VSS
 Text Label 6650 6150 0    50   ~ 0
 VSS
-Text Label 2600 1050 2    50   ~ 0
-PIO0_13_OUT
-Text Label 3600 1050 0    50   ~ 0
-PIO0_12_OUT
-Text Label 2600 1150 2    50   ~ 0
-PIO0_5_OUT
-Text Label 3600 1150 0    50   ~ 0
-PIO0_4_OUT
-Text Label 2600 1250 2    50   ~ 0
-PIO0_28_OUT
-Text Label 3600 1250 0    50   ~ 0
-PIO0_3_OUT
-Text Label 2600 1350 2    50   ~ 0
-PIO0_2_OUT
-Text Label 3600 1350 0    50   ~ 0
-PIO0_11_OUT
-Text Label 2600 1450 2    50   ~ 0
-PIO0_10_OUT
-Text Label 3600 1450 0    50   ~ 0
-PIO0_16_OUT
-Text Label 2600 1550 2    50   ~ 0
-PIO0_27_OUT
-Text Label 3600 1550 0    50   ~ 0
-PIO0_26_OUT
-Text Label 2600 1650 2    50   ~ 0
-PIO0_25_OUT
-Text Label 3600 1650 0    50   ~ 0
-PIO0_24_OUT
 Text Label 3600 1750 0    50   ~ 0
 VSS
 Text Label 2600 1750 2    50   ~ 0
@@ -424,74 +385,179 @@ Text Label 3600 2650 0    50   ~ 0
 VSS
 Text Label 2600 2650 2    50   ~ 0
 VSS
-Text Label 2600 1850 2    50   ~ 0
-PIO0_15_OUT
-Text Label 3600 1850 0    50   ~ 0
-PIO0_1_OUT
-NoConn ~ 2600 1950
-NoConn ~ 2600 2050
-NoConn ~ 2600 2150
-NoConn ~ 2600 2250
-NoConn ~ 2600 2350
-NoConn ~ 2600 2450
-NoConn ~ 2600 2550
-NoConn ~ 3600 2550
-NoConn ~ 3600 2450
-NoConn ~ 3600 2350
-NoConn ~ 3600 2250
-NoConn ~ 3600 2150
-NoConn ~ 3600 2050
-NoConn ~ 3600 1950
 Text Label 2600 5000 2    50   ~ 0
 VSS
 Text Label 3600 5000 0    50   ~ 0
 VSS
-Text Label 3600 3300 0    50   ~ 0
-PIO0_9_OUT
-Text Label 2600 3300 2    50   ~ 0
-PIO0_8_OUT
-Text Label 3600 3400 0    50   ~ 0
-PIO0_7_OUT
-Text Label 2600 3400 2    50   ~ 0
-PIO0_6_OUT
-Text Label 3600 3500 0    50   ~ 0
-PIO0_0_OUT
-Text Label 2600 3500 2    50   ~ 0
-PIO0_14_OUT
-Text Label 3600 3600 0    50   ~ 0
-PIO0_23_OUT
-Text Label 2600 3600 2    50   ~ 0
-PIO0_22_OUT
-Text Label 3600 3700 0    50   ~ 0
-PIO0_21_OUT
-Text Label 2600 3700 2    50   ~ 0
-PIO0_20_OUT
-Text Label 3600 3800 0    50   ~ 0
-PIO0_19_OUT
-Text Label 2600 3800 2    50   ~ 0
-PIO0_18_OUT
-Text Label 3600 3900 0    50   ~ 0
-PIO0_17_OUT
-NoConn ~ 3600 4200
-NoConn ~ 3600 4300
-NoConn ~ 3600 4400
-NoConn ~ 3600 4500
-NoConn ~ 3600 4600
-NoConn ~ 3600 4700
-NoConn ~ 3600 4800
-NoConn ~ 3600 4900
-NoConn ~ 2600 4900
-NoConn ~ 2600 4800
-NoConn ~ 2600 4700
-NoConn ~ 2600 4600
-NoConn ~ 2600 4500
-NoConn ~ 2600 4400
-NoConn ~ 2600 4300
-NoConn ~ 2600 4200
-Text Label 2600 3900 2    50   ~ 0
-GPIO_49
+$Comp
+L SquantorConnectorsNamed:nuclone_medium_right J4
+U 1 1 5D897E29
+P 3100 4050
+F 0 "J4" H 3100 2950 50  0000 C CNN
+F 1 "nuclone_small_right" H 3100 5150 50  0000 C CNN
+F 2 "SquantorConnectorsNamed:nuclone_medium_right" H 3100 4000 50  0001 C CNN
+F 3 "" H 3100 4000 50  0001 C CNN
+	1    3100 4050
+	-1   0    0    1   
+$EndComp
+Text Label 2600 1050 2    50   ~ 0
+GPIO_00
+Text Label 2600 1150 2    50   ~ 0
+GPIO_02
+Text Label 2600 1250 2    50   ~ 0
+GPIO_04
+Text Label 2600 1350 2    50   ~ 0
+GPIO_06
+Text Label 2600 1450 2    50   ~ 0
+GPIO_08
+Text Label 2600 1550 2    50   ~ 0
+GPIO_10
+Text Label 3600 1050 0    50   ~ 0
+GPIO_01
+Text Label 3600 1150 0    50   ~ 0
+GPIO_03
+Text Label 3600 1250 0    50   ~ 0
+GPIO_05
+Text Label 3600 1350 0    50   ~ 0
+GPIO_07
+Text Label 3600 1450 0    50   ~ 0
+GPIO_09
+Text Label 3600 1550 0    50   ~ 0
+GPIO_11
+Text Label 3600 1650 0    50   ~ 0
+GPIO_13
+Text Label 2600 1650 2    50   ~ 0
+GPIO_12
+Text Label 2600 1850 2    50   ~ 0
+GPIO_14
+Text Label 2600 1950 2    50   ~ 0
+GPIO_16
+Text Label 2600 2050 2    50   ~ 0
+GPIO_18
+Text Label 3600 1850 0    50   ~ 0
+GPIO_15
+Text Label 3600 1950 0    50   ~ 0
+GPIO_17
+Text Label 3600 2050 0    50   ~ 0
+GPIO_19
+Text Label 2600 2150 2    50   ~ 0
+GPIO_20
+Text Label 2600 2250 2    50   ~ 0
+GPIO_22
+Text Label 2600 2350 2    50   ~ 0
+GPIO_24
+Text Label 2600 2450 2    50   ~ 0
+GPIO_26
+Text Label 2600 2550 2    50   ~ 0
+GPIO_28
+Text Label 3600 2150 0    50   ~ 0
+GPIO_21
+Text Label 3600 2250 0    50   ~ 0
+GPIO_23
+Text Label 3600 2350 0    50   ~ 0
+GPIO_25
+Text Label 3600 2450 0    50   ~ 0
+GPIO_27
+Text Label 3600 2550 0    50   ~ 0
+GPIO_29
+Text Label 3600 4900 0    50   ~ 0
+GPIO_30
+Text Label 3600 4800 0    50   ~ 0
+GPIO_32
+Text Label 3600 4700 0    50   ~ 0
+GPIO_34
+Text Label 3600 4600 0    50   ~ 0
+GPIO_36
+Text Label 3600 4500 0    50   ~ 0
+GPIO_38
+Text Label 2600 4900 2    50   ~ 0
+GPIO_31
+Text Label 2600 4800 2    50   ~ 0
+GPIO_33
+Text Label 2600 4700 2    50   ~ 0
+GPIO_35
+Text Label 2600 4600 2    50   ~ 0
+GPIO_37
+Text Label 2600 4500 2    50   ~ 0
+GPIO_39
+Text Label 2600 4400 2    50   ~ 0
+GPIO_41
+Text Label 2600 4300 2    50   ~ 0
+GPIO_43
+Text Label 2600 4200 2    50   ~ 0
+GPIO_45
 Text Label 2600 4000 2    50   ~ 0
 GPIO_47
+Text Label 2600 3900 2    50   ~ 0
+GPIO_49
+Text Label 3600 4400 0    50   ~ 0
+GPIO_40
+Text Label 3600 4300 0    50   ~ 0
+GPIO_42
+Text Label 3600 4200 0    50   ~ 0
+GPIO_44
 Text Label 3600 4000 0    50   ~ 0
 GPIO_46
+Text Label 3600 3900 0    50   ~ 0
+GPIO_48
+Text Label 3600 3800 0    50   ~ 0
+GPIO_50
+Text Label 3600 3700 0    50   ~ 0
+GPIO_52
+Text Label 3600 3600 0    50   ~ 0
+GPIO_54
+Text Label 3600 3500 0    50   ~ 0
+GPIO_56
+Text Label 3600 3400 0    50   ~ 0
+GPIO_58
+Text Label 2600 3800 2    50   ~ 0
+GPIO_51
+Text Label 2600 3700 2    50   ~ 0
+GPIO_53
+Text Label 2600 3600 2    50   ~ 0
+GPIO_55
+Text Label 2600 3500 2    50   ~ 0
+GPIO_57
+Text Label 2600 3400 2    50   ~ 0
+GPIO_59
+Text Label 2600 3300 2    50   ~ 0
+GPIO_61
+Text Label 3600 3300 0    50   ~ 0
+GPIO_60
+$Sheet
+S 5450 900  800  500 
+U 5DD8BFF4
+F0 "four pin test network " 50
+F1 "pin_test_network_quad.sch" 50
+F2 "GPIO0" B L 5450 1000 50 
+F3 "GPIO1" B L 5450 1100 50 
+F4 "GPIO2" B L 5450 1200 50 
+F5 "GPIO3" B L 5450 1300 50 
+F6 "Stimulus" B R 6250 1100 50 
+F7 "VSS" I R 6250 1200 50 
+$EndSheet
+Text Label 5400 1000 2    50   ~ 0
+GPIO_00
+Text Label 5400 1100 2    50   ~ 0
+GPIO_01
+Text Label 5400 1200 2    50   ~ 0
+GPIO_02
+Text Label 5400 1300 2    50   ~ 0
+GPIO_03
+Text Label 6300 1200 0    50   ~ 0
+VSS
+Text Label 6300 1100 0    50   ~ 0
+Stimulus
+Wire Wire Line
+	5400 1000 5450 1000
+Wire Wire Line
+	5450 1100 5400 1100
+Wire Wire Line
+	5400 1200 5450 1200
+Wire Wire Line
+	5450 1300 5400 1300
+Wire Wire Line
+	6250 1100 6300 1100
+Wire Wire Line
+	6300 1200 6250 1200
 $EndSCHEMATC
