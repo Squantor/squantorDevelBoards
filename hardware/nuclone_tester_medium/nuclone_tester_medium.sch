@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -561,4 +561,76 @@ Wire Wire Line
 	6250 1100 6300 1100
 Wire Wire Line
 	6300 1200 6250 1200
+$Sheet
+S 5450 1600 800  500 
+U 5DD4C220
+F0 "sheet5DD4C220" 50
+F1 "pin_test_network_quad.sch" 50
+F2 "GPIO0" B L 5450 1700 50 
+F3 "GPIO1" B L 5450 1800 50 
+F4 "GPIO2" B L 5450 1900 50 
+F5 "GPIO3" B L 5450 2000 50 
+F6 "Stimulus" B R 6250 1800 50 
+F7 "VSS" I R 6250 1900 50 
+$EndSheet
+Text Label 5400 1700 2    50   ~ 0
+GPIO_04
+Text Label 5400 1800 2    50   ~ 0
+GPIO_05
+Text Label 5400 1900 2    50   ~ 0
+GPIO_06
+Text Label 5400 2000 2    50   ~ 0
+GPIO_07
+Text Label 6300 1900 0    50   ~ 0
+VSS
+Text Label 6300 1800 0    50   ~ 0
+Stimulus
+Wire Wire Line
+	5400 1700 5450 1700
+Wire Wire Line
+	5450 1800 5400 1800
+Wire Wire Line
+	5400 1900 5450 1900
+Wire Wire Line
+	5450 2000 5400 2000
+Wire Wire Line
+	6250 1800 6300 1800
+Wire Wire Line
+	6300 1900 6250 1900
+$Sheet
+S 5450 2300 800  500 
+U 5DD500E1
+F0 "sheet5DD500E1" 50
+F1 "pin_test_network_quad.sch" 50
+F2 "GPIO0" B L 5450 2400 50 
+F3 "GPIO1" B L 5450 2500 50 
+F4 "GPIO2" B L 5450 2600 50 
+F5 "GPIO3" B L 5450 2700 50 
+F6 "Stimulus" B R 6250 2500 50 
+F7 "VSS" I R 6250 2600 50 
+$EndSheet
+Text Label 5400 2400 2    50   ~ 0
+GPIO_08
+Text Label 5400 2500 2    50   ~ 0
+GPIO_09
+Text Label 5400 2600 2    50   ~ 0
+GPIO_10
+Text Label 5400 2700 2    50   ~ 0
+GPIO_11
+Text Label 6300 2600 0    50   ~ 0
+VSS
+Text Label 6300 2500 0    50   ~ 0
+Stimulus
+Wire Wire Line
+	5400 2400 5450 2400
+Wire Wire Line
+	5450 2500 5400 2500
+Wire Wire Line
+	5400 2600 5450 2600
+Wire Wire Line
+	5450 2700 5400 2700
+Wire Wire Line
+	6250 2500 6300 2500
+Wire Wire Line
+	6300 2600 6250 2600
 $EndSCHEMATC
