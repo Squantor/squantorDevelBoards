@@ -793,9 +793,9 @@ Text Label 9950 5650 2    50   ~ 0
 GPIO_28
 Text Label 9950 5750 2    50   ~ 0
 GPIO_29
-Text Label 9950 5850 2    50   ~ 0
+Text Label 8400 750  2    50   ~ 0
 GPIO_30
-Text Label 9950 5950 2    50   ~ 0
+Text Label 8400 850  2    50   ~ 0
 GPIO_31
 Text Label 10850 5850 0    50   ~ 0
 VSS
@@ -825,13 +825,13 @@ F5 "GPIO3" B L 8450 1050 50
 F6 "Stimulus" B R 9250 850 50 
 F7 "VSS" I R 9250 950 50 
 $EndSheet
-Text Label 8400 750  2    50   ~ 0
-GPIO_32
-Text Label 8400 850  2    50   ~ 0
-GPIO_33
 Text Label 8400 950  2    50   ~ 0
-GPIO_34
+GPIO_32
 Text Label 8400 1050 2    50   ~ 0
+GPIO_33
+Text Label 8400 1450 2    50   ~ 0
+GPIO_34
+Text Label 8400 1550 2    50   ~ 0
 GPIO_35
 Text Label 9300 950  0    50   ~ 0
 VSS
@@ -861,13 +861,13 @@ F5 "GPIO3" B L 8450 1750 50
 F6 "Stimulus" B R 9250 1550 50 
 F7 "VSS" I R 9250 1650 50 
 $EndSheet
-Text Label 8400 1450 2    50   ~ 0
-GPIO_36
-Text Label 8400 1550 2    50   ~ 0
-GPIO_37
 Text Label 8400 1650 2    50   ~ 0
-GPIO_38
+GPIO_36
 Text Label 8400 1750 2    50   ~ 0
+GPIO_37
+Text Label 8400 2150 2    50   ~ 0
+GPIO_38
+Text Label 8400 2250 2    50   ~ 0
 GPIO_39
 Text Label 9300 1650 0    50   ~ 0
 VSS
@@ -897,13 +897,13 @@ F5 "GPIO3" B L 8450 2450 50
 F6 "Stimulus" B R 9250 2250 50 
 F7 "VSS" I R 9250 2350 50 
 $EndSheet
-Text Label 8400 2150 2    50   ~ 0
-GPIO_40
-Text Label 8400 2250 2    50   ~ 0
-GPIO_41
 Text Label 8400 2350 2    50   ~ 0
-GPIO_42
+GPIO_40
 Text Label 8400 2450 2    50   ~ 0
+GPIO_41
+Text Label 8400 2850 2    50   ~ 0
+GPIO_42
+Text Label 8400 2950 2    50   ~ 0
 GPIO_43
 Text Label 9300 2350 0    50   ~ 0
 VSS
@@ -933,13 +933,13 @@ F5 "GPIO3" B L 8450 3150 50
 F6 "Stimulus" B R 9250 2950 50 
 F7 "VSS" I R 9250 3050 50 
 $EndSheet
-Text Label 8400 2850 2    50   ~ 0
-GPIO_44
-Text Label 8400 2950 2    50   ~ 0
-GPIO_45
 Text Label 8400 3050 2    50   ~ 0
-GPIO_46
+GPIO_44
 Text Label 8400 3150 2    50   ~ 0
+GPIO_45
+Text Label 8400 3550 2    50   ~ 0
+GPIO_46
+Text Label 8400 3650 2    50   ~ 0
 GPIO_47
 Text Label 9300 3050 0    50   ~ 0
 VSS
@@ -969,13 +969,13 @@ F5 "GPIO3" B L 8450 3850 50
 F6 "Stimulus" B R 9250 3650 50 
 F7 "VSS" I R 9250 3750 50 
 $EndSheet
-Text Label 8400 3550 2    50   ~ 0
-GPIO_48
-Text Label 8400 3650 2    50   ~ 0
-GPIO_49
 Text Label 8400 3750 2    50   ~ 0
-GPIO_50
+GPIO_48
 Text Label 8400 3850 2    50   ~ 0
+GPIO_49
+Text Label 8400 4250 2    50   ~ 0
+GPIO_50
+Text Label 8400 4350 2    50   ~ 0
 GPIO_51
 Text Label 9300 3750 0    50   ~ 0
 VSS
@@ -1005,13 +1005,13 @@ F5 "GPIO3" B L 8450 4550 50
 F6 "Stimulus" B R 9250 4350 50 
 F7 "VSS" I R 9250 4450 50 
 $EndSheet
-Text Label 8400 4250 2    50   ~ 0
-GPIO_52
-Text Label 8400 4350 2    50   ~ 0
-GPIO_53
 Text Label 8400 4450 2    50   ~ 0
-GPIO_54
+GPIO_52
 Text Label 8400 4550 2    50   ~ 0
+GPIO_53
+Text Label 8400 4950 2    50   ~ 0
+GPIO_54
+Text Label 8400 5050 2    50   ~ 0
 GPIO_55
 Text Label 9300 4450 0    50   ~ 0
 VSS
@@ -1041,13 +1041,13 @@ F5 "GPIO3" B L 8450 5250 50
 F6 "Stimulus" B R 9250 5050 50 
 F7 "VSS" I R 9250 5150 50 
 $EndSheet
-Text Label 8400 4950 2    50   ~ 0
-GPIO_56
-Text Label 8400 5050 2    50   ~ 0
-GPIO_57
 Text Label 8400 5150 2    50   ~ 0
-GPIO_58
+GPIO_56
 Text Label 8400 5250 2    50   ~ 0
+GPIO_57
+Text Label 8400 5650 2    50   ~ 0
+GPIO_58
+Text Label 8400 5750 2    50   ~ 0
 GPIO_59
 Text Label 9300 5150 0    50   ~ 0
 VSS
@@ -1077,14 +1077,10 @@ F5 "GPIO3" B L 8450 5950 50
 F6 "Stimulus" B R 9250 5750 50 
 F7 "VSS" I R 9250 5850 50 
 $EndSheet
-Text Label 8400 5650 2    50   ~ 0
-GPIO_60
-Text Label 8400 5750 2    50   ~ 0
-GPIO_61
 Text Label 8400 5850 2    50   ~ 0
-GPIO_62
+GPIO_60
 Text Label 8400 5950 2    50   ~ 0
-GPIO_63
+GPIO_61
 Text Label 9300 5850 0    50   ~ 0
 VSS
 Text Label 9300 5750 0    50   ~ 0
@@ -1101,4 +1097,6 @@ Wire Wire Line
 	9250 5750 9300 5750
 Wire Wire Line
 	9300 5850 9250 5850
+NoConn ~ 9950 5850
+NoConn ~ 9950 5950
 $EndSCHEMATC
