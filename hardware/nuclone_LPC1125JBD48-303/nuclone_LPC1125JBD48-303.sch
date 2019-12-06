@@ -703,13 +703,13 @@ NoConn ~ 3600 2150
 $Comp
 L Device:R_Pack04 RN7
 U 1 1 5DC81B7E
-P 1300 3300
-F 0 "RN7" V 1000 3300 50  0000 C CNN
-F 1 "100" V 1500 3300 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 3300 50  0001 C CNN
-F 3 "~" H 1300 3300 50  0001 C CNN
-	1    1300 3300
-	0    1    1    0   
+P 1300 3200
+F 0 "RN7" V 1000 3200 50  0000 C CNN
+F 1 "100" V 1500 3200 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 3200 50  0001 C CNN
+F 3 "~" H 1300 3200 50  0001 C CNN
+	1    1300 3200
+	0    1    -1   0   
 $EndComp
 $Comp
 L Device:R_Pack04 RN8
@@ -1226,10 +1226,10 @@ F 3 "~" H 1300 5300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Pack04 RN?
+L Device:R_Pack04 RN11
 U 1 1 5E113B69
 P 1300 5900
-F 0 "RN?" V 1000 5900 50  0000 C CNN
+F 0 "RN11" V 1000 5900 50  0000 C CNN
 F 1 "100" V 1500 5900 50  0000 C CNN
 F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 5900 50  0001 C CNN
 F 3 "~" H 1300 5900 50  0001 C CNN
@@ -1237,10 +1237,10 @@ F 3 "~" H 1300 5900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Pack04 RN?
+L Device:R_Pack04 RN12
 U 1 1 5E1144B9
 P 1300 6500
-F 0 "RN?" V 1000 6500 50  0000 C CNN
+F 0 "RN12" V 1000 6500 50  0000 C CNN
 F 1 "100" V 1500 6500 50  0000 C CNN
 F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 6500 50  0001 C CNN
 F 3 "~" H 1300 6500 50  0001 C CNN
@@ -1378,30 +1378,6 @@ Text Label 2600 3400 2    50   ~ 0
 GPIO_59
 Text Label 3600 3400 0    50   ~ 0
 GPIO_58
-Text Label 2600 3500 2    50   ~ 0
-PIO1_7_OUT
-Text Label 3600 3500 0    50   ~ 0
-PIO1_6_OUT
-Text Label 2600 3600 2    50   ~ 0
-PIO1_5_OUT
-Text Label 3600 3600 0    50   ~ 0
-PIO1_11_OUT
-Text Label 2600 3700 2    50   ~ 0
-PIO1_4_OUT
-Text Label 3600 3700 0    50   ~ 0
-PIO1_3_OUT
-Text Label 2600 3800 2    50   ~ 0
-PIO2_3_OUT
-Text Label 3600 3800 0    50   ~ 0
-PIO3_0_OUT
-Text Label 2600 3900 2    50   ~ 0
-PIO1_2_OUT
-Text Label 3600 3900 0    50   ~ 0
-PIO1_1_OUT
-Text Label 2600 4000 2    50   ~ 0
-PIO0_11_OUT
-Text Label 3600 4000 0    50   ~ 0
-PIO1_10_OUT
 $Comp
 L SquantorConnectorsNamed:nuclone_medium_right J4
 U 1 1 5D897E29
@@ -1413,12 +1389,36 @@ F 3 "" H 3100 4000 50  0001 C CNN
 	1    3100 4050
 	-1   0    0    1   
 $EndComp
+Text Label 2600 3500 2    50   ~ 0
+PIO1_11_OUT
+Text Label 3600 3500 0    50   ~ 0
+PIO1_5_OUT
+Text Label 2600 3600 2    50   ~ 0
+PIO1_6_OUT
+Text Label 3600 3600 0    50   ~ 0
+PIO1_7_OUT
+Text Label 2600 3700 2    50   ~ 0
+PIO3_0_OUT
+Text Label 3600 3700 0    50   ~ 0
+PIO2_3_OUT
+Text Label 2600 3800 2    50   ~ 0
+PIO1_3_OUT
+Text Label 3600 3800 0    50   ~ 0
+PIO1_4_OUT
+Text Label 2600 3900 2    50   ~ 0
+PIO1_10_OUT
+Text Label 3600 3900 0    50   ~ 0
+PIO0_11_OUT
+Text Label 2600 4000 2    50   ~ 0
+PIO1_1_OUT
+Text Label 3600 4000 0    50   ~ 0
+PIO1_2_OUT
 Text Label 2600 4200 2    50   ~ 0
-PIO0_10_OUT
-Text Label 3600 4200 0    50   ~ 0
-PIO0_9_OUT
-Text Label 2600 4300 2    50   ~ 0
-PIO0_8_OUT
-Text Label 3600 4300 0    50   ~ 0
 PIO2_2_OUT
+Text Label 3600 4200 0    50   ~ 0
+PIO0_8_OUT
+Text Label 2600 4300 2    50   ~ 0
+PIO0_9_OUT
+Text Label 3600 4300 0    50   ~ 0
+PIO0_10_OUT
 $EndSCHEMATC
