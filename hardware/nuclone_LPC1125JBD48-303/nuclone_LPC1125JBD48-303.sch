@@ -1181,29 +1181,27 @@ Text Label 1100 4100 2    50   ~ 0
 PIO0_8_MCU
 Text Label 1100 4000 2    50   ~ 0
 PIO0_9_MCU
-Text Label 1100 5100 2    50   ~ 0
-PIO1_10_MCU
 Text Label 1100 4800 2    50   ~ 0
+PIO1_10_MCU
+Text Label 1100 4700 2    50   ~ 0
 PIO0_11_MCU
-Text Label 1100 5700 2    50   ~ 0
+Text Label 1100 5300 2    50   ~ 0
 PIO3_0_MCU
-Text Label 1100 5400 2    50   ~ 0
-PIO2_3_MCU
-Text Label 1100 5200 2    50   ~ 0
-PIO1_4_MCU
-Text Label 1100 6300 2    50   ~ 0
-PIO1_11_MCU
 Text Label 1100 6000 2    50   ~ 0
-PIO1_5_MCU
-Text Label 1100 5900 2    50   ~ 0
-PIO1_6_MCU
+PIO2_3_MCU
 Text Label 1100 5800 2    50   ~ 0
-PIO1_7_MCU
+PIO1_4_MCU
+Text Label 1100 5700 2    50   ~ 0
+PIO1_11_MCU
+Text Label 1100 6500 2    50   ~ 0
+PIO1_6_MCU
 Text Label 1100 6400 2    50   ~ 0
+PIO1_7_MCU
+Text Label 1100 6300 2    50   ~ 0
 PIO3_3_MCU
 Text Label 1100 3900 2    50   ~ 0
 PIO0_10
-Text Label 1100 5300 2    50   ~ 0
+Text Label 1100 5900 2    50   ~ 0
 PIO1_3
 Text Label 1100 900  2    50   ~ 0
 PIO0_0
@@ -1240,8 +1238,6 @@ F 3 "~" H 1300 6500 50  0001 C CNN
 	1    1300 6500
 	0    1    1    0   
 $EndComp
-NoConn ~ 1100 6500
-NoConn ~ 1100 6600
 Text Label 1500 700  0    50   ~ 0
 PIO2_6_OUT
 Text Label 1500 800  0    50   ~ 0
@@ -1298,27 +1294,27 @@ Text Label 1500 4000 0    50   ~ 0
 PIO0_9_OUT
 Text Label 1500 3900 0    50   ~ 0
 PIO0_10_OUT
-Text Label 1500 5100 0    50   ~ 0
+Text Label 1500 4800 0    50   ~ 0
 PIO1_10_OUT
-Text Label 1500 4500 0    50   ~ 0
+Text Label 1650 4350 0    50   ~ 0
 PIO1_2_OUT
-Text Label 1500 5700 0    50   ~ 0
-PIO3_0_OUT
-Text Label 1500 5400 0    50   ~ 0
-PIO2_3_OUT
 Text Label 1500 5300 0    50   ~ 0
-PIO1_3_OUT
-Text Label 1500 5200 0    50   ~ 0
-PIO1_4_OUT
-Text Label 1500 6300 0    50   ~ 0
-PIO1_11_OUT
+PIO3_0_OUT
 Text Label 1500 6000 0    50   ~ 0
-PIO1_5_OUT
+PIO2_3_OUT
 Text Label 1500 5900 0    50   ~ 0
-PIO1_6_OUT
+PIO1_3_OUT
 Text Label 1500 5800 0    50   ~ 0
-PIO1_7_OUT
+PIO1_4_OUT
+Text Label 1500 5700 0    50   ~ 0
+PIO1_11_OUT
+Text Label 1500 6600 0    50   ~ 0
+PIO1_5_OUT
+Text Label 1500 6500 0    50   ~ 0
+PIO1_6_OUT
 Text Label 1500 6400 0    50   ~ 0
+PIO1_7_OUT
+Text Label 1500 6300 0    50   ~ 0
 PIO3_3_OUT
 Text Label 2600 1250 2    50   ~ 0
 PIO1_8_OUT
@@ -1354,10 +1350,6 @@ Text Label 3600 2050 0    50   ~ 0
 PIO2_9_OUT
 Text Label 2600 3300 2    50   ~ 0
 PIO3_3_OUT
-Text Label 1500 6500 0    50   ~ 0
-GPIO_59
-Text Label 1500 6600 0    50   ~ 0
-GPIO_58
 Text Label 3600 3300 0    50   ~ 0
 GPIO_60
 Text Label 2600 3400 2    50   ~ 0
@@ -1375,9 +1367,9 @@ F 3 "" H 3100 4000 50  0001 C CNN
 	1    3100 4050
 	-1   0    0    1   
 $EndComp
-Text Label 1500 4800 0    50   ~ 0
+Text Label 1500 4700 0    50   ~ 0
 PIO0_11_OUT
-Text Label 1500 4600 0    50   ~ 0
+Text Label 1500 4500 0    50   ~ 0
 PIO1_1_OUT
 Text Label 2600 3500 2    50   ~ 0
 PIO1_7_OUT
@@ -1405,9 +1397,9 @@ Text Label 3600 4300 0    50   ~ 0
 PIO0_8_OUT
 Text Label 2600 4400 2    50   ~ 0
 PIO2_2_OUT
-Text Label 1100 4600 2    50   ~ 0
-PIO1_1_MCU
 Text Label 1100 4500 2    50   ~ 0
+PIO1_1_MCU
+Text Label 1050 4400 2    50   ~ 0
 PIO1_2_MCU
 Text Label 3600 3800 0    50   ~ 0
 PIO3_0_OUT
@@ -1417,10 +1409,20 @@ Text Label 8900 1950 2    50   ~ 0
 PIO1_0_MCU
 Text Label 3600 3900 0    50   ~ 0
 PIO1_1_OUT
-Text Label 1100 4700 2    50   ~ 0
+Text Label 1100 4600 2    50   ~ 0
 PIO1_0_MCU
-Text Label 1500 4700 0    50   ~ 0
+Text Label 1500 4600 0    50   ~ 0
 PIO1_0_OUT
 Text Label 2600 4000 2    50   ~ 0
 PIO1_0_OUT
+Text Label 1100 6600 2    50   ~ 0
+PIO1_5_MCU
+Text Label 1100 5400 2    50   ~ 0
+PIO1_2_MCU
+Text Label 1500 5400 0    50   ~ 0
+PIO1_2_OUT
+NoConn ~ 1100 5200
+NoConn ~ 1100 5100
+NoConn ~ 1500 5100
+NoConn ~ 1500 5200
 $EndSCHEMATC
