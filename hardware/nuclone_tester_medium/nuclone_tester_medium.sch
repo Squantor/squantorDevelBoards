@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:nuclone_tester_medium-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -184,19 +183,19 @@ $EndComp
 $Comp
 L SquantorConnectorsNamed:JTAG_2X05_IN J1
 U 1 1 5D2859FE
-P 4400 6250
-F 0 "J1" H 4400 6600 60  0000 C CNN
-F 1 "JTAG_2X05" H 4400 5900 60  0000 C CNN
-F 2 "SquantorConnectors:Header-0127-2X05-H006" H 4400 6400 60  0001 C CNN
-F 3 "" H 4400 6400 60  0001 C CNN
-	1    4400 6250
+P 2700 6250
+F 0 "J1" H 2700 6600 60  0000 C CNN
+F 1 "JTAG_2X05" H 2700 5900 60  0000 C CNN
+F 2 "SquantorConnectors:Header-0127-2X05-H006" H 2700 6400 60  0001 C CNN
+F 3 "" H 2700 6400 60  0001 C CNN
+	1    2700 6250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3900 6450 3850 6450
-Text Label 4900 6050 0    50   ~ 0
+	2200 6450 2150 6450
+Text Label 3200 6050 0    50   ~ 0
 VDD
-Text Label 4900 6450 0    50   ~ 0
+Text Label 3200 6450 0    50   ~ 0
 VSS
 $Comp
 L SquantorMicrochip:MCP1702-MB U1
@@ -285,94 +284,94 @@ F 3 "~" H 4700 7500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4700 7500 4700 7450
-NoConn ~ 3900 6350
+NoConn ~ 2200 6350
 $Comp
 L Device:R_Pack04 RN2
 U 1 1 5DBD503E
-P 3650 6250
-F 0 "RN2" V 3350 6250 50  0000 C CNN
-F 1 "100" V 3850 6250 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 3925 6250 50  0001 C CNN
-F 3 "~" H 3650 6250 50  0001 C CNN
-	1    3650 6250
+P 1950 6250
+F 0 "RN2" V 1650 6250 50  0000 C CNN
+F 1 "100" V 2150 6250 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 2225 6250 50  0001 C CNN
+F 3 "~" H 1950 6250 50  0001 C CNN
+	1    1950 6250
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	3850 6450 3850 6350
+	2150 6450 2150 6350
 Wire Wire Line
-	3850 6250 3900 6250
+	2150 6250 2200 6250
 Wire Wire Line
-	3850 6150 3900 6150
+	2150 6150 2200 6150
 Wire Wire Line
-	3850 6050 3900 6050
+	2150 6050 2200 6050
 $Comp
 L Device:R_Pack04 RN1
 U 1 1 5DBF1A39
-P 2800 6150
-F 0 "RN1" V 2500 6150 50  0000 C CNN
-F 1 "47K" V 3000 6150 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 3075 6150 50  0001 C CNN
-F 3 "~" H 2800 6150 50  0001 C CNN
-	1    2800 6150
+P 1100 6150
+F 0 "RN1" V 800 6150 50  0000 C CNN
+F 1 "47K" V 1300 6150 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1375 6150 50  0001 C CNN
+F 3 "~" H 1100 6150 50  0001 C CNN
+	1    1100 6150
 	0    1    -1   0   
 $EndComp
-Text Label 2550 6050 2    50   ~ 0
+Text Label 850  6050 2    50   ~ 0
 VDD
-Text Label 2550 6150 2    50   ~ 0
+Text Label 850  6150 2    50   ~ 0
 VSS
-Text Label 2550 6350 2    50   ~ 0
+Text Label 850  6350 2    50   ~ 0
 VDD
 Wire Wire Line
-	2550 6050 2600 6050
+	850  6050 900  6050
 Wire Wire Line
-	2600 6150 2550 6150
-Text Label 2550 6250 2    50   ~ 0
+	900  6150 850  6150
+Text Label 850  6250 2    50   ~ 0
 VSS
 Wire Wire Line
-	2600 6250 2550 6250
+	900  6250 850  6250
 Wire Wire Line
-	2550 6350 2600 6350
+	850  6350 900  6350
 Wire Wire Line
-	3000 6050 3450 6050
+	1300 6050 1750 6050
 Wire Wire Line
-	3450 6150 3000 6150
+	1750 6150 1300 6150
 Wire Wire Line
-	3000 6250 3450 6250
+	1300 6250 1750 6250
 Wire Wire Line
-	3450 6350 3350 6350
-Text Label 3000 6050 0    50   ~ 0
+	1750 6350 1650 6350
+Text Label 1300 6050 0    50   ~ 0
 PIO0_2_MCU
-Text Label 3000 6150 0    50   ~ 0
+Text Label 1300 6150 0    50   ~ 0
 PIO0_3_MCU
-Text Label 3000 6350 0    50   ~ 0
+Text Label 1300 6350 0    50   ~ 0
 PIO0_5_MCU
-Text Label 3000 6250 0    50   ~ 0
+Text Label 1300 6250 0    50   ~ 0
 SWO_TDO
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5DC2B74B
-P 3050 6600
-F 0 "SW1" H 3150 6700 50  0000 C CNN
-F 1 "RESET" H 3050 6550 50  0000 C CNN
-F 2 "SquantorSwitches:DTSM3" H 3050 6800 50  0001 C CNN
-F 3 "~" H 3050 6800 50  0001 C CNN
-	1    3050 6600
+P 1350 6600
+F 0 "SW1" H 1450 6700 50  0000 C CNN
+F 1 "RESET" H 1350 6550 50  0000 C CNN
+F 2 "SquantorSwitches:DTSM3" H 1350 6800 50  0001 C CNN
+F 3 "~" H 1350 6800 50  0001 C CNN
+	1    1350 6600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3350 6350 3350 6600
+	1650 6350 1650 6600
 Wire Wire Line
-	3350 6600 3250 6600
-Connection ~ 3350 6350
+	1650 6600 1550 6600
+Connection ~ 1650 6350
 Wire Wire Line
-	3350 6350 3000 6350
-Text Label 2800 6600 2    50   ~ 0
+	1650 6350 1300 6350
+Text Label 1100 6600 2    50   ~ 0
 VSS
 Wire Wire Line
-	2850 6600 2800 6600
-Text Label 4900 6250 0    50   ~ 0
+	1150 6600 1100 6600
+Text Label 3200 6250 0    50   ~ 0
 VSS
-Text Label 4900 6150 0    50   ~ 0
+Text Label 3200 6150 0    50   ~ 0
 VSS
 Text Label 3600 1750 0    50   ~ 0
 VSS
@@ -1099,4 +1098,64 @@ Wire Wire Line
 	9300 5850 9250 5850
 NoConn ~ 9950 5850
 NoConn ~ 9950 5950
+$Comp
+L SquantorProto:testpad TP1
+U 1 1 5E117FB9
+P 4100 5950
+F 0 "TP1" H 3900 6000 50  0000 L CNN
+F 1 "TMS" H 4200 5950 50  0000 L CNN
+F 2 "SquantorTestPoints:TestPoint_Hole_D0.8mm" H 4100 5950 50  0001 C CNN
+F 3 "" H 4100 5950 50  0001 C CNN
+	1    4100 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorProto:testpad TP2
+U 1 1 5E1193B7
+P 4100 6100
+F 0 "TP2" H 3900 6150 50  0000 L CNN
+F 1 "TCK" H 4200 6100 50  0000 L CNN
+F 2 "SquantorTestPoints:TestPoint_Hole_D0.8mm" H 4100 6100 50  0001 C CNN
+F 3 "" H 4100 6100 50  0001 C CNN
+	1    4100 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorProto:testpad TP3
+U 1 1 5E1196C6
+P 4100 6250
+F 0 "TP3" H 3900 6300 50  0000 L CNN
+F 1 "TDO" H 4200 6250 50  0000 L CNN
+F 2 "SquantorTestPoints:TestPoint_Hole_D0.8mm" H 4100 6250 50  0001 C CNN
+F 3 "" H 4100 6250 50  0001 C CNN
+	1    4100 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorProto:testpad TP4
+U 1 1 5E13C582
+P 4100 6400
+F 0 "TP4" H 3900 6450 50  0000 L CNN
+F 1 "RESET" H 4200 6400 50  0000 L CNN
+F 2 "SquantorTestPoints:TestPoint_Hole_D0.8mm" H 4100 6400 50  0001 C CNN
+F 3 "" H 4100 6400 50  0001 C CNN
+	1    4100 6400
+	1    0    0    -1  
+$EndComp
+Text Label 3900 5950 2    50   ~ 0
+PIO0_2_MCU
+Text Label 3900 6100 2    50   ~ 0
+PIO0_3_MCU
+Text Label 3900 6250 2    50   ~ 0
+SWO_TDO
+Text Label 3900 6400 2    50   ~ 0
+PIO0_5_MCU
+Wire Wire Line
+	3900 5950 3950 5950
+Wire Wire Line
+	3950 6100 3900 6100
+Wire Wire Line
+	3900 6250 3950 6250
+Wire Wire Line
+	3950 6400 3900 6400
 $EndSCHEMATC
