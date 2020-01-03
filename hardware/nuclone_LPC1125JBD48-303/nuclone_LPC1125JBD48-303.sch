@@ -1296,8 +1296,6 @@ Text Label 1500 3900 0    50   ~ 0
 PIO0_10_OUT
 Text Label 1500 4800 0    50   ~ 0
 PIO1_10_OUT
-Text Label 1650 4350 0    50   ~ 0
-PIO1_2_OUT
 Text Label 1500 5300 0    50   ~ 0
 PIO3_0_OUT
 Text Label 1500 6000 0    50   ~ 0
@@ -1399,8 +1397,6 @@ Text Label 2600 4400 2    50   ~ 0
 PIO2_2_OUT
 Text Label 1100 4500 2    50   ~ 0
 PIO1_1_MCU
-Text Label 1050 4400 2    50   ~ 0
-PIO1_2_MCU
 Text Label 3600 3800 0    50   ~ 0
 PIO3_0_OUT
 Text Label 2600 3900 2    50   ~ 0
