@@ -957,46 +957,16 @@ Wire Wire Line
 Connection ~ 9600 6250
 Wire Wire Line
 	9600 6250 9400 6250
-$Comp
-L SquantorSpecial:Solderjumper_3way_12conn JP4
-U 1 1 5E021EE5
-P 7200 4250
-F 0 "JP4" H 7200 4500 50  0000 C CNN
-F 1 "VREFP" H 7200 4000 50  0000 C CNN
-F 2 "SquantorSpecial:solder_jumper_3way_12conn" H 7200 4250 50  0001 C CNN
-F 3 "" H 7200 4250 50  0001 C CNN
-	1    7200 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L SquantorSpecial:Solderjumper_3way_12conn JP5
-U 1 1 5E02E5A8
-P 7200 4850
-F 0 "JP5" H 7200 5100 50  0000 C CNN
-F 1 "VREFN" H 7200 4600 50  0000 C CNN
-F 2 "SquantorSpecial:solder_jumper_3way_12conn" H 7200 4850 50  0001 C CNN
-F 3 "" H 7200 4850 50  0001 C CNN
-	1    7200 4850
-	1    0    0    -1  
-$EndComp
-Text Label 7450 4250 0    50   ~ 0
+Text Label 7450 4150 0    50   ~ 0
 VREFP_MCU
-Text Label 7450 4850 0    50   ~ 0
+Text Label 7450 4550 0    50   ~ 0
 VREFN_MCU
 Text Label 6950 4150 2    50   ~ 0
 VDDA_MCU
-Text Label 6950 4750 2    50   ~ 0
+Text Label 6950 4550 2    50   ~ 0
 VSSA_MCU
 Wire Wire Line
-	6950 4150 7000 4150
-Wire Wire Line
-	6950 4750 7000 4750
-Wire Wire Line
-	7400 4850 7450 4850
-Wire Wire Line
-	7450 4250 7400 4250
-NoConn ~ 7000 4950
-NoConn ~ 7000 4350
+	6950 4550 7000 4550
 Wire Wire Line
 	6250 1700 6200 1700
 Text Label 6200 1100 2    50   ~ 0
@@ -1348,12 +1318,6 @@ Text Label 3600 2050 0    50   ~ 0
 PIO2_9_OUT
 Text Label 2600 3300 2    50   ~ 0
 PIO3_3_OUT
-Text Label 3600 3300 0    50   ~ 0
-GPIO_60
-Text Label 2600 3400 2    50   ~ 0
-GPIO_59
-Text Label 3600 3400 0    50   ~ 0
-GPIO_58
 $Comp
 L SquantorConnectorsNamed:nuclone_medium_right J4
 U 1 1 5D897E29
@@ -1421,4 +1385,57 @@ NoConn ~ 1100 5200
 NoConn ~ 1100 5100
 NoConn ~ 1500 5100
 NoConn ~ 1500 5200
+$Comp
+L SquantorSpecial:Solderjumper_2way_12conn JP4
+U 1 1 5E115518
+P 7200 4150
+F 0 "JP4" H 7200 4300 50  0000 C CNN
+F 1 "VREFP" H 7200 4000 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_conn" H 7200 4150 50  0001 C CNN
+F 3 "" H 7200 4150 50  0001 C CNN
+	1    7200 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorSpecial:Solderjumper_2way_12conn JP5
+U 1 1 5E120837
+P 7200 4550
+F 0 "JP5" H 7200 4700 50  0000 C CNN
+F 1 "VREFN" H 7200 4400 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_conn" H 7200 4550 50  0001 C CNN
+F 3 "" H 7200 4550 50  0001 C CNN
+	1    7200 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 4150 7000 4150
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E141CA9
+P 7900 4150
+F 0 "#FLG0102" H 7900 4225 50  0001 C CNN
+F 1 "PWR_FLAG" V 7900 4450 50  0000 C CNN
+F 2 "" H 7900 4150 50  0001 C CNN
+F 3 "~" H 7900 4150 50  0001 C CNN
+	1    7900 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5E1442D2
+P 7900 4550
+F 0 "#FLG0103" H 7900 4625 50  0001 C CNN
+F 1 "PWR_FLAG" V 7900 4850 50  0000 C CNN
+F 2 "" H 7900 4550 50  0001 C CNN
+F 3 "~" H 7900 4550 50  0001 C CNN
+	1    7900 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7400 4150 7900 4150
+Wire Wire Line
+	7400 4550 7900 4550
+NoConn ~ 2600 3400
+NoConn ~ 3600 3400
+NoConn ~ 3600 3300
 $EndSCHEMATC
