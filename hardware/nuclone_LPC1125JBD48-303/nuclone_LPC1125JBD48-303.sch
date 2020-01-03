@@ -1333,47 +1333,47 @@ Text Label 1500 4700 0    50   ~ 0
 PIO0_11_OUT
 Text Label 1500 4500 0    50   ~ 0
 PIO1_1_OUT
-Text Label 2600 3500 2    50   ~ 0
+Text Label 3600 3300 0    50   ~ 0
 PIO1_7_OUT
-Text Label 3600 3500 0    50   ~ 0
+Text Label 2600 3400 2    50   ~ 0
 PIO1_6_OUT
-Text Label 2600 3600 2    50   ~ 0
+Text Label 3600 3400 0    50   ~ 0
 PIO1_5_OUT
-Text Label 3600 3600 0    50   ~ 0
+Text Label 2600 3500 2    50   ~ 0
 PIO1_11_OUT
-Text Label 2600 3700 2    50   ~ 0
+Text Label 3600 3500 0    50   ~ 0
 PIO1_4_OUT
-Text Label 3600 3700 0    50   ~ 0
+Text Label 2600 3600 2    50   ~ 0
 PIO1_3_OUT
-Text Label 2600 3800 2    50   ~ 0
+Text Label 3600 3600 0    50   ~ 0
 PIO2_3_OUT
-Text Label 3600 4000 0    50   ~ 0
+Text Label 2600 3900 2    50   ~ 0
 PIO0_11_OUT
-Text Label 2600 4200 2    50   ~ 0
+Text Label 3600 3900 0    50   ~ 0
 PIO1_10_OUT
-Text Label 3600 4200 0    50   ~ 0
+Text Label 2600 4000 2    50   ~ 0
 PIO0_10_OUT
-Text Label 2600 4300 2    50   ~ 0
+Text Label 3600 4000 0    50   ~ 0
 PIO0_9_OUT
-Text Label 3600 4300 0    50   ~ 0
+Text Label 2600 4200 2    50   ~ 0
 PIO0_8_OUT
-Text Label 2600 4400 2    50   ~ 0
+Text Label 3600 4200 0    50   ~ 0
 PIO2_2_OUT
 Text Label 1100 4500 2    50   ~ 0
 PIO1_1_MCU
-Text Label 3600 3800 0    50   ~ 0
+Text Label 2600 3700 2    50   ~ 0
 PIO3_0_OUT
-Text Label 2600 3900 2    50   ~ 0
+Text Label 3600 3700 0    50   ~ 0
 PIO1_2_OUT
 Text Label 8900 1950 2    50   ~ 0
 PIO1_0_MCU
-Text Label 3600 3900 0    50   ~ 0
+Text Label 2600 3800 2    50   ~ 0
 PIO1_1_OUT
 Text Label 1100 4600 2    50   ~ 0
 PIO1_0_MCU
 Text Label 1500 4600 0    50   ~ 0
 PIO1_0_OUT
-Text Label 2600 4000 2    50   ~ 0
+Text Label 3600 3800 0    50   ~ 0
 PIO1_0_OUT
 Text Label 1100 6600 2    50   ~ 0
 PIO1_5_MCU
@@ -1435,7 +1435,7 @@ Wire Wire Line
 	7400 4150 7900 4150
 Wire Wire Line
 	7400 4550 7900 4550
-NoConn ~ 2600 3400
-NoConn ~ 3600 3400
-NoConn ~ 3600 3300
+NoConn ~ 3600 4300
+NoConn ~ 2600 4400
+NoConn ~ 2600 4300
 $EndSCHEMATC
