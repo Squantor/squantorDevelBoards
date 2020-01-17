@@ -74,6 +74,7 @@
     (pad_size 0.7 1.8)
     (pad_drill 0)
     (pad_to_mask_clearance 0.1)
+    (pad_to_paste_clearance_ratio -0.1)
     (aux_axis_origin 0 0)
     (visible_elements FFFFFFFF)
     (pcbplotparams
@@ -228,10 +229,6 @@
     (add_net "Net-(J1-Pad2)")
     (add_net "Net-(J1-Pad4)")
     (add_net "Net-(J1-Pad6)")
-    (add_net "Net-(J1-Pad7)")
-    (add_net "Net-(J1-Pad8)")
-    (add_net "Net-(J2-Pad2)")
-    (add_net "Net-(J2-Pad3)")
     (add_net "Net-(J2-Pad4)")
     (add_net "Net-(J3-Pad19)")
     (add_net "Net-(J3-Pad20)")
