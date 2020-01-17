@@ -1085,9 +1085,9 @@ PIO0_14_OUT
 Text Label 1500 4250 0    50   ~ 0
 PIO0_0_OUT
 Text Label 1500 4350 0    50   ~ 0
-PIO0_20_OUT
+PIO0_6_OUT
 Text Label 1500 4450 0    50   ~ 0
-PIO0_19_OUT
+PIO0_7_OUT
 Text Label 2600 5000 2    50   ~ 0
 VSS
 Text Label 3600 5000 0    50   ~ 0
@@ -1115,9 +1115,9 @@ PIO0_22_OUT
 Text Label 3600 3700 0    50   ~ 0
 PIO0_0_OUT
 Text Label 2600 3700 2    50   ~ 0
-PIO0_14_OUT
+PIO0_6_OUT
 Text Label 3600 3800 0    50   ~ 0
-PIO0_19_OUT
+PIO0_7_OUT
 Text Label 2600 3800 2    50   ~ 0
 GPIO_51
 Text Label 3600 3900 0    50   ~ 0
