@@ -1107,11 +1107,11 @@ PIO0_20_OUT
 Text Label 3600 3500 0    50   ~ 0
 PIO0_21_OUT
 Text Label 2600 3500 2    50   ~ 0
-PIO0_14_OUT
+PIO0_22_OUT
 Text Label 3600 3600 0    50   ~ 0
 PIO0_23_OUT
 Text Label 2600 3600 2    50   ~ 0
-PIO0_22_OUT
+PIO0_14_OUT
 Text Label 3600 3700 0    50   ~ 0
 PIO0_0_OUT
 Text Label 2600 3700 2    50   ~ 0
