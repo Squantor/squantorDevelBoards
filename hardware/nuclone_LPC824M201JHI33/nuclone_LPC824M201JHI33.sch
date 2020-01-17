@@ -1029,9 +1029,9 @@ Text Label 1100 3200 2    50   ~ 0
 PIO0_18_MCU
 Text Label 1100 3100 2    50   ~ 0
 PIO0_17_MCU
-Text Label 1100 4850 2    50   ~ 0
+Text Label 1100 4950 2    50   ~ 0
 PIO0_9
-Text Label 1100 4550 2    50   ~ 0
+Text Label 1100 4850 2    50   ~ 0
 PIO0_8
 $Comp
 L Device:R_Pack04 RN7
@@ -1066,60 +1066,46 @@ F 3 "~" H 1300 4450 50  0001 C CNN
 	1    1300 4450
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R_Pack04 RN10
-U 1 1 5DC9E41E
-P 1300 5050
-F 0 "RN10" V 1000 5050 50  0000 C CNN
-F 1 "100" V 1500 5050 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 5050 50  0001 C CNN
-F 3 "~" H 1300 5050 50  0001 C CNN
-	1    1300 5050
-	0    1    1    0   
-$EndComp
 Text Label 1500 3100 0    50   ~ 0
-PIO0_9_OUT
+PIO0_17_OUT
 Text Label 1500 3200 0    50   ~ 0
-PIO0_8_OUT
+PIO0_18_OUT
 Text Label 1500 3300 0    50   ~ 0
-PIO0_7_OUT
+PIO0_19_OUT
 Text Label 1500 3400 0    50   ~ 0
-PIO0_6_OUT
+PIO0_20_OUT
 Text Label 1500 3700 0    50   ~ 0
-PIO0_0_OUT
+PIO0_21_OUT
 Text Label 1500 3800 0    50   ~ 0
-PIO0_14_OUT
+PIO0_22_OUT
 Text Label 1500 3900 0    50   ~ 0
 PIO0_23_OUT
 Text Label 1500 4000 0    50   ~ 0
-PIO0_22_OUT
+PIO0_14_OUT
 Text Label 1500 4250 0    50   ~ 0
-PIO0_21_OUT
+PIO0_0_OUT
 Text Label 1500 4350 0    50   ~ 0
 PIO0_20_OUT
 Text Label 1500 4450 0    50   ~ 0
 PIO0_19_OUT
-Text Label 1500 4550 0    50   ~ 0
-PIO0_18_OUT
 Text Label 2600 5000 2    50   ~ 0
 VSS
 Text Label 3600 5000 0    50   ~ 0
 VSS
 Text Label 1500 4850 0    50   ~ 0
-PIO0_17_OUT
-NoConn ~ 1100 4950
+PIO0_8_OUT
 NoConn ~ 1100 5050
 NoConn ~ 1100 5150
 Text Label 3600 3300 0    50   ~ 0
-PIO0_9_OUT
+PIO0_17_OUT
 Text Label 2600 3300 2    50   ~ 0
-PIO0_8_OUT
+PIO0_18_OUT
 Text Label 3600 3400 0    50   ~ 0
-PIO0_7_OUT
+PIO0_19_OUT
 Text Label 2600 3400 2    50   ~ 0
-PIO0_6_OUT
+PIO0_20_OUT
 Text Label 3600 3500 0    50   ~ 0
-PIO0_0_OUT
+PIO0_21_OUT
 Text Label 2600 3500 2    50   ~ 0
 PIO0_14_OUT
 Text Label 3600 3600 0    50   ~ 0
@@ -1127,15 +1113,15 @@ PIO0_23_OUT
 Text Label 2600 3600 2    50   ~ 0
 PIO0_22_OUT
 Text Label 3600 3700 0    50   ~ 0
-PIO0_21_OUT
+PIO0_0_OUT
 Text Label 2600 3700 2    50   ~ 0
-PIO0_20_OUT
+PIO0_14_OUT
 Text Label 3600 3800 0    50   ~ 0
 PIO0_19_OUT
 Text Label 2600 3800 2    50   ~ 0
-PIO0_18_OUT
+GPIO_51
 Text Label 3600 3900 0    50   ~ 0
-PIO0_17_OUT
+PIO0_8_OUT
 NoConn ~ 3600 4200
 NoConn ~ 3600 4300
 NoConn ~ 3600 4400
@@ -1153,13 +1139,11 @@ NoConn ~ 2600 4400
 NoConn ~ 2600 4300
 NoConn ~ 2600 4200
 Text Label 2600 3900 2    50   ~ 0
-GPIO_49
+PIO0_9_OUT
 Text Label 2600 4000 2    50   ~ 0
 GPIO_47
 Text Label 3600 4000 0    50   ~ 0
 GPIO_46
-Text Label 1500 4950 0    50   ~ 0
-GPIO_49
 Text Label 1500 5150 0    50   ~ 0
 GPIO_47
 Text Label 1500 5050 0    50   ~ 0
@@ -1281,4 +1265,20 @@ F 3 "" H 2950 6700 60  0001 C CNN
 $EndComp
 Text Label 3200 6700 0    50   ~ 0
 VSS
+$Comp
+L Device:R_Pack04 RN10
+U 1 1 5DC9E41E
+P 1300 5050
+F 0 "RN10" V 1000 5050 50  0000 C CNN
+F 1 "100" V 1500 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 5050 50  0001 C CNN
+F 3 "~" H 1300 5050 50  0001 C CNN
+	1    1300 5050
+	0    1    1    0   
+$EndComp
+NoConn ~ 1100 4550
+Text Label 1500 4950 0    50   ~ 0
+PIO0_9_OUT
+Text Label 1500 4550 0    50   ~ 0
+GPIO_51
 $EndSCHEMATC
