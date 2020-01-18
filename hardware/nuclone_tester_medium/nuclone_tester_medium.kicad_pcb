@@ -327,6 +327,8 @@
     (add_net /VBUS)
     (add_net /VDD)
     (add_net /VSS)
+    (add_net /sheet5DD6E772/GPIO2)
+    (add_net /sheet5DD6E772/GPIO3)
     (add_net "Net-(C10-Pad1)")
     (add_net "Net-(C11-Pad1)")
     (add_net "Net-(C12-Pad1)")
@@ -398,6 +400,10 @@
     (add_net "Net-(J1-Pad2)")
     (add_net "Net-(J1-Pad4)")
     (add_net "Net-(J1-Pad6)")
+    (add_net "Net-(J1-Pad7)")
+    (add_net "Net-(J1-Pad8)")
+    (add_net "Net-(J2-Pad2)")
+    (add_net "Net-(J2-Pad3)")
     (add_net "Net-(J2-Pad4)")
   )
 
@@ -5263,7 +5269,7 @@
     (fp_text reference N2 (at 0 0.1) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value 20200117 (at 0.8 0.1) (layer B.SilkS)
+    (fp_text value 20200118 (at 0.8 0.1) (layer B.SilkS)
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_text user V: (at 5.3 0.1) (layer B.SilkS)
