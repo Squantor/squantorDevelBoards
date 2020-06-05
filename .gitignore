@@ -14,6 +14,7 @@ _autosave*
 # kicad outputs
 plots/
 plots-*/
+*_plots_*/
 *_plots/
 *.zip
 
