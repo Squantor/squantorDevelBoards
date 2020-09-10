@@ -242,4 +242,71 @@ F 3 "" H 1150 7000 60  0001 C CNN
 $EndComp
 Wire Notes Line
 	550  6850 550  7750
+$Comp
+L SquantorConnectorsNamed:DevBoardUartInput J3
+U 1 1 5F5A9789
+P 900 3700
+F 0 "J3" H 900 4000 50  0000 C CNN
+F 1 "DevBoardUartInput" V 650 3700 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 900 3700 50  0001 C CNN
+F 3 "" H 900 3700 50  0001 C CNN
+	1    900  3700
+	1    0    0    -1  
+$EndComp
+Text Label 1150 3550 0    50   ~ 0
+VSS
+Text Label 1150 3650 0    50   ~ 0
+VBUS
+$Comp
+L Device:R R1
+U 1 1 5F5ABB91
+P 1300 3750
+F 0 "R1" V 1250 3900 50  0000 C CNN
+F 1 "100" V 1300 3750 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1230 3750 50  0001 C CNN
+F 3 "~" H 1300 3750 50  0001 C CNN
+	1    1300 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1100 3750 1150 3750
+$Comp
+L Device:R R2
+U 1 1 5F5ACFD3
+P 1300 3850
+F 0 "R2" V 1250 4000 50  0000 C CNN
+F 1 "100" V 1300 3850 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1230 3850 50  0001 C CNN
+F 3 "~" H 1300 3850 50  0001 C CNN
+	1    1300 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1100 3850 1150 3850
+Text Label 1500 3850 0    50   ~ 0
+PIO0_24
+Text Label 1500 3750 0    50   ~ 0
+PIO0_25
+Wire Wire Line
+	1450 3750 1500 3750
+Wire Wire Line
+	1500 3850 1450 3850
+Wire Wire Line
+	1100 3550 1150 3550
+Wire Wire Line
+	1150 3650 1100 3650
+Text Notes 1300 4050 0    50   ~ 0
+UART & power
+Wire Notes Line
+	550  3300 1900 3300
+Wire Notes Line
+	1900 3300 1900 4100
+Wire Notes Line
+	1900 4100 550  4100
+Wire Notes Line
+	550  4100 550  3300
+Wire Notes Line
+	1900 3950 1250 3950
+Wire Notes Line
+	1250 3950 1250 4100
 $EndSCHEMATC
