@@ -16,94 +16,35 @@ $EndDescr
 $Comp
 L SquantorLabels:OHWLOGO N1
 U 1 1 5A135869
-P 950 7050
-F 0 "N1" H 950 7200 60  0000 C CNN
-F 1 "OHWLOGO" H 950 6900 60  0000 C CNN
-F 2 "Symbol:OSHW-Symbol_6.7x6mm_SilkScreen" H 950 7050 60  0001 C CNN
-F 3 "" H 950 7050 60  0001 C CNN
-	1    950  7050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H4
-U 1 1 5D6A0DE1
-P 1600 7450
-F 0 "H4" H 1700 7496 50  0000 L CNN
-F 1 "MountingHole" H 1700 7405 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 1600 7450 50  0001 C CNN
-F 3 "~" H 1600 7450 50  0001 C CNN
-	1    1600 7450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H3
-U 1 1 5D6A12DB
-P 1600 7300
-F 0 "H3" H 1700 7346 50  0000 L CNN
-F 1 "MountingHole" H 1700 7255 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 1600 7300 50  0001 C CNN
-F 3 "~" H 1600 7300 50  0001 C CNN
-	1    1600 7300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H2
-U 1 1 5D6A14DC
-P 1600 7150
-F 0 "H2" H 1700 7196 50  0000 L CNN
-F 1 "MountingHole" H 1700 7105 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 1600 7150 50  0001 C CNN
-F 3 "~" H 1600 7150 50  0001 C CNN
-	1    1600 7150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole H1
-U 1 1 5D6A1740
-P 1600 7000
-F 0 "H1" H 1700 7046 50  0000 L CNN
-F 1 "MountingHole" H 1700 6955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 1600 7000 50  0001 C CNN
-F 3 "~" H 1600 7000 50  0001 C CNN
-	1    1600 7000
+P 800 7150
+F 0 "N1" H 800 7300 60  0000 C CNN
+F 1 "OHWLOGO" H 800 7000 60  0000 C CNN
+F 2 "Symbol:OSHW-Symbol_6.7x6mm_SilkScreen" H 800 7150 60  0001 C CNN
+F 3 "" H 800 7150 60  0001 C CNN
+	1    800  7150
 	1    0    0    -1  
 $EndComp
 $Comp
 L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
-P 950 7400
-F 0 "N2" H 900 7500 60  0000 L CNN
-F 1 "20200910" H 700 7400 60  0000 L CNN
-F 2 "SquantorLabels:Label_Generic" H 950 7400 60  0001 C CNN
-F 3 "" H 950 7400 60  0001 C CNN
-	1    950  7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L SquantorLabels:Label N3
-U 1 1 5D8B1B32
-P 950 7600
-F 0 "N3" H 900 7650 60  0000 L CNN
-F 1 "JLCJLCJLCJLC" H 650 7550 60  0000 L CNN
-F 2 "SquantorLabels:Label_Generic" H 950 7600 60  0001 C CNN
-F 3 "" H 950 7600 60  0001 C CNN
-	1    950  7600
+P 1150 7500
+F 0 "N2" H 1100 7600 60  0000 L CNN
+F 1 "20200910" H 900 7500 60  0000 L CNN
+F 2 "SquantorLabels:Label_Generic" H 1150 7500 60  0001 C CNN
+F 3 "" H 1150 7500 60  0001 C CNN
+	1    1150 7500
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	600  6850 2250 6850
+	550  6850 1500 6850
 Wire Notes Line
-	2250 6850 2250 7750
+	1500 6850 1500 7750
 Wire Notes Line
-	2250 7750 600  7750
-Wire Notes Line
-	600  7750 600  6850
-Text Notes 1350 7700 0    50   ~ 0
+	1500 7750 550  7750
+Text Notes 600  7700 0    50   ~ 0
 Mechanical and labels
 Wire Notes Line
-	1300 7750 1300 7600
-Wire Notes Line
-	1300 7600 2250 7600
+	550  7600 1500 7600
 $Comp
 L SquantorConnectorsNamed:expansion_small_left_LPC82XJHI33 J1
 U 1 1 5F2AC8A4
@@ -288,4 +229,17 @@ Text Label 950  2150 2    50   ~ 0
 VSS
 Text Label 2050 2150 0    50   ~ 0
 VSS
+$Comp
+L SquantorLabels:Label N3
+U 1 1 5D8B1B32
+P 1150 7000
+F 0 "N3" H 1100 7050 60  0000 L CNN
+F 1 "JLCJLCJLCJLC" H 850 6950 60  0000 L CNN
+F 2 "SquantorLabels:Label_Generic" H 1150 7000 60  0001 C CNN
+F 3 "" H 1150 7000 60  0001 C CNN
+	1    1150 7000
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	550  6850 550  7750
 $EndSCHEMATC
