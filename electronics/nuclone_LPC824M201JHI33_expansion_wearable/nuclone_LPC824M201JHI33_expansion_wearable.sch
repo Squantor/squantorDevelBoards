@@ -458,9 +458,9 @@ Wire Wire Line
 	3750 700  3850 700 
 Wire Wire Line
 	2950 2200 3000 2200
-Text Label 2950 2400 2    50   ~ 0
+Text Label 2950 2950 2    50   ~ 0
 chrg_en
-Text Label 3850 2400 0    50   ~ 0
+Text Label 3850 2800 0    50   ~ 0
 chrg_state
 Text Label 3850 2300 0    50   ~ 0
 VSS
@@ -485,12 +485,8 @@ Wire Wire Line
 	3800 2200 3800 2000
 Wire Wire Line
 	3800 2000 3550 2000
-Wire Wire Line
-	3750 2300 3850 2300
 Text Label 3850 2200 0    50   ~ 0
 VBAT
-Wire Wire Line
-	3800 2200 3850 2200
 Connection ~ 3800 2200
 $Comp
 L Device:C C3
@@ -588,25 +584,40 @@ Wire Wire Line
 Wire Wire Line
 	3750 2400 3800 2400
 Wire Wire Line
-	2950 2400 3000 2400
-Connection ~ 3000 2400
-Wire Wire Line
 	3000 2400 3050 2400
-Connection ~ 3800 2400
-Wire Wire Line
-	3800 2400 3850 2400
-Text Notes 3400 3100 0    50   ~ 0
+Text Notes 3800 3100 0    50   ~ 0
 lithium charger circuit
 Wire Notes Line
-	4350 1650 2600 1650
+	4700 1650 2600 1650
 Wire Notes Line
 	2600 1650 2600 3150
 Wire Notes Line
-	2600 3150 4350 3150
+	2600 3150 4700 3150
 Wire Notes Line
-	4350 1650 4350 3150
+	4700 1650 4700 3150
 Wire Notes Line
-	4350 3000 3350 3000
+	4700 3000 3750 3000
 Wire Notes Line
-	3350 3000 3350 3150
+	3750 3000 3750 3150
+$Comp
+L SquantorConnectorsNamed:batt_recharge J4
+U 1 1 5F6DE241
+P 4400 2250
+F 0 "J4" H 4400 2450 50  0000 C CNN
+F 1 "batt_recharge" H 4400 2050 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 4500 2250 50  0001 C CNN
+F 3 "" H 4500 2250 50  0001 C CNN
+	1    4400 2250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2200 4050 2200
+Wire Wire Line
+	3750 2300 4050 2300
+Wire Wire Line
+	3850 2800 3800 2800
+Connection ~ 3800 2800
+Wire Wire Line
+	3000 2950 2950 2950
+Connection ~ 3000 2950
 $EndSCHEMATC
