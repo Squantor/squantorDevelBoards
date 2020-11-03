@@ -317,8 +317,8 @@ Wire Notes Line
 	1900 3950 1600 3950
 Wire Notes Line
 	1600 3950 1600 4100
-Text Label 2050 1650 0    50   ~ 0
-UART_RX
 Text Label 950  1650 2    50   ~ 0
+UART_RX
+Text Label 2050 1650 0    50   ~ 0
 UART_TX
 $EndSCHEMATC
