@@ -71,14 +71,10 @@ Text Label 950  1050 2    50   ~ 0
 PIO0_13
 Text Label 950  1150 2    50   ~ 0
 PIO0_5
-Text Label 950  1250 2    50   ~ 0
-PIO0_28
 Text Label 950  1350 2    50   ~ 0
 PIO0_2
 Text Label 950  1450 2    50   ~ 0
 PIO0_10
-Text Label 2050 1450 0    50   ~ 0
-PIO0_16
 Text Label 2050 1350 0    50   ~ 0
 PIO0_11
 Text Label 2050 1250 0    50   ~ 0
@@ -87,10 +83,6 @@ Text Label 2050 1150 0    50   ~ 0
 PIO0_4
 Text Label 2050 1050 0    50   ~ 0
 PIO0_12
-Text Label 950  1550 2    50   ~ 0
-PIO0_27
-Text Label 2050 1550 0    50   ~ 0
-PIO0_26
 Wire Wire Line
 	950  750  1000 750 
 Wire Wire Line
@@ -321,4 +313,166 @@ Text Label 950  1650 2    50   ~ 0
 UART_RX
 Text Label 2050 1650 0    50   ~ 0
 UART_TX
+$Comp
+L SquantorIC:25XNN_8pin_serial_flash U1
+U 1 1 5FA3CCEA
+P 3800 1150
+F 0 "U1" H 3800 1450 50  0000 C CNN
+F 1 "generic 25XNN serial flash" H 3800 850 50  0000 C CNN
+F 2 "" H 3750 1150 50  0001 C CNN
+F 3 "" H 3750 1150 50  0001 C CNN
+	1    3800 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FA3F133
+P 3800 700
+F 0 "C1" V 3750 600 50  0000 C CNN
+F 1 "1u" V 3850 800 50  0000 C CNN
+F 2 "SquantorRcl:C_0402" H 3838 550 50  0001 C CNN
+F 3 "~" H 3800 700 50  0001 C CNN
+	1    3800 700 
+	0    1    1    0   
+$EndComp
+Text Label 3400 1300 2    50   ~ 0
+VSS
+Text Label 3600 700  2    50   ~ 0
+VSS
+Text Label 4200 1000 0    50   ~ 0
+VDD
+Text Label 4000 700  0    50   ~ 0
+VDD
+Wire Wire Line
+	3600 700  3650 700 
+Wire Wire Line
+	3450 1300 3400 1300
+Wire Wire Line
+	4150 1000 4200 1000
+Wire Wire Line
+	4000 700  3950 700 
+$Comp
+L Device:R R5
+U 1 1 5FA47038
+P 3250 1200
+F 0 "R5" V 3200 1350 50  0000 C CNN
+F 1 "10k" V 3250 1200 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 3180 1200 50  0001 C CNN
+F 3 "~" H 3250 1200 50  0001 C CNN
+	1    3250 1200
+	0    1    1    0   
+$EndComp
+Text Label 3050 1200 2    50   ~ 0
+VDD
+Wire Wire Line
+	3100 1200 3050 1200
+Wire Wire Line
+	3400 1200 3450 1200
+$Comp
+L Device:R R6
+U 1 1 5FA4B9BE
+P 4350 1100
+F 0 "R6" V 4300 1250 50  0000 C CNN
+F 1 "10k" V 4350 1100 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 4280 1100 50  0001 C CNN
+F 3 "~" H 4350 1100 50  0001 C CNN
+	1    4350 1100
+	0    1    1    0   
+$EndComp
+Text Label 4550 1100 0    50   ~ 0
+VDD
+Wire Wire Line
+	4150 1100 4200 1100
+Wire Wire Line
+	4500 1100 4550 1100
+$Comp
+L Device:R R4
+U 1 1 5FA4F275
+P 3250 1100
+F 0 "R4" V 3200 1250 50  0000 C CNN
+F 1 "100" V 3250 1100 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 3180 1100 50  0001 C CNN
+F 3 "~" H 3250 1100 50  0001 C CNN
+	1    3250 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5FA500E7
+P 3250 1000
+F 0 "R3" V 3200 1150 50  0000 C CNN
+F 1 "100" V 3250 1000 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 3180 1000 50  0001 C CNN
+F 3 "~" H 3250 1000 50  0001 C CNN
+	1    3250 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 1000 3400 1000
+Wire Wire Line
+	3450 1100 3400 1100
+$Comp
+L Device:R R7
+U 1 1 5FA5396F
+P 4350 1200
+F 0 "R7" V 4300 1350 50  0000 C CNN
+F 1 "100" V 4350 1200 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 4280 1200 50  0001 C CNN
+F 3 "~" H 4350 1200 50  0001 C CNN
+	1    4350 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5FA5410E
+P 4350 1300
+F 0 "R8" V 4300 1450 50  0000 C CNN
+F 1 "100" V 4350 1300 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 4280 1300 50  0001 C CNN
+F 3 "~" H 4350 1300 50  0001 C CNN
+	1    4350 1300
+	0    1    1    0   
+$EndComp
+Text Label 3050 1100 2    50   ~ 0
+SPI_CIPO
+Text Label 4550 1300 0    50   ~ 0
+SPI_COPI
+Text Label 4550 1200 0    50   ~ 0
+SPI_CLK
+Text Label 3050 1000 2    50   ~ 0
+CE_FLASH
+Wire Wire Line
+	3050 1100 3100 1100
+Wire Wire Line
+	3100 1000 3050 1000
+Wire Wire Line
+	4150 1200 4200 1200
+Wire Wire Line
+	4200 1300 4150 1300
+Text Label 950  1550 2    50   ~ 0
+SPI_CIPO
+Text Label 2050 1550 0    50   ~ 0
+SPI_COPI
+Wire Wire Line
+	4500 1200 4550 1200
+Wire Wire Line
+	4550 1300 4500 1300
+Text Label 2050 1450 0    50   ~ 0
+SPI_CLK
+Text Label 950  1250 2    50   ~ 0
+CE_FLASH
+Wire Notes Line
+	2600 1600 4950 1600
+Wire Notes Line
+	4950 550  2600 550 
+Wire Notes Line
+	4950 550  4950 1600
+Wire Notes Line
+	2600 550  2600 1600
+Text Notes 4450 1550 0    50   ~ 0
+Serial Flash
+Wire Notes Line
+	4400 1600 4400 1450
+Wire Notes Line
+	4400 1450 4950 1450
 $EndSCHEMATC
