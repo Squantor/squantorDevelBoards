@@ -89,10 +89,6 @@ Text Label 2050 1050 0    50   ~ 0
 PIO0_12
 Text Label 950  1550 2    50   ~ 0
 PIO0_27
-Text Label 950  1650 2    50   ~ 0
-PIO0_25
-Text Label 2050 1650 0    50   ~ 0
-PIO0_24
 Text Label 2050 1550 0    50   ~ 0
 PIO0_26
 Wire Wire Line
@@ -254,4 +250,75 @@ Wire Wire Line
 	950  2950 1000 2950
 Wire Wire Line
 	1000 2750 950  2750
+$Comp
+L SquantorConnectorsNamed:DevBoardUartInput J?
+U 1 1 5FA293F4
+P 900 3750
+F 0 "J?" H 900 4050 50  0000 C CNN
+F 1 "DevBoardUartInput" H 900 3450 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal" H 900 3750 50  0001 C CNN
+F 3 "" H 900 3750 50  0001 C CNN
+	1    900  3750
+	1    0    0    -1  
+$EndComp
+Text Label 1150 3600 0    50   ~ 0
+VSS
+Text Label 1150 3700 0    50   ~ 0
+VDD
+$Comp
+L Device:R R?
+U 1 1 5FA2A7EA
+P 1300 3800
+F 0 "R?" V 1250 3950 50  0000 C CNN
+F 1 "100" V 1300 3800 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1230 3800 50  0001 C CNN
+F 3 "~" H 1300 3800 50  0001 C CNN
+	1    1300 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1100 3600 1150 3600
+Wire Wire Line
+	1150 3700 1100 3700
+Wire Wire Line
+	1100 3800 1150 3800
+$Comp
+L Device:R R?
+U 1 1 5FA2E1D6
+P 1300 3900
+F 0 "R?" V 1250 4050 50  0000 C CNN
+F 1 "100" V 1300 3900 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 1230 3900 50  0001 C CNN
+F 3 "~" H 1300 3900 50  0001 C CNN
+	1    1300 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1150 3900 1100 3900
+Text Label 1500 3800 0    50   ~ 0
+UART_RX
+Text Label 1500 3900 0    50   ~ 0
+UART_TX
+Wire Wire Line
+	1500 3800 1450 3800
+Wire Wire Line
+	1500 3900 1450 3900
+Wire Notes Line
+	550  3350 1900 3350
+Wire Notes Line
+	1900 3350 1900 4100
+Wire Notes Line
+	1900 4100 550  4100
+Wire Notes Line
+	550  4100 550  3350
+Text Notes 1650 4050 0    50   ~ 0
+UART
+Wire Notes Line
+	1900 3950 1600 3950
+Wire Notes Line
+	1600 3950 1600 4100
+Text Label 2050 1650 0    50   ~ 0
+UART_RX
+Text Label 950  1650 2    50   ~ 0
+UART_TX
 $EndSCHEMATC
