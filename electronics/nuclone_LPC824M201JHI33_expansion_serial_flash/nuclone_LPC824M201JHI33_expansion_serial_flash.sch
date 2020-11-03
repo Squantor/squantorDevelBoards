@@ -240,9 +240,9 @@ Wire Notes Line
 	550  6850 550  7750
 Text Label 950  2750 2    50   ~ 0
 GPIO_19
-Text Label 950  2950 2    50   ~ 0
-GPIO_15
 Text Label 2050 2950 0    50   ~ 0
+GPIO_15
+Text Label 950  2950 2    50   ~ 0
 GPIO_14
 Wire Wire Line
 	2050 2950 2000 2950
@@ -251,10 +251,10 @@ Wire Wire Line
 Wire Wire Line
 	1000 2750 950  2750
 $Comp
-L SquantorConnectorsNamed:DevBoardUartInput J?
+L SquantorConnectorsNamed:DevBoardUartInput J3
 U 1 1 5FA293F4
 P 900 3750
-F 0 "J?" H 900 4050 50  0000 C CNN
+F 0 "J3" H 900 4050 50  0000 C CNN
 F 1 "DevBoardUartInput" H 900 3450 50  0000 C CNN
 F 2 "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal" H 900 3750 50  0001 C CNN
 F 3 "" H 900 3750 50  0001 C CNN
@@ -266,10 +266,10 @@ VSS
 Text Label 1150 3700 0    50   ~ 0
 VDD
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 5FA2A7EA
 P 1300 3800
-F 0 "R?" V 1250 3950 50  0000 C CNN
+F 0 "R1" V 1250 3950 50  0000 C CNN
 F 1 "100" V 1300 3800 50  0000 C CNN
 F 2 "SquantorRcl:R_0402_hand" V 1230 3800 50  0001 C CNN
 F 3 "~" H 1300 3800 50  0001 C CNN
@@ -283,10 +283,10 @@ Wire Wire Line
 Wire Wire Line
 	1100 3800 1150 3800
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5FA2E1D6
 P 1300 3900
-F 0 "R?" V 1250 4050 50  0000 C CNN
+F 0 "R2" V 1250 4050 50  0000 C CNN
 F 1 "100" V 1300 3900 50  0000 C CNN
 F 2 "SquantorRcl:R_0402_hand" V 1230 3900 50  0001 C CNN
 F 3 "~" H 1300 3900 50  0001 C CNN
