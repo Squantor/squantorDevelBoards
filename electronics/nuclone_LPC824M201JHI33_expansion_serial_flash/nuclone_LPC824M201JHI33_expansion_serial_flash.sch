@@ -255,8 +255,6 @@ F 3 "" H 900 3750 50  0001 C CNN
 $EndComp
 Text Label 1150 3600 0    50   ~ 0
 VSS
-Text Label 1150 3700 0    50   ~ 0
-VDD
 $Comp
 L Device:R R1
 U 1 1 5FA2A7EA
@@ -319,7 +317,7 @@ U 1 1 5FA3CCEA
 P 4800 1150
 F 0 "U1" H 4800 1450 50  0000 C CNN
 F 1 "generic 25XNN serial flash" H 4800 850 50  0000 C CNN
-F 2 "" H 4750 1150 50  0001 C CNN
+F 2 "SquantorIC:SOIC-8_dual_wide" H 4750 1150 50  0001 C CNN
 F 3 "" H 4750 1150 50  0001 C CNN
 	1    4800 1150
 	1    0    0    -1  
@@ -495,4 +493,6 @@ Text Notes 9800 800  0    50   ~ 0
 Watchdog LED
 Text Notes 9800 900  0    50   ~ 0
 Activity LED
+Text Label 1150 3700 0    50   ~ 0
+VBUS
 $EndSCHEMATC
