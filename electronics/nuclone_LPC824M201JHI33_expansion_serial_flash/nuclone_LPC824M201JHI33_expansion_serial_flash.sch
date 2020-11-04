@@ -557,4 +557,87 @@ Wire Notes Line
 	3700 2350 3700 2200
 Wire Notes Line
 	3700 2200 4150 2200
+Text Label 3000 2600 2    50   ~ 0
+PIO0_12
+Text Label 3000 2700 2    50   ~ 0
+PIO0_13
+$Comp
+L Device:R R?
+U 1 1 5FA70748
+P 3200 2600
+F 0 "R?" V 3150 2750 50  0000 C CNN
+F 1 "4.7K" V 3200 2600 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 3130 2600 50  0001 C CNN
+F 3 "~" H 3200 2600 50  0001 C CNN
+	1    3200 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FA71094
+P 3200 2700
+F 0 "R?" V 3150 2850 50  0000 C CNN
+F 1 "4.7K" V 3200 2700 50  0000 C CNN
+F 2 "SquantorRcl:R_0402_hand" V 3130 2700 50  0001 C CNN
+F 3 "~" H 3200 2700 50  0001 C CNN
+	1    3200 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 2700 3000 2700
+Wire Wire Line
+	3000 2600 3050 2600
+$Comp
+L Device:LED D?
+U 1 1 5FA77252
+P 3550 2600
+F 0 "D?" H 3650 2550 50  0000 C CNN
+F 1 "LED" H 3400 2650 50  0000 C CNN
+F 2 "SquantorDiodes:LED_0603_hand" H 3550 2600 50  0001 C CNN
+F 3 "~" H 3550 2600 50  0001 C CNN
+	1    3550 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5FA7856F
+P 3550 2700
+F 0 "D?" H 3650 2650 50  0000 C CNN
+F 1 "LED" H 3400 2750 50  0000 C CNN
+F 2 "SquantorDiodes:LED_0603_hand" H 3550 2700 50  0001 C CNN
+F 3 "~" H 3550 2700 50  0001 C CNN
+	1    3550 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3400 2700 3350 2700
+Wire Wire Line
+	3350 2600 3400 2600
+Text Label 3800 2650 0    50   ~ 0
+VSS
+Wire Wire Line
+	3700 2600 3750 2600
+Wire Wire Line
+	3750 2600 3750 2650
+Wire Wire Line
+	3750 2650 3800 2650
+Wire Wire Line
+	3700 2700 3750 2700
+Wire Wire Line
+	3750 2700 3750 2650
+Connection ~ 3750 2650
+Text Notes 3850 2800 0    50   ~ 0
+LED
+Wire Notes Line
+	4050 2850 4050 2450
+Wire Notes Line
+	2600 2450 2600 2850
+Wire Notes Line
+	3800 2700 3800 2850
+Wire Notes Line
+	2600 2850 4050 2850
+Wire Notes Line
+	2600 2450 4050 2450
+Wire Notes Line
+	3800 2700 4050 2700
 $EndSCHEMATC
