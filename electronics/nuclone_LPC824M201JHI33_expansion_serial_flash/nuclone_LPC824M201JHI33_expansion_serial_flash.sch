@@ -84,12 +84,6 @@ PIO0_4
 Text Label 2050 1050 0    50   ~ 0
 PIO0_12
 Wire Wire Line
-	950  750  1000 750 
-Wire Wire Line
-	1000 850  950  850 
-Wire Wire Line
-	950  950  1000 950 
-Wire Wire Line
 	1000 1050 950  1050
 Wire Wire Line
 	950  1150 1000 1150
@@ -179,10 +173,6 @@ Wire Wire Line
 	2000 2350 2050 2350
 Wire Wire Line
 	2050 2250 2000 2250
-Wire Wire Line
-	2000 2150 2050 2150
-Wire Wire Line
-	2050 2050 2000 2050
 Wire Notes Line
 	2500 550  2500 3250
 Wire Notes Line
@@ -197,25 +187,15 @@ Wire Notes Line
 	1900 3100 1900 3250
 Text Notes 1950 3200 0    50   ~ 0
 Connectors
-Text Label 950  750  2    50   ~ 0
-VDD
 Text Label 2050 750  0    50   ~ 0
-VDD
-Text Label 2050 2050 0    50   ~ 0
 VDD
 Text Label 950  2050 2    50   ~ 0
 VDD
-Text Label 950  850  2    50   ~ 0
-VBUS
 Text Label 2050 850  0    50   ~ 0
 VBUS
-Text Label 950  950  2    50   ~ 0
-VSS
 Text Label 2050 950  0    50   ~ 0
 VSS
 Text Label 950  2150 2    50   ~ 0
-VSS
-Text Label 2050 2150 0    50   ~ 0
 VSS
 $Comp
 L SquantorLabels:Label N3
@@ -562,10 +542,10 @@ PIO0_12
 Text Label 3000 2700 2    50   ~ 0
 PIO0_13
 $Comp
-L Device:R R?
+L Device:R R9
 U 1 1 5FA70748
 P 3200 2600
-F 0 "R?" V 3150 2750 50  0000 C CNN
+F 0 "R9" V 3150 2750 50  0000 C CNN
 F 1 "4.7K" V 3200 2600 50  0000 C CNN
 F 2 "SquantorRcl:R_0402_hand" V 3130 2600 50  0001 C CNN
 F 3 "~" H 3200 2600 50  0001 C CNN
@@ -573,10 +553,10 @@ F 3 "~" H 3200 2600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R10
 U 1 1 5FA71094
 P 3200 2700
-F 0 "R?" V 3150 2850 50  0000 C CNN
+F 0 "R10" V 3150 2850 50  0000 C CNN
 F 1 "4.7K" V 3200 2700 50  0000 C CNN
 F 2 "SquantorRcl:R_0402_hand" V 3130 2700 50  0001 C CNN
 F 3 "~" H 3200 2700 50  0001 C CNN
@@ -588,10 +568,10 @@ Wire Wire Line
 Wire Wire Line
 	3000 2600 3050 2600
 $Comp
-L Device:LED D?
+L Device:LED D1
 U 1 1 5FA77252
 P 3550 2600
-F 0 "D?" H 3650 2550 50  0000 C CNN
+F 0 "D1" H 3650 2550 50  0000 C CNN
 F 1 "LED" H 3400 2650 50  0000 C CNN
 F 2 "SquantorDiodes:LED_0603_hand" H 3550 2600 50  0001 C CNN
 F 3 "~" H 3550 2600 50  0001 C CNN
@@ -599,10 +579,10 @@ F 3 "~" H 3550 2600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:LED D?
+L Device:LED D2
 U 1 1 5FA7856F
 P 3550 2700
-F 0 "D?" H 3650 2650 50  0000 C CNN
+F 0 "D2" H 3650 2650 50  0000 C CNN
 F 1 "LED" H 3400 2750 50  0000 C CNN
 F 2 "SquantorDiodes:LED_0603_hand" H 3550 2700 50  0001 C CNN
 F 3 "~" H 3550 2700 50  0001 C CNN
@@ -640,4 +620,34 @@ Wire Notes Line
 	2600 2450 4050 2450
 Wire Notes Line
 	3800 2700 4050 2700
+NoConn ~ 1000 950 
+NoConn ~ 1000 850 
+NoConn ~ 2000 2050
+NoConn ~ 2000 2150
+Text Label 950  750  2    50   ~ 0
+VDD
+Wire Wire Line
+	1000 750  950  750 
+NoConn ~ 1000 2950
+NoConn ~ 1000 2850
+NoConn ~ 1000 2750
+NoConn ~ 1000 2650
+NoConn ~ 1000 2550
+NoConn ~ 1000 2450
+NoConn ~ 1000 2350
+NoConn ~ 1000 2250
+NoConn ~ 2000 2250
+NoConn ~ 2000 2350
+NoConn ~ 2000 2450
+NoConn ~ 2000 2550
+NoConn ~ 2000 2650
+NoConn ~ 2000 2750
+NoConn ~ 2000 2850
+NoConn ~ 2000 2950
+NoConn ~ 1000 1150
+NoConn ~ 1000 1350
+NoConn ~ 1000 1450
+NoConn ~ 2000 1350
+NoConn ~ 2000 1250
+NoConn ~ 2000 1150
 $EndSCHEMATC
