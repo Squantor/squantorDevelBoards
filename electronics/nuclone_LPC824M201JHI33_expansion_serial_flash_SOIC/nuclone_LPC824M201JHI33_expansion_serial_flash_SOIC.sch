@@ -380,10 +380,6 @@ Wire Notes Line
 	11150 1100 10800 1100
 Wire Notes Line
 	10800 1100 10800 1250
-Text Notes 9800 800  0    50   ~ 0
-Watchdog LED
-Text Notes 9800 900  0    50   ~ 0
-Activity LED
 Text Label 1150 3700 0    50   ~ 0
 VBUS
 Text Label 3800 2100 0    50   ~ 0
