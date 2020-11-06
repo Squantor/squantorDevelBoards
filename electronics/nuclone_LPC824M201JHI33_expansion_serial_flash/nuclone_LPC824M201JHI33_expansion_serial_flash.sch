@@ -386,70 +386,40 @@ Text Notes 9800 900  0    50   ~ 0
 Activity LED
 Text Label 1150 3700 0    50   ~ 0
 VBUS
-$Comp
-L Connector_Generic:Conn_02x04_Odd_Even J4
-U 1 1 5FA427EC
-P 3250 1950
-F 0 "J4" H 3300 2150 50  0000 C CNN
-F 1 "Conn_02x04_Odd_Even" H 3250 1650 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 3250 1950 50  0001 C CNN
-F 3 "~" H 3250 1950 50  0001 C CNN
-	1    3250 1950
-	1    0    0    -1  
-$EndComp
-Text Label 3650 2000 0    50   ~ 0
+Text Label 3800 2100 0    50   ~ 0
 VSS
 Wire Wire Line
-	3550 1850 3600 1850
+	3700 1850 3750 1850
 Wire Wire Line
-	3600 1850 3600 1950
+	3750 1850 3750 1950
 Wire Wire Line
-	3600 2000 3650 2000
+	3750 2150 3700 2150
 Wire Wire Line
-	3600 2000 3600 2050
+	3700 2050 3750 2050
+Connection ~ 3750 2050
 Wire Wire Line
-	3600 2150 3550 2150
-Connection ~ 3600 2000
+	3750 2050 3750 2100
 Wire Wire Line
-	3550 2050 3600 2050
-Connection ~ 3600 2050
-Wire Wire Line
-	3600 2050 3600 2150
-Wire Wire Line
-	3600 1950 3550 1950
-Connection ~ 3600 1950
-Wire Wire Line
-	3600 1950 3600 2000
-Text Label 3000 2150 2    50   ~ 0
-SPI_COPI
-Text Label 3000 2050 2    50   ~ 0
-SPI_CLK
-Text Label 3000 1950 2    50   ~ 0
-SPI_CIPO
-Text Label 3000 1850 2    50   ~ 0
+	3750 1950 3700 1950
+Connection ~ 3750 1950
+Text Label 3150 1850 2    50   ~ 0
 CE_FLASH
 Wire Wire Line
-	3050 1850 3000 1850
-Wire Wire Line
-	3000 1950 3050 1950
-Wire Wire Line
-	3050 2050 3000 2050
-Wire Wire Line
-	3000 2150 3050 2150
+	3200 1850 3150 1850
 Wire Notes Line
-	4150 1700 4150 2350
+	4200 1700 4200 2550
 Wire Notes Line
-	4150 2350 2600 2350
+	4200 2550 2600 2550
 Wire Notes Line
-	2600 2350 2600 1700
+	2600 2550 2600 1700
 Wire Notes Line
-	2600 1700 4150 1700
-Text Notes 3750 2300 0    50   ~ 0
-SPI debug
+	2600 1700 4200 1700
+Text Notes 3750 2500 0    50   ~ 0
+QSPI debug
 Wire Notes Line
-	3700 2350 3700 2200
+	3700 2550 3700 2400
 Wire Notes Line
-	3700 2200 4150 2200
+	3700 2400 4200 2400
 Text Label 950  4350 2    50   ~ 0
 LED0
 Text Label 950  4450 2    50   ~ 0
@@ -698,4 +668,52 @@ NoConn ~ 1000 1250
 NoConn ~ 1000 1550
 NoConn ~ 2000 1550
 NoConn ~ 2000 1450
+$Comp
+L Connector_Generic:Conn_02x06_Odd_Even J?
+U 1 1 5FB97898
+P 3400 2050
+F 0 "J?" H 3400 2350 50  0000 C CNN
+F 1 "Conn_02x06_Odd_Even" H 3250 1650 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 3400 2050 50  0001 C CNN
+F 3 "~" H 3400 2050 50  0001 C CNN
+	1    3400 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2350 3750 2350
+Wire Wire Line
+	3750 2350 3750 2250
+Connection ~ 3750 2150
+Wire Wire Line
+	3750 2250 3700 2250
+Connection ~ 3750 2250
+Wire Wire Line
+	3750 2250 3750 2150
+Wire Wire Line
+	3750 1950 3750 2050
+Wire Wire Line
+	3800 2100 3750 2100
+Connection ~ 3750 2100
+Wire Wire Line
+	3750 2100 3750 2150
+Text Label 3150 1950 2    50   ~ 0
+CLK
+Text Label 3150 2050 2    50   ~ 0
+SIO0
+Text Label 3150 2150 2    50   ~ 0
+SIO1
+Text Label 3150 2250 2    50   ~ 0
+SIO2
+Text Label 3150 2350 2    50   ~ 0
+SIO3
+Wire Wire Line
+	3200 2350 3150 2350
+Wire Wire Line
+	3150 2250 3200 2250
+Wire Wire Line
+	3200 2150 3150 2150
+Wire Wire Line
+	3200 2050 3150 2050
+Wire Wire Line
+	3150 1950 3200 1950
 $EndSCHEMATC
