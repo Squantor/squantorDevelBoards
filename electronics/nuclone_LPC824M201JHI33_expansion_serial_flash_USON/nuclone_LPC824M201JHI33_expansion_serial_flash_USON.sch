@@ -276,10 +276,10 @@ UART_RX
 Text Label 2050 1650 0    50   ~ 0
 UART_TX
 $Comp
-L SquantorIC:25XNN_8pin_serial_flash U1
+L SquantorIC:25XNN_9pin_serial_flash U1
 U 1 1 5FA3CCEA
 P 3850 1150
-F 0 "U1" H 3850 1450 50  0000 C CNN
+F 0 "U1" H 3650 1550 50  0000 C CNN
 F 1 "generic 25XNN serial flash" H 3850 850 50  0000 C CNN
 F 2 "SquantorIC:USON-8-4x3-Macronix" H 3800 1150 50  0001 C CNN
 F 3 "" H 3800 1150 50  0001 C CNN
@@ -630,4 +630,8 @@ NoConn ~ 1000 1250
 NoConn ~ 1000 1550
 NoConn ~ 2000 1550
 NoConn ~ 2000 1450
+Text Label 4400 900  0    50   ~ 0
+VSS
+Wire Wire Line
+	4200 900  4400 900 
 $EndSCHEMATC
