@@ -402,7 +402,7 @@ Wire Wire Line
 Wire Wire Line
 	3750 1950 3700 1950
 Connection ~ 3750 1950
-Text Label 3150 1850 2    50   ~ 0
+Text Label 3150 2350 2    50   ~ 0
 CE_FLASH
 Wire Wire Line
 	3200 1850 3150 1850
@@ -669,10 +669,10 @@ NoConn ~ 1000 1550
 NoConn ~ 2000 1550
 NoConn ~ 2000 1450
 $Comp
-L Connector_Generic:Conn_02x06_Odd_Even J?
+L Connector_Generic:Conn_02x06_Odd_Even J4
 U 1 1 5FB97898
 P 3400 2050
-F 0 "J?" H 3400 2350 50  0000 C CNN
+F 0 "J4" H 3400 2350 50  0000 C CNN
 F 1 "Conn_02x06_Odd_Even" H 3250 1650 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 3400 2050 50  0001 C CNN
 F 3 "~" H 3400 2050 50  0001 C CNN
@@ -696,15 +696,15 @@ Wire Wire Line
 Connection ~ 3750 2100
 Wire Wire Line
 	3750 2100 3750 2150
-Text Label 3150 1950 2    50   ~ 0
-CLK
-Text Label 3150 2050 2    50   ~ 0
-SIO0
-Text Label 3150 2150 2    50   ~ 0
-SIO1
 Text Label 3150 2250 2    50   ~ 0
+CLK
+Text Label 3150 2150 2    50   ~ 0
+SIO0
+Text Label 3150 2050 2    50   ~ 0
+SIO1
+Text Label 3150 1950 2    50   ~ 0
 SIO2
-Text Label 3150 2350 2    50   ~ 0
+Text Label 3150 1850 2    50   ~ 0
 SIO3
 Wire Wire Line
 	3200 2350 3150 2350
