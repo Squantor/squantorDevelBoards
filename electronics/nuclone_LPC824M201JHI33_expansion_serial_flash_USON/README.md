@@ -1,7 +1,5 @@
-# LPC824M201JHI33 nuclone shrunk expansion board with serial flash in SOIC packages
+# LPC824M201JHI33 nuclone shrunk expansion board with serial flash in USON packages
 Small nuclone expansion board for the [LPC824 nuclone](https://github.com/Squantor/squantorDevelBoards/tree/master/hardware/nuclone_LPC824M201JHI33/README.md) that also has a serial flash and a 4 pin JST connection for hooking up an UART. The goal of this board to play around with efficient serial flash handling, SPI drivers and filesystem driver development. Lets see if we can wring some performance out of it with QSPI.
-## Debug connector
-There is a connector present to hook up a logic analyser for checking the signals.
 # HSI (Hardware Software Interface)
 This applies to a project that has a embedded software component. Describe what each pin/bus does, what it is connected to, what its function is and some "safe" behaviour when starting up.
 * LPC824 PIO24 is connected to UART TX via 100Ohm series resistor
