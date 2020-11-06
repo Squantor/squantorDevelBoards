@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 76)
+    (drawings 80)
     (tracks 146)
     (zones 0)
     (modules 22)
@@ -1258,6 +1258,18 @@
     (fp_line (start -0.5 -0.6) (end 0.5 -0.6) (layer B.SilkS) (width 0.15))
   )
 
+  (gr_text TX (at 81 89.8 90) (layer F.SilkS)
+    (effects (font (size 0.8 0.8) (thickness 0.12)))
+  )
+  (gr_text RX (at 79 89.8 90) (layer F.SilkS)
+    (effects (font (size 0.8 0.8) (thickness 0.12)))
+  )
+  (gr_text VBUS (at 77.1 89 90) (layer F.SilkS)
+    (effects (font (size 0.8 0.8) (thickness 0.12)))
+  )
+  (gr_text VSS (at 75 89.4 90) (layer F.SilkS)
+    (effects (font (size 0.8 0.8) (thickness 0.12)))
+  )
   (gr_text Blinky (at 78.1 80.6) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.12)))
   )
