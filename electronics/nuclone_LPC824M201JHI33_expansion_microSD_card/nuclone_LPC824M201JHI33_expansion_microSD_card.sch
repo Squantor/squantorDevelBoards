@@ -774,80 +774,6 @@ Text Label 2050 2550 0    50   ~ 0
 CardDet
 Wire Wire Line
 	2050 2550 2000 2550
-$Comp
-L Connector_Generic:Conn_02x07_Odd_Even J4
-U 1 1 5FB2A1E7
-P 3200 2850
-F 0 "J4" H 3200 3250 50  0000 C CNN
-F 1 "Conn_02x07_Odd_Even" H 3200 2450 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x07_P2.54mm_Vertical" H 3200 2850 50  0001 C CNN
-F 3 "~" H 3200 2850 50  0001 C CNN
-	1    3200 2850
-	1    0    0    -1  
-$EndComp
-Text Label 3600 2850 0    50   ~ 0
-VSS
-Wire Wire Line
-	3500 2850 3550 2850
-Wire Wire Line
-	3500 2550 3550 2550
-Wire Wire Line
-	3550 2550 3550 2650
-Connection ~ 3550 2850
-Wire Wire Line
-	3550 2850 3600 2850
-Wire Wire Line
-	3550 2850 3550 2950
-Wire Wire Line
-	3550 3150 3500 3150
-Wire Wire Line
-	3500 3050 3550 3050
-Connection ~ 3550 3050
-Wire Wire Line
-	3550 3050 3550 3150
-Wire Wire Line
-	3550 2950 3500 2950
-Connection ~ 3550 2950
-Wire Wire Line
-	3550 2950 3550 3050
-Wire Wire Line
-	3500 2750 3550 2750
-Connection ~ 3550 2750
-Wire Wire Line
-	3550 2750 3550 2850
-Wire Wire Line
-	3550 2650 3500 2650
-Connection ~ 3550 2650
-Wire Wire Line
-	3550 2650 3550 2750
-Text Label 2950 2550 2    50   ~ 0
-DAT2
-Text Label 2950 2650 2    50   ~ 0
-DAT3
-Text Label 2950 2750 2    50   ~ 0
-CMD
-Text Label 2950 2850 2    50   ~ 0
-CLK
-Text Label 2950 2950 2    50   ~ 0
-DAT0
-Text Label 2950 3050 2    50   ~ 0
-DAT1
-Text Label 2950 3150 2    50   ~ 0
-CardDet
-Wire Wire Line
-	3000 3150 2950 3150
-Wire Wire Line
-	2950 3050 3000 3050
-Wire Wire Line
-	3000 2950 2950 2950
-Wire Wire Line
-	2950 2850 3000 2850
-Wire Wire Line
-	3000 2750 2950 2750
-Wire Wire Line
-	2950 2650 3000 2650
-Wire Wire Line
-	3000 2550 2950 2550
 Text Notes 3600 2250 0    50   ~ 0
 SD card socket
 Wire Notes Line
@@ -862,18 +788,4 @@ Wire Notes Line
 	4250 2150 3550 2150
 Wire Notes Line
 	3550 2150 3550 2300
-Text Notes 3250 3400 0    50   ~ 0
-SD bus debug
-Wire Notes Line
-	3800 3450 3800 2400
-Wire Notes Line
-	3800 2400 2600 2400
-Wire Notes Line
-	2600 2400 2600 3450
-Wire Notes Line
-	2600 3450 3800 3450
-Wire Notes Line
-	3800 3300 3200 3300
-Wire Notes Line
-	3200 3300 3200 3450
 $EndSCHEMATC
