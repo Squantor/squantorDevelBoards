@@ -123,8 +123,6 @@ Text Label 950  2650 2    50   ~ 0
 PIO0_6
 Text Label 950  2550 2    50   ~ 0
 PIO0_14
-Text Label 2050 2550 0    50   ~ 0
-PIO0_23
 Text Label 2050 2650 0    50   ~ 0
 PIO0_0
 Wire Wire Line
@@ -149,8 +147,6 @@ Wire Wire Line
 	2000 2750 2050 2750
 Wire Wire Line
 	2050 2650 2000 2650
-Wire Wire Line
-	2000 2550 2050 2550
 Wire Wire Line
 	2050 2450 2000 2450
 Wire Wire Line
@@ -387,7 +383,6 @@ NoConn ~ 1000 2850
 NoConn ~ 1000 2750
 NoConn ~ 1000 2650
 NoConn ~ 1000 2550
-NoConn ~ 2000 2550
 NoConn ~ 2000 2650
 NoConn ~ 2000 2750
 NoConn ~ 2000 2850
@@ -398,18 +393,6 @@ NoConn ~ 1000 1450
 NoConn ~ 2000 1350
 NoConn ~ 2000 1250
 NoConn ~ 2000 1150
-Text Label 2050 2250 0    50   ~ 0
-SIO0
-Text Label 950  2250 2    50   ~ 0
-SIO1
-Text Label 2050 2350 0    50   ~ 0
-SIO2
-Text Label 950  2350 2    50   ~ 0
-SIO3
-Text Label 950  2450 2    50   ~ 0
-CLK
-Text Label 2050 2450 0    50   ~ 0
-CE_FLASH
 Text Label 2050 1050 0    50   ~ 0
 LED0
 Text Label 950  1050 2    50   ~ 0
@@ -702,4 +685,93 @@ Wire Wire Line
 	3800 2000 3850 2000
 Wire Wire Line
 	3850 1950 3850 2000
+Text Label 3400 1600 2    50   ~ 0
+VSS
+Text Label 3400 1400 2    50   ~ 0
+VDD
+Text Label 3400 1200 2    50   ~ 0
+VDD
+Text Label 3400 1000 2    50   ~ 0
+VDD
+Text Label 3400 1800 2    50   ~ 0
+VDD
+Text Label 3400 2000 2    50   ~ 0
+VDD
+Text Label 3350 2450 2    50   ~ 0
+VSS
+$Comp
+L Device:R R?
+U 1 1 5FAEF379
+P 3600 2200
+F 0 "R?" V 3650 2350 50  0000 C CNN
+F 1 "100" V 3600 2200 50  0000 C CNN
+F 2 "" V 3530 2200 50  0001 C CNN
+F 3 "~" H 3600 2200 50  0001 C CNN
+	1    3600 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FAF22D7
+P 3600 2300
+F 0 "R?" V 3650 2450 50  0000 C CNN
+F 1 "100k" V 3600 2300 50  0000 C CNN
+F 2 "" V 3530 2300 50  0001 C CNN
+F 3 "~" H 3600 2300 50  0001 C CNN
+	1    3600 2300
+	0    1    1    0   
+$EndComp
+Text Label 3350 2250 2    50   ~ 0
+CardDet
+Wire Wire Line
+	3450 2200 3400 2200
+Wire Wire Line
+	3400 2200 3400 2250
+Wire Wire Line
+	3400 2250 3350 2250
+Wire Wire Line
+	3450 2300 3400 2300
+Wire Wire Line
+	3400 2300 3400 2250
+Connection ~ 3400 2250
+Text Label 3400 1900 2    50   ~ 0
+DAT0
+Text Label 3400 2100 2    50   ~ 0
+DAT1
+Wire Wire Line
+	4000 2050 3850 2050
+Wire Wire Line
+	3850 2050 3850 2200
+Wire Wire Line
+	3850 2200 3750 2200
+Text Label 3800 2300 0    50   ~ 0
+VSS
+Wire Wire Line
+	3800 2300 3750 2300
+Wire Wire Line
+	4000 2150 3950 2150
+Wire Wire Line
+	3950 2150 3950 2450
+Wire Wire Line
+	3950 2450 3350 2450
+Text Label 3400 1300 2    50   ~ 0
+DAT3
+Text Label 3400 1100 2    50   ~ 0
+DAT2
+Text Label 2050 2250 0    50   ~ 0
+DAT0
+Text Label 950  2250 2    50   ~ 0
+DAT1
+Text Label 2050 2350 0    50   ~ 0
+DAT2
+Text Label 950  2350 2    50   ~ 0
+DAT3
+Text Label 2050 2450 0    50   ~ 0
+CMD
+Text Label 950  2450 2    50   ~ 0
+CLK
+Text Label 2050 2550 0    50   ~ 0
+CardDet
+Wire Wire Line
+	2050 2550 2000 2550
 $EndSCHEMATC
