@@ -291,40 +291,6 @@ Wire Notes Line
 	10800 1100 10800 1250
 Text Label 1150 3700 0    50   ~ 0
 VBUS
-Text Label 3800 2100 0    50   ~ 0
-VSS
-Wire Wire Line
-	3700 1850 3750 1850
-Wire Wire Line
-	3750 1850 3750 1950
-Wire Wire Line
-	3750 2150 3700 2150
-Wire Wire Line
-	3700 2050 3750 2050
-Connection ~ 3750 2050
-Wire Wire Line
-	3750 2050 3750 2100
-Wire Wire Line
-	3750 1950 3700 1950
-Connection ~ 3750 1950
-Text Label 3150 2350 2    50   ~ 0
-CE_FLASH
-Wire Wire Line
-	3200 1850 3150 1850
-Wire Notes Line
-	4200 1700 4200 2550
-Wire Notes Line
-	4200 2550 2600 2550
-Wire Notes Line
-	2600 2550 2600 1700
-Wire Notes Line
-	2600 1700 4200 1700
-Text Notes 3750 2500 0    50   ~ 0
-QSPI debug
-Wire Notes Line
-	3700 2550 3700 2400
-Wire Notes Line
-	3700 2400 4200 2400
 Text Label 950  4350 2    50   ~ 0
 LED0
 Text Label 950  4450 2    50   ~ 0
@@ -461,51 +427,279 @@ NoConn ~ 1000 1550
 NoConn ~ 2000 1550
 NoConn ~ 2000 1450
 $Comp
-L Connector_Generic:Conn_02x06_Odd_Even J4
-U 1 1 5FB97898
-P 3400 2050
-F 0 "J4" H 3400 2350 50  0000 C CNN
-F 1 "Conn_02x06_Odd_Even" H 3250 1650 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 3400 2050 50  0001 C CNN
-F 3 "~" H 3400 2050 50  0001 C CNN
-	1    3400 2050
+L SquantorIC:microSD_socket U?
+U 1 1 5FA6CF0D
+P 4300 1700
+F 0 "U?" H 4250 2300 50  0000 L CNN
+F 1 "microSD_socket" H 4000 1100 50  0000 L CNN
+F 2 "" H 4250 1700 50  0001 C CNN
+F 3 "" H 4250 1700 50  0001 C CNN
+	1    4300 1700
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C C?
+U 1 1 5FA723AF
+P 4300 950
+F 0 "C?" V 4350 1050 50  0000 C CNN
+F 1 "1u" V 4250 850 50  0000 C CNN
+F 2 "SquantorRcl:C_0402" H 4338 800 50  0001 C CNN
+F 3 "~" H 4300 950 50  0001 C CNN
+	1    4300 950 
+	0    1    1    0   
+$EndComp
+Text Label 4100 950  2    50   ~ 0
+VSS
+Text Label 3950 1750 2    50   ~ 0
+VSS
+Text Label 4500 950  0    50   ~ 0
+VDD
+Text Label 3950 1550 2    50   ~ 0
+VDD
 Wire Wire Line
-	3700 2350 3750 2350
+	3950 1550 4000 1550
 Wire Wire Line
-	3750 2350 3750 2250
-Connection ~ 3750 2150
+	4000 1750 3950 1750
 Wire Wire Line
-	3750 2250 3700 2250
-Connection ~ 3750 2250
+	4100 950  4150 950 
 Wire Wire Line
-	3750 2250 3750 2150
+	4450 950  4500 950 
+$Comp
+L Device:R R?
+U 1 1 5FA7D810
+P 3600 1700
+F 0 "R?" V 3650 1850 50  0000 C CNN
+F 1 "100" V 3600 1700 50  0000 C CNN
+F 2 "" V 3530 1700 50  0001 C CNN
+F 3 "~" H 3600 1700 50  0001 C CNN
+	1    3600 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FA7F0B3
+P 3600 1600
+F 0 "R?" V 3650 1750 50  0000 C CNN
+F 1 "10k" V 3600 1600 50  0000 C CNN
+F 2 "" V 3530 1600 50  0001 C CNN
+F 3 "~" H 3600 1600 50  0001 C CNN
+	1    3600 1600
+	0    1    1    0   
+$EndComp
+Text Label 3400 1700 2    50   ~ 0
+CLK
 Wire Wire Line
-	3750 1950 3750 2050
+	4000 1650 3800 1650
+Wire Wire Line
+	3800 1650 3800 1600
+Wire Wire Line
+	3800 1600 3750 1600
+Wire Wire Line
+	3800 1650 3800 1700
+Wire Wire Line
+	3800 1700 3750 1700
+Connection ~ 3800 1650
+Text Label 3400 1600 2    50   ~ 0
+VSS
+Wire Wire Line
+	3450 1600 3400 1600
+Wire Wire Line
+	3450 1700 3400 1700
+$Comp
+L Device:R R?
+U 1 1 5FA91098
+P 3600 1500
+F 0 "R?" V 3650 1650 50  0000 C CNN
+F 1 "100" V 3600 1500 50  0000 C CNN
+F 2 "" V 3530 1500 50  0001 C CNN
+F 3 "~" H 3600 1500 50  0001 C CNN
+	1    3600 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FA91190
+P 3600 1400
+F 0 "R?" V 3650 1550 50  0000 C CNN
+F 1 "10k" V 3600 1400 50  0000 C CNN
+F 2 "" V 3530 1400 50  0001 C CNN
+F 3 "~" H 3600 1400 50  0001 C CNN
+	1    3600 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 1400 3750 1400
+Wire Wire Line
+	3800 1500 3750 1500
+Wire Wire Line
+	3450 1400 3400 1400
+Wire Wire Line
+	3450 1500 3400 1500
+Text Label 3400 1500 2    50   ~ 0
+CMD
+$Comp
+L Device:R R?
+U 1 1 5FA96522
+P 3600 1300
+F 0 "R?" V 3650 1450 50  0000 C CNN
+F 1 "100" V 3600 1300 50  0000 C CNN
+F 2 "" V 3530 1300 50  0001 C CNN
+F 3 "~" H 3600 1300 50  0001 C CNN
+	1    3600 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FA9652C
+P 3600 1200
+F 0 "R?" V 3650 1350 50  0000 C CNN
+F 1 "10k" V 3600 1200 50  0000 C CNN
+F 2 "" V 3530 1200 50  0001 C CNN
+F 3 "~" H 3600 1200 50  0001 C CNN
+	1    3600 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 1200 3750 1200
+Wire Wire Line
+	3800 1300 3750 1300
+Wire Wire Line
+	3450 1200 3400 1200
+Wire Wire Line
+	3450 1300 3400 1300
+$Comp
+L Device:R R?
+U 1 1 5FAA13A1
+P 3600 1100
+F 0 "R?" V 3650 1250 50  0000 C CNN
+F 1 "100" V 3600 1100 50  0000 C CNN
+F 2 "" V 3530 1100 50  0001 C CNN
+F 3 "~" H 3600 1100 50  0001 C CNN
+	1    3600 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FAA14D9
+P 3600 1000
+F 0 "R?" V 3650 1150 50  0000 C CNN
+F 1 "10k" V 3600 1000 50  0000 C CNN
+F 2 "" V 3530 1000 50  0001 C CNN
+F 3 "~" H 3600 1000 50  0001 C CNN
+	1    3600 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 1000 3750 1000
+Wire Wire Line
+	3800 1100 3750 1100
+Wire Wire Line
+	3450 1000 3400 1000
+Wire Wire Line
+	3450 1100 3400 1100
+$Comp
+L Device:R R?
+U 1 1 5FAA89C4
+P 3600 2100
+F 0 "R?" V 3650 2250 50  0000 C CNN
+F 1 "100" V 3600 2100 50  0000 C CNN
+F 2 "" V 3530 2100 50  0001 C CNN
+F 3 "~" H 3600 2100 50  0001 C CNN
+	1    3600 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FAA8B1C
+P 3600 2000
+F 0 "R?" V 3650 2150 50  0000 C CNN
+F 1 "10k" V 3600 2000 50  0000 C CNN
+F 2 "" V 3530 2000 50  0001 C CNN
+F 3 "~" H 3600 2000 50  0001 C CNN
+	1    3600 2000
+	0    1    1    0   
+$EndComp
 Wire Wire Line
 	3800 2100 3750 2100
-Connection ~ 3750 2100
 Wire Wire Line
-	3750 2100 3750 2150
-Text Label 3150 2250 2    50   ~ 0
-CLK
-Text Label 3150 2150 2    50   ~ 0
-SIO0
-Text Label 3150 2050 2    50   ~ 0
-SIO1
-Text Label 3150 1950 2    50   ~ 0
-SIO2
-Text Label 3150 1850 2    50   ~ 0
-SIO3
+	3450 2000 3400 2000
 Wire Wire Line
-	3200 2350 3150 2350
+	3450 2100 3400 2100
+$Comp
+L Device:R R?
+U 1 1 5FAA8B2A
+P 3600 1900
+F 0 "R?" V 3650 2050 50  0000 C CNN
+F 1 "100" V 3600 1900 50  0000 C CNN
+F 2 "" V 3530 1900 50  0001 C CNN
+F 3 "~" H 3600 1900 50  0001 C CNN
+	1    3600 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FAA8B34
+P 3600 1800
+F 0 "R?" V 3650 1950 50  0000 C CNN
+F 1 "10k" V 3600 1800 50  0000 C CNN
+F 2 "" V 3530 1800 50  0001 C CNN
+F 3 "~" H 3600 1800 50  0001 C CNN
+	1    3600 1800
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	3150 2250 3200 2250
+	3800 1800 3750 1800
 Wire Wire Line
-	3200 2150 3150 2150
+	3800 1900 3750 1900
 Wire Wire Line
-	3200 2050 3150 2050
+	3450 1800 3400 1800
 Wire Wire Line
-	3150 1950 3200 1950
+	3450 1900 3400 1900
+Wire Wire Line
+	4000 1450 3800 1450
+Wire Wire Line
+	3800 1450 3800 1500
+Wire Wire Line
+	3800 1400 3800 1450
+Connection ~ 3800 1450
+Wire Wire Line
+	4000 1350 3850 1350
+Wire Wire Line
+	3850 1350 3850 1250
+Wire Wire Line
+	3850 1250 3800 1250
+Wire Wire Line
+	3800 1250 3800 1300
+Wire Wire Line
+	3800 1250 3800 1200
+Connection ~ 3800 1250
+Wire Wire Line
+	4000 1250 3900 1250
+Wire Wire Line
+	3900 1250 3900 1050
+Wire Wire Line
+	3900 1050 3800 1050
+Wire Wire Line
+	3800 1050 3800 1000
+Wire Wire Line
+	3800 1100 3800 1050
+Connection ~ 3800 1050
+Wire Wire Line
+	4000 1850 3800 1850
+Wire Wire Line
+	3800 1850 3800 1800
+Wire Wire Line
+	3800 1850 3800 1900
+Connection ~ 3800 1850
+Wire Wire Line
+	4000 1950 3850 1950
+Wire Wire Line
+	3750 2000 3800 2000
+Wire Wire Line
+	3800 2000 3800 2100
+Connection ~ 3800 2000
+Wire Wire Line
+	3800 2000 3850 2000
+Wire Wire Line
+	3850 1950 3850 2000
 $EndSCHEMATC
