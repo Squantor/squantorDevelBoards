@@ -16,7 +16,6 @@ This applies to a project that has a embedded software component. Describe what 
 * LPC824 PIO23 is connected to LED1 via 4.7KOhm resistor, this is used as an activity indicator
 ## TODO's
 Still some things need to be done:
-* Review with one night in between
 * Produce at [OSHPARK](https://oshpark.com/)
 * Assemble
 * Test & characterise
