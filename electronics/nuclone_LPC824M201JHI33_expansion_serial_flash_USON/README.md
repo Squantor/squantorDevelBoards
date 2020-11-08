@@ -14,11 +14,10 @@ This applies to a project that has a embedded software component. Describe what 
 * LPC824 PIO23 is connected to LED1 via 4.7KOhm resistor, this is used as an activity indicator
 ## TODO's
 Still some things need to be done:
-* Review with one night in between
 * Produce at [OSHPARK](https://oshpark.com/)
 * Assemble
 * Test & characterise
 * update Readme.md with pictures and BOM
 ## BOM
-* Any 25 style 8 pin SOIC serial flash is suitable like the [Winbond W25X20CLSNIG](https://lcsc.com/product-detail/FLASH_Winbond-Elec-W25X20CLSNIG_C34591.html)
+* Any 25 style 8 pin USON (4 by 3 mm) serial flash is suitable like the [Winbond W25Q16FWUUIQ](https://lcsc.com/product-detail/FLASH_Winbond-Elec-W25Q16FWUUIQ-TR_C469174.html)
 
