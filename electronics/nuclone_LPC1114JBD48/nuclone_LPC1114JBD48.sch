@@ -915,10 +915,10 @@ Wire Wire Line
 Text Label 9000 650  2    50   ~ 0
 PIO0_0
 $Comp
-L SquantorSpecial:Solderjumper_2way_noconn JP?
+L SquantorSpecial:Solderjumper_2way_noconn JP1
 U 1 1 5FBD87EF
 P 9250 650
-F 0 "JP?" H 9450 600 50  0000 C CNN
+F 0 "JP1" H 9450 600 50  0000 C CNN
 F 1 "reset" H 9050 600 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 9250 650 50  0001 C CNN
 F 3 "" H 9250 650 50  0001 C CNN
