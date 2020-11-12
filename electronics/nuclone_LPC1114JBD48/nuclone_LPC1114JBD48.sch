@@ -990,10 +990,10 @@ PIO1_2
 Wire Wire Line
 	9150 850  9550 850 
 $Comp
-L SquantorSpecial:Solderjumper_2way_noconn JP?
+L SquantorSpecial:Solderjumper_2way_noconn JP3
 U 1 1 5FBC0C53
 P 9050 2650
-F 0 "JP?" H 9250 2600 50  0000 C CNN
+F 0 "JP3" H 9250 2600 50  0000 C CNN
 F 1 "SWDIO" H 8850 2600 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 9050 2650 50  0001 C CNN
 F 3 "" H 9050 2650 50  0001 C CNN
@@ -1051,10 +1051,10 @@ PIO1_10
 Text Label 2700 1900 2    50   ~ 0
 PIO1_10
 $Comp
-L SquantorSpecial:Solderjumper_2way_noconn JP?
+L SquantorSpecial:Solderjumper_2way_noconn JP2
 U 1 1 5FC70803
 P 8950 1850
-F 0 "JP?" H 9150 1800 50  0000 C CNN
+F 0 "JP2" H 9150 1800 50  0000 C CNN
 F 1 "reset" H 8750 1800 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 8950 1850 50  0001 C CNN
 F 3 "" H 8950 1850 50  0001 C CNN
@@ -1075,4 +1075,14 @@ Text Label 9550 1650 2    50   ~ 0
 PIO0_8
 Text Label 3700 2000 0    50   ~ 0
 PIO0_8
+NoConn ~ 950  2600
+NoConn ~ 950  2500
+NoConn ~ 950  2400
+NoConn ~ 950  2300
+NoConn ~ 950  2200
+NoConn ~ 1950 2600
+NoConn ~ 1950 2500
+NoConn ~ 1950 2400
+NoConn ~ 1950 2300
+NoConn ~ 1950 2200
 $EndSCHEMATC
