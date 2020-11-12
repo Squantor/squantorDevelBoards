@@ -306,10 +306,6 @@ Text Label 1950 2700 0    50   ~ 0
 VSS
 Text Label 950  2700 2    50   ~ 0
 VSS
-Text Label 950  1900 2    50   ~ 0
-GPIO_14
-Text Label 1950 1900 0    50   ~ 0
-GPIO_15
 Text Label 2700 2700 2    50   ~ 0
 VSS
 Text Label 3700 2700 0    50   ~ 0
@@ -381,28 +377,12 @@ F 3 "" H 1600 1700 50  0001 C CNN
 	1    1450 1750
 	1    0    0    -1  
 $EndComp
-Text Label 950  2000 2    50   ~ 0
-GPIO_16
-Text Label 950  2100 2    50   ~ 0
-GPIO_18
-Text Label 1950 2000 0    50   ~ 0
-GPIO_17
-Text Label 1950 2100 0    50   ~ 0
-GPIO_19
-Text Label 950  2200 2    50   ~ 0
-GPIO_20
-Text Label 950  2300 2    50   ~ 0
-GPIO_22
 Text Label 950  2400 2    50   ~ 0
 GPIO_24
 Text Label 950  2500 2    50   ~ 0
 GPIO_26
 Text Label 950  2600 2    50   ~ 0
 GPIO_28
-Text Label 1950 2200 0    50   ~ 0
-GPIO_21
-Text Label 1950 2300 0    50   ~ 0
-GPIO_23
 Text Label 1950 2400 0    50   ~ 0
 GPIO_25
 Text Label 1950 2500 0    50   ~ 0
@@ -982,4 +962,72 @@ Wire Wire Line
 	9550 1150 9500 1150
 Text Label 1950 1500 0    50   ~ 0
 PIO0_3
+Text Label 9500 1250 2    50   ~ 0
+PIO0_4
+Wire Wire Line
+	9500 1250 9550 1250
+Text Label 950  1600 2    50   ~ 0
+PIO0_4
+Text Label 9500 1350 2    50   ~ 0
+PIO0_5
+Wire Wire Line
+	9550 1350 9500 1350
+Text Label 1950 1600 0    50   ~ 0
+PIO0_5
+Text Label 9550 3250 2    50   ~ 0
+PIO1_9
+Wire Wire Line
+	9550 3250 9600 3250
+Text Label 950  1700 2    50   ~ 0
+PIO1_9
+Text Label 9550 5550 2    50   ~ 0
+PIO3_4
+Wire Wire Line
+	9550 5550 9600 5550
+Text Label 1950 1700 0    50   ~ 0
+PIO3_4
+Text Label 9550 4150 2    50   ~ 0
+PIO2_4
+Wire Wire Line
+	9600 4150 9550 4150
+Text Label 950  1900 2    50   ~ 0
+PIO2_4
+Text Label 9550 4250 2    50   ~ 0
+PIO2_5
+Wire Wire Line
+	9550 4250 9600 4250
+Text Label 1950 1900 0    50   ~ 0
+PIO2_5
+Text Label 9550 5650 2    50   ~ 0
+PIO3_5
+Wire Wire Line
+	9600 5650 9550 5650
+Text Label 950  2000 2    50   ~ 0
+PIO3_5
+Text Label 9500 1450 2    50   ~ 0
+PIO0_6
+Wire Wire Line
+	9550 1450 9500 1450
+Text Label 1950 2000 0    50   ~ 0
+PIO0_6
+Text Label 9500 1550 2    50   ~ 0
+PIO0_7
+Wire Wire Line
+	9500 1550 9550 1550
+Text Label 950  2100 2    50   ~ 0
+PIO0_7
+Text Label 9550 4650 2    50   ~ 0
+PIO2_9
+Wire Wire Line
+	9550 4650 9600 4650
+Text Label 1950 2100 0    50   ~ 0
+PIO2_9
+Text Label 950  2300 2    50   ~ 0
+GPIO_22
+Text Label 950  2200 2    50   ~ 0
+GPIO_20
+Text Label 1950 2300 0    50   ~ 0
+GPIO_23
+Text Label 1950 2200 0    50   ~ 0
+GPIO_21
 $EndSCHEMATC
