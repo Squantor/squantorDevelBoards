@@ -310,8 +310,6 @@ Text Label 2700 2700 2    50   ~ 0
 VSS
 Text Label 3700 2700 0    50   ~ 0
 VSS
-Text Label 3700 1700 0    50   ~ 0
-GPIO_46
 Wire Wire Line
 	1850 3550 1900 3550
 Wire Wire Line
@@ -527,10 +525,6 @@ Wire Wire Line
 	1150 4700 1450 4700
 Wire Wire Line
 	1150 4600 1450 4600
-Text Label 2700 1700 2    50   ~ 0
-GPIO_47
-Text Label 2700 1500 2    50   ~ 0
-GPIO_51
 Text Label 3700 2600 0    50   ~ 0
 GPIO_30
 Text Label 3700 2500 0    50   ~ 0
@@ -549,46 +543,8 @@ Text Label 2700 2500 2    50   ~ 0
 GPIO_33
 Text Label 2700 2600 2    50   ~ 0
 GPIO_31
-Text Label 2700 2100 2    50   ~ 0
-GPIO_41
-Text Label 2700 2000 2    50   ~ 0
-GPIO_43
-Text Label 2700 1900 2    50   ~ 0
-GPIO_45
-Text Label 3700 1900 0    50   ~ 0
-GPIO_44
-Text Label 3700 2000 0    50   ~ 0
-GPIO_42
-Text Label 3700 2100 0    50   ~ 0
-GPIO_40
 Text Label 3700 2400 0    50   ~ 0
 GPIO_34
-Text Label 2700 1600 2    50   ~ 0
-GPIO_49
-Text Label 3700 1600 0    50   ~ 0
-GPIO_48
-Text Label 2700 1400 2    50   ~ 0
-GPIO_53
-Text Label 2700 1300 2    50   ~ 0
-GPIO_55
-Text Label 2700 1200 2    50   ~ 0
-GPIO_57
-Text Label 2700 1100 2    50   ~ 0
-GPIO_59
-Text Label 3700 1100 0    50   ~ 0
-GPIO_58
-Text Label 3700 1200 0    50   ~ 0
-GPIO_56
-Text Label 3700 1300 0    50   ~ 0
-GPIO_54
-Text Label 3700 1400 0    50   ~ 0
-GPIO_52
-Text Label 3700 1500 0    50   ~ 0
-GPIO_50
-Text Label 2700 1000 2    50   ~ 0
-GPIO_61
-Text Label 3700 1000 0    50   ~ 0
-GPIO_60
 Text Notes 2350 4100 0    50   ~ 0
 Power input
 Wire Notes Line
@@ -728,14 +684,10 @@ F 3 "" H 10050 4850 50  0001 C CNN
 	5    10000 5400
 	1    0    0    -1  
 $EndComp
-Text Label 9550 2650 2    50   ~ 0
+Text Label 9600 2650 2    50   ~ 0
 TMS
-Text Label 9500 1850 2    50   ~ 0
+Text Label 9550 1850 2    50   ~ 0
 TCK
-Wire Wire Line
-	9550 1850 9500 1850
-Wire Wire Line
-	9600 2650 9550 2650
 $Comp
 L Device:C C8
 U 1 1 5FB5BA20
@@ -892,50 +844,33 @@ Wire Wire Line
 	9550 3750 9600 3750
 Wire Wire Line
 	9600 4350 9550 4350
-Text Label 9000 650  2    50   ~ 0
+Text Label 8750 850  2    50   ~ 0
 PIO0_0
 $Comp
 L SquantorSpecial:Solderjumper_2way_noconn JP1
 U 1 1 5FBD87EF
-P 9250 650
-F 0 "JP1" H 9450 600 50  0000 C CNN
-F 1 "reset" H 9050 600 50  0000 C CNN
-F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 9250 650 50  0001 C CNN
-F 3 "" H 9250 650 50  0001 C CNN
-	1    9250 650 
+P 8950 850
+F 0 "JP1" H 9150 800 50  0000 C CNN
+F 1 "reset" H 8750 800 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 8950 850 50  0001 C CNN
+F 3 "" H 8950 850 50  0001 C CNN
+	1    8950 850 
 	1    0    0    -1  
 $EndComp
-Text Label 9450 850  2    50   ~ 0
+Text Label 9550 850  2    50   ~ 0
 RESET
-Wire Wire Line
-	9550 850  9500 850 
-Wire Wire Line
-	9500 850  9500 650 
-Wire Wire Line
-	9500 650  9450 650 
-Connection ~ 9500 850 
-Wire Wire Line
-	9500 850  9450 850 
-Wire Wire Line
-	9050 650  9000 650 
-Text Label 9500 950  2    50   ~ 0
+Text Label 9550 950  2    50   ~ 0
 PIO0_1
 Text Label 950  1200 2    50   ~ 0
 PIO0_0
 Text Label 1950 1200 0    50   ~ 0
 PIO0_1
-Wire Wire Line
-	9550 950  9500 950 
-Text Label 9550 3150 2    50   ~ 0
+Text Label 9600 3150 2    50   ~ 0
 PIO1_8
 Text Label 950  1300 2    50   ~ 0
 PIO1_8
-Wire Wire Line
-	9550 3150 9600 3150
-Text Label 9500 1050 2    50   ~ 0
+Text Label 9550 1050 2    50   ~ 0
 PIO0_2
-Wire Wire Line
-	9550 1050 9500 1050
 Text Label 1950 1300 0    50   ~ 0
 PIO0_2
 Text Label 9550 4450 2    50   ~ 0
@@ -956,28 +891,20 @@ Wire Wire Line
 	9600 3850 9550 3850
 Text Label 950  1500 2    50   ~ 0
 PIO2_1
-Text Label 9500 1150 2    50   ~ 0
+Text Label 9550 1150 2    50   ~ 0
 PIO0_3
-Wire Wire Line
-	9550 1150 9500 1150
 Text Label 1950 1500 0    50   ~ 0
 PIO0_3
-Text Label 9500 1250 2    50   ~ 0
+Text Label 9550 1250 2    50   ~ 0
 PIO0_4
-Wire Wire Line
-	9500 1250 9550 1250
 Text Label 950  1600 2    50   ~ 0
 PIO0_4
-Text Label 9500 1350 2    50   ~ 0
+Text Label 9550 1350 2    50   ~ 0
 PIO0_5
-Wire Wire Line
-	9550 1350 9500 1350
 Text Label 1950 1600 0    50   ~ 0
 PIO0_5
-Text Label 9550 3250 2    50   ~ 0
+Text Label 9600 3250 2    50   ~ 0
 PIO1_9
-Wire Wire Line
-	9550 3250 9600 3250
 Text Label 950  1700 2    50   ~ 0
 PIO1_9
 Text Label 9550 5550 2    50   ~ 0
@@ -1004,16 +931,12 @@ Wire Wire Line
 	9600 5650 9550 5650
 Text Label 950  2000 2    50   ~ 0
 PIO3_5
-Text Label 9500 1450 2    50   ~ 0
+Text Label 9550 1450 2    50   ~ 0
 PIO0_6
-Wire Wire Line
-	9550 1450 9500 1450
 Text Label 1950 2000 0    50   ~ 0
 PIO0_6
-Text Label 9500 1550 2    50   ~ 0
+Text Label 9550 1550 2    50   ~ 0
 PIO0_7
-Wire Wire Line
-	9500 1550 9550 1550
 Text Label 950  2100 2    50   ~ 0
 PIO0_7
 Text Label 9550 4650 2    50   ~ 0
@@ -1030,4 +953,126 @@ Text Label 1950 2300 0    50   ~ 0
 GPIO_23
 Text Label 1950 2200 0    50   ~ 0
 GPIO_21
+Text Label 9550 5450 2    50   ~ 0
+PIO3_3
+Wire Wire Line
+	9550 5450 9600 5450
+Text Label 2700 1000 2    50   ~ 0
+PIO3_3
+Text Label 9600 3050 2    50   ~ 0
+PIO1_7
+Text Label 3700 1000 0    50   ~ 0
+PIO1_7
+Text Label 9600 2950 2    50   ~ 0
+PIO1_6
+Text Label 2700 1100 2    50   ~ 0
+PIO1_6
+Text Label 9600 2850 2    50   ~ 0
+PIO1_5
+Text Label 3700 1100 0    50   ~ 0
+PIO1_5
+Text Label 9550 5350 2    50   ~ 0
+PIO3_2
+Wire Wire Line
+	9550 5350 9600 5350
+Text Label 2700 1200 2    50   ~ 0
+PIO3_2
+Text Label 9600 3450 2    50   ~ 0
+PIO1_11
+Text Label 3700 1200 0    50   ~ 0
+PIO1_11
+Text Label 9600 2750 2    50   ~ 0
+PIO1_4
+Text Label 2700 1300 2    50   ~ 0
+PIO1_4
+Text Label 9600 2550 2    50   ~ 0
+PIO1_2
+Wire Wire Line
+	9150 850  9550 850 
+$Comp
+L SquantorSpecial:Solderjumper_2way_noconn JP?
+U 1 1 5FBC0C53
+P 9050 2650
+F 0 "JP?" H 9250 2600 50  0000 C CNN
+F 1 "SWDIO" H 8850 2600 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 9050 2650 50  0001 C CNN
+F 3 "" H 9050 2650 50  0001 C CNN
+	1    9050 2650
+	1    0    0    -1  
+$EndComp
+Text Label 8750 2650 2    50   ~ 0
+PIO1_3
+Wire Wire Line
+	8750 2650 8850 2650
+Wire Wire Line
+	9250 2650 9600 2650
+Text Label 3700 1300 0    50   ~ 0
+PIO1_3
+Text Label 9550 4050 2    50   ~ 0
+PIO2_3
+Wire Wire Line
+	9550 4050 9600 4050
+Text Label 2700 1400 2    50   ~ 0
+PIO2_3
+Text Label 9550 5250 2    50   ~ 0
+PIO3_1
+Wire Wire Line
+	9600 5250 9550 5250
+Text Label 3700 1400 0    50   ~ 0
+PIO3_1
+Text Label 9550 5150 2    50   ~ 0
+PIO3_0
+Wire Wire Line
+	9600 5150 9550 5150
+Text Label 2700 1500 2    50   ~ 0
+PIO3_0
+Text Label 3700 1500 0    50   ~ 0
+PIO1_2
+Text Label 9600 2450 2    50   ~ 0
+PIO1_1
+Text Label 2700 1600 2    50   ~ 0
+PIO1_1
+Text Label 9600 2350 2    50   ~ 0
+PIO1_0
+Text Label 3700 1600 0    50   ~ 0
+PIO1_0
+Text Label 9550 1950 2    50   ~ 0
+PIO0_11
+Text Label 2700 1700 2    50   ~ 0
+PIO0_11
+Text Label 9550 4850 2    50   ~ 0
+PIO2_11
+Wire Wire Line
+	9550 4850 9600 4850
+Text Label 3700 1700 0    50   ~ 0
+PIO2_11
+Text Label 9600 3350 2    50   ~ 0
+PIO1_10
+Text Label 2700 1900 2    50   ~ 0
+PIO1_10
+$Comp
+L SquantorSpecial:Solderjumper_2way_noconn JP?
+U 1 1 5FC70803
+P 8950 1850
+F 0 "JP?" H 9150 1800 50  0000 C CNN
+F 1 "reset" H 8750 1800 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 8950 1850 50  0001 C CNN
+F 3 "" H 8950 1850 50  0001 C CNN
+	1    8950 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 1850 9150 1850
+Text Label 8750 1850 2    50   ~ 0
+PIO0_10
+Text Label 3700 1900 0    50   ~ 0
+PIO0_10
+Text Label 9550 1750 2    50   ~ 0
+PIO0_9
+Text Label 2700 2000 2    50   ~ 0
+PIO0_9
+Text Label 9550 1650 2    50   ~ 0
+PIO0_8
+Text Label 3700 2000 0    50   ~ 0
+PIO0_8
 $EndSCHEMATC
