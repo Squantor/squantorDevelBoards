@@ -5,7 +5,6 @@ Development board for the LPC1114 in TQFP48 package, actually any LPC111X series
 * what pins are connected to SWD
 ## TODO's
 Still some things need to be done:
-* schematic entry 
 * PCB layout
 * Review with one night in between
 * Produce at [OSHPARK](https://oshpark.com/)
