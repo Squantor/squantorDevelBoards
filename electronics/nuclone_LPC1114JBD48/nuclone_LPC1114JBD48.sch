@@ -91,12 +91,12 @@ $EndComp
 $Comp
 L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
-P 950 7250
-F 0 "N2" H 900 7350 60  0000 L CNN
-F 1 "20201110" H 700 7250 60  0000 L CNN
-F 2 "SquantorLabels:Label_version" H 950 7250 60  0001 C CNN
-F 3 "" H 950 7250 60  0001 C CNN
-	1    950  7250
+P 950 7200
+F 0 "N2" H 900 7300 60  0000 L CNN
+F 1 "20201114" H 700 7200 60  0000 L CNN
+F 2 "SquantorLabels:Label_version" H 950 7200 60  0001 C CNN
+F 3 "" H 950 7200 60  0001 C CNN
+	1    950  7200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -113,12 +113,12 @@ $EndComp
 $Comp
 L SquantorLabels:Label N3
 U 1 1 5D8B1B32
-P 950 6850
-F 0 "N3" H 900 6900 60  0000 L CNN
-F 1 "JLCJLCJLCJLC" H 650 6800 60  0000 L CNN
-F 2 "SquantorLabels:Label_Generic" H 950 6850 60  0001 C CNN
-F 3 "" H 950 6850 60  0001 C CNN
-	1    950  6850
+P 950 6900
+F 0 "N3" H 900 6950 60  0000 L CNN
+F 1 "JLCJLCJLCJLC" H 650 6850 60  0000 L CNN
+F 2 "SquantorLabels:Label_Generic" H 950 6900 60  0001 C CNN
+F 3 "" H 950 6900 60  0001 C CNN
+	1    950  6900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -604,11 +604,11 @@ Wire Notes Line
 Text Notes 1350 7600 0    50   ~ 0
 Labels and mounting
 Wire Notes Line
-	2300 7650 2300 6600
+	2300 7650 2300 6500
 Wire Notes Line
-	2300 6600 600  6600
+	2300 6500 600  6500
 Wire Notes Line
-	600  6600 600  7650
+	600  6500 600  7650
 Wire Notes Line
 	600  7650 2300 7650
 Wire Notes Line
@@ -1088,6 +1088,17 @@ F 1 "12MHz" H 10550 3500 50  0000 L CNN
 F 2 "SquantorCrystal:Crystal_3225_4" H 10850 3300 50  0001 C CNN
 F 3 "~" H 10850 3300 50  0001 C CNN
 	1    10850 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorLabels:Label N4
+U 1 1 5FB0926C
+P 950 6650
+F 0 "N4" H 900 6700 60  0000 L CNN
+F 1 "NuClone LPC1114 LQFP48" H 800 6600 60  0000 L CNN
+F 2 "SquantorLabels:Label_Generic" H 950 6650 60  0001 C CNN
+F 3 "" H 950 6650 60  0001 C CNN
+	1    950  6650
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
