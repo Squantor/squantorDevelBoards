@@ -621,10 +621,10 @@ F 3 "" H 950 6700 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SquantorNxp:LPC824M201JDH20 U?
+L SquantorNxp:LPC824M201JDH20 U2
 U 1 1 5FB27B1F
 P 10700 3300
-F 0 "U?" H 10750 3600 45  0000 L CNN
+F 0 "U2" H 10750 3600 45  0000 L CNN
 F 1 "LPC824M201JDH20" H 10400 3000 45  0000 L CNN
 F 2 "SquantorIC:SOT360" H 10980 2950 20  0001 C CNN
 F 3 "" H 10950 2800 60  0000 C CNN
@@ -632,10 +632,10 @@ F 3 "" H 10950 2800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SquantorNxp:LPC824M201JDH20 U?
+L SquantorNxp:LPC824M201JDH20 U2
 U 2 1 5FB290CC
 P 10250 1500
-F 0 "U?" H 10750 2250 45  0000 L CNN
+F 0 "U2" H 10750 2250 45  0000 L CNN
 F 1 "LPC824M201JDH20" H 9650 450 45  0000 L CNN
 F 2 "SquantorIC:SOT360" H 10530 1150 20  0001 C CNN
 F 3 "" H 10500 1000 60  0000 C CNN
@@ -643,10 +643,10 @@ F 3 "" H 10500 1000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SquantorSpecial:Solderjumper_2way_noconn JP?
+L SquantorSpecial:Solderjumper_2way_noconn JP1
 U 1 1 5FB30B7E
 P 8400 800
-F 0 "JP?" H 8200 750 50  0000 C CNN
+F 0 "JP1" H 8200 750 50  0000 C CNN
 F 1 "PIO0_2" H 8650 750 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 8400 800 50  0001 C CNN
 F 3 "" H 8400 800 50  0001 C CNN
@@ -670,10 +670,10 @@ PIO0_1
 Text Label 9550 1300 2    50   ~ 0
 PIO0_4
 $Comp
-L SquantorSpecial:Solderjumper_2way_noconn JP?
+L SquantorSpecial:Solderjumper_2way_noconn JP2
 U 1 1 5FB3B6A3
 P 8400 1000
-F 0 "JP?" H 8200 950 50  0000 C CNN
+F 0 "JP2" H 8200 950 50  0000 C CNN
 F 1 "PIO0_3" H 8650 950 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 8400 1000 50  0001 C CNN
 F 3 "" H 8400 1000 50  0001 C CNN
@@ -689,10 +689,10 @@ PIO0_2
 Text Label 8200 1000 2    50   ~ 0
 PIO0_3
 $Comp
-L SquantorSpecial:Solderjumper_2way_noconn JP?
+L SquantorSpecial:Solderjumper_2way_noconn JP3
 U 1 1 5FB3E044
 P 8400 1200
-F 0 "JP?" H 8200 1150 50  0000 C CNN
+F 0 "JP3" H 8200 1150 50  0000 C CNN
 F 1 "PIO0_5" H 8650 1150 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 8400 1200 50  0001 C CNN
 F 3 "" H 8400 1200 50  0001 C CNN
@@ -708,10 +708,10 @@ PIO0_10
 Text Label 9550 1800 2    50   ~ 0
 PIO0_11
 $Comp
-L SquantorSpecial:Solderjumper_2way_12conn JP?
+L SquantorSpecial:Solderjumper_2way_12conn JP4
 U 1 1 5FB417E0
 P 8400 1450
-F 0 "JP?" H 8200 1400 50  0000 C CNN
+F 0 "JP4" H 8200 1400 50  0000 C CNN
 F 1 "PIO0_8" H 8650 1400 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_conn" H 8400 1450 50  0001 C CNN
 F 3 "" H 8400 1450 50  0001 C CNN
@@ -719,10 +719,10 @@ F 3 "" H 8400 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SquantorSpecial:Solderjumper_2way_12conn JP?
+L SquantorSpecial:Solderjumper_2way_12conn JP5
 U 1 1 5FB425DB
 P 8400 1650
-F 0 "JP?" H 8200 1600 50  0000 C CNN
+F 0 "JP5" H 8200 1600 50  0000 C CNN
 F 1 "PIO0_9" H 8650 1600 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_conn" H 8400 1650 50  0001 C CNN
 F 3 "" H 8400 1650 50  0001 C CNN
@@ -752,10 +752,10 @@ PIO0_23
 Text Label 9550 2850 2    50   ~ 0
 VDD
 $Comp
-L Device:Ferrite_Bead FB?
+L Device:Ferrite_Bead FB2
 U 1 1 5FB49DF7
 P 9750 2850
-F 0 "FB?" V 9700 2750 50  0000 C CNN
+F 0 "FB2" V 9700 2750 50  0000 C CNN
 F 1 "600" V 9800 2950 50  0000 C CNN
 F 2 "SquantorRcl:L_0402" V 9680 2850 50  0001 C CNN
 F 3 "~" H 9750 2850 50  0001 C CNN
@@ -763,10 +763,10 @@ F 3 "~" H 9750 2850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 5FB50B29
 P 9950 3050
-F 0 "C?" H 10000 3150 50  0000 L CNN
+F 0 "C3" H 10000 3150 50  0000 L CNN
 F 1 "1u" H 10000 2950 50  0000 L CNN
 F 2 "SquantorRcl:C_0402" H 9988 2900 50  0001 C CNN
 F 3 "~" H 9950 3050 50  0001 C CNN
@@ -774,10 +774,10 @@ F 3 "~" H 9950 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C5
 U 1 1 5FB516C9
 P 10150 3050
-F 0 "C?" H 10200 3150 50  0000 L CNN
+F 0 "C5" H 10200 3150 50  0000 L CNN
 F 1 "100n" H 10200 2950 50  0000 L CNN
 F 2 "SquantorRcl:C_0402" H 10188 2900 50  0001 C CNN
 F 3 "~" H 10150 3050 50  0001 C CNN
@@ -817,10 +817,10 @@ Wire Wire Line
 Text Label 9550 3250 2    50   ~ 0
 VSS
 $Comp
-L Device:Ferrite_Bead FB?
+L Device:Ferrite_Bead FB3
 U 1 1 5FB7AD79
 P 9750 3350
-F 0 "FB?" V 9700 3250 50  0000 C CNN
+F 0 "FB3" V 9700 3250 50  0000 C CNN
 F 1 "600" V 9800 3450 50  0000 C CNN
 F 2 "SquantorRcl:L_0402" V 9680 3350 50  0001 C CNN
 F 3 "~" H 9750 3350 50  0001 C CNN
@@ -830,10 +830,10 @@ $EndComp
 Text Label 9550 3350 2    50   ~ 0
 VDD
 $Comp
-L Device:Ferrite_Bead FB?
+L Device:Ferrite_Bead FB4
 U 1 1 5FB7B71C
 P 9750 3750
-F 0 "FB?" V 9700 3650 50  0000 C CNN
+F 0 "FB4" V 9700 3650 50  0000 C CNN
 F 1 "600" V 9800 3850 50  0000 C CNN
 F 2 "SquantorRcl:L_0402" V 9680 3750 50  0001 C CNN
 F 3 "~" H 9750 3750 50  0001 C CNN
@@ -841,10 +841,10 @@ F 3 "~" H 9750 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C4
 U 1 1 5FB7BD2C
 P 9950 3550
-F 0 "C?" H 10000 3650 50  0000 L CNN
+F 0 "C4" H 10000 3650 50  0000 L CNN
 F 1 "1u" H 10000 3450 50  0000 L CNN
 F 2 "SquantorRcl:C_0402" H 9988 3400 50  0001 C CNN
 F 3 "~" H 9950 3550 50  0001 C CNN
@@ -852,10 +852,10 @@ F 3 "~" H 9950 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C6
 U 1 1 5FB7D33F
 P 10150 3550
-F 0 "C?" H 10200 3650 50  0000 L CNN
+F 0 "C6" H 10200 3650 50  0000 L CNN
 F 1 "100n" H 10200 3450 50  0000 L CNN
 F 2 "SquantorRcl:C_0402" H 10188 3400 50  0001 C CNN
 F 3 "~" H 10150 3550 50  0001 C CNN
