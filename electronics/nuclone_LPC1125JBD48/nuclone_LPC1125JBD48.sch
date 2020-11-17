@@ -759,9 +759,9 @@ Wire Wire Line
 	10350 3500 10400 3500
 Wire Wire Line
 	10400 3500 10400 3450
-Text Label 7400 4800 2    50   ~ 0
-PIO2_6
 Text Label 7400 4200 2    50   ~ 0
+PIO2_6
+Text Label 7400 3600 2    50   ~ 0
 PIO2_0
 Text Label 950  1100 2    50   ~ 0
 PIO2_6
@@ -796,15 +796,15 @@ Text Label 7400 1000 2    50   ~ 0
 PIO0_2
 Text Label 1950 1300 0    50   ~ 0
 PIO0_2
-Text Label 7400 4900 2    50   ~ 0
+Text Label 7400 4300 2    50   ~ 0
 PIO2_7
 Text Label 950  1400 2    50   ~ 0
 PIO2_7
-Text Label 7400 5000 2    50   ~ 0
+Text Label 7400 4400 2    50   ~ 0
 PIO2_8
 Text Label 1950 1400 0    50   ~ 0
 PIO2_8
-Text Label 7400 4300 2    50   ~ 0
+Text Label 7400 3700 2    50   ~ 0
 PIO2_1
 Text Label 950  1500 2    50   ~ 0
 PIO2_1
@@ -824,15 +824,15 @@ Text Label 7400 3100 2    50   ~ 0
 PIO1_9
 Text Label 950  1700 2    50   ~ 0
 PIO1_9
-Text Label 7400 3800 2    50   ~ 0
+Text Label 7400 5000 2    50   ~ 0
 PIO3_4
 Text Label 1950 1700 0    50   ~ 0
 PIO3_4
-Text Label 7400 4600 2    50   ~ 0
+Text Label 7400 4000 2    50   ~ 0
 PIO2_4
 Text Label 950  1900 2    50   ~ 0
 PIO2_4
-Text Label 7400 4700 2    50   ~ 0
+Text Label 7400 4100 2    50   ~ 0
 PIO2_5
 Text Label 1950 1900 0    50   ~ 0
 PIO2_5
@@ -846,7 +846,7 @@ Text Label 7400 1500 2    50   ~ 0
 PIO0_7
 Text Label 950  2100 2    50   ~ 0
 PIO0_7
-Text Label 7400 5100 2    50   ~ 0
+Text Label 7400 4500 2    50   ~ 0
 PIO2_9
 Text Label 1950 2100 0    50   ~ 0
 PIO2_9
@@ -858,7 +858,7 @@ Text Label 1950 2300 0    50   ~ 0
 GPIO_23
 Text Label 1950 2200 0    50   ~ 0
 GPIO_21
-Text Label 7400 3700 2    50   ~ 0
+Text Label 7400 4900 2    50   ~ 0
 PIO3_3
 Text Label 2700 1000 2    50   ~ 0
 PIO3_3
@@ -874,15 +874,13 @@ Text Label 7400 2700 2    50   ~ 0
 PIO1_5
 Text Label 3700 1100 0    50   ~ 0
 PIO1_5
-Text Label 2700 1200 2    50   ~ 0
-PIO3_2
 Text Label 7400 3300 2    50   ~ 0
 PIO1_11
-Text Label 3700 1200 0    50   ~ 0
+Text Label 2700 1200 2    50   ~ 0
 PIO1_11
 Text Label 7400 2600 2    50   ~ 0
 PIO1_4
-Text Label 2700 1300 2    50   ~ 0
+Text Label 3700 1200 0    50   ~ 0
 PIO1_4
 Text Label 7400 2400 2    50   ~ 0
 PIO1_2
@@ -899,37 +897,31 @@ F 3 "" H 9900 4250 50  0001 C CNN
 $EndComp
 Text Label 9700 4250 2    50   ~ 0
 PIO1_3
-Text Label 3700 1300 0    50   ~ 0
+Text Label 2700 1300 2    50   ~ 0
 PIO1_3
-Text Label 7400 4500 2    50   ~ 0
+Text Label 7400 3900 2    50   ~ 0
 PIO2_3
+Text Label 3700 1300 0    50   ~ 0
+PIO2_3
+Text Label 7400 4800 2    50   ~ 0
+PIO3_0
 Text Label 2700 1400 2    50   ~ 0
-PIO2_3
+PIO3_0
 Text Label 3700 1400 0    50   ~ 0
-PIO3_1
-Text Label 7400 3600 2    50   ~ 0
-PIO3_0
-Text Label 2700 1500 2    50   ~ 0
-PIO3_0
-Text Label 3700 1500 0    50   ~ 0
 PIO1_2
 Text Label 7400 2300 2    50   ~ 0
 PIO1_1
-Text Label 2700 1600 2    50   ~ 0
+Text Label 2700 1500 2    50   ~ 0
 PIO1_1
 Text Label 7400 2200 2    50   ~ 0
 PIO1_0
-Text Label 3700 1600 0    50   ~ 0
+Text Label 3700 1500 0    50   ~ 0
 PIO1_0
 Text Label 7400 1900 2    50   ~ 0
 PIO0_11
-Text Label 2700 1700 2    50   ~ 0
-PIO0_11
-Text Label 3700 1700 0    50   ~ 0
-PIO2_11
 Text Label 7400 3200 2    50   ~ 0
 PIO1_10
-Text Label 2700 1900 2    50   ~ 0
+Text Label 3700 1600 0    50   ~ 0
 PIO1_10
 $Comp
 L SquantorSpecial:Solderjumper_2way_noconn JP2
@@ -944,15 +936,15 @@ F 3 "" H 9900 4500 50  0001 C CNN
 $EndComp
 Text Label 9700 4500 2    50   ~ 0
 PIO0_10
-Text Label 3700 1900 0    50   ~ 0
+Text Label 2700 1700 2    50   ~ 0
 PIO0_10
 Text Label 7400 1700 2    50   ~ 0
 PIO0_9
-Text Label 2700 2000 2    50   ~ 0
+Text Label 3700 1700 0    50   ~ 0
 PIO0_9
 Text Label 7400 1600 2    50   ~ 0
 PIO0_8
-Text Label 3700 2000 0    50   ~ 0
+Text Label 2700 1900 2    50   ~ 0
 PIO0_8
 NoConn ~ 950  2600
 NoConn ~ 950  2500
@@ -974,12 +966,10 @@ NoConn ~ 3700 2500
 NoConn ~ 3700 2400
 NoConn ~ 3700 2300
 NoConn ~ 3700 2200
-Text Label 7400 4400 2    50   ~ 0
+Text Label 7400 3800 2    50   ~ 0
 PIO2_2
-Text Label 2700 2100 2    50   ~ 0
+Text Label 3700 1900 0    50   ~ 0
 PIO2_2
-Text Label 3700 2100 0    50   ~ 0
-PIO2_10
 Wire Wire Line
 	10850 3450 10850 3500
 Wire Wire Line
@@ -1090,26 +1080,26 @@ VDD
 $Comp
 L SquantorNxp:LPC1125FBD48_303 U2
 U 4 1 5FB90C7D
-P 8300 4650
-F 0 "U2" H 7500 5250 50  0000 L CNN
-F 1 "LPC1125FBD48_303" H 8500 4050 50  0000 L CNN
-F 2 "SquantorIC:SOT313-2-NXP" H 7350 4550 50  0001 C CNN
-F 3 "" H 7350 4550 50  0001 C CNN
-	4    8300 4650
+P 8300 4050
+F 0 "U2" H 7500 4650 50  0000 L CNN
+F 1 "LPC1125FBD48_303" H 8500 3450 50  0000 L CNN
+F 2 "SquantorIC:SOT313-2-NXP" H 7350 3950 50  0001 C CNN
+F 3 "" H 7350 3950 50  0001 C CNN
+	4    8300 4050
 	1    0    0    -1  
 $EndComp
 $Comp
 L SquantorNxp:LPC1125FBD48_303 U2
 U 5 1 5FB9E8A1
-P 8250 3750
-F 0 "U2" H 7550 4050 50  0000 C CNN
-F 1 "LPC1125FBD48_303" H 8650 3450 50  0000 C CNN
-F 2 "SquantorIC:SOT313-2-NXP" H 7300 3650 50  0001 C CNN
-F 3 "" H 7300 3650 50  0001 C CNN
-	5    8250 3750
+P 8250 4950
+F 0 "U2" H 7550 5250 50  0000 C CNN
+F 1 "LPC1125FBD48_303" H 8650 4650 50  0000 C CNN
+F 2 "SquantorIC:SOT313-2-NXP" H 7300 4850 50  0001 C CNN
+F 3 "" H 7300 4850 50  0001 C CNN
+	5    8250 4950
 	1    0    0    -1  
 $EndComp
-Text Label 7400 3900 2    50   ~ 0
+Text Label 7400 5100 2    50   ~ 0
 PIO3_5
 $Comp
 L Device:Ferrite_Bead FB4
@@ -1315,4 +1305,18 @@ Text Notes 650  5600 0    50   ~ 0
 Check GPIO ordering to connector
 Text Notes 700  5700 0    50   ~ 0
 rename jumpers
+Text Label 2700 1600 2    50   ~ 0
+PIO0_11
+Text Label 3700 2100 0    50   ~ 0
+GPIO_40
+Text Label 3700 2000 0    50   ~ 0
+GPIO_42
+Text Label 2700 2100 2    50   ~ 0
+GPIO_41
+Text Label 2700 2000 2    50   ~ 0
+GPIO_43
+NoConn ~ 3700 2100
+NoConn ~ 3700 2000
+NoConn ~ 2700 2100
+NoConn ~ 2700 2000
 $EndSCHEMATC
