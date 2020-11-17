@@ -1282,10 +1282,6 @@ NoConn ~ 2700 2100
 NoConn ~ 2700 2000
 Text Notes 9850 5250 0    50   ~ 0
 LPC1125 controller + support
-Text Notes 4500 6950 0    50   ~ 0
-Copy schematic of the LPCXpresso board
-Text Notes 4500 7050 0    50   ~ 0
-Add sections for all schematic parts
 Wire Notes Line
 	7050 5300 7050 600 
 Wire Notes Line
@@ -1376,10 +1372,10 @@ Wire Wire Line
 Wire Wire Line
 	1350 5450 1400 5450
 $Comp
-L Device:C C?
+L Device:C C14
 U 1 1 5FE233AA
 P 2000 5450
-F 0 "C?" V 2050 5550 50  0000 C CNN
+F 0 "C14" V 2050 5550 50  0000 C CNN
 F 1 "10n" V 1950 5350 50  0000 C CNN
 F 2 "SquantorRcl:C_0603" H 2038 5300 50  0001 C CNN
 F 3 "~" H 2000 5450 50  0001 C CNN
