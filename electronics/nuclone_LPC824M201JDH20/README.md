@@ -4,10 +4,7 @@ Small nuclone development kit for the [LPC824M201JDH20](https://www.nxp.com/prod
 TODO
 ## TODO's
 Still some things need to be done:
-* schematic entry 
-* PCB layout
-* Review with one night in between
-* Produce at [OSHPARK](https://oshpark.com/)
+* Produce at [JLCPCB](https://jlcpcb.com/)
 * Assemble
 * Test & characterise
 * update Readme.md with pictures and BOM
