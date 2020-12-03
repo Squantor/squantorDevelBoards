@@ -93,7 +93,7 @@ L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
 P 950 7250
 F 0 "N2" H 900 7350 60  0000 L CNN
-F 1 "20201202" H 700 7250 60  0000 L CNN
+F 1 "20201203" H 700 7250 60  0000 L CNN
 F 2 "SquantorLabels:Label_version" H 950 7250 60  0001 C CNN
 F 3 "" H 950 7250 60  0001 C CNN
 	1    950  7250
@@ -827,7 +827,7 @@ F 3 "~" H 9550 3200 50  0001 C CNN
 	1    9550 3200
 	0    1    1    0   
 $EndComp
-Text Label 9350 3200 2    50   ~ 0
+Text Label 8950 3200 2    50   ~ 0
 VDD
 $Comp
 L Device:Ferrite_Bead FB4
@@ -864,7 +864,7 @@ F 3 "~" H 9950 3400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9350 3200 9400 3200
-Text Label 9350 3600 2    50   ~ 0
+Text Label 8950 3600 2    50   ~ 0
 VSS
 Wire Wire Line
 	9350 3600 9400 3600
@@ -1067,4 +1067,26 @@ Wire Wire Line
 Connection ~ 10150 3200
 Wire Wire Line
 	10150 3200 10200 3200
+$Comp
+L SquantorSpecial:Solderjumper_2way_12conn JP6
+U 1 1 5FC9B0E9
+P 9150 3200
+F 0 "JP6" H 9150 3350 50  0000 C CNN
+F 1 "VREFP" H 9150 3050 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_conn" H 9150 3200 50  0001 C CNN
+F 3 "" H 9150 3200 50  0001 C CNN
+	1    9150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorSpecial:Solderjumper_2way_12conn JP7
+U 1 1 5FCA98BF
+P 9150 3600
+F 0 "JP7" H 9150 3750 50  0000 C CNN
+F 1 "VREFN" H 9150 3450 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_conn" H 9150 3600 50  0001 C CNN
+F 3 "" H 9150 3600 50  0001 C CNN
+	1    9150 3600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
