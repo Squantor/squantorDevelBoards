@@ -93,7 +93,7 @@ L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
 P 950 7200
 F 0 "N2" H 900 7300 60  0000 L CNN
-F 1 "20201210" H 700 7200 60  0000 L CNN
+F 1 "20201214" H 700 7200 60  0000 L CNN
 F 2 "SquantorLabels:Label_version" H 950 7200 60  0001 C CNN
 F 3 "" H 950 7200 60  0001 C CNN
 	1    950  7200
@@ -1203,8 +1203,6 @@ Text Label 7500 1300 2    50   ~ 0
 RESET
 Text Label 9700 3000 0    50   ~ 0
 TCK
-Text Notes 4500 7100 0    50   ~ 0
-optimize MCU block size
 Text Label 9300 3700 2    50   ~ 0
 PIO0_8_I
 Text Label 9300 4200 2    50   ~ 0
