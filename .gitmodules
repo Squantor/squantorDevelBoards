@@ -22,3 +22,6 @@
 [submodule "software/libMcuLL"]
 	path = software/libMcuLL
 	url = https://github.com/Squantor/libMcuLL.git
+[submodule "software/libEmbedded"]
+	path = software/libEmbedded
+	url = https://github.com/Squantor/libEmbedded.git
