@@ -19,3 +19,6 @@
 [submodule "software/squantorMinUnitC"]
 	path = software/squantorMinUnitC
 	url = https://github.com/Squantor/squantorMinUnitC.git
+[submodule "software/libMcuLL"]
+	path = software/libMcuLL
+	url = https://github.com/Squantor/libMcuLL.git
