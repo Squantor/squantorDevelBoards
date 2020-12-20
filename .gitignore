@@ -46,3 +46,6 @@ bin/
 #logs
 *.log
 
+# doxygen output
+documentation/
+
