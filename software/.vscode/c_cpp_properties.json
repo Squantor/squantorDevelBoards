@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/nuclone_LPC824M201JHI33_expansion_serial_flash/inc",
+                "${workspaceFolder}/libMcuLL/inc/",
+                "${workspaceFolder}/squantorLibC/inc/",
+                "${workspaceFolder}/squantorLibEmbeddedC/inc/",
+                "${workspaceFolder}/libEmbedded/inc/"
+            ],
+            "defines": [
+                "MCU_LPC824M201JHI33",
+                "DEBUG"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": false,
+                "path": [
+                    "${workspaceFolder}/**"
+                ]
+            },
+            "compilerPath": "/home/abilos/programs/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
