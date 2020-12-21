@@ -36,19 +36,20 @@ void boardInit(void)
     IoconPinSetMode(LPC_IOCON, IOCON_XTAL_IN, PIN_MODE_INACTIVE);
     IoconPinSetMode(LPC_IOCON, IOCON_XTAL_OUT, PIN_MODE_INACTIVE);
     
-    IoconPinSetMode(LPC_IOCON, IOCON_ZEROCROSS_DET, PIN_MODE_INACTIVE);
-    IoconPinSetHysteresis(LPC_IOCON, IOCON_ZEROCROSS_DET, true);
-    IoconPinSetMode(LPC_IOCON, IOCON_SSR_CTRL, PIN_MODE_INACTIVE);
-    GpioSetPinState(LPC_GPIO_PORT, 0, PIN_SSR_CTRL, false);
-    GpioSetPinDIROutput(LPC_GPIO_PORT, 0, PIN_SSR_CTRL);
+    IoconPinSetMode(LPC_IOCON, IOCON_LED_ALIVE, PIN_MODE_INACTIVE);
+    GpioSetPinState(LPC_GPIO_PORT, 0, PIN_LED_ALIVE, false);
+    GpioSetPinDIROutput(LPC_GPIO_PORT, 0, PIN_LED_ALIVE);
+
+    IoconPinSetMode(LPC_IOCON, IOCON_LED_ACT, PIN_MODE_INACTIVE);
+    GpioSetPinState(LPC_GPIO_PORT, 0, PIN_LED_ACT, false);
+    GpioSetPinDIROutput(LPC_GPIO_PORT, 0, PIN_LED_ACT);
 
     ClockDisablePeriphClock(SYSCTL_CLOCK_SWM);
 
-    // setup system clocks
+    // system clock setup to use 12MHz*5/2=30MHz
     ClockSetPLLBypass(false, false);
-    //SysctlPowerUp(SYSCTL_SLPWAKE_SYSOSC_PD);
-    ClockSetSystemPLLSource(SYSCTL_PLLCLKSRC_IRC);
-    //ClockSetSystemPLLSource(SYSCTL_PLLCLKSRC_SYSOSC);
+    SysctlPowerUp(SYSCTL_SLPWAKE_SYSOSC_PD);
+    ClockSetSystemPLLSource(SYSCTL_PLLCLKSRC_SYSOSC);
     FmcSetFlashAccess(FLASHTIM_30MHZ_CPU);
     SysctlPowerDown(SYSCTL_SLPWAKE_SYSPLL_PD);
     ClockSetupSystemPLL(4, 1);

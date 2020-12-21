@@ -32,7 +32,7 @@ include libEmbedded/libEmbedded.mk
 # project settings
 MCU = LPC824M201JHI33
 TARGET = MCU
-BOARD = dummy_board
+BOARD = board
 
 # project sources
 FILES += $(PROJECT)/src/main.cpp \
