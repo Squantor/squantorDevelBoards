@@ -30,13 +30,17 @@ SOFTWARE.
 #include <mcu_ll.h>
 #include <time_interval.hpp>
 
-volatile int var;
+volatile int var = 0;
 
 int main()
 {
     boardInit();
-    timeInterval statusInterval(SEC2TICKS(1));
+    timeInterval aliveInterval(SEC2TICKS(1));
     while (1) {
         var ^= 0x55;
+        if(aliveInterval.elapsed())
+        {
+            var++;
+        }
     }
 }

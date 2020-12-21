@@ -44,8 +44,8 @@ SOFTWARE.
 
 #define IOCON_LED_ALIVE     IOCON_PIO12
 #define PIN_LED_ALIVE       (12u)
-#define IOCON_LED_ACT       IOCON_PIO23
-#define PIN_LED_ACT         (23u)
+#define IOCON_LED_ACT       IOCON_PIO13
+#define PIN_LED_ACT         (13u)
 
 void boardInit(void);
 

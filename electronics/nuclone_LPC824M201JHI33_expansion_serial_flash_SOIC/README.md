@@ -13,7 +13,7 @@ This applies to a project that has a embedded software component. Describe what 
 * LPC824 PIO21 is connected to serial flash CE via 100Ohm series resistor
 * LPC824 PIO22 is connected to serial flash CLK via 100Ohm series resistor
 * LPC824 PIO12 is connected to LED0 via 4.7KOhm resistor, this is used as alive blinky indicator
-* LPC824 PIO23 is connected to LED1 via 4.7KOhm resistor, this is used as an activity indicator
+* LPC824 PIO13 is connected to LED1 via 4.7KOhm resistor, this is used as an activity indicator
 ## TODO's
 Still some things need to be done:
 * Produce at [OSHPARK](https://oshpark.com/)
