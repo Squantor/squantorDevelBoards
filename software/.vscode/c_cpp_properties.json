@@ -5,6 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/nuclone_LPC824M201JHI33_expansion_serial_flash/inc",
                 "${workspaceFolder}/libMcuLL/inc/",
+                "${workspaceFolder}/common/inc/",
                 "${workspaceFolder}/squantorLibC/inc/",
                 "${workspaceFolder}/squantorLibEmbeddedC/inc/",
                 "${workspaceFolder}/libEmbedded/inc/"

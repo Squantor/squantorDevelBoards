@@ -36,8 +36,10 @@ BOARD = dummy_board
 
 # project sources
 FILES += $(PROJECT)/src/main.cpp \
-$(PROJECT)/src/$(BOARD).cpp
+$(PROJECT)/src/$(BOARD).cpp \
+common/src/cortexM_systick.c \
+common/src/time_interval.cpp
 
-INCLUDES += -IlibMcuLL/inc -I$(PROJECT)/inc
+INCLUDES += -IlibMcuLL/inc -IsquantorLibC/inc -Icommon/inc  -I$(PROJECT)/inc
 
 

@@ -32,6 +32,21 @@ SOFTWARE.
 #define CLOCK_AHB           (30000000u)
 #define CLOCK_MAIN          (60000000u)
 
+#define TICKS_PER_S         (100u)
+
+#define IOCON_XTAL_IN       IOCON_PIO8
+#define IOCON_XTAL_OUT      IOCON_PIO9
+
+#define IOCON_UART_TX       IOCON_PIO25
+#define PIN_UART_TX         (25u)
+#define IOCON_UART_RX       IOCON_PIO24
+#define PIN_UART_RX         (24u)
+
+#define IOCON_LED_ALIVE     IOCON_PIO12
+#define PIN_LED_ALIVE       (12u)
+#define IOCON_LED_ACT       IOCON_PIO23
+#define PIN_LED_ACT         (23u)
+
 void boardInit(void);
 
 #endif

@@ -28,12 +28,14 @@ SOFTWARE.
  */
 #include <board.hpp>
 #include <mcu_ll.h>
+#include <time_interval.hpp>
 
 volatile int var;
 
 int main()
 {
     boardInit();
+    timeInterval statusInterval(SEC2TICKS(1));
     while (1) {
         var ^= 0x55;
     }
