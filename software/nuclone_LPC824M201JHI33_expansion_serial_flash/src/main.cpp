@@ -41,6 +41,7 @@ int main()
         if(aliveInterval.elapsed())
         {
             var++;
+            GpioSetPinToggle(LPC_GPIO_PORT, 0, PIN_LED_ACT);
         }
     }
 }
