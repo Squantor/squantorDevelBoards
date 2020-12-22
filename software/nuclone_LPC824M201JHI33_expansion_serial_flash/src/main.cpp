@@ -29,19 +29,19 @@ SOFTWARE.
 #include <board.hpp>
 #include <mcu_ll.h>
 #include <time_interval.hpp>
-
-volatile int var = 0;
+#include <stream_uart.hpp>
+#include <print.h>
 
 int main()
 {
     boardInit();
+    dsPuts(&streamUart, "Serial flash exploration\n");
     timeInterval aliveInterval(SEC2TICKS(1));
     while (1) {
-        var ^= 0x55;
         if(aliveInterval.elapsed())
         {
-            var++;
             GpioSetPinToggle(LPC_GPIO_PORT, 0, PIN_LED_ACT);
+            dsPuts(&streamUart, "Blink\n");
         }
     }
 }

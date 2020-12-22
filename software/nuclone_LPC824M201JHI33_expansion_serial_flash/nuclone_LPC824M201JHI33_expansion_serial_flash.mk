@@ -38,7 +38,8 @@ BOARD = board
 FILES += $(PROJECT)/src/main.cpp \
 $(PROJECT)/src/$(BOARD).cpp \
 common/src/cortexM_systick.c \
-common/src/time_interval.cpp
+common/src/time_interval.cpp \
+common/src/stream_uart.cpp
 
 INCLUDES += -IlibMcuLL/inc -IsquantorLibC/inc -Icommon/inc  -I$(PROJECT)/inc
 

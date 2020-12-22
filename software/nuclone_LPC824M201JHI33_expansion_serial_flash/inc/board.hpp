@@ -47,6 +47,9 @@ SOFTWARE.
 #define IOCON_LED_ACT       IOCON_PIO13
 #define PIN_LED_ACT         (13u)
 
+#define UART_DEBUG          LPC_USART0
+#define UART_BAUD_RATE      (115200u)
+
 void boardInit(void);
 
 #endif

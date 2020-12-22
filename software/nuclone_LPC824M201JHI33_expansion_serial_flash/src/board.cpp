@@ -36,6 +36,9 @@ void boardInit(void)
     IoconPinSetMode(LPC_IOCON, IOCON_XTAL_IN, PIN_MODE_INACTIVE);
     IoconPinSetMode(LPC_IOCON, IOCON_XTAL_OUT, PIN_MODE_INACTIVE);
     
+    SwmMovablePinAssign(SWM_U0_TXD_O, PIN_UART_TX);
+    SwmMovablePinAssign(SWM_U0_RXD_I, PIN_UART_RX);
+
     IoconPinSetMode(LPC_IOCON, IOCON_LED_ALIVE, PIN_MODE_INACTIVE);
     GpioSetPinState(LPC_GPIO_PORT, 0, PIN_LED_ALIVE, false);
     GpioSetPinDIROutput(LPC_GPIO_PORT, 0, PIN_LED_ALIVE);
@@ -57,6 +60,14 @@ void boardInit(void)
     while (!ClockIsSystemPLLLocked());
     ClockSetSysClockDiv(2);
     ClockSetMainClockSource(SYSCTL_MAINCLKSRC_PLLOUT);
+
+    // setup UART
+    UartInit(UART_DEBUG);
+    UartConfigData(UART_DEBUG, UART_CFG_DATALEN_8 | UART_CFG_PARITY_NONE | UART_CFG_STOPLEN_1);
+    ClockSetUSARTNBaseClockRate((UART_BAUD_RATE * 16), true);
+    UartSetBaud(UART_DEBUG, UART_BAUD_RATE);
+    UartEnable(UART_DEBUG);
+    UartTXEnable(UART_DEBUG);
 
     SysTick_Config(CLOCK_AHB / TICKS_PER_S);
 }

@@ -27,7 +27,7 @@ Datastream that points to the user facing UART interface
 
 #include <results.h>
 #include <stream_uart.hpp>
-#include <PPG_sensor_V100.hpp>
+#include <board.hpp>
 #include <mcu_ll.h>
 
 const static char streamUartName[] = "uartStream";
