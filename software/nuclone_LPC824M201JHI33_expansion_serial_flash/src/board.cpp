@@ -39,6 +39,17 @@ void boardInit(void)
     SwmMovablePinAssign(SWM_U0_TXD_O, PIN_UART_TX);
     SwmMovablePinAssign(SWM_U0_RXD_I, PIN_UART_RX);
 
+    IoconPinSetMode(LPC_IOCON, IOCON_SPI_FLASH_SIO0, PIN_MODE_INACTIVE);
+    IoconPinSetMode(LPC_IOCON, IOCON_SPI_FLASH_SIO1, PIN_MODE_INACTIVE);
+    IoconPinSetMode(LPC_IOCON, IOCON_SPI_FLASH_SIO2, PIN_MODE_INACTIVE);
+    IoconPinSetMode(LPC_IOCON, IOCON_SPI_FLASH_SIO3, PIN_MODE_INACTIVE);
+    IoconPinSetMode(LPC_IOCON, IOCON_SPI_FLASH_CE, PIN_MODE_INACTIVE);
+    IoconPinSetMode(LPC_IOCON, IOCON_SPI_FLASH_SCK, PIN_MODE_INACTIVE);
+    SwmMovablePinAssign(SWM_SPI0_MOSI_IO, PIN_SPI_FLASH_SIO0);
+    SwmMovablePinAssign(SWM_SPI0_MISO_IO, PIN_SPI_FLASH_SIO1);
+    SwmMovablePinAssign(SWM_SPI0_SCK_IO, PIN_SPI_FLASH_SCK);
+    SwmMovablePinAssign(SWM_SPI0_SSEL0_IO, PIN_SPI_FLASH_CE);
+
     IoconPinSetMode(LPC_IOCON, IOCON_LED_ALIVE, PIN_MODE_INACTIVE);
     GpioSetPinState(LPC_GPIO_PORT, 0, PIN_LED_ALIVE, false);
     GpioSetPinDIROutput(LPC_GPIO_PORT, 0, PIN_LED_ALIVE);
@@ -68,6 +79,8 @@ void boardInit(void)
     UartSetBaud(UART_DEBUG, UART_BAUD_RATE);
     UartEnable(UART_DEBUG);
     UartTXEnable(UART_DEBUG);
+
+    // setup SPI
 
     SysTick_Config(CLOCK_AHB / TICKS_PER_S);
 }
