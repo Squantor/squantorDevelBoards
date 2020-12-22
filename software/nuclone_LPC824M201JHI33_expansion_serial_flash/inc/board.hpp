@@ -47,6 +47,20 @@ SOFTWARE.
 #define IOCON_LED_ACT       IOCON_PIO13
 #define PIN_LED_ACT         (13u)
 
+#define IOCON_SPI_FLASH_SIO0    IOCON_PIO17
+#define IOCON_SPI_FLASH_SIO1    IOCON_PIO18
+#define IOCON_SPI_FLASH_SIO2    IOCON_PIO19
+#define IOCON_SPI_FLASH_SIO3    IOCON_PIO20
+#define IOCON_SPI_FLASH_CE      IOCON_PIO21
+#define IOCON_SPI_FLASH_SCK     IOCON_PIO22
+#define PIN_SPI_FLASH_SIO0      (17u)
+#define PIN_SPI_FLASH_SIO1      (18u)
+#define PIN_SPI_FLASH_SIO2      (19u)
+#define PIN_SPI_FLASH_SIO3      (20u)
+#define PIN_SPI_FLASH_CE        (21u)
+#define PIN_SPI_FLASH_SCK       (22u)
+
+
 #define UART_DEBUG          LPC_USART0
 #define UART_BAUD_RATE      (115200u)
 
