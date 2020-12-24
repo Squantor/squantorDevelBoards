@@ -42,7 +42,7 @@ int main()
         if(aliveInterval.elapsed())
         {
             GpioSetPinToggle(LPC_GPIO_PORT, 0, PIN_LED_ACT);
-            SpiWriteTXDataAndCtrl(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0) | SPI_TXDATCTL_EOT, spiData);
+            SpiWriteTXDataAndCtrl(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0) | SPI_TXDATCTL_EOT | SPI_TXDATCTL_FLEN(15), spiData);
             // wait until transfer completed
             while(!(SpiGetStatus(LPC_SPI0) & SPI_STAT_MSTIDLE))
                 ;
