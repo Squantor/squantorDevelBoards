@@ -32,9 +32,46 @@ SOFTWARE.
 #include <stream_uart.hpp>
 #include <print.h>
 
+
+const uint8_t spiFlashJedecId[] = {0x9F, 0x00, 0x00, 0x00};
+
+
+void spiTxRxDeviceSingle(LPC_SPI_T *pSPI, const uint8_t &txBuf, uint8_t &rxBuf)
+{
+    // wait until we can write to TX fifo
+    while(!(SpiGetStatus(pSPI) & SPI_STAT_TXRDY))
+        ;
+    SpiWriteTXData(pSPI, txBuf);
+    // wait until we have data in RX fifo
+    while(!(SpiGetStatus(pSPI) & SPI_STAT_RXRDY))
+        ;
+    rxBuf = (uint8_t) SpiReadRXData(pSPI);
+}
+
+// spi transmit/receive a block
+void spiTxRxDeviceBlock(LPC_SPI_T *pSPI, uint32_t TxSlaveSel, const uint8_t *txBuf, uint8_t *rxBuf, const uint8_t size)
+{
+    int bufIndex = 0;
+    if(size < 1)
+        goto done;
+    if(size < 2)
+        goto lastByte;
+    while(bufIndex < size-1)
+    {
+        spiTxctrl(pSPI, TxSlaveSel | SPI_TXCTL_FLEN(8));
+        spiTxRxDeviceSingle(pSPI, txBuf[bufIndex], rxBuf[bufIndex]);        
+        bufIndex++;
+    }
+
+    lastByte:
+        spiTxctrl(pSPI, TxSlaveSel | SPI_TXDATCTL_EOT | SPI_TXCTL_FLEN(8));
+        spiTxRxDeviceSingle(pSPI, txBuf[bufIndex], rxBuf[bufIndex]);
+    done:;
+}
+
 int main()
 {
-    uint16_t spiData = 0;
+    uint8_t spiResult[4];
     boardInit();
     dsPuts(&streamUart, "Serial flash exploration\n");
     timeInterval aliveInterval(SEC2TICKS(1));
@@ -42,16 +79,8 @@ int main()
         if(aliveInterval.elapsed())
         {
             GpioSetPinToggle(LPC_GPIO_PORT, 0, PIN_LED_ACT);
-            SpiWriteTXDataAndCtrl(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0) | SPI_TXDATCTL_EOT | SPI_TXDATCTL_FLEN(15), spiData);
-            // wait until transfer completed
-            while(!(SpiGetStatus(LPC_SPI0) & SPI_STAT_MSTIDLE))
-                ;
-            dsPuts(&streamUart, "SPI data: ");
-            printHexU32(&streamUart, SpiReadRawRXFifo(LPC_SPI0));
-            dsPuts(&streamUart, " SPI status: ");
-            printHexU32(&streamUart, SpiGetStatus(LPC_SPI0));
+            spiTxRxDeviceBlock(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0), spiFlashJedecId, spiResult, sizeof(spiFlashJedecId));
             dsPuts(&streamUart, "\n");
-            spiData++;
         }
     }
 }
