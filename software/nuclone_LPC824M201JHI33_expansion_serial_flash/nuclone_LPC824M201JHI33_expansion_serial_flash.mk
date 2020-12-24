@@ -28,6 +28,7 @@
 include squantorLibC/squantorLibC.mk
 include squantorLibEmbeddedC/squantorLibEmbeddedC.mk
 include libEmbedded/libEmbedded.mk
+include libMcuLL/libMcuLL.mk
 
 # project settings
 MCU = LPC824M201JHI33
@@ -41,6 +42,6 @@ common/src/cortexM_systick.c \
 common/src/time_interval.cpp \
 common/src/stream_uart.cpp
 
-INCLUDES += -IlibMcuLL/inc -IsquantorLibC/inc -Icommon/inc  -I$(PROJECT)/inc
+INCLUDES += -Icommon/inc  -I$(PROJECT)/inc
 
 
