@@ -81,6 +81,11 @@ void boardInit(void)
     UartTXEnable(UART_DEBUG);
 
     // setup SPI
+    SpiInit(LPC_SPI0);
+    SpiSetCFGRegBits(LPC_SPI0, SPI_CFG_SPI_EN | SPI_CFG_MASTER_EN | SPI_CFG_MSB_FIRST_EN 
+        | SPI_CFG_CPHA0 | SPI_CFG_CPOL0 | SPI_CFG_LOOP_EN);
+
+    
 
     SysTick_Config(CLOCK_AHB / TICKS_PER_S);
 }

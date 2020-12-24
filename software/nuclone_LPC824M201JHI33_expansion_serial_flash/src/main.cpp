@@ -41,7 +41,9 @@ int main()
         if(aliveInterval.elapsed())
         {
             GpioSetPinToggle(LPC_GPIO_PORT, 0, PIN_LED_ACT);
-            dsPuts(&streamUart, "Blink\n");
+            dsPuts(&streamUart, "SPI status: ");
+            printHexU32(&streamUart, SpiGetStatus(LPC_SPI0));
+            dsPuts(&streamUart, "\n");
         }
     }
 }
