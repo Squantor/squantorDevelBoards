@@ -34,6 +34,7 @@ SOFTWARE.
 
 int main()
 {
+    uint16_t spiData = 0;
     boardInit();
     dsPuts(&streamUart, "Serial flash exploration\n");
     timeInterval aliveInterval(SEC2TICKS(1));
@@ -41,9 +42,16 @@ int main()
         if(aliveInterval.elapsed())
         {
             GpioSetPinToggle(LPC_GPIO_PORT, 0, PIN_LED_ACT);
-            dsPuts(&streamUart, "SPI status: ");
+            SpiWriteTXDataAndCtrl(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0) | SPI_TXDATCTL_EOT, spiData);
+            // wait until transfer completed
+            while(!(SpiGetStatus(LPC_SPI0) & SPI_STAT_MSTIDLE))
+                ;
+            dsPuts(&streamUart, "SPI data: ");
+            printHexU32(&streamUart, SpiReadRXData(LPC_SPI0));
+            dsPuts(&streamUart, " SPI status: ");
             printHexU32(&streamUart, SpiGetStatus(LPC_SPI0));
             dsPuts(&streamUart, "\n");
+            spiData++;
         }
     }
 }
