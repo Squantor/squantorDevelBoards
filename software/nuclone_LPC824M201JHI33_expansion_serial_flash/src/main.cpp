@@ -47,7 +47,7 @@ int main()
             while(!(SpiGetStatus(LPC_SPI0) & SPI_STAT_MSTIDLE))
                 ;
             dsPuts(&streamUart, "SPI data: ");
-            printHexU32(&streamUart, SpiReadRXData(LPC_SPI0));
+            printHexU32(&streamUart, SpiReadRawRXFifo(LPC_SPI0));
             dsPuts(&streamUart, " SPI status: ");
             printHexU32(&streamUart, SpiGetStatus(LPC_SPI0));
             dsPuts(&streamUart, "\n");
