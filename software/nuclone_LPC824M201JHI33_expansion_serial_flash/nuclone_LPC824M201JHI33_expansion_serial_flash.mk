@@ -37,10 +37,11 @@ BOARD = board
 
 # project sources
 FILES += $(PROJECT)/src/main.cpp \
+$(PROJECT)/src/spi_flash.cpp \
 $(PROJECT)/src/$(BOARD).cpp \
 common/src/cortexM_systick.c \
 common/src/time_interval.cpp \
-common/src/stream_uart.cpp
+common/src/stream_uart.cpp \
 
 INCLUDES += -Icommon/inc  -I$(PROJECT)/inc
 
