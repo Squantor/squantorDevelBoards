@@ -31,11 +31,10 @@ SOFTWARE.
 #include <time_interval.hpp>
 #include <stream_uart.hpp>
 #include <print.h>
+#include <array.hpp>
 
-
-const uint8_t spiFlashDeviceId[] = {0xAB, 0x00, 0x00, 0x00, 0x00};
-const uint8_t spiFlashJedecId[] = {0x9F, 0x00, 0x00, 0x00};
-
+const util::array<uint8_t, 5> spiFlashDeviceId = {0xAB, 0x00, 0x00, 0x00, 0x00};
+const util::array<uint8_t, 4> spiFlashJedecId = {0x9F, 0x00, 0x00, 0x00};
 
 void spiTxRxDeviceSingle(LPC_SPI_T *pSPI, const uint8_t &txBuf, uint8_t &rxBuf)
 {
@@ -72,7 +71,7 @@ void spiTxRxDeviceBlock(LPC_SPI_T *pSPI, uint32_t TxSlaveSel, const uint8_t *txB
 
 int main()
 {
-    uint8_t spiResult[10];
+    util::array<uint8_t, 10> spiResult;
     boardInit();
     dsPuts(&streamUart, "Serial flash exploration\n");
     timeInterval aliveInterval(SEC2TICKS(1));
@@ -80,8 +79,8 @@ int main()
         if(aliveInterval.elapsed())
         {
             GpioSetPinToggle(LPC_GPIO_PORT, 0, PIN_LED_ACT);
-            spiTxRxDeviceBlock(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0), spiFlashDeviceId, spiResult, sizeof(spiFlashDeviceId));
-            spiTxRxDeviceBlock(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0), spiFlashJedecId, spiResult, sizeof(spiFlashJedecId));
+            spiTxRxDeviceBlock(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0), spiFlashDeviceId.data(), spiResult.data(), spiFlashDeviceId.size());
+            spiTxRxDeviceBlock(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0), spiFlashJedecId.data(), spiResult.data(), spiFlashJedecId.size());
             dsPuts(&streamUart, "\n");
         }
     }
