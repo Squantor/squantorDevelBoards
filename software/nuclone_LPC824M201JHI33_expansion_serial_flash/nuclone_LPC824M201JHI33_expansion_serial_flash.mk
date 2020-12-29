@@ -37,6 +37,7 @@ BOARD = board
 
 # project sources
 FILES += $(PROJECT)/src/main.cpp \
+$(PROJECT)/src/spi.cpp \
 $(PROJECT)/src/spi_flash.cpp \
 $(PROJECT)/src/$(BOARD).cpp \
 common/src/cortexM_systick.c \
