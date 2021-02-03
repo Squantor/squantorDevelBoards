@@ -49,3 +49,6 @@ bin/
 # doxygen output
 documentation/
 
+#freecad backup files
+*.FCStd1
+
