@@ -483,7 +483,7 @@ U 1 1 5DBCC5A5
 P 10000 3250
 F 0 "JP1" H 10000 3400 50  0000 C CNN
 F 1 "PIO0_3" H 10000 3100 50  0000 C CNN
-F 2 "SquantorSpecial:solder_jumper_2way_conn" H 10000 3250 50  0001 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 10000 3250 50  0001 C CNN
 F 3 "" H 10000 3250 50  0001 C CNN
 	1    10000 3250
 	1    0    0    -1  
@@ -784,7 +784,7 @@ U 1 1 6029626C
 P 3600 7550
 F 0 "C8" V 3550 7400 50  0000 L CNN
 F 1 "10n" V 3650 7600 50  0000 L CNN
-F 2 "SquantorRcl:C_0603" H 3638 7400 50  0001 C CNN
+F 2 "SquantorRcl:C_0402" H 3638 7400 50  0001 C CNN
 F 3 "~" H 3600 7550 50  0001 C CNN
 	1    3600 7550
 	0    1    1    0   
