@@ -703,7 +703,7 @@ L SquantorSpecial:Solderjumper_2way_noconn JP1
 U 1 1 5FBD87EF
 P 9500 3300
 F 0 "JP1" H 9300 3250 50  0000 C CNN
-F 1 "PIO0_0" H 9500 3150 50  0000 C CNN
+F 1 "PIO0_5" H 9500 3150 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 9500 3300 50  0001 C CNN
 F 3 "" H 9500 3300 50  0001 C CNN
 	1    9500 3300
@@ -728,7 +728,7 @@ L SquantorSpecial:Solderjumper_2way_noconn JP3
 U 1 1 5FBC0C53
 P 9500 2700
 F 0 "JP3" H 9300 2650 50  0000 C CNN
-F 1 "PIO1_3" H 9500 2550 50  0000 C CNN
+F 1 "PIO0_2" H 9500 2550 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 9500 2700 50  0001 C CNN
 F 3 "" H 9500 2700 50  0001 C CNN
 	1    9500 2700
@@ -741,7 +741,7 @@ L SquantorSpecial:Solderjumper_2way_noconn JP2
 U 1 1 5FC70803
 P 9500 3000
 F 0 "JP2" H 9300 2950 50  0000 C CNN
-F 1 "PIO0_10" H 9500 2850 50  0000 C CNN
+F 1 "PIO0_3" H 9500 2850 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 9500 3000 50  0001 C CNN
 F 3 "" H 9500 3000 50  0001 C CNN
 	1    9500 3000
@@ -1007,7 +1007,7 @@ NoConn ~ 3700 2000
 NoConn ~ 2700 2100
 NoConn ~ 2700 2000
 Text Notes 9850 5250 0    50   ~ 0
-LPC1125 controller + support
+LPC845 controller + support
 Wire Notes Line
 	7050 5300 7050 600 
 Wire Notes Line
