@@ -24,25 +24,25 @@ F 3 "" H 900 6950 60  0001 C CNN
 	1    900  6950
 	1    0    0    -1  
 $EndComp
-Text Label 3600 950  0    50   ~ 0
+Text Label 2250 1000 0    50   ~ 0
 VSS
-Text Label 2600 950  2    50   ~ 0
+Text Label 1250 1000 2    50   ~ 0
 VSS
-Text Label 3600 850  0    50   ~ 0
+Text Label 2250 900  0    50   ~ 0
 VBUS
-Text Label 2600 850  2    50   ~ 0
+Text Label 1250 900  2    50   ~ 0
 VBUS
-Text Label 2600 750  2    50   ~ 0
+Text Label 1250 800  2    50   ~ 0
 VDD
-Text Label 3600 750  0    50   ~ 0
+Text Label 2250 800  0    50   ~ 0
 VDD
-Text Label 3600 3200 0    50   ~ 0
+Text Label 2250 2200 0    50   ~ 0
 VSS
-Text Label 2600 3200 2    50   ~ 0
+Text Label 1250 2200 2    50   ~ 0
 VSS
-Text Label 3600 3100 0    50   ~ 0
+Text Label 2250 2100 0    50   ~ 0
 VDD
-Text Label 2600 3100 2    50   ~ 0
+Text Label 1250 2100 2    50   ~ 0
 VDD
 $Comp
 L Mechanical:MountingHole H4
@@ -93,22 +93,11 @@ L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
 P 900 7300
 F 0 "N2" H 850 7400 60  0000 L CNN
-F 1 "20200118" H 650 7300 60  0000 L CNN
+F 1 "20210214" H 650 7300 60  0000 L CNN
 F 2 "SquantorLabels:Label_version" H 900 7300 60  0001 C CNN
 F 3 "" H 900 7300 60  0001 C CNN
 	1    900  7300
 	1    0    0    -1  
-$EndComp
-$Comp
-L SquantorConnectorsNamed:nuclone_medium_right J4
-U 1 1 5D897E29
-P 3100 4050
-F 0 "J4" H 3100 2950 50  0000 C CNN
-F 1 "nuclone_small_right" H 3100 5150 50  0000 C CNN
-F 2 "SquantorConnectorsNamed:nuclone_medium_right" H 3100 4000 50  0001 C CNN
-F 3 "" H 3100 4000 50  0001 C CNN
-	1    3100 4050
-	-1   0    0    1   
 $EndComp
 $Comp
 L SquantorLabels:Label N3
@@ -119,17 +108,6 @@ F 1 "JLCJLCJLCJLC" H 600 7450 60  0000 L CNN
 F 2 "SquantorLabels:Label_Generic" H 900 7500 60  0001 C CNN
 F 3 "" H 900 7500 60  0001 C CNN
 	1    900  7500
-	1    0    0    -1  
-$EndComp
-$Comp
-L SquantorConnectorsNamed:nuclone_medium_left J3
-U 1 1 5D87167A
-P 3100 1700
-F 0 "J3" H 3100 2800 50  0000 C CNN
-F 1 "nuclone_small_left" H 3100 600 50  0000 C CNN
-F 2 "SquantorConnectorsNamed:nuclone_medium_left" H 3250 1650 50  0001 C CNN
-F 3 "" H 3250 1650 50  0001 C CNN
-	1    3100 1700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -608,17 +586,6 @@ Text Label 4750 6350 0    50   ~ 0
 PIO0_5_MCU
 Text Label 4750 6250 0    50   ~ 0
 SWO_TDO
-$Comp
-L Device:R_Pack04 RN3
-U 1 1 5DC5FBD5
-P 1300 800
-F 0 "RN3" V 1000 800 50  0000 C CNN
-F 1 "100" V 1500 800 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 800 50  0001 C CNN
-F 3 "~" H 1300 800 50  0001 C CNN
-	1    1300 800 
-	0    1    -1   0   
-$EndComp
 Wire Wire Line
 	8550 2950 8600 2950
 Wire Wire Line
@@ -631,28 +598,6 @@ Wire Wire Line
 	9050 3350 9000 3350
 Wire Wire Line
 	9000 2950 9050 2950
-$Comp
-L Device:R_Pack04 RN4
-U 1 1 5DD0E88A
-P 1300 1400
-F 0 "RN4" V 1000 1400 50  0000 C CNN
-F 1 "100" V 1500 1400 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 1400 50  0001 C CNN
-F 3 "~" H 1300 1400 50  0001 C CNN
-	1    1300 1400
-	0    1    -1   0   
-$EndComp
-$Comp
-L Device:R_Pack04 RN5
-U 1 1 5DE31D3C
-P 1300 2000
-F 0 "RN5" V 1000 2000 50  0000 C CNN
-F 1 "100" V 1500 2000 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 2000 50  0001 C CNN
-F 3 "~" H 1300 2000 50  0001 C CNN
-	1    1300 2000
-	0    1    -1   0   
-$EndComp
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5DC2B74B
@@ -738,20 +683,6 @@ Text Label 7800 1950 2    50   ~ 0
 PIO0_27_MCU
 Text Label 7800 2050 2    50   ~ 0
 PIO0_28_MCU
-Text Label 1100 700  2    50   ~ 0
-PIO0_13_MCU
-Text Label 1100 800  2    50   ~ 0
-PIO0_12_MCU
-Text Label 1100 900  2    50   ~ 0
-PIO0_5
-Text Label 1100 1000 2    50   ~ 0
-PIO0_4_MCU
-Text Label 1100 1300 2    50   ~ 0
-PIO0_28_MCU
-Text Label 1100 1600 2    50   ~ 0
-PIO0_11_MCU
-Text Label 1100 1900 2    50   ~ 0
-PIO0_10_MCU
 $Comp
 L Device:Ferrite_Bead_Small FB3
 U 1 1 5DB67658
@@ -852,399 +783,64 @@ Wire Wire Line
 	9800 3600 9750 3600
 Wire Wire Line
 	9750 3300 9800 3300
-Text Label 1100 2000 2    50   ~ 0
-PIO0_16_MCU
-Text Label 1100 2100 2    50   ~ 0
-PIO0_27_MCU
-Text Label 1100 2200 2    50   ~ 0
-PIO0_26_MCU
-Text Label 1100 2500 2    50   ~ 0
-PIO0_25_MCU
-Text Label 1100 2600 2    50   ~ 0
-PIO0_24_MCU
-Text Label 1100 2700 2    50   ~ 0
-PIO0_15_MCU
-Text Label 1100 2800 2    50   ~ 0
-PIO0_1_MCU
-Text Label 1100 1400 2    50   ~ 0
-PIO0_3
-Text Label 1100 1500 2    50   ~ 0
-PIO0_2
-$Comp
-L Device:R_Pack04 RN6
-U 1 1 5DC0F15B
-P 1300 2600
-F 0 "RN6" V 1000 2600 50  0000 C CNN
-F 1 "100" V 1500 2600 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 2600 50  0001 C CNN
-F 3 "~" H 1300 2600 50  0001 C CNN
-	1    1300 2600
-	0    1    -1   0   
-$EndComp
-Text Label 1500 700  0    50   ~ 0
+Text Label 1250 1100 2    50   ~ 0
 PIO0_13_OUT
-Text Label 1500 800  0    50   ~ 0
+Text Label 2250 1100 0    50   ~ 0
 PIO0_12_OUT
-Text Label 1500 900  0    50   ~ 0
+Text Label 1250 1200 2    50   ~ 0
 PIO0_5_OUT
-Text Label 1500 1000 0    50   ~ 0
+Text Label 2250 1200 0    50   ~ 0
 PIO0_4_OUT
-Text Label 1500 1300 0    50   ~ 0
+Text Label 1250 1300 2    50   ~ 0
 PIO0_28_OUT
-Text Label 1500 1400 0    50   ~ 0
+Text Label 2250 1300 0    50   ~ 0
 PIO0_3_OUT
-Text Label 1500 1500 0    50   ~ 0
+Text Label 1250 1400 2    50   ~ 0
 PIO0_2_OUT
-Text Label 1500 1600 0    50   ~ 0
+Text Label 2250 1400 0    50   ~ 0
 PIO0_11_OUT
-Text Label 1500 1900 0    50   ~ 0
+Text Label 1250 1500 2    50   ~ 0
 PIO0_10_OUT
-Text Label 1500 2000 0    50   ~ 0
+Text Label 2250 1500 0    50   ~ 0
 PIO0_16_OUT
-Text Label 1500 2100 0    50   ~ 0
+Text Label 1250 1600 2    50   ~ 0
 PIO0_27_OUT
-Text Label 1500 2200 0    50   ~ 0
+Text Label 2250 1600 0    50   ~ 0
 PIO0_26_OUT
-Text Label 1500 2500 0    50   ~ 0
+Text Label 1250 1700 2    50   ~ 0
 PIO0_25_OUT
-Text Label 1500 2600 0    50   ~ 0
+Text Label 2250 1700 0    50   ~ 0
 PIO0_24_OUT
-Text Label 1500 2700 0    50   ~ 0
+Text Label 1250 3000 2    50   ~ 0
 PIO0_15_OUT
-Text Label 1500 2800 0    50   ~ 0
+Text Label 2250 2900 0    50   ~ 0
 PIO0_1_OUT
-Text Label 2600 1050 2    50   ~ 0
-PIO0_13_OUT
-Text Label 3600 1050 0    50   ~ 0
-PIO0_12_OUT
-Text Label 2600 1150 2    50   ~ 0
-PIO0_5_OUT
-Text Label 3600 1150 0    50   ~ 0
-PIO0_4_OUT
-Text Label 2600 1250 2    50   ~ 0
-PIO0_28_OUT
-Text Label 3600 1250 0    50   ~ 0
-PIO0_3_OUT
-Text Label 2600 1350 2    50   ~ 0
-PIO0_2_OUT
-Text Label 3600 1350 0    50   ~ 0
-PIO0_11_OUT
-Text Label 2600 1450 2    50   ~ 0
-PIO0_10_OUT
-Text Label 3600 1450 0    50   ~ 0
-PIO0_16_OUT
-Text Label 2600 1550 2    50   ~ 0
-PIO0_27_OUT
-Text Label 3600 1550 0    50   ~ 0
-PIO0_26_OUT
-Text Label 2600 1650 2    50   ~ 0
-PIO0_25_OUT
-Text Label 3600 1650 0    50   ~ 0
-PIO0_24_OUT
-Text Label 3600 1750 0    50   ~ 0
-VSS
-Text Label 2600 1750 2    50   ~ 0
-VSS
-Text Label 2600 4100 2    50   ~ 0
-VSS
-Text Label 3600 4100 0    50   ~ 0
-VSS
-Text Label 3600 2650 0    50   ~ 0
-VSS
-Text Label 2600 2650 2    50   ~ 0
-VSS
-Text Label 2600 1850 2    50   ~ 0
-PIO0_15_OUT
-Text Label 3600 1850 0    50   ~ 0
-PIO0_1_OUT
-NoConn ~ 2600 1950
-NoConn ~ 2600 2050
-NoConn ~ 2600 2150
-NoConn ~ 2600 2250
-NoConn ~ 2600 2350
-NoConn ~ 2600 2450
-NoConn ~ 2600 2550
-NoConn ~ 3600 2550
-NoConn ~ 3600 2450
-NoConn ~ 3600 2350
-NoConn ~ 3600 2250
-NoConn ~ 3600 2150
-NoConn ~ 3600 2050
-NoConn ~ 3600 1950
-Text Label 1100 4450 2    50   ~ 0
-PIO0_7_MCU
-Text Label 1100 4350 2    50   ~ 0
-PIO0_6_MCU
-Text Label 1100 4250 2    50   ~ 0
-PIO0_0_MCU
-Text Label 1100 4000 2    50   ~ 0
-PIO0_14_MCU
-Text Label 1100 3900 2    50   ~ 0
-PIO0_23_MCU
-Text Label 1100 3800 2    50   ~ 0
-PIO0_22_MCU
-Text Label 1100 3700 2    50   ~ 0
-PIO0_21_MCU
-Text Label 1100 3400 2    50   ~ 0
-PIO0_20_MCU
-Text Label 1100 3300 2    50   ~ 0
-PIO0_19_MCU
-Text Label 1100 3200 2    50   ~ 0
-PIO0_18_MCU
-Text Label 1100 3100 2    50   ~ 0
-PIO0_17_MCU
-Text Label 1100 4950 2    50   ~ 0
-PIO0_9
-Text Label 1100 4850 2    50   ~ 0
-PIO0_8
-$Comp
-L Device:R_Pack04 RN7
-U 1 1 5DC81B7E
-P 1300 3300
-F 0 "RN7" V 1000 3300 50  0000 C CNN
-F 1 "100" V 1500 3300 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 3300 50  0001 C CNN
-F 3 "~" H 1300 3300 50  0001 C CNN
-	1    1300 3300
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Pack04 RN8
-U 1 1 5DC8BCD6
-P 1300 3900
-F 0 "RN8" V 1000 3900 50  0000 C CNN
-F 1 "100" V 1500 3900 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 3900 50  0001 C CNN
-F 3 "~" H 1300 3900 50  0001 C CNN
-	1    1300 3900
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Pack04 RN9
-U 1 1 5DC95489
-P 1300 4450
-F 0 "RN9" V 1000 4450 50  0000 C CNN
-F 1 "100" V 1500 4450 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 4450 50  0001 C CNN
-F 3 "~" H 1300 4450 50  0001 C CNN
-	1    1300 4450
-	0    1    1    0   
-$EndComp
-Text Label 1500 3100 0    50   ~ 0
+Text Label 2250 2300 0    50   ~ 0
 PIO0_17_OUT
-Text Label 1500 3200 0    50   ~ 0
+Text Label 1250 2300 2    50   ~ 0
 PIO0_18_OUT
-Text Label 1500 3300 0    50   ~ 0
+Text Label 2250 2400 0    50   ~ 0
 PIO0_19_OUT
-Text Label 1500 3400 0    50   ~ 0
+Text Label 1250 2400 2    50   ~ 0
 PIO0_20_OUT
-Text Label 1500 3700 0    50   ~ 0
+Text Label 2250 2500 0    50   ~ 0
 PIO0_21_OUT
-Text Label 1500 3800 0    50   ~ 0
+Text Label 1250 2500 2    50   ~ 0
 PIO0_22_OUT
-Text Label 1500 3900 0    50   ~ 0
+Text Label 2250 2600 0    50   ~ 0
 PIO0_23_OUT
-Text Label 1500 4000 0    50   ~ 0
+Text Label 1250 2600 2    50   ~ 0
 PIO0_14_OUT
-Text Label 1500 4250 0    50   ~ 0
+Text Label 2250 2700 0    50   ~ 0
 PIO0_0_OUT
-Text Label 1500 4350 0    50   ~ 0
+Text Label 1250 2700 2    50   ~ 0
 PIO0_6_OUT
-Text Label 1500 4450 0    50   ~ 0
+Text Label 1250 2800 2    50   ~ 0
 PIO0_7_OUT
-Text Label 2600 5000 2    50   ~ 0
-VSS
-Text Label 3600 5000 0    50   ~ 0
-VSS
-Text Label 1500 4850 0    50   ~ 0
+Text Label 2250 2800 0    50   ~ 0
 PIO0_8_OUT
-NoConn ~ 1100 5050
-NoConn ~ 1100 5150
-Text Label 3600 3300 0    50   ~ 0
-PIO0_17_OUT
-Text Label 2600 3300 2    50   ~ 0
-PIO0_18_OUT
-Text Label 3600 3400 0    50   ~ 0
-PIO0_19_OUT
-Text Label 2600 3400 2    50   ~ 0
-PIO0_20_OUT
-Text Label 3600 3500 0    50   ~ 0
-PIO0_21_OUT
-Text Label 2600 3500 2    50   ~ 0
-PIO0_22_OUT
-Text Label 3600 3600 0    50   ~ 0
-PIO0_23_OUT
-Text Label 2600 3600 2    50   ~ 0
-PIO0_14_OUT
-Text Label 3600 3700 0    50   ~ 0
-PIO0_0_OUT
-Text Label 2600 3700 2    50   ~ 0
-PIO0_6_OUT
-Text Label 3600 3800 0    50   ~ 0
-PIO0_7_OUT
-Text Label 2600 3800 2    50   ~ 0
-GPIO_51
-Text Label 3600 3900 0    50   ~ 0
-PIO0_8_OUT
-NoConn ~ 3600 4200
-NoConn ~ 3600 4300
-NoConn ~ 3600 4400
-NoConn ~ 3600 4500
-NoConn ~ 3600 4600
-NoConn ~ 3600 4700
-NoConn ~ 3600 4800
-NoConn ~ 3600 4900
-NoConn ~ 2600 4900
-NoConn ~ 2600 4800
-NoConn ~ 2600 4700
-NoConn ~ 2600 4600
-NoConn ~ 2600 4500
-NoConn ~ 2600 4400
-NoConn ~ 2600 4300
-NoConn ~ 2600 4200
-Text Label 2600 3900 2    50   ~ 0
+Text Label 1250 2900 2    50   ~ 0
 PIO0_9_OUT
-Text Label 2600 4000 2    50   ~ 0
-GPIO_47
-Text Label 3600 4000 0    50   ~ 0
-GPIO_46
-Text Label 1500 5150 0    50   ~ 0
-GPIO_47
-Text Label 1500 5050 0    50   ~ 0
-GPIO_46
-$Comp
-L SquantorProto:Proto_1pin J9
-U 1 1 5DBFD769
-P 3400 5400
-F 0 "J9" H 3450 5400 60  0000 L CNN
-F 1 "Proto_1pin" H 3550 5450 60  0000 L CNN
-F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 3400 5400 60  0001 C CNN
-F 3 "" H 3400 5400 60  0001 C CNN
-	1    3400 5400
-	-1   0    0    -1  
-$EndComp
-$Comp
-L SquantorProto:Proto_1pin J10
-U 1 1 5DBFDBC3
-P 3400 5700
-F 0 "J10" H 3450 5700 60  0000 L CNN
-F 1 "Proto_1pin" H 3550 5750 60  0000 L CNN
-F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 3400 5700 60  0001 C CNN
-F 3 "" H 3400 5700 60  0001 C CNN
-	1    3400 5700
-	-1   0    0    -1  
-$EndComp
-$Comp
-L SquantorProto:Proto_1pin J11
-U 1 1 5DBFE1FD
-P 3400 6000
-F 0 "J11" H 3450 6000 60  0000 L CNN
-F 1 "Proto_1pin" H 3550 6050 60  0000 L CNN
-F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 3400 6000 60  0001 C CNN
-F 3 "" H 3400 6000 60  0001 C CNN
-	1    3400 6000
-	-1   0    0    -1  
-$EndComp
-$Comp
-L SquantorProto:Proto_1pin J12
-U 1 1 5DC095A9
-P 3400 6300
-F 0 "J12" H 3450 6300 60  0000 L CNN
-F 1 "Proto_1pin" H 3550 6350 60  0000 L CNN
-F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 3400 6300 60  0001 C CNN
-F 3 "" H 3400 6300 60  0001 C CNN
-	1    3400 6300
-	-1   0    0    -1  
-$EndComp
-Text Label 3650 5400 0    50   ~ 0
-VSS
-Text Label 3650 5700 0    50   ~ 0
-VSS
-Text Label 3650 6000 0    50   ~ 0
-VSS
-Text Label 3650 6300 0    50   ~ 0
-VSS
-Text Label 2300 6300 2    50   ~ 0
-VSS
-$Comp
-L SquantorProto:Proto_1pin J8
-U 1 1 5DBDD844
-P 2550 6300
-F 0 "J8" H 2600 6300 60  0000 L CNN
-F 1 "Proto_1pin" H 2700 6250 60  0000 L CNN
-F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 2550 6300 60  0001 C CNN
-F 3 "" H 2550 6300 60  0001 C CNN
-	1    2550 6300
-	1    0    0    -1  
-$EndComp
-Text Label 2300 6000 2    50   ~ 0
-VSS
-$Comp
-L SquantorProto:Proto_1pin J7
-U 1 1 5DBDD839
-P 2550 6000
-F 0 "J7" H 2600 6000 60  0000 L CNN
-F 1 "Proto_1pin" H 2700 5950 60  0000 L CNN
-F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 2550 6000 60  0001 C CNN
-F 3 "" H 2550 6000 60  0001 C CNN
-	1    2550 6000
-	1    0    0    -1  
-$EndComp
-Text Label 2300 5700 2    50   ~ 0
-VSS
-$Comp
-L SquantorProto:Proto_1pin J6
-U 1 1 5DBD2931
-P 2550 5700
-F 0 "J6" H 2600 5700 60  0000 L CNN
-F 1 "Proto_1pin" H 2700 5650 60  0000 L CNN
-F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 2550 5700 60  0001 C CNN
-F 3 "" H 2550 5700 60  0001 C CNN
-	1    2550 5700
-	1    0    0    -1  
-$EndComp
-Text Label 2300 5400 2    50   ~ 0
-VSS
-$Comp
-L SquantorProto:Proto_1pin J5
-U 1 1 5DBCDDE6
-P 2550 5400
-F 0 "J5" H 2600 5400 60  0000 L CNN
-F 1 "Proto_1pin" H 2700 5350 60  0000 L CNN
-F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 2550 5400 60  0001 C CNN
-F 3 "" H 2550 5400 60  0001 C CNN
-	1    2550 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L SquantorProto:Proto_1pin J13
-U 1 1 5DC42C58
-P 2950 6700
-F 0 "J13" H 3000 6700 60  0000 L CNN
-F 1 "Proto_1pin" H 3100 6750 60  0000 L CNN
-F 2 "SquantorProto:proto-SMD-0127-08X08-P010X020+pin" H 2950 6700 60  0001 C CNN
-F 3 "" H 2950 6700 60  0001 C CNN
-	1    2950 6700
-	-1   0    0    -1  
-$EndComp
-Text Label 3200 6700 0    50   ~ 0
-VSS
-$Comp
-L Device:R_Pack04 RN10
-U 1 1 5DC9E41E
-P 1300 5050
-F 0 "RN10" V 1000 5050 50  0000 C CNN
-F 1 "100" V 1500 5050 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 1575 5050 50  0001 C CNN
-F 3 "~" H 1300 5050 50  0001 C CNN
-	1    1300 5050
-	0    1    1    0   
-$EndComp
-NoConn ~ 1100 4550
-Text Label 1500 4950 0    50   ~ 0
-PIO0_9_OUT
-Text Label 1500 4550 0    50   ~ 0
-GPIO_51
 Wire Wire Line
 	5950 7050 6000 7050
 Wire Wire Line
@@ -1299,4 +895,27 @@ Wire Wire Line
 	5950 7350 6000 7350
 NoConn ~ 5950 7250
 NoConn ~ 5950 7150
+NoConn ~ 2250 3000
+$Comp
+L SquantorConnectorsNamed:expansion_small_left_LPC82XJHI33 J3
+U 1 1 602DAB7D
+P 1750 1250
+F 0 "J3" H 1750 1850 50  0000 C CNN
+F 1 "expansion_small_left_LPC82XJHI33" H 1750 650 50  0000 C CNN
+F 2 "SquantorConnectorsNamed:nuclone_small_left" H 1900 1200 50  0001 C CNN
+F 3 "" H 1900 1200 50  0001 C CNN
+	1    1750 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorConnectorsNamed:expansion_small_right_LPC82XJHI33 J4
+U 1 1 602E3E14
+P 1750 2550
+F 0 "J4" H 1750 1950 50  0000 C CNN
+F 1 "expansion_small_right_LPC82XJHI33" H 1750 3150 50  0000 C CNN
+F 2 "SquantorConnectorsNamed:nuclone_small_right" H 1750 2500 50  0001 C CNN
+F 3 "" H 1750 2500 50  0001 C CNN
+	1    1750 2550
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
