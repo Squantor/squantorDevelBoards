@@ -744,28 +744,6 @@ Wire Wire Line
 NoConn ~ 10000 6050
 NoConn ~ 10000 5950
 NoConn ~ 2250 3000
-$Comp
-L SquantorConnectorsNamed:expansion_small_left_LPC82XJHI33 J3
-U 1 1 602DAB7D
-P 1750 1250
-F 0 "J3" H 1750 1850 50  0000 C CNN
-F 1 "expansion_small_left_LPC82XJHI33" H 1750 650 50  0000 C CNN
-F 2 "SquantorConnectorsNamed:nuclone_small_left" H 1900 1200 50  0001 C CNN
-F 3 "" H 1900 1200 50  0001 C CNN
-	1    1750 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L SquantorConnectorsNamed:expansion_small_right_LPC82XJHI33 J4
-U 1 1 602E3E14
-P 1750 2550
-F 0 "J4" H 1750 1950 50  0000 C CNN
-F 1 "expansion_small_right_LPC82XJHI33" H 1750 3150 50  0000 C CNN
-F 2 "SquantorConnectorsNamed:nuclone_small_right" H 1750 2500 50  0001 C CNN
-F 3 "" H 1750 2500 50  0001 C CNN
-	1    1750 2550
-	-1   0    0    1   
-$EndComp
 Text Label 8600 2450 0    50   ~ 0
 TMS
 Text Label 8600 2850 0    50   ~ 0
@@ -1158,4 +1136,26 @@ Wire Notes Line
 	2600 3200 1700 3200
 Wire Notes Line
 	1700 3200 1700 3350
+$Comp
+L SquantorConnectorsNamed:nuclone_left_LPC82XHI33 J3
+U 1 1 602DAB7D
+P 1750 1250
+F 0 "J3" H 1750 1850 50  0000 C CNN
+F 1 "expansion_small_left_LPC82XJHI33" H 1750 650 50  0000 C CNN
+F 2 "SquantorConnectorsNamed:nuclone_small_left" H 1900 1200 50  0001 C CNN
+F 3 "" H 1900 1200 50  0001 C CNN
+	1    1750 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorConnectorsNamed:nuclone_right_LPC82XHI33 J4
+U 1 1 602E3E14
+P 1750 2550
+F 0 "J4" H 1750 1950 50  0000 C CNN
+F 1 "expansion_small_right_LPC82XJHI33" H 1750 3150 50  0000 C CNN
+F 2 "SquantorConnectorsNamed:nuclone_small_right" H 1750 2500 50  0001 C CNN
+F 3 "" H 1750 2500 50  0001 C CNN
+	1    1750 2550
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
