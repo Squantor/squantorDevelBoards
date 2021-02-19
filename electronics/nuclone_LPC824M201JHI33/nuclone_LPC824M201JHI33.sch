@@ -380,7 +380,7 @@ L SquantorSpecial:Solderjumper_3way_23conn JP4
 U 1 1 5DB9A1C1
 P 8400 3750
 F 0 "JP4" H 8400 4000 50  0000 C CNN
-F 1 "XTAL/PIO" H 8400 3500 50  0000 C CNN
+F 1 "XTAL/PIO_08" H 8400 3500 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_3way_23conn" H 8400 3750 50  0001 C CNN
 F 3 "" H 8400 3750 50  0001 C CNN
 	1    8400 3750
@@ -391,7 +391,7 @@ L SquantorSpecial:Solderjumper_3way_23conn JP5
 U 1 1 5DB9F39C
 P 8400 4350
 F 0 "JP5" H 8400 4600 50  0000 C CNN
-F 1 "XTAL/PIO" H 8400 4100 50  0000 C CNN
+F 1 "XTAL/PIO_09" H 8400 4100 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_3way_23conn" H 8400 4350 50  0001 C CNN
 F 3 "" H 8400 4350 50  0001 C CNN
 	1    8400 4350
@@ -412,7 +412,7 @@ L SquantorSpecial:Solderjumper_2way_noconn JP3
 U 1 1 5DBC8EA5
 P 8400 3250
 F 0 "JP3" H 8400 3400 50  0000 C CNN
-F 1 "RESET/PIO" H 8400 3100 50  0000 C CNN
+F 1 "RESET/PIO_05" H 8400 3100 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 8400 3250 50  0001 C CNN
 F 3 "" H 8400 3250 50  0001 C CNN
 	1    8400 3250
@@ -425,7 +425,7 @@ L SquantorSpecial:Solderjumper_2way_noconn JP2
 U 1 1 5DBCBA91
 P 8400 2450
 F 0 "JP2" H 8400 2600 50  0000 C CNN
-F 1 "TMS/PIO" H 8400 2300 50  0000 C CNN
+F 1 "TMS/PIO_02" H 8400 2300 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 8400 2450 50  0001 C CNN
 F 3 "" H 8400 2450 50  0001 C CNN
 	1    8400 2450
@@ -436,7 +436,7 @@ L SquantorSpecial:Solderjumper_2way_noconn JP1
 U 1 1 5DBCC5A5
 P 8400 2850
 F 0 "JP1" H 8400 3000 50  0000 C CNN
-F 1 "TCK/PIO" H 8400 2700 50  0000 C CNN
+F 1 "TCK/PIO_03" H 8400 2700 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 8400 2850 50  0001 C CNN
 F 3 "" H 8400 2850 50  0001 C CNN
 	1    8400 2850
