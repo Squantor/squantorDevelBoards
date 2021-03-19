@@ -43,8 +43,9 @@ $(PROJECT)/src/$(BOARD).cpp \
 common/src/cortexM_systick.c \
 common/src/time_interval.cpp \
 common/src/stream_uart.cpp \
+$(PROJECT)/src/test_W25Q32BV_id.cpp
 
 INCLUDES += -Icommon/inc  -I$(PROJECT)/inc
 
 DEFINES += -DMINUNIT_MAX_TESTS=100 
-DEFINES += -DMINUNIT_REPORT_DISABLE # saves load of flash space
+#DEFINES += -DMINUNIT_REPORT_DISABLE # saves load of flash space
