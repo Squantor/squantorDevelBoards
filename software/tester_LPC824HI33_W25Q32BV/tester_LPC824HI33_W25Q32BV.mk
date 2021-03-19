@@ -28,6 +28,7 @@
 include squantorLibC/squantorLibC.mk
 include libEmbedded/libEmbedded.mk
 include libMcuLL/libMcuLL.mk
+include squantorMinUnit/squantorMinUnit.mk
 
 # project settings
 MCU = LPC824M201HI33
@@ -45,4 +46,5 @@ common/src/stream_uart.cpp \
 
 INCLUDES += -Icommon/inc  -I$(PROJECT)/inc
 
-
+DEFINES += -DMINUNIT_MAX_TESTS=100 
+DEFINES += -DMINUNIT_REPORT_DISABLE # saves load of flash space
