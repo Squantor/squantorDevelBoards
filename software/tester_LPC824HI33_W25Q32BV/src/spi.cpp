@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2020 Bart Bilos
  * For conditions of distribution and use, see LICENSE file
  */
-#include <board.hpp>
+#include <nuclone_LPC824HI33_exp_W25Q32BV.hpp>
 #include <spi.hpp>
 
 void spiTxRxDeviceSingle(LPC_SPI_T * pSPI, const uint8_t &txBuf, uint8_t &rxBuf)

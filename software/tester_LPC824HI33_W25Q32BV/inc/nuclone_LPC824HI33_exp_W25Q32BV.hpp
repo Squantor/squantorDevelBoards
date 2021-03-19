@@ -32,6 +32,8 @@ SOFTWARE.
 #define CLOCK_AHB           (30000000u)
 #define CLOCK_MAIN          (60000000u)
 
+#include <mcu_ll.h>
+
 #define TICKS_PER_S         (100u)
 
 #define IOCON_XTAL_IN       IOCON_PIO8

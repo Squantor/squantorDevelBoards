@@ -9,8 +9,7 @@
  * can be compiled and run on any Cortex-M MCU. However, to see
  * its effect, you'll need to use debugger.
  */
-#include <board.hpp>
-#include <mcu_ll.h>
+#include <nuclone_LPC824HI33_exp_W25Q32BV.hpp>
 #include <time_interval.hpp>
 #include <stream_uart.hpp>
 #include <print.h>

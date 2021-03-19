@@ -32,7 +32,7 @@ include libMcuLL/libMcuLL.mk
 # project settings
 MCU = LPC824M201HI33
 TARGET = MCU
-BOARD = board
+BOARD = nuclone_LPC824HI33_exp_W25Q32BV
 
 # project sources
 FILES += $(PROJECT)/src/main.cpp \
