@@ -43,8 +43,9 @@ bin/
 #MCUexpresso stuff
 *.launch
 
-#logs
+# miscellanious generated files
 *.log
+disassemblies/
 
 # doxygen output
 documentation/

@@ -31,8 +31,16 @@ int main()
         if(aliveInterval.elapsed())
         {
             GpioSetPinToggle(LPC_GPIO_PORT, 0, PIN_LED_ACT);
+            dsPuts(&streamUart, "Device ID: ");
             spiTxRxDeviceBlock(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0), spiFlashDeviceId.data(), spiResult.data(), spiFlashDeviceId.size());
+            printHexU8(&streamUart, spiResult[4]);
+            dsPuts(&streamUart, "\nJedec ID: ");
             spiTxRxDeviceBlock(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0), spiFlashJedecId.data(), spiResult.data(), spiFlashJedecId.size());
+            printHexU8(&streamUart, spiResult[1]);
+            dsPuts(&streamUart, ",");
+            printHexU8(&streamUart, spiResult[2]);
+            dsPuts(&streamUart, ",");
+            printHexU8(&streamUart, spiResult[3]);
             dsPuts(&streamUart, "\n");
         }
     }

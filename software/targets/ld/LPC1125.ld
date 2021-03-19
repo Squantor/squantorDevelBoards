@@ -5,11 +5,17 @@
  * For conditions of distribution and use, see LICENSE file
  */
 
-/* UM10601 Ch.2 p.9 */
+/*
+
+Linker file for the LPC1125 microcontroller from NXP.
+
+*/
+
+/* UM10839 Ch.2.1 Memory map */
 MEMORY
 {
-    rom   :   ORIGIN = 0x00000000, LENGTH = 16K
-    ram   :   ORIGIN = 0x10000000, LENGTH = 4K
+    rom   :   ORIGIN = 0x00000000, LENGTH = 64K
+    ram   :   ORIGIN = 0x10000000, LENGTH = 8K
 }
 
 /* Include main link script. Note: it will be searched in -L paths. */
