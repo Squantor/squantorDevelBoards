@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build nuclone_LPC824M201JHI33_expansion_serial_flash",
+            "label": "build tester_LPC824HI33_W25Q32BV",
             "type": "shell",
-            "command": "make PROJECT=nuclone_LPC824M201JHI33_expansion_serial_flash -j20",
+            "command": "make PROJECT=tester_LPC824HI33_W25Q32BV -j20",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -16,7 +16,7 @@
         {
             "label": "clean",
             "type": "shell",
-            "command": "make clean",
+            "command": "make PROJECT=tester_LPC824HI33_W25Q32BV clean",
             "problemMatcher": [
                 "$gcc"
             ]
