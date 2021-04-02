@@ -93,7 +93,7 @@ L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
 P 950 7200
 F 0 "N2" H 900 7300 60  0000 L CNN
-F 1 "20210329" H 700 7200 60  0000 L CNN
+F 1 "20210402" H 700 7200 60  0000 L CNN
 F 2 "SquantorLabels:Label_version" H 950 7200 60  0001 C CNN
 F 3 "" H 950 7200 60  0001 C CNN
 	1    950  7200
@@ -368,16 +368,8 @@ F 3 "" H 1600 1700 50  0001 C CNN
 	1    1450 1750
 	1    0    0    -1  
 $EndComp
-Text Label 950  2400 2    50   ~ 0
-GPIO_24
-Text Label 950  2500 2    50   ~ 0
-GPIO_26
 Text Label 950  2600 2    50   ~ 0
 GPIO_28
-Text Label 1950 2400 0    50   ~ 0
-GPIO_25
-Text Label 1950 2500 0    50   ~ 0
-GPIO_27
 Text Label 1950 2600 0    50   ~ 0
 GPIO_29
 $Comp
@@ -520,14 +512,6 @@ Text Label 3700 2600 0    50   ~ 0
 GPIO_30
 Text Label 3700 2500 0    50   ~ 0
 GPIO_32
-Text Label 3700 2300 0    50   ~ 0
-GPIO_36
-Text Label 3700 2200 0    50   ~ 0
-GPIO_38
-Text Label 2700 2200 2    50   ~ 0
-GPIO_39
-Text Label 2700 2300 2    50   ~ 0
-GPIO_37
 Text Label 2700 2400 2    50   ~ 0
 GPIO_35
 Text Label 2700 2500 2    50   ~ 0
@@ -752,21 +736,13 @@ PIO0_9_I
 Text Label 7500 1600 2    50   ~ 0
 PIO0_8_I
 NoConn ~ 950  2600
-NoConn ~ 950  2500
-NoConn ~ 950  2400
 NoConn ~ 1950 2600
-NoConn ~ 1950 2500
-NoConn ~ 1950 2400
-NoConn ~ 2700 2200
-NoConn ~ 2700 2300
 NoConn ~ 2700 2400
 NoConn ~ 2700 2500
 NoConn ~ 2700 2600
 NoConn ~ 3700 2600
 NoConn ~ 3700 2500
 NoConn ~ 3700 2400
-NoConn ~ 3700 2300
-NoConn ~ 3700 2200
 Wire Wire Line
 	10700 1400 10700 1450
 Wire Wire Line
@@ -994,18 +970,6 @@ Text Label 7500 1100 2    50   ~ 0
 TCK
 Text Label 10300 2900 0    50   ~ 0
 RESET
-Text Label 3700 2100 0    50   ~ 0
-GPIO_40
-Text Label 3700 2000 0    50   ~ 0
-GPIO_42
-Text Label 2700 2100 2    50   ~ 0
-GPIO_41
-Text Label 2700 2000 2    50   ~ 0
-GPIO_43
-NoConn ~ 3700 2100
-NoConn ~ 3700 2000
-NoConn ~ 2700 2100
-NoConn ~ 2700 2000
 Text Notes 9900 6400 0    50   ~ 0
 LPC845 controller + support
 Wire Notes Line
@@ -1221,42 +1185,6 @@ Text Label 10700 1050 0    50   ~ 0
 XTALOUT
 Text Label 7500 5000 2    50   ~ 0
 PIO1_8
-Text Label 2700 1900 2    50   ~ 0
-PIO0_8
-Text Label 3700 1900 0    50   ~ 0
-PIO0_9
-Text Label 3700 1700 0    50   ~ 0
-PIO1_5
-Text Label 2700 1700 2    50   ~ 0
-PIO1_6
-Text Label 3700 1600 0    50   ~ 0
-PIO0_7
-Text Label 2700 1600 2    50   ~ 0
-PIO0_6
-Text Label 3700 1500 0    50   ~ 0
-PIO1_7
-Text Label 2700 1500 2    50   ~ 0
-PIO0_0
-Text Label 3700 1400 0    50   ~ 0
-PIO0_14
-Text Label 2700 1400 2    50   ~ 0
-PIO0_29
-Text Label 3700 1300 0    50   ~ 0
-PIO0_23
-Text Label 2700 1300 2    50   ~ 0
-PIO0_30
-Text Label 3700 1200 0    50   ~ 0
-PIO0_22
-Text Label 2700 1200 2    50   ~ 0
-PIO0_21
-Text Label 3700 1100 0    50   ~ 0
-PIO0_20
-Text Label 2700 1100 2    50   ~ 0
-PIO0_19
-Text Label 3700 1000 0    50   ~ 0
-PIO0_18
-Text Label 2700 1000 2    50   ~ 0
-PIO0_17
 Wire Wire Line
 	9300 6200 9550 6200
 Wire Wire Line
@@ -1268,7 +1196,7 @@ L Device:R R14
 U 1 1 605C45F3
 P 3200 7350
 F 0 "R14" V 3150 7500 50  0000 C CNN
-F 1 "10K" V 3200 7350 50  0000 C CNN
+F 1 "1K" V 3200 7350 50  0000 C CNN
 F 2 "SquantorRcl:R_0402_hand" V 3130 7350 50  0001 C CNN
 F 3 "~" H 3200 7350 50  0001 C CNN
 	1    3200 7350
@@ -1480,4 +1408,74 @@ Text Label 950  2000 2    50   ~ 0
 PIO1_2
 Text Label 1950 2100 0    50   ~ 0
 PIO0_27
+Text Label 950  2100 2    50   ~ 0
+PIO1_14
+Text Label 1950 2200 0    50   ~ 0
+PIO0_26
+Text Label 950  2200 2    50   ~ 0
+PIO1_15
+Text Label 1950 2300 0    50   ~ 0
+PIO0_25
+Text Label 950  2300 2    50   ~ 0
+PIO0_24
+Text Label 1950 2400 0    50   ~ 0
+PIO1_3
+Text Label 950  2400 2    50   ~ 0
+PIO0_15
+Text Label 1950 2500 0    50   ~ 0
+PIO1_4
+Text Label 950  2500 2    50   ~ 0
+PIO0_1
+Text Label 3700 1000 0    50   ~ 0
+PIO1_10
+Text Label 2700 1000 2    50   ~ 0
+PIO0_17
+Text Label 3700 1100 0    50   ~ 0
+PIO1_11
+Text Label 2700 1100 2    50   ~ 0
+PIO0_18
+Text Label 3700 1200 0    50   ~ 0
+PIO0_19
+Text Label 2700 1200 2    50   ~ 0
+PIO1_21
+Text Label 3700 1300 0    50   ~ 0
+PIO0_20
+Text Label 2700 1300 2    50   ~ 0
+PIO0_21
+Text Label 3700 1400 0    50   ~ 0
+PIO1_20
+Text Label 2700 1400 2    50   ~ 0
+PIO0_22
+Text Label 3700 1500 0    50   ~ 0
+PIO0_30
+Text Label 2700 1500 2    50   ~ 0
+PIO0_23
+Text Label 3700 1600 0    50   ~ 0
+PIO0_29
+Text Label 2700 1600 2    50   ~ 0
+PIO0_14
+Text Label 3700 1700 0    50   ~ 0
+PIO0_0
+Text Label 2700 1700 2    50   ~ 0
+PIO1_7
+Text Label 3700 1900 0    50   ~ 0
+PIO0_6
+Text Label 2700 1900 2    50   ~ 0
+PIO0_7
+Text Label 3700 2000 0    50   ~ 0
+PIO1_19
+Text Label 2700 2000 2    50   ~ 0
+PIO1_18
+Text Label 3700 2100 0    50   ~ 0
+PIO1_6
+Text Label 2700 2100 2    50   ~ 0
+PIO1_17
+Text Label 3700 2200 0    50   ~ 0
+PIO1_16
+Text Label 2700 2200 2    50   ~ 0
+PIO1_5
+Text Label 3700 2300 0    50   ~ 0
+PIO0_8
+Text Label 2700 2300 2    50   ~ 0
+PIO0_9
 $EndSCHEMATC
