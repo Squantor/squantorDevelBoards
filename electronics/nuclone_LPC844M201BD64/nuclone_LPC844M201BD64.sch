@@ -1221,54 +1221,6 @@ Text Label 10700 1050 0    50   ~ 0
 XTALOUT
 Text Label 7500 5000 2    50   ~ 0
 PIO1_8
-Text Label 950  1100 2    50   ~ 0
-PIO1_8
-Text Label 1950 1100 0    50   ~ 0
-PIO0_13
-Text Label 950  1200 2    50   ~ 0
-PIO1_9
-Text Label 1950 1200 0    50   ~ 0
-PIO0_12
-Text Label 950  1300 2    50   ~ 0
-PIO0_5
-Text Label 1950 1300 0    50   ~ 0
-PIO0_4
-Text Label 950  1400 2    50   ~ 0
-PIO0_28
-Text Label 1950 1400 0    50   ~ 0
-PIO0_3
-Text Label 950  1500 2    50   ~ 0
-PIO0_31
-Text Label 1950 1500 0    50   ~ 0
-PIO0_2
-Text Label 950  1600 2    50   ~ 0
-PIO1_0
-Text Label 1950 1600 0    50   ~ 0
-PIO0_11
-Text Label 950  1700 2    50   ~ 0
-PIO0_10
-Text Label 1950 1700 0    50   ~ 0
-PIO1_1
-Text Label 950  1900 2    50   ~ 0
-PIO0_16
-Text Label 1950 1900 0    50   ~ 0
-PIO1_2
-Text Label 950  2000 2    50   ~ 0
-PIO0_27
-Text Label 1950 2000 0    50   ~ 0
-PIO0_26
-Text Label 950  2100 2    50   ~ 0
-PIO0_25
-Text Label 1950 2100 0    50   ~ 0
-PIO0_24
-Text Label 950  2200 2    50   ~ 0
-PIO1_3
-Text Label 1950 2200 0    50   ~ 0
-PIO0_15
-Text Label 950  2300 2    50   ~ 0
-PIO1_4
-Text Label 1950 2300 0    50   ~ 0
-PIO0_1
 Text Label 2700 1900 2    50   ~ 0
 PIO0_8
 Text Label 3700 1900 0    50   ~ 0
@@ -1383,17 +1335,17 @@ PIO1_12
 Text Label 7500 5500 2    50   ~ 0
 PIO1_13
 Text Label 7500 5600 2    50   ~ 0
-PIO1_10
+PIO1_14
 Text Label 7500 5700 2    50   ~ 0
-PIO1_10
+PIO1_15
 Text Label 7500 5800 2    50   ~ 0
-PIO1_10
+PIO1_16
 Text Label 7500 5900 2    50   ~ 0
-PIO1_10
+PIO1_17
 Text Label 7500 6000 2    50   ~ 0
-PIO1_10
+PIO1_18
 Text Label 7500 6100 2    50   ~ 0
-PIO1_10
+PIO1_19
 Text Label 7500 6200 2    50   ~ 0
 PIO1_20
 Text Label 7500 6300 2    50   ~ 0
@@ -1490,4 +1442,42 @@ Wire Wire Line
 Connection ~ 9050 4500
 Wire Wire Line
 	9050 4500 9250 4500
+Text Label 950  1100 2    50   ~ 0
+PIO1_8
+Text Label 1950 1100 0    50   ~ 0
+PIO0_13
+Text Label 950  1200 2    50   ~ 0
+PIO1_9
+Text Label 1950 1200 0    50   ~ 0
+PIO0_12
+Text Label 950  1300 2    50   ~ 0
+PIO0_5
+Text Label 1950 1300 0    50   ~ 0
+PIO0_4
+Text Label 950  1400 2    50   ~ 0
+PIO1_12
+Text Label 1950 1400 0    50   ~ 0
+PIO0_28
+Text Label 950  1500 2    50   ~ 0
+PIO1_13
+Text Label 1950 1500 0    50   ~ 0
+PIO0_3
+Text Label 950  1600 2    50   ~ 0
+PIO0_31
+Text Label 1950 1600 0    50   ~ 0
+PIO0_2
+Text Label 1950 1700 0    50   ~ 0
+PIO1_0
+Text Label 950  1700 2    50   ~ 0
+PIO0_11
+Text Label 1950 1900 0    50   ~ 0
+PIO0_10
+Text Label 950  1900 2    50   ~ 0
+PIO1_1
+Text Label 1950 2000 0    50   ~ 0
+PIO0_16
+Text Label 950  2000 2    50   ~ 0
+PIO1_2
+Text Label 1950 2100 0    50   ~ 0
+PIO0_27
 $EndSCHEMATC
