@@ -93,7 +93,7 @@ L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
 P 950 7200
 F 0 "N2" H 900 7300 60  0000 L CNN
-F 1 "20210402" H 700 7200 60  0000 L CNN
+F 1 "20210403" H 700 7200 60  0000 L CNN
 F 2 "SquantorLabels:Label_version" H 950 7200 60  0001 C CNN
 F 3 "" H 950 7200 60  0001 C CNN
 	1    950  7200
@@ -1394,37 +1394,37 @@ Text Label 950  1600 2    50   ~ 0
 PIO0_31
 Text Label 1950 1600 0    50   ~ 0
 PIO0_2
-Text Label 1950 1700 0    50   ~ 0
-PIO1_0
 Text Label 950  1700 2    50   ~ 0
+PIO1_0
+Text Label 1950 1700 0    50   ~ 0
 PIO0_11
-Text Label 1950 1900 0    50   ~ 0
-PIO0_10
 Text Label 950  1900 2    50   ~ 0
+PIO0_10
+Text Label 1950 1900 0    50   ~ 0
 PIO1_1
-Text Label 1950 2000 0    50   ~ 0
-PIO0_16
 Text Label 950  2000 2    50   ~ 0
+PIO0_16
+Text Label 1950 2000 0    50   ~ 0
 PIO1_2
-Text Label 1950 2100 0    50   ~ 0
-PIO0_27
 Text Label 950  2100 2    50   ~ 0
+PIO0_27
+Text Label 1950 2100 0    50   ~ 0
 PIO1_14
-Text Label 1950 2200 0    50   ~ 0
-PIO0_26
 Text Label 950  2200 2    50   ~ 0
+PIO0_26
+Text Label 1950 2200 0    50   ~ 0
 PIO1_15
-Text Label 1950 2300 0    50   ~ 0
-PIO0_25
 Text Label 950  2300 2    50   ~ 0
+PIO0_25
+Text Label 1950 2300 0    50   ~ 0
 PIO0_24
-Text Label 1950 2400 0    50   ~ 0
-PIO1_3
 Text Label 950  2400 2    50   ~ 0
+PIO1_3
+Text Label 1950 2400 0    50   ~ 0
 PIO0_15
-Text Label 1950 2500 0    50   ~ 0
-PIO1_4
 Text Label 950  2500 2    50   ~ 0
+PIO1_4
+Text Label 1950 2500 0    50   ~ 0
 PIO0_1
 Text Label 3700 1000 0    50   ~ 0
 PIO1_10
