@@ -93,7 +93,7 @@ L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
 P 950 7200
 F 0 "N2" H 900 7300 60  0000 L CNN
-F 1 "20210406" H 700 7200 60  0000 L CNN
+F 1 "20210425" H 700 7200 60  0000 L CNN
 F 2 "SquantorLabels:Label_version" H 950 7200 60  0001 C CNN
 F 3 "" H 950 7200 60  0001 C CNN
 	1    950  7200
@@ -1278,9 +1278,9 @@ Text Label 7500 6200 2    50   ~ 0
 PIO1_20
 Text Label 7500 6300 2    50   ~ 0
 PIO1_21
-Text Label 10350 5000 2    50   ~ 0
-VDD
 Text Label 10350 5100 2    50   ~ 0
+VDD
+Text Label 10350 5000 2    50   ~ 0
 VSS
 Text Label 10350 5300 2    50   ~ 0
 VDD
