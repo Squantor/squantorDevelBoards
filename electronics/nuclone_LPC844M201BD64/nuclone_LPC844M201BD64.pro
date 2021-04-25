@@ -1,4 +1,4 @@
-update=di 15 dec 2020 20:34:17 CET
+update=zo 25 apr 2021 11:53:36 CEST
 version=1
 last_client=kicad
 [cvpcb]
@@ -48,11 +48,11 @@ ViaDiameter1=0.6
 ViaDrill1=0.3
 ViaDiameter2=0.6
 ViaDrill2=0.3
-ViaDiameter3=0.65
+ViaDiameter3=0.7
 ViaDrill3=0.4
-ViaDiameter4=0.75
+ViaDiameter4=0.9
 ViaDrill4=0.6
-ViaDiameter5=0.95
+ViaDiameter5=1.1
 ViaDrill5=0.8
 ViaDiameter6=1.3
 ViaDrill6=1
