@@ -928,36 +928,6 @@ F 3 "~" H 1900 6100 50  0001 C CNN
 $EndComp
 Text Label 2100 5900 0    50   ~ 0
 RESET
-Text Label 1250 5900 2    50   ~ 0
-VDD
-$Comp
-L Device:R R12
-U 1 1 5FDF326B
-P 1500 5900
-F 0 "R12" V 1450 6050 50  0000 C CNN
-F 1 "10K" V 1500 5900 50  0000 C CNN
-F 2 "SquantorRcl:R_0402_hand" V 1430 5900 50  0001 C CNN
-F 3 "~" H 1500 5900 50  0001 C CNN
-	1    1500 5900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1250 5900 1350 5900
-$Comp
-L Device:LED D1
-U 1 1 5FDF6F1B
-P 1900 5900
-F 0 "D1" H 1800 5950 50  0000 C CNN
-F 1 "RED" H 1900 6000 50  0000 C CNN
-F 2 "SquantorDiodes:LED_0603_hand" H 1900 5900 50  0001 C CNN
-F 3 "~" H 1900 5900 50  0001 C CNN
-	1    1900 5900
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1650 5900 1750 5900
-Wire Wire Line
-	2050 5900 2100 5900
 Wire Wire Line
 	2100 5900 2100 6100
 Wire Wire Line
@@ -1591,10 +1561,10 @@ Wire Notes Line
 Wire Notes Line
 	3700 5450 3700 5600
 $Comp
-L SquantorProto:testpad TP?
+L SquantorProto:testpad TP5
 U 1 1 6108CD4C
 P 2450 5900
-F 0 "TP?" H 2250 5850 50  0000 C CNN
+F 0 "TP5" H 2250 5850 50  0000 C CNN
 F 1 "Reset" H 2650 5900 50  0000 C CNN
 F 2 "SquantorTestPoints:TestPoint_hole_H04R07" H 2650 5900 50  0001 C CNN
 F 3 "~" H 2650 5900 50  0001 C CNN
@@ -1603,5 +1573,4 @@ F 3 "~" H 2650 5900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2350 5900 2100 5900
-Connection ~ 2100 5900
 $EndSCHEMATC
