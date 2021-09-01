@@ -26,11 +26,12 @@
 
 #additional library includes
 include squantorLibC/squantorLibC.mk
-include squantorLibEmbeddedC/squantorLibEmbeddedC.mk
-include libEmbedded/libEmbedded.mk
+include squantorLibEmbedded/squantorLibEmbedded.mk
+include libMcuLL/libMcuLL.mk
+include squantorMinUnit/squantorMinUnit.mk
 
 # project settings
-MCU = LPC824M201JHI33
+MCU = LPC824M201HI33
 TARGET = MCU
 BOARD = dummy_board
 
