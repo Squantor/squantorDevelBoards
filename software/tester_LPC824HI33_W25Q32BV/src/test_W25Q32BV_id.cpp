@@ -13,14 +13,14 @@
 const util::array<uint8_t, 5> spiFlashDeviceId = {0xAB, 0x00, 0x00, 0x00, 0x00};
 const util::array<uint8_t, 4> spiFlashJedecId = {0x9F, 0x00, 0x00, 0x00};
 
-MINUNIT_ADD(W25Q32BV_wakeup)
+MINUNIT_ADD(W25Q32BV_wakeup, NULL, NULL)
 {
     util::array<uint8_t, 5> spiResult;
     spiTxRxDeviceBlock(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0), spiFlashDeviceId.data(), spiResult.data(), spiFlashDeviceId.size());
     minUnitCheck(spiResult[4] == 0x15);
 }
 
-MINUNIT_ADD(W25Q32BV_id)
+MINUNIT_ADD(W25Q32BV_id, NULL, NULL)
 {
     util::array<uint8_t, 4> spiResult;
     spiTxRxDeviceBlock(LPC_SPI0, SPI_TXDATCTL_ASSERTNUM_SSEL(0), spiFlashJedecId.data(), spiResult.data(), spiFlashJedecId.size());
