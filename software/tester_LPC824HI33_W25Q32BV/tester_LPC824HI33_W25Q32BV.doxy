@@ -1,5 +1,5 @@
 # doxygen settings to override from the default config
 PROJECT_NAME = "LPC824 serial flash expansion test"
-OUTPUT_DIRECTORY = documentation/nuclone_LPC824M201JHI33_expansion_serial_flash
+OUTPUT_DIRECTORY = doxyOutput/nuclone_LPC824M201JHI33_expansion_serial_flash
 INCLUDE_PATH = nuclone_LPC824M201JHI33_expansion_serial_flash/inc libMcull/inc
 INPUT = nuclone_LPC824M201JHI33_expansion_serial_flash/src nuclone_LPC824M201JHI33_expansion_serial_flash/inc

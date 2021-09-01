@@ -1,15 +1,48 @@
-# git ls-files --others --exclude-from=.git/info/exclude
-# Lines that start with '#' are comments.
-# For a project mostly in C, the following would be a good set of
-# exclude patterns (uncomment them if you want to use them):
-# *.[oa]
-# *~
-*.bak
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+build/
+Debug/
+Release/
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+bin/
+
+# miscellanious generated files
+*.log
+disassemblies/
+
+# doxygen output
+doxyOutput/
+documentation
+
+#vscode files that are better ignored
+settings.json
+
+#kicad temporaries
 *.kicad_pcb-bak
-*.net
-rescue-backup/
-_autosave*
 *.sch-bak
+*.net
+*.tmp
+*.bak
+_autosave*
+fp-info-cache
 
 # kicad outputs
 plots/
@@ -18,38 +51,8 @@ plots-*/
 *_plots/
 *.zip
 
-# kicad caches
-fp-info-cache
-*-cache.lib
+# freecad backup files
+*.FCStd?
 
-#executables
-bin/
-
-# Object files
-*.o
-*.elf
-build/
-
-# Linker output
-*.map
-
-# Libraries
-*.a
-
-# Executables
-*.hex
-bin/
-
-#MCUexpresso stuff
-*.launch
-
-# miscellanious generated files
-*.log
-disassemblies/
-
-# doxygen output
-documentation/
-
-#freecad backup files
-*.FCStd1
-
+# ignore STL files, you can add them by forcing it
+*.stl
