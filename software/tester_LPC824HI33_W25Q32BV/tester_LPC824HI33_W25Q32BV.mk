@@ -26,7 +26,7 @@
 
 #additional library includes
 include squantorLibC/squantorLibC.mk
-include libEmbedded/libEmbedded.mk
+include squantorLibEmbedded/squantorLibEmbedded.mk
 include libMcuLL/libMcuLL.mk
 include squantorMinUnit/squantorMinUnit.mk
 

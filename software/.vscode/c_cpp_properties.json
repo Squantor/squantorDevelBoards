@@ -7,7 +7,7 @@
                 "${workspaceFolder}/libMcuLL/inc/",
                 "${workspaceFolder}/common/inc/",
                 "${workspaceFolder}/squantorLibC/inc/",
-                "${workspaceFolder}/libEmbedded/inc/",
+                "${workspaceFolder}/squantorLibEmbedded/inc/",
                 "${workspaceFolder}/squantorMinUnit/inc"
             ],
             "defines": [
