@@ -22,9 +22,19 @@
 #define IOCON_XTAL_IN       IOCON_PIO0_8
 #define IOCON_XTAL_OUT      IOCON_PIO0_9
 
-#define IOCON_LED           IOCON_PIO0_13
-#define PORT_LED            GPIO_PORT0
-#define PIN_LED             (13u)
+// memory display connections
+#define IOCON_DISP_CE   IOCON_PIO0_24
+#define PORT_DISP_CE    GPIO_PORT0
+#define PIN_DISP_CE     (24u)
+#define SWM_DISP_CE     SWM_PORTPIN_P0_24
+#define IOCON_DISP_MOSI IOCON_PIO0_25
+#define PORT_DISP_MOSI  GPIO_PORT0
+#define PIN_DISP_MOSI   (25u)
+#define SWM_DISP_MOSI   SWM_PORTPIN_P0_25
+#define IOCON_DISP_SCK  IOCON_PIO0_26
+#define PORT_DISP_SCK   GPIO_PORT0
+#define PIN_DISP_SCK    (26u)
+#define SWM_DISP_SCK    SWM_PORTPIN_P0_26
 
 void boardInit(void);
 
