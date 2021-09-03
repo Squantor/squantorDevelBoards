@@ -3,7 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/tester_LPC824HI33_W25Q32BV/inc",
+                "${workspaceFolder}/LPC844M201BD64_memory_display/inc",
                 "${workspaceFolder}/libMcuLL/inc/",
                 "${workspaceFolder}/common/inc/",
                 "${workspaceFolder}/squantorLibC/inc/",

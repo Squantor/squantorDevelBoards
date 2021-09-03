@@ -4,13 +4,20 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build tester_LPC824HI33_W25Q32BV",
+            "label": "build debug LPC844M201BD64 memory display test",
             "type": "shell",
-            "command": "make PROJECT=tester_LPC824HI33_W25Q32BV -j20",
+            "command": "make PROJECT=LPC844M201BD64_memory_display -j20",
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "build tester_LPC824HI33_W25Q32BV",
+            "type": "shell",
+            "command": "make PROJECT=tester_LPC824HI33_W25Q32BV -j20",
+            "group": "build",
             "problemMatcher": "$gcc"
         },
         {

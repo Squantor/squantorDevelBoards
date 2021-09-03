@@ -5,6 +5,29 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "gdb",
+            "request": "attach",
+            "name": "Debug debug LPC844M201BD64 memory display test",
+            "target": "extended-remote /dev/ttyACM0",
+            "executable": "${workspaceFolder}/bin/LPC844M201BD64_memory_display/debug/LPC844M201BD64_memory_display.elf",
+            "cwd": "${workspaceRoot}",
+            "internalConsoleOptions": "openOnFirstSessionStart",
+            "autorun": [
+                "file ${workspaceFolder}/bin/LPC844M201BD64_memory_display/debug/LPC844M201BD64_memory_display.elf",
+                "monitor swdp_scan",
+                "attach 1",
+                "set mem inaccessible-by-default off",
+                "set {int}0x40048000 = 2",
+                "load ${workspaceFolder}/bin/LPC844M201BD64_memory_display/debug/LPC844M201BD64_memory_display.elf",
+                "set {int}0x40048000 = 2",
+                "compare-sections",
+                "b main",
+            ],
+            "preLaunchTask": "build debug LPC844M201BD64 memory display test",
+            "gdbpath": "/home/abilos/programs/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb"
+        },
+        /*
+        {
             "name": "debug tester_LPC824HI33_W25Q32BV",
             "type": "cppdbg",
             "request": "launch",
@@ -65,6 +88,6 @@
             "preLaunchTask": "build tester_LPC824HI33_W25Q32BV",
             "miDebuggerPath": "/home/abilos/programs/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-gdb",
         },
-
+        */
     ]
 }
