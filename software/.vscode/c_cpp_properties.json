@@ -11,7 +11,7 @@
                 "${workspaceFolder}/squantorMinUnit/inc"
             ],
             "defines": [
-                "MCU_LPC824M201HI33",
+                "MCU_LPC844M201BD64",
                 "DEBUG"
             ],
             "browse": {
