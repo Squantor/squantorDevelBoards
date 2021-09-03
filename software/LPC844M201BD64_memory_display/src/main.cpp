@@ -21,35 +21,52 @@ extern "C"
     }
 }
 
+void waitSpiTxComplete(void)
+{
+    while(!(spiSetGetStatus(SPI0, 0x0) & SPI_STAT_TXRDY))
+        ;
+}
+
 int main()
 {
     int currticks = systicks;
     boardInit();
+    spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x6) | 
+        SPI_TXDATCTL_TXSSEL0 | 
+        SPI_TXDATCTL_EOF |
+        SPI_TXDATCTL_RXIGNORE | 
+        SPI_TXDATCTL_LEN(3) );
+    waitSpiTxComplete();
+    spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0000) | 
+        SPI_TXDATCTL_TXSSEL0 | 
+        SPI_TXDATCTL_EOF |
+        SPI_TXDATCTL_EOT |
+        SPI_TXDATCTL_RXIGNORE | 
+        SPI_TXDATCTL_LEN(16) );
     while (1) {
         if(currticks < systicks)
         {
             currticks = systicks;
-            if(currticks & 1)
-            {
-                spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0006) | 
-                            SPI_TXDATCTL_TXSSEL0 | 
-                            SPI_TXDATCTL_EOF |
-                            SPI_TXDATCTL_RXIGNORE | 
-                            SPI_TXDATCTL_LEN(16) );
-            }
-            else
-            {
-                spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0004) | 
-                            SPI_TXDATCTL_TXSSEL0 | 
-                            SPI_TXDATCTL_EOF |
-                            SPI_TXDATCTL_RXIGNORE | 
-                            SPI_TXDATCTL_LEN(16) );
-            }
+            waitSpiTxComplete();
+            spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0003) | 
+                SPI_TXDATCTL_TXSSEL0 | 
+                SPI_TXDATCTL_EOF |
+                SPI_TXDATCTL_RXIGNORE | 
+                SPI_TXDATCTL_LEN(16) );
+            uint16_t data = currticks;
+            waitSpiTxComplete();
+            spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(data) | 
+                SPI_TXDATCTL_TXSSEL0 | 
+                SPI_TXDATCTL_EOF |
+                SPI_TXDATCTL_RXIGNORE | 
+                SPI_TXDATCTL_LEN(16) );
+            waitSpiTxComplete();
             spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0000) | 
-                        SPI_TXDATCTL_TXSSEL0 | 
-                        SPI_TXDATCTL_EOF |
-                        SPI_TXDATCTL_RXIGNORE | 
-                        SPI_TXDATCTL_LEN(16) );
+                SPI_TXDATCTL_TXSSEL0 | 
+                SPI_TXDATCTL_EOF |
+                SPI_TXDATCTL_EOT |
+                SPI_TXDATCTL_RXIGNORE | 
+                SPI_TXDATCTL_LEN(16) );
         }
     }
 }
