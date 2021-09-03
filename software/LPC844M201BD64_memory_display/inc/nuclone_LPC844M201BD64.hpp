@@ -17,7 +17,7 @@
 
 #include <mcu_ll.h>
 
-#define TICKS_PER_S         2
+#define TICKS_PER_S         10
 
 #define IOCON_XTAL_IN       IOCON_PIO0_8
 #define IOCON_XTAL_OUT      IOCON_PIO0_9

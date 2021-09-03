@@ -11,6 +11,9 @@
  */
 #include <nuclone_LPC844M201BD64.hpp>
 
+uint16_t vcom = 0;
+uint16_t framebuffer[576];
+
 volatile int systicks = 0;
 
 extern "C" 
@@ -27,11 +30,44 @@ void waitSpiTxComplete(void)
         ;
 }
 
+void transferFramebuf(void)
+{
+    vcom = vcom ^ 0x2;  
+    for(uint8_t i = 1; i < 97; i++)
+    {
+        uint16_t linepreamble = (i << 8) | vcom | 0x01;
+        waitSpiTxComplete();
+        spiSetTxCtrlData(SPI0, SPI_TXDATCTL_TXDAT(linepreamble) | 
+            SPI_TXDATCTL_TXSSEL0 | 
+            SPI_TXDATCTL_EOF |
+            SPI_TXDATCTL_RXIGNORE | 
+            SPI_TXDATCTL_LEN(16) );
+        for(uint8_t j = 0; j < 6; j++)
+        {
+            uint16_t lineData = framebuffer[(i-1) * 6 + j];
+            waitSpiTxComplete();
+            spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(lineData) | 
+                SPI_TXDATCTL_TXSSEL0 | 
+                SPI_TXDATCTL_EOF |
+                SPI_TXDATCTL_RXIGNORE | 
+                SPI_TXDATCTL_LEN(16) );
+        }
+    }
+    waitSpiTxComplete();
+    spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0000) | 
+        SPI_TXDATCTL_TXSSEL0 | 
+        SPI_TXDATCTL_EOF |
+        SPI_TXDATCTL_EOT |
+        SPI_TXDATCTL_RXIGNORE | 
+        SPI_TXDATCTL_LEN(16) );
+
+}
+
 int main()
 {
     int currticks = systicks;
     boardInit();
-    spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x6) | 
+    spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x4) | 
         SPI_TXDATCTL_TXSSEL0 | 
         SPI_TXDATCTL_EOF |
         SPI_TXDATCTL_RXIGNORE | 
@@ -47,26 +83,11 @@ int main()
         if(currticks < systicks)
         {
             currticks = systicks;
-            waitSpiTxComplete();
-            spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0003) | 
-                SPI_TXDATCTL_TXSSEL0 | 
-                SPI_TXDATCTL_EOF |
-                SPI_TXDATCTL_RXIGNORE | 
-                SPI_TXDATCTL_LEN(16) );
-            uint16_t data = currticks;
-            waitSpiTxComplete();
-            spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(data) | 
-                SPI_TXDATCTL_TXSSEL0 | 
-                SPI_TXDATCTL_EOF |
-                SPI_TXDATCTL_RXIGNORE | 
-                SPI_TXDATCTL_LEN(16) );
-            waitSpiTxComplete();
-            spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0000) | 
-                SPI_TXDATCTL_TXSSEL0 | 
-                SPI_TXDATCTL_EOF |
-                SPI_TXDATCTL_EOT |
-                SPI_TXDATCTL_RXIGNORE | 
-                SPI_TXDATCTL_LEN(16) );
+            transferFramebuf();
+            for(int i = 0; i < 576; i++)
+            {
+                framebuffer[i] = i + currticks;
+            }
         }
     }
 }
