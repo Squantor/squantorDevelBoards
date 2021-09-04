@@ -14,7 +14,7 @@
 uint16_t vcom = 0;
 uint16_t framebuffer[576];
 
-volatile int systicks = 0;
+volatile unsigned int systicks = 0;
 
 extern "C" 
 {
@@ -63,9 +63,18 @@ void transferFramebuf(void)
 
 }
 
+void putpixel(uint8_t x, uint8_t y, uint8_t pixel)
+{
+    int index = y * 6 + x / 16;
+    if(pixel == 0)
+        framebuffer[index] = framebuffer[index] & ~(0x01 << (x & 0xF));
+    else
+        framebuffer[index] = framebuffer[index] | (0x01 << (x & 0xF));
+}
+
 int main()
 {
-    int currticks = systicks;
+    unsigned int currticks = systicks;
     boardInit();
     spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x4) | 
         SPI_TXDATCTL_TXSSEL0 | 
@@ -83,11 +92,15 @@ int main()
         if(currticks < systicks)
         {
             currticks = systicks;
-            transferFramebuf();
-            for(int i = 0; i < 576; i++)
+            for(unsigned int i = 0 ; i < 96; i++)
             {
-                framebuffer[i] = i + currticks;
+                for(unsigned int j = 0; j < 96; j++)
+                {
+                    putpixel(i, j, ((j ^ i) + currticks) & 0x20);
+                    //putpixel(i, j, ((i*i + j*j) + currticks) & 0x20);
+                }
             }
+            transferFramebuf();
         }
     }
 }
