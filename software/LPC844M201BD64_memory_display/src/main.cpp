@@ -10,9 +10,9 @@
  * its effect, you'll need to use debugger.
  */
 #include <nuclone_LPC844M201BD64.hpp>
+#include <sharp_memlcd.hpp>
 
-uint16_t vcom = 0;
-uint16_t framebuffer[576];
+util::sharpMemLcd<util::LS013B4DN04> boardLcd;
 
 volatile unsigned int systicks = 0;
 
@@ -32,26 +32,15 @@ void waitSpiTxComplete(void)
 
 void transferFramebuf(void)
 {
-    vcom = vcom ^ 0x2;  
-    for(uint8_t i = 1; i < 97; i++)
+    boardLcd.flipVcom();
+    for(const uint16_t &data : boardLcd.frameBuffer)
     {
-        uint16_t linepreamble = (i << 8) | vcom | 0x01;
         waitSpiTxComplete();
-        spiSetTxCtrlData(SPI0, SPI_TXDATCTL_TXDAT(linepreamble) | 
+        spiSetTxCtrlData(SPI0, SPI_TXDATCTL_TXDAT(data) | 
             SPI_TXDATCTL_TXSSEL0 | 
             SPI_TXDATCTL_EOF |
             SPI_TXDATCTL_RXIGNORE | 
             SPI_TXDATCTL_LEN(16) );
-        for(uint8_t j = 0; j < 6; j++)
-        {
-            uint16_t lineData = framebuffer[(i-1) * 6 + j];
-            waitSpiTxComplete();
-            spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(lineData) | 
-                SPI_TXDATCTL_TXSSEL0 | 
-                SPI_TXDATCTL_EOF |
-                SPI_TXDATCTL_RXIGNORE | 
-                SPI_TXDATCTL_LEN(16) );
-        }
     }
     waitSpiTxComplete();
     spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0000) | 
@@ -61,15 +50,6 @@ void transferFramebuf(void)
         SPI_TXDATCTL_RXIGNORE | 
         SPI_TXDATCTL_LEN(16) );
 
-}
-
-void putpixel(uint8_t x, uint8_t y, uint8_t pixel)
-{
-    int index = y * 6 + x / 16;
-    if(pixel == 0)
-        framebuffer[index] = framebuffer[index] & ~(0x01 << (x & 0xF));
-    else
-        framebuffer[index] = framebuffer[index] | (0x01 << (x & 0xF));
 }
 
 int main()
@@ -88,6 +68,7 @@ int main()
         SPI_TXDATCTL_EOT |
         SPI_TXDATCTL_RXIGNORE | 
         SPI_TXDATCTL_LEN(16) );
+    boardLcd.init();
     while (1) {
         if(currticks < systicks)
         {
@@ -96,8 +77,9 @@ int main()
             {
                 for(unsigned int j = 0; j < 96; j++)
                 {
-                    putpixel(i, j, ((j ^ i) + currticks) & 0x20);
-                    //putpixel(i, j, ((i*i + j*j) + currticks) & 0x20);
+                    boardLcd.putPixel(i, j, ((j ^ i) + currticks) & 0x20);
+                    //boardLcd.putPixel(i, j, ((i*i + j*j) + currticks) & 0x20);
+                    //if(i == j) boardLcd.putPixel(i, j, 1);
                 }
             }
             transferFramebuf();
