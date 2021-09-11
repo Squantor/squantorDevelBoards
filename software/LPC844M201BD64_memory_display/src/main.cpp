@@ -5,9 +5,7 @@
  * For conditions of distribution and use, see LICENSE file
  */
 /*
- * This is simple example file which does do any I/O and thus
- * can be compiled and run on any Cortex-M MCU. However, to see
- * its effect, you'll need to use debugger.
+ * Example using the sharp memory LCD
  */
 #include <nuclone_LPC844M201BD64.hpp>
 #include <sharp_memlcd.hpp>
@@ -73,9 +71,9 @@ int main()
         if(currticks < systicks)
         {
             currticks = systicks;
-            for(unsigned int i = 0 ; i < 96; i++)
+            for(unsigned int i = 0 ; i < util::LS013B4DN04::maxY; i++)
             {
-                for(unsigned int j = 0; j < 96; j++)
+                for(unsigned int j = 0; j < util::LS013B4DN04::maxX; j++)
                 {
                     boardLcd.putPixel(i, j, ((j ^ i) + currticks) & 0x20);
                     //boardLcd.putPixel(i, j, ((i*i + j*j) + currticks) & 0x20);
