@@ -6,11 +6,18 @@
         {
             "label": "build debug LPC844M201BD64 memory display test",
             "type": "shell",
-            "command": "make PROJECT=LPC844M201BD64_memory_display -j20",
+            "command": "make PROJECT=LPC844M201BD64_memory_display CONFIG=debug -j20",
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
+            "problemMatcher": "$gcc"
+        },
+        {
+            "label": "build release LPC844M201BD64 memory display test",
+            "type": "shell",
+            "command": "make PROJECT=LPC844M201BD64_memory_display CONFIG=release -j20",
+            "group": "build",
             "problemMatcher": "$gcc"
         },
         {
