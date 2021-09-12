@@ -71,9 +71,9 @@ int main()
         if(currticks < systicks)
         {
             currticks = systicks;
-            for(unsigned int i = 0 ; i < util::LS013B4DN04::maxY; i++)
+            for(unsigned int i = 0 ; i < boardLcd.maxY; i++)
             {
-                for(unsigned int j = 0; j < util::LS013B4DN04::maxX; j++)
+                for(unsigned int j = 0; j < boardLcd.maxX; j++)
                 {
                     boardLcd.putPixel(i, j, ((j ^ i) + currticks) & 0x20);
                     //boardLcd.putPixel(i, j, ((i*i + j*j) + currticks) & 0x20);
