@@ -75,7 +75,7 @@ int main()
             {
                 for(unsigned int j = 0; j < boardLcd.maxX; j++)
                 {
-                    boardLcd.putPixel(i, j, ((j ^ i) + currticks) & 0x20);
+                    boardLcd.putPixel(j, i, ((j ^ i) + currticks) & 0x20);
                     //boardLcd.putPixel(i, j, ((i*i + j*j) + currticks) & 0x20);
                     //if(i == j) boardLcd.putPixel(i, j, 1);
                 }
