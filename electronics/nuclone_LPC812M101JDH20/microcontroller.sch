@@ -376,9 +376,9 @@ Text Label 3700 2400 2    50   ~ 0
 PIO0_15
 Text Label 3700 2300 2    50   ~ 0
 PIO0_14
-Text Label 4400 5250 2    50   ~ 0
+Text Label 4200 5950 2    50   ~ 0
 PIO0_9
-Text Label 4400 5100 2    50   ~ 0
+Text Label 4200 5350 2    50   ~ 0
 PIO0_8
 Text Label 3700 1600 2    50   ~ 0
 PIO0_7
@@ -446,4 +446,101 @@ Wire Wire Line
 	1000 4400 950  4400
 Wire Wire Line
 	950  4300 1000 4300
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP4
+U 1 1 614AA891
+P 4450 5250
+F 0 "JP4" H 4450 5500 50  0000 C CNN
+F 1 "PIO0_8" H 4450 5000 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_3way_12conn" H 4450 5250 50  0001 C CNN
+F 3 "" H 4450 5250 50  0001 C CNN
+	1    4450 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 5350 4250 5350
+Text Label 4700 5250 0    50   ~ 0
+XTALIN
+Wire Wire Line
+	4700 5250 4650 5250
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP5
+U 1 1 614B4ED5
+P 4450 5850
+F 0 "JP5" H 4450 6100 50  0000 C CNN
+F 1 "PIO0_8" H 4450 5600 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_3way_12conn" H 4450 5850 50  0001 C CNN
+F 3 "" H 4450 5850 50  0001 C CNN
+	1    4450 5850
+	1    0    0    -1  
+$EndComp
+Text Label 4700 5850 0    50   ~ 0
+XTALOUT
+Wire Wire Line
+	4700 5850 4650 5850
+Wire Wire Line
+	4250 5950 4200 5950
+$Comp
+L Device:Crystal_GND23 Y1
+U 1 1 614BEB87
+P 3900 5550
+F 0 "Y1" V 3950 5700 50  0000 L CNN
+F 1 "12MHz" V 3800 5150 50  0000 L CNN
+F 2 "SquantorCrystal:Crystal_3225_4" H 3900 5550 50  0001 C CNN
+F 3 "~" H 3900 5550 50  0001 C CNN
+	1    3900 5550
+	0    1    1    0   
+$EndComp
+Text Label 3650 5550 2    50   ~ 0
+VSS
+Text Label 4150 5550 0    50   ~ 0
+VSS
+Wire Wire Line
+	4150 5550 4100 5550
+Wire Wire Line
+	3700 5550 3650 5550
+Wire Wire Line
+	4250 5750 3900 5750
+Wire Wire Line
+	3900 5750 3900 5700
+Wire Wire Line
+	3900 5400 3900 5150
+Wire Wire Line
+	3900 5150 4250 5150
+$Comp
+L Device:C C6
+U 1 1 614D6557
+P 3700 5150
+F 0 "C6" V 3650 5250 50  0000 C CNN
+F 1 "18p" V 3750 5250 50  0000 C CNN
+F 2 "SquantorRcl:C_0402" H 3738 5000 50  0001 C CNN
+F 3 "~" H 3700 5150 50  0001 C CNN
+	1    3700 5150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 5150 3850 5150
+Connection ~ 3900 5150
+Text Label 3500 5150 2    50   ~ 0
+VSS
+Wire Wire Line
+	3550 5150 3500 5150
+$Comp
+L Device:C C7
+U 1 1 614DDB42
+P 3700 5750
+F 0 "C7" V 3650 5850 50  0000 C CNN
+F 1 "18p" V 3750 5850 50  0000 C CNN
+F 2 "SquantorRcl:C_0402" H 3738 5600 50  0001 C CNN
+F 3 "~" H 3700 5750 50  0001 C CNN
+	1    3700 5750
+	0    1    1    0   
+$EndComp
+Text Label 3500 5750 2    50   ~ 0
+VSS
+Wire Wire Line
+	3500 5750 3550 5750
+Wire Wire Line
+	3850 5750 3900 5750
+Connection ~ 3900 5750
 $EndSCHEMATC
