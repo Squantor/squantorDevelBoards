@@ -481,7 +481,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 5950 4200 5950
 $Comp
-L Device:Crystal_GND23 Y1
+L Device:Crystal_GND24 Y1
 U 1 1 614BEB87
 P 3900 5550
 F 0 "Y1" V 3950 5700 50  0000 L CNN
