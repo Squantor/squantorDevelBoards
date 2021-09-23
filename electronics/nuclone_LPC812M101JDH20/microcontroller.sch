@@ -468,7 +468,7 @@ L SquantorSpecial:Solderjumper_3way_12conn JP5
 U 1 1 614B4ED5
 P 4450 5850
 F 0 "JP5" H 4450 6100 50  0000 C CNN
-F 1 "PIO0_8" H 4450 5600 50  0000 C CNN
+F 1 "PIO0_9" H 4450 5600 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_3way_12conn" H 4450 5850 50  0001 C CNN
 F 3 "" H 4450 5850 50  0001 C CNN
 	1    4450 5850
