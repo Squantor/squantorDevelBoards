@@ -10,8 +10,6 @@
 #include <nuclone_LPC844M201BD64.hpp>
 #include <sharp_memlcd.hpp>
 
-util::sharpMemLcd<util::LS013B4DN04> boardLcd;
-
 volatile unsigned int systicks = 0;
 
 extern "C" 
@@ -28,26 +26,50 @@ void waitSpiTxComplete(void)
         ;
 }
 
-void transferFramebuf(void)
+void lcdTransfer(uint16_t *begin, uint16_t *end)
 {
-    boardLcd.flipVcom();
-    for(const uint16_t &data : boardLcd.frameBuffer)
+    // transfer of 1
+    if(begin+1 == end)
     {
         waitSpiTxComplete();
-        spiSetTxCtrlData(SPI0, SPI_TXDATCTL_TXDAT(data) | 
-            SPI_TXDATCTL_TXSSEL0 | 
-            SPI_TXDATCTL_EOF |
-            SPI_TXDATCTL_RXIGNORE | 
-            SPI_TXDATCTL_LEN(16) );
-    }
-    waitSpiTxComplete();
-    spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0000) | 
+        spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(*begin) | 
         SPI_TXDATCTL_TXSSEL0 | 
         SPI_TXDATCTL_EOF |
         SPI_TXDATCTL_EOT |
         SPI_TXDATCTL_RXIGNORE | 
         SPI_TXDATCTL_LEN(16) );
+        return ;
+    }
+    // transfer of N
+    else
+    {
+        uint16_t *p = begin;
+        while (p < end)
+        {
+            waitSpiTxComplete();
+            spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(*p) | 
+            SPI_TXDATCTL_TXSSEL0 | 
+            SPI_TXDATCTL_EOF |
+            SPI_TXDATCTL_RXIGNORE | 
+            SPI_TXDATCTL_LEN(16) );
+            p++;
+        }
+        waitSpiTxComplete();
+        spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0000) | 
+            SPI_TXDATCTL_TXSSEL0 | 
+            SPI_TXDATCTL_EOF |
+            SPI_TXDATCTL_EOT |
+            SPI_TXDATCTL_RXIGNORE | 
+            SPI_TXDATCTL_LEN(16) );    
+    }
+}
 
+util::sharpMemLcd<util::LS013B4DN04, lcdTransfer> boardLcd;
+
+void transferFramebuf(void)
+{
+    boardLcd.flipVcom();
+    lcdTransfer(boardLcd.frameBuffer.begin(), boardLcd.frameBuffer.end());
 }
 
 int main()
