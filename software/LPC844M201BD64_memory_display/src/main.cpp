@@ -54,6 +54,7 @@ void lcdTransfer(uint16_t *begin, uint16_t *end)
             SPI_TXDATCTL_LEN(16) );
             p++;
         }
+        // line or multiline transfers need to be terminated
         waitSpiTxComplete();
         spiSetTxCtrlData(SPI0,  SPI_TXDATCTL_TXDAT(0x0000) | 
             SPI_TXDATCTL_TXSSEL0 | 
@@ -69,7 +70,7 @@ util::sharpMemLcd<util::LS013B4DN04, lcdTransfer> boardLcd;
 void transferFramebuf(void)
 {
     boardLcd.flipVcom();
-    lcdTransfer(boardLcd.frameBuffer.begin(), boardLcd.frameBuffer.end());
+    boardLcd.lcdUpdate();
 }
 
 int main()
