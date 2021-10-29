@@ -711,7 +711,7 @@ F 3 "~" H 3550 5100 50  0001 C CNN
 	1    3550 5100
 	0    1    1    0   
 $EndComp
-Text Label 3350 5100 2    50   ~ 0
+Text Label 4250 5100 0    50   ~ 0
 VDD
 Wire Wire Line
 	750  4650 1850 4650
@@ -723,7 +723,7 @@ Wire Wire Line
 	3350 5100 3400 5100
 Wire Wire Line
 	3700 5100 3750 5100
-Text Label 4250 5100 0    50   ~ 0
+Text Label 3350 5100 2    50   ~ 0
 VSS
 Wire Wire Line
 	4250 5100 4200 5100
@@ -907,6 +907,7 @@ F35 "GPIO_26" B L 7900 3300 50
 F36 "GPIO_27" B L 7900 3400 50 
 F37 "GPIO_28" B L 7900 3500 50 
 F38 "GPIO_29" B L 7900 3600 50 
+F39 "Bootloader" I R 9450 5700 50 
 $EndSheet
 Text Label 7850 6100 2    50   ~ 0
 VDD
@@ -1030,4 +1031,8 @@ Wire Wire Line
 	7850 3500 7900 3500
 Wire Wire Line
 	7900 3600 7850 3600
+Text Label 9500 5700 0    50   ~ 0
+Bootloader
+Wire Wire Line
+	9500 5700 9450 5700
 $EndSCHEMATC
