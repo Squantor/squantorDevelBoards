@@ -625,7 +625,7 @@ L SquantorSpecial:Solderjumper_3way_12conn JP4
 U 1 1 618B9DAF
 P 2700 4250
 F 0 "JP4" H 2700 4500 50  0000 C CNN
-F 1 "PF0" H 2700 4000 50  0000 C CNN
+F 1 "PF1" H 2700 4000 50  0000 C CNN
 F 2 "SquantorSpecial:solder_jumper_3way_12conn" H 2700 4250 50  0001 C CNN
 F 3 "" H 2700 4250 50  0001 C CNN
 	1    2700 4250
