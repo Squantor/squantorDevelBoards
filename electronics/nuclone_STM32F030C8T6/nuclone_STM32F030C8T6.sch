@@ -1019,6 +1019,7 @@ F67 "GPIO_58" B R 9450 1000 50
 F68 "GPIO_59" B R 9450 900 50 
 F69 "GPIO_60" B R 9450 800 50 
 F70 "GPIO_61" B R 9450 700 50 
+F71 "Bootloader" I R 9450 5700 50 
 $EndSheet
 Text Label 7850 6100 2    50   ~ 0
 VDD
@@ -1270,4 +1271,8 @@ Wire Wire Line
 	9450 800  9500 800 
 Wire Wire Line
 	9500 700  9450 700 
+Text Label 9500 5700 0    50   ~ 0
+Bootloader
+Wire Wire Line
+	9500 5700 9450 5700
 $EndSCHEMATC
