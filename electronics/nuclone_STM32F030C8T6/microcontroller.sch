@@ -558,22 +558,14 @@ Wire Wire Line
 	4450 1850 4500 1850
 Text Label 4450 5750 2    50   ~ 0
 PC13
-Text Label 4450 5850 2    50   ~ 0
+Text Label 2800 3350 2    50   ~ 0
 PC14
-Text Label 4450 5950 2    50   ~ 0
-PC15
-Text Label 4450 6150 2    50   ~ 0
-PF0
-Text Label 4450 6250 2    50   ~ 0
-PF1
 Text Label 1000 2100 0    50   ~ 0
 PC13
 Text Label 1000 2200 0    50   ~ 0
 PC14
 Text Label 1000 2300 0    50   ~ 0
 PC15
-Text Notes 4550 6050 2    50   ~ 0
-TODO, jumpers here!
 Wire Wire Line
 	4450 5750 4500 5750
 Wire Wire Line
@@ -738,10 +730,6 @@ Text Label 4450 3250 2    50   ~ 0
 PA11
 Text Label 4450 3350 2    50   ~ 0
 PA12
-Text Label 4450 3450 2    50   ~ 0
-PA13
-Text Label 4450 3550 2    50   ~ 0
-PA14
 Text Label 4450 3650 2    50   ~ 0
 PA15
 Wire Wire Line
@@ -788,8 +776,6 @@ Text Label 1750 3300 0    50   ~ 0
 PA14
 Text Label 1750 3400 0    50   ~ 0
 PA15
-Text Notes 4250 3500 2    50   ~ 0
-Jumper!
 Text Label 4450 4250 2    50   ~ 0
 PB3
 Text Label 4450 4350 2    50   ~ 0
@@ -874,4 +860,144 @@ Wire Wire Line
 	1750 4000 1700 4000
 Wire Wire Line
 	1750 4100 1700 4100
+$Comp
+L SquantorSpecial:Solderjumper_2way_noconn JP1
+U 1 1 619588D3
+P 3050 2600
+F 0 "JP1" H 2850 2550 50  0000 C CNN
+F 1 "PA13" H 3250 2550 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 3050 2600 50  0001 C CNN
+F 3 "" H 3050 2600 50  0001 C CNN
+	1    3050 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorSpecial:Solderjumper_2way_noconn JP2
+U 1 1 6198AA72
+P 3050 2850
+F 0 "JP2" H 2850 2800 50  0000 C CNN
+F 1 "PA14" H 3250 2800 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_2way_noconn" H 3050 2850 50  0001 C CNN
+F 3 "" H 3050 2850 50  0001 C CNN
+	1    3050 2850
+	1    0    0    -1  
+$EndComp
+Text Label 2800 2600 2    50   ~ 0
+PA13
+Text Label 2800 2850 2    50   ~ 0
+PA14
+Text Label 4450 3450 2    50   ~ 0
+TMS
+Text Label 4450 3550 2    50   ~ 0
+TCK
+Text Label 3300 2600 0    50   ~ 0
+TMS
+Text Label 3300 2850 0    50   ~ 0
+TCK
+Wire Wire Line
+	3300 2850 3250 2850
+Wire Wire Line
+	3250 2600 3300 2600
+Wire Wire Line
+	2850 2600 2800 2600
+Wire Wire Line
+	2800 2850 2850 2850
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP3
+U 1 1 619B8160
+P 3050 3250
+F 0 "JP3" H 3250 3400 50  0000 C CNN
+F 1 "PC14/OSC32" H 3050 3000 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_3way_12conn" H 3050 3250 50  0001 C CNN
+F 3 "" H 3050 3250 50  0001 C CNN
+	1    3050 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP4
+U 1 1 619BD39D
+P 3050 3750
+F 0 "JP4" H 3250 3900 50  0000 C CNN
+F 1 "PC15/OSC32" H 3050 3500 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_3way_12conn" H 3050 3750 50  0001 C CNN
+F 3 "" H 3050 3750 50  0001 C CNN
+	1    3050 3750
+	1    0    0    -1  
+$EndComp
+Text Label 2800 3850 2    50   ~ 0
+PC15
+Wire Wire Line
+	2850 3850 2800 3850
+Wire Wire Line
+	2800 3350 2850 3350
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP5
+U 1 1 619D0013
+P 3050 4250
+F 0 "JP5" H 3250 4400 50  0000 C CNN
+F 1 "PF0/OSC" H 3050 4000 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_3way_12conn" H 3050 4250 50  0001 C CNN
+F 3 "" H 3050 4250 50  0001 C CNN
+	1    3050 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP6
+U 1 1 619D0D98
+P 3050 4750
+F 0 "JP6" H 3250 4900 50  0000 C CNN
+F 1 "PF1/OSC" H 3050 4500 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_3way_12conn" H 3050 4750 50  0001 C CNN
+F 3 "" H 3050 4750 50  0001 C CNN
+	1    3050 4750
+	1    0    0    -1  
+$EndComp
+Text Label 2800 4350 2    50   ~ 0
+PF0
+Text Label 2800 4850 2    50   ~ 0
+PF1
+Wire Wire Line
+	2850 4850 2800 4850
+Wire Wire Line
+	2800 4350 2850 4350
+Text Label 4450 5850 2    50   ~ 0
+OSC32IN_MCU
+Text Label 4450 5950 2    50   ~ 0
+OSC32OUT_MCU
+Text Label 4450 6150 2    50   ~ 0
+OSCIN_MCU
+Text Label 4450 6250 2    50   ~ 0
+OSCOUT_MCU
+Text Label 3300 3250 0    50   ~ 0
+OSC32IN_MCU
+Text Label 3300 3750 0    50   ~ 0
+OSC32OUT_MCU
+Text Label 3300 4250 0    50   ~ 0
+OSCIN_MCU
+Text Label 3300 4750 0    50   ~ 0
+OSCOUT_MCU
+Wire Wire Line
+	3300 4750 3250 4750
+Wire Wire Line
+	3250 4250 3300 4250
+Wire Wire Line
+	3300 3750 3250 3750
+Wire Wire Line
+	3250 3250 3300 3250
+Text Label 2800 3150 2    50   ~ 0
+OSC32IN
+Text Label 2800 3650 2    50   ~ 0
+OSC32OUT
+Text Label 2800 4150 2    50   ~ 0
+OSCIN
+Text Label 2800 4650 2    50   ~ 0
+OSCOUT
+Wire Wire Line
+	2850 4650 2800 4650
+Wire Wire Line
+	2800 4150 2850 4150
+Wire Wire Line
+	2850 3650 2800 3650
+Wire Wire Line
+	2800 3150 2850 3150
 $EndSCHEMATC
