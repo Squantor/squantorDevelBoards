@@ -105,7 +105,7 @@ U 1 1 5D897E29
 P 3200 1750
 F 0 "J4" H 3200 650 50  0000 C CNN
 F 1 "nuclone_medium_right" H 3200 2850 50  0000 C CNN
-F 2 "SquantorConnectorsNamed:nuclone_medium_right" H 3200 1700 50  0001 C CNN
+F 2 "SquantorConnectorsNamed:nuclone_medium_right_stacked" H 3200 1700 50  0000 C CNN
 F 3 "" H 3200 1700 50  0001 C CNN
 	1    3200 1750
 	-1   0    0    1   
@@ -333,7 +333,7 @@ U 1 1 5D87167A
 P 1450 1750
 F 0 "J3" H 1450 2850 50  0000 C CNN
 F 1 "nuclone_medium_left" H 1450 650 50  0000 C CNN
-F 2 "SquantorConnectorsNamed:nuclone_medium_left" H 1600 1700 50  0001 C CNN
+F 2 "SquantorConnectorsNamed:nuclone_medium_left_stacked" H 1600 1700 50  0001 C CNN
 F 3 "" H 1600 1700 50  0001 C CNN
 	1    1450 1750
 	1    0    0    -1  
