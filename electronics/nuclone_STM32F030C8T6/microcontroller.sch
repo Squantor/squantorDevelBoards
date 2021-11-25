@@ -212,17 +212,6 @@ NoConn ~ 950  4700
 NoConn ~ 950  4800
 NoConn ~ 950  4900
 NoConn ~ 950  5000
-NoConn ~ 1700 5200
-NoConn ~ 1700 5100
-NoConn ~ 1700 5000
-NoConn ~ 1700 4900
-NoConn ~ 1700 4800
-NoConn ~ 1700 4700
-NoConn ~ 1700 4600
-NoConn ~ 1700 4500
-NoConn ~ 1700 4400
-NoConn ~ 1700 4300
-NoConn ~ 1700 4200
 Text HLabel 950  2000 0    50   Input ~ 0
 Bootloader
 $Comp
@@ -712,13 +701,13 @@ Wire Wire Line
 	4450 5350 4500 5350
 Wire Wire Line
 	4500 5450 4450 5450
-Text Label 1750 2100 0    50   ~ 0
+Text Label 1750 3200 0    50   ~ 0
 PB12
-Text Label 1750 2200 0    50   ~ 0
+Text Label 1750 3300 0    50   ~ 0
 PB13
-Text Label 1750 2300 0    50   ~ 0
+Text Label 1750 3400 0    50   ~ 0
 PB14
-Text Label 1750 2400 0    50   ~ 0
+Text Label 1750 3500 0    50   ~ 0
 PB15
 Text Label 4450 2950 2    50   ~ 0
 PA8
@@ -748,17 +737,17 @@ Wire Wire Line
 	4450 3550 4500 3550
 Wire Wire Line
 	4500 3650 4450 3650
-Text Label 1750 2500 0    50   ~ 0
+Text Label 1750 3600 0    50   ~ 0
 PA8
-Text Label 1750 2600 0    50   ~ 0
+Text Label 1750 3700 0    50   ~ 0
 PA9
-Text Label 1750 2700 0    50   ~ 0
+Text Label 1750 3800 0    50   ~ 0
 PA10
-Text Label 1750 2800 0    50   ~ 0
+Text Label 1750 3900 0    50   ~ 0
 PA11
-Text Label 1750 2900 0    50   ~ 0
+Text Label 1750 4000 0    50   ~ 0
 PA12
-Text Label 1750 3000 0    50   ~ 0
+Text Label 1750 4100 0    50   ~ 0
 PA13
 Text Label 4450 6350 2    50   ~ 0
 PF6
@@ -768,13 +757,13 @@ Wire Wire Line
 	4450 6350 4500 6350
 Wire Wire Line
 	4500 6450 4450 6450
-Text Label 1750 3100 0    50   ~ 0
+Text Label 1750 4200 0    50   ~ 0
 PF6
-Text Label 1750 3200 0    50   ~ 0
+Text Label 1750 4300 0    50   ~ 0
 PF7
-Text Label 1750 3300 0    50   ~ 0
+Text Label 1750 4400 0    50   ~ 0
 PA14
-Text Label 1750 3400 0    50   ~ 0
+Text Label 1750 4500 0    50   ~ 0
 PA15
 Text Label 4450 4250 2    50   ~ 0
 PB3
@@ -804,54 +793,32 @@ Wire Wire Line
 	4500 4750 4450 4750
 Wire Wire Line
 	4450 4850 4500 4850
-Text Label 1750 3500 0    50   ~ 0
+Text Label 1750 4600 0    50   ~ 0
 PB3
-Text Label 1750 3600 0    50   ~ 0
+Text Label 1750 4700 0    50   ~ 0
 PB4
-Text Label 1750 3700 0    50   ~ 0
+Text Label 1750 4800 0    50   ~ 0
 PB5
-Text Label 1750 3800 0    50   ~ 0
+Text Label 1750 4900 0    50   ~ 0
 PB6
-Text Label 1750 3900 0    50   ~ 0
+Text Label 1750 5000 0    50   ~ 0
 PB7
-Text Label 1750 4000 0    50   ~ 0
+Text Label 1750 5100 0    50   ~ 0
 PB8
-Text Label 1750 4100 0    50   ~ 0
+Text Label 1750 5200 0    50   ~ 0
 PB9
 Wire Wire Line
-	1700 2100 1750 2100
+	1700 3200 1750 3200
 Wire Wire Line
-	1750 2200 1700 2200
+	1750 3300 1700 3300
 Wire Wire Line
-	1700 2300 1750 2300
+	1700 3400 1750 3400
 Wire Wire Line
-	1750 2400 1700 2400
+	1750 3500 1700 3500
 Wire Wire Line
-	1700 2500 1750 2500
+	1700 3600 1750 3600
 Wire Wire Line
-	1750 2600 1700 2600
-Wire Wire Line
-	1750 2700 1700 2700
-Wire Wire Line
-	1700 2800 1750 2800
-Wire Wire Line
-	1750 2900 1700 2900
-Wire Wire Line
-	1700 3000 1750 3000
-Wire Wire Line
-	1750 3100 1700 3100
-Wire Wire Line
-	1750 3200 1700 3200
-Wire Wire Line
-	1700 3300 1750 3300
-Wire Wire Line
-	1750 3400 1700 3400
-Wire Wire Line
-	1700 3500 1750 3500
-Wire Wire Line
-	1750 3600 1700 3600
-Wire Wire Line
-	1700 3700 1750 3700
+	1750 3700 1700 3700
 Wire Wire Line
 	1750 3800 1700 3800
 Wire Wire Line
@@ -859,7 +826,29 @@ Wire Wire Line
 Wire Wire Line
 	1750 4000 1700 4000
 Wire Wire Line
-	1750 4100 1700 4100
+	1700 4100 1750 4100
+Wire Wire Line
+	1750 4200 1700 4200
+Wire Wire Line
+	1750 4300 1700 4300
+Wire Wire Line
+	1700 4400 1750 4400
+Wire Wire Line
+	1750 4500 1700 4500
+Wire Wire Line
+	1700 4600 1750 4600
+Wire Wire Line
+	1750 4700 1700 4700
+Wire Wire Line
+	1700 4800 1750 4800
+Wire Wire Line
+	1750 4900 1700 4900
+Wire Wire Line
+	1700 5000 1750 5000
+Wire Wire Line
+	1750 5100 1700 5100
+Wire Wire Line
+	1750 5200 1700 5200
 $Comp
 L SquantorSpecial:Solderjumper_2way_noconn JP1
 U 1 1 619588D3
@@ -1000,4 +989,15 @@ Wire Wire Line
 	2850 3650 2800 3650
 Wire Wire Line
 	2800 3150 2850 3150
+NoConn ~ 1700 3100
+NoConn ~ 1700 3000
+NoConn ~ 1700 2900
+NoConn ~ 1700 2800
+NoConn ~ 1700 2700
+NoConn ~ 1700 2600
+NoConn ~ 1700 2500
+NoConn ~ 1700 2400
+NoConn ~ 1700 2300
+NoConn ~ 1700 2200
+NoConn ~ 1700 2100
 $EndSCHEMATC

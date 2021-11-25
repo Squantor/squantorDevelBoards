@@ -103,12 +103,12 @@ $Comp
 L SquantorConnectorsNamed:nuclone_medium_right J4
 U 1 1 5D897E29
 P 3200 1750
-F 0 "J4" H 3200 650 50  0000 C CNN
-F 1 "nuclone_medium_right" H 3200 2850 50  0000 C CNN
-F 2 "SquantorConnectorsNamed:nuclone_medium_right_stacked" H 3200 1700 50  0000 C CNN
+F 0 "J4" H 3200 2850 50  0000 C CNN
+F 1 "nuclone_medium_right" H 3200 650 50  0000 C CNN
+F 2 "SquantorConnectorsNamed:nuclone_medium_right_stacked" H 3200 1700 50  0001 C CNN
 F 3 "" H 3200 1700 50  0001 C CNN
 	1    3200 1750
-	-1   0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L SquantorLabels:Label N3
@@ -411,17 +411,17 @@ Wire Wire Line
 	850  5500 800  5500
 Wire Wire Line
 	800  5600 850  5600
-Text Label 3700 2600 0    50   ~ 0
-GPIO_30
-Text Label 3700 2500 0    50   ~ 0
-GPIO_32
-Text Label 2700 2400 2    50   ~ 0
-GPIO_35
-Text Label 2700 2500 2    50   ~ 0
-GPIO_33
 Text Label 2700 2600 2    50   ~ 0
-GPIO_31
+GPIO_30
+Text Label 2700 2500 2    50   ~ 0
+GPIO_32
 Text Label 3700 2400 0    50   ~ 0
+GPIO_35
+Text Label 3700 2500 0    50   ~ 0
+GPIO_33
+Text Label 3700 2600 0    50   ~ 0
+GPIO_31
+Text Label 2700 2400 2    50   ~ 0
 GPIO_34
 Text Notes 2800 4700 0    50   ~ 0
 Power input
@@ -629,57 +629,57 @@ Text Label 1950 2400 0    50   ~ 0
 GPIO_25
 Text Label 1950 2500 0    50   ~ 0
 GPIO_27
-Text Label 3700 1000 0    50   ~ 0
-GPIO_60
 Text Label 2700 1000 2    50   ~ 0
+GPIO_60
+Text Label 3700 1000 0    50   ~ 0
 GPIO_61
-Text Label 3700 1100 0    50   ~ 0
-GPIO_58
 Text Label 2700 1100 2    50   ~ 0
+GPIO_58
+Text Label 3700 1100 0    50   ~ 0
 GPIO_59
-Text Label 3700 1200 0    50   ~ 0
-GPIO_56
 Text Label 2700 1200 2    50   ~ 0
+GPIO_56
+Text Label 3700 1200 0    50   ~ 0
 GPIO_57
-Text Label 3700 1300 0    50   ~ 0
-GPIO_54
 Text Label 2700 1300 2    50   ~ 0
+GPIO_54
+Text Label 3700 1300 0    50   ~ 0
 GPIO_55
-Text Label 3700 1400 0    50   ~ 0
-GPIO_52
 Text Label 2700 1400 2    50   ~ 0
+GPIO_52
+Text Label 3700 1400 0    50   ~ 0
 GPIO_53
-Text Label 3700 1500 0    50   ~ 0
-GPIO_50
 Text Label 2700 1500 2    50   ~ 0
+GPIO_50
+Text Label 3700 1500 0    50   ~ 0
 GPIO_51
-Text Label 3700 1600 0    50   ~ 0
-GPIO_48
 Text Label 2700 1600 2    50   ~ 0
+GPIO_48
+Text Label 3700 1600 0    50   ~ 0
 GPIO_49
-Text Label 3700 1700 0    50   ~ 0
-GPIO_46
 Text Label 2700 1700 2    50   ~ 0
+GPIO_46
+Text Label 3700 1700 0    50   ~ 0
 GPIO_47
-Text Label 3700 1900 0    50   ~ 0
-GPIO_44
 Text Label 2700 1900 2    50   ~ 0
+GPIO_44
+Text Label 3700 1900 0    50   ~ 0
 GPIO_45
-Text Label 3700 2000 0    50   ~ 0
-GPIO_42
 Text Label 2700 2000 2    50   ~ 0
+GPIO_42
+Text Label 3700 2000 0    50   ~ 0
 GPIO_43
-Text Label 3700 2100 0    50   ~ 0
-GPIO_40
 Text Label 2700 2100 2    50   ~ 0
+GPIO_40
+Text Label 3700 2100 0    50   ~ 0
 GPIO_41
-Text Label 3700 2200 0    50   ~ 0
-GPIO_38
 Text Label 2700 2200 2    50   ~ 0
+GPIO_38
+Text Label 3700 2200 0    50   ~ 0
 GPIO_39
-Text Label 3700 2300 0    50   ~ 0
-GPIO_36
 Text Label 2700 2300 2    50   ~ 0
+GPIO_36
+Text Label 3700 2300 0    50   ~ 0
 GPIO_37
 Wire Wire Line
 	1150 5600 1800 5600
