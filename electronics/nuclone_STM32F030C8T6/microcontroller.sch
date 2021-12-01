@@ -258,7 +258,7 @@ F 3 "" H 3950 5950 50  0001 C CNN
 	4    5400 5950
 	1    0    0    -1  
 $EndComp
-Text Label 3200 1350 2    50   ~ 0
+Text Label 3600 1350 2    50   ~ 0
 VSS
 Wire Wire Line
 	4450 1250 4450 1350
@@ -279,10 +279,10 @@ Connection ~ 4450 1050
 Wire Wire Line
 	4450 1050 4450 950 
 $Comp
-L Device:C C12
-U 1 1 6189D72B
+L Device:C C11
+U 1 1 618A0D69
 P 4250 1150
-F 0 "C12" H 4300 1250 50  0000 L CNN
+F 0 "C11" H 4300 1250 50  0000 L CNN
 F 1 "10n" H 4300 1050 50  0000 L CNN
 F 2 "SquantorRcl:C_0402" H 4288 1000 50  0001 C CNN
 F 3 "~" H 4250 1150 50  0001 C CNN
@@ -290,10 +290,10 @@ F 3 "~" H 4250 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C11
-U 1 1 618A0D69
+L Device:C C10
+U 1 1 618A117F
 P 4050 1150
-F 0 "C11" H 4100 1250 50  0000 L CNN
+F 0 "C10" H 4100 1250 50  0000 L CNN
 F 1 "10n" H 4100 1050 50  0000 L CNN
 F 2 "SquantorRcl:C_0402" H 4088 1000 50  0001 C CNN
 F 3 "~" H 4050 1150 50  0001 C CNN
@@ -301,53 +301,29 @@ F 3 "~" H 4050 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C10
-U 1 1 618A117F
+L Device:C C8
+U 1 1 618A1634
 P 3850 1150
-F 0 "C10" H 3900 1250 50  0000 L CNN
-F 1 "10n" H 3900 1050 50  0000 L CNN
+F 0 "C8" H 3900 1250 50  0000 L CNN
+F 1 "100n" H 3900 1050 50  0000 L CNN
 F 2 "SquantorRcl:C_0402" H 3888 1000 50  0001 C CNN
 F 3 "~" H 3850 1150 50  0001 C CNN
 	1    3850 1150
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C8
-U 1 1 618A1634
+L Device:C C6
+U 1 1 618A1E29
 P 3650 1150
-F 0 "C8" H 3700 1250 50  0000 L CNN
+F 0 "C6" H 3700 1250 50  0000 L CNN
 F 1 "100n" H 3700 1050 50  0000 L CNN
 F 2 "SquantorRcl:C_0402" H 3688 1000 50  0001 C CNN
 F 3 "~" H 3650 1150 50  0001 C CNN
 	1    3650 1150
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C6
-U 1 1 618A1E29
-P 3450 1150
-F 0 "C6" H 3500 1250 50  0000 L CNN
-F 1 "100n" H 3500 1050 50  0000 L CNN
-F 2 "SquantorRcl:C_0402" H 3488 1000 50  0001 C CNN
-F 3 "~" H 3450 1150 50  0001 C CNN
-	1    3450 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C4
-U 1 1 618A224F
-P 3250 1150
-F 0 "C4" H 3300 1250 50  0000 L CNN
-F 1 "100n" H 3300 1050 50  0000 L CNN
-F 2 "SquantorRcl:C_0402" H 3288 1000 50  0001 C CNN
-F 3 "~" H 3250 1150 50  0001 C CNN
-	1    3250 1150
-	1    0    0    -1  
-$EndComp
-Text Label 3200 950  2    50   ~ 0
+Text Label 3600 950  2    50   ~ 0
 VDD
-Wire Wire Line
-	3200 1350 3250 1350
 Connection ~ 4450 1350
 Wire Wire Line
 	4250 1300 4250 1350
@@ -366,21 +342,8 @@ Wire Wire Line
 	3850 1350 4050 1350
 Wire Wire Line
 	3650 1300 3650 1350
-Connection ~ 3650 1350
 Wire Wire Line
 	3650 1350 3850 1350
-Wire Wire Line
-	3450 1300 3450 1350
-Connection ~ 3450 1350
-Wire Wire Line
-	3450 1350 3650 1350
-Wire Wire Line
-	3250 1300 3250 1350
-Connection ~ 3250 1350
-Wire Wire Line
-	3250 1350 3450 1350
-Wire Wire Line
-	3200 950  3250 950 
 Wire Wire Line
 	4250 1000 4250 950 
 Connection ~ 4250 950 
@@ -398,19 +361,8 @@ Wire Wire Line
 	3850 950  4050 950 
 Wire Wire Line
 	3650 1000 3650 950 
-Connection ~ 3650 950 
 Wire Wire Line
 	3650 950  3850 950 
-Wire Wire Line
-	3450 1000 3450 950 
-Connection ~ 3450 950 
-Wire Wire Line
-	3450 950  3650 950 
-Wire Wire Line
-	3250 1000 3250 950 
-Connection ~ 3250 950 
-Wire Wire Line
-	3250 950  3450 950 
 $Comp
 L Device:C C7
 U 1 1 618B0A8E
@@ -1000,4 +952,146 @@ NoConn ~ 1700 2400
 NoConn ~ 1700 2300
 NoConn ~ 1700 2200
 NoConn ~ 1700 2100
+Wire Wire Line
+	3600 950  3650 950 
+Connection ~ 3650 950 
+Wire Wire Line
+	3650 1350 3600 1350
+Connection ~ 3650 1350
+$Comp
+L Device:Crystal Y1
+U 1 1 61AF6183
+P 2900 5550
+F 0 "Y1" H 3050 5600 50  0000 C CNN
+F 1 "32KHz" H 3100 5500 50  0000 C CNN
+F 2 "SquantorCrystal:Crystal_2012_2" H 2900 5550 50  0001 C CNN
+F 3 "~" H 2900 5550 50  0001 C CNN
+	1    2900 5550
+	1    0    0    -1  
+$EndComp
+Text Label 2650 5550 2    50   ~ 0
+OSC32IN
+Text Label 3150 5550 0    50   ~ 0
+OSC32OUT
+$Comp
+L Device:Crystal_GND24 Y2
+U 1 1 61AF9D34
+P 2900 6250
+F 0 "Y2" H 3050 6300 50  0000 L CNN
+F 1 "16MHz" H 3050 6200 50  0000 L CNN
+F 2 "SquantorCrystal:Crystal_3225_4" H 2900 6250 50  0001 C CNN
+F 3 "~" H 2900 6250 50  0001 C CNN
+	1    2900 6250
+	1    0    0    -1  
+$EndComp
+Text Label 2650 6250 2    50   ~ 0
+OSCIN
+Text Label 3150 6250 0    50   ~ 0
+OSCOUT
+Wire Wire Line
+	2650 6250 2700 6250
+Wire Wire Line
+	3050 6250 3100 6250
+Wire Wire Line
+	2650 5550 2700 5550
+Wire Wire Line
+	3050 5550 3100 5550
+Text Label 2850 6000 2    50   ~ 0
+VSS
+Text Label 2650 6800 2    50   ~ 0
+VSS
+Wire Wire Line
+	2850 6000 2900 6000
+Wire Wire Line
+	2900 6000 2900 6050
+$Comp
+L Device:C C12
+U 1 1 61B45A3A
+P 2900 5350
+F 0 "C12" V 2850 5400 50  0000 L CNN
+F 1 "10p" V 2950 5400 50  0000 L CNN
+F 2 "SquantorRcl:C_0402" H 2938 5200 50  0001 C CNN
+F 3 "~" H 2900 5350 50  0001 C CNN
+	1    2900 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2700 5550 2700 5350
+Wire Wire Line
+	2700 5350 2750 5350
+Connection ~ 2700 5550
+Wire Wire Line
+	2700 5550 2750 5550
+Text Label 3100 5350 0    50   ~ 0
+VSS
+$Comp
+L Device:C C13
+U 1 1 61B8CB11
+P 2900 5750
+F 0 "C13" V 2850 5800 50  0000 L CNN
+F 1 "10p" V 2950 5800 50  0000 L CNN
+F 2 "SquantorRcl:C_0402" H 2938 5600 50  0001 C CNN
+F 3 "~" H 2900 5750 50  0001 C CNN
+	1    2900 5750
+	0    1    1    0   
+$EndComp
+Text Label 2700 5750 2    50   ~ 0
+VSS
+Wire Wire Line
+	2700 5750 2750 5750
+Wire Wire Line
+	3050 5750 3100 5750
+Wire Wire Line
+	3100 5750 3100 5550
+Connection ~ 3100 5550
+Wire Wire Line
+	3100 5550 3150 5550
+Wire Wire Line
+	3100 5350 3050 5350
+$Comp
+L Device:C C4
+U 1 1 61BD8942
+P 2700 6600
+F 0 "C4" H 2550 6500 50  0000 L CNN
+F 1 "10p" H 2500 6700 50  0000 L CNN
+F 2 "SquantorRcl:C_0402" H 2738 6450 50  0001 C CNN
+F 3 "~" H 2700 6600 50  0001 C CNN
+	1    2700 6600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2700 6450 2700 6250
+Connection ~ 2700 6250
+Wire Wire Line
+	2700 6250 2750 6250
+Wire Wire Line
+	2650 6800 2700 6800
+Wire Wire Line
+	2900 6450 2900 6800
+Wire Wire Line
+	2700 6750 2700 6800
+Connection ~ 2700 6800
+Wire Wire Line
+	2700 6800 2900 6800
+$Comp
+L Device:C C15
+U 1 1 61C05903
+P 3100 6600
+F 0 "C15" H 2950 6500 50  0000 L CNN
+F 1 "10p" H 2900 6700 50  0000 L CNN
+F 2 "SquantorRcl:C_0402" H 3138 6450 50  0001 C CNN
+F 3 "~" H 3100 6600 50  0001 C CNN
+	1    3100 6600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3100 6250 3100 6450
+Connection ~ 3100 6250
+Wire Wire Line
+	3100 6250 3150 6250
+Wire Wire Line
+	3100 6750 3100 6800
+Wire Wire Line
+	3100 6800 2900 6800
+Connection ~ 2900 6800
 $EndSCHEMATC
