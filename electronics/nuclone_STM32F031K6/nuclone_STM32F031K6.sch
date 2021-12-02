@@ -93,7 +93,7 @@ L SquantorLabels:VYYYYMMDD N2
 U 1 1 5D6A68B9
 P 950 7200
 F 0 "N2" H 900 7300 60  0000 L CNN
-F 1 "20211125" H 700 7200 60  0000 L CNN
+F 1 "20211202" H 700 7200 60  0000 L CNN
 F 2 "SquantorLabels:Label_version" H 950 7200 60  0001 C CNN
 F 3 "" H 950 7200 60  0001 C CNN
 	1    950  7200
@@ -454,11 +454,11 @@ Wire Notes Line
 Text Notes 1350 7600 0    50   ~ 0
 Labels and mounting
 Wire Notes Line
-	2300 7650 2300 6500
+	2300 7650 2300 6250
 Wire Notes Line
-	2300 6500 600  6500
+	2300 6250 600  6250
 Wire Notes Line
-	600  6500 600  7650
+	600  6250 600  7650
 Wire Notes Line
 	600  7650 2300 7650
 Wire Notes Line
@@ -1035,4 +1035,15 @@ Text Label 9500 5700 0    50   ~ 0
 Bootloader
 Wire Wire Line
 	9500 5700 9450 5700
+$Comp
+L SquantorLabels:Label N5
+U 1 1 61AA3CB4
+P 950 6400
+F 0 "N5" H 900 6450 60  0000 L CNN
+F 1 "Nuclone Template 20211124" H 800 6350 60  0000 L CNN
+F 2 "SquantorLabels:Label_Generic" H 950 6400 60  0001 C CNN
+F 3 "" H 950 6400 60  0001 C CNN
+	1    950  6400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
