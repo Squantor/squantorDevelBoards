@@ -205,7 +205,7 @@ Wire Wire Line
 	2550 2700 2500 2700
 Wire Wire Line
 	2500 2450 2550 2450
-Text Label 2050 3950 2    50   ~ 0
+Text Label 3950 4300 0    50   ~ 0
 PIO0_8
 $Comp
 L SquantorSpecial:Solderjumper_2way_12conn JP4
@@ -567,34 +567,34 @@ TCK
 $Comp
 L SquantorSpecial:Solderjumper_3way_12conn JP6
 U 1 1 621E0E36
-P 2300 3850
-F 0 "JP6" H 2150 3850 50  0000 C CNN
-F 1 "PIO0_8" H 2550 3800 50  0000 C CNN
-F 2 "SquantorSpecial:solder_jumper_0402_3way_12conn" H 2300 3850 50  0001 C CNN
-F 3 "" H 2300 3850 50  0001 C CNN
-	1    2300 3850
-	1    0    0    -1  
+P 3700 4400
+F 0 "JP6" H 3550 4400 50  0000 C CNN
+F 1 "PIO0_8" H 3700 4650 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_0402_3way_12conn" H 3700 4400 50  0001 C CNN
+F 3 "" H 3700 4400 50  0001 C CNN
+	1    3700 4400
+	-1   0    0    1   
 $EndComp
 $Comp
 L SquantorSpecial:Solderjumper_3way_12conn JP7
 U 1 1 621E3BE7
-P 2300 4300
-F 0 "JP7" H 2150 4300 50  0000 C CNN
-F 1 "PIO0_9" H 2550 4250 50  0000 C CNN
-F 2 "SquantorSpecial:solder_jumper_0402_3way_12conn" H 2300 4300 50  0001 C CNN
-F 3 "" H 2300 4300 50  0001 C CNN
-	1    2300 4300
-	1    0    0    -1  
+P 5000 4400
+F 0 "JP7" H 4850 4400 50  0000 C CNN
+F 1 "PIO0_9" H 5000 4650 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_0402_3way_12conn" H 5000 4400 50  0001 C CNN
+F 3 "" H 5000 4400 50  0001 C CNN
+	1    5000 4400
+	1    0    0    1   
 $EndComp
-Text Label 2050 4400 2    50   ~ 0
+Text Label 4750 4300 2    50   ~ 0
 PIO0_9
 Wire Wire Line
-	2050 3950 2100 3950
+	3950 4300 3900 4300
 Wire Wire Line
-	2050 4400 2100 4400
-Text Label 2550 3850 0    50   ~ 0
+	4750 4300 4800 4300
+Text Label 3450 4400 2    50   ~ 0
 XTALIN
-Text Label 2550 4300 0    50   ~ 0
+Text Label 5250 4400 0    50   ~ 0
 XTALOUT
 Text Label 4050 1300 2    50   ~ 0
 RESET
@@ -658,4 +658,77 @@ Wire Wire Line
 	950  4900 1000 4900
 Wire Wire Line
 	1000 5000 950  5000
+$Comp
+L Device:Crystal_GND24 Y?
+U 1 1 6223845B
+P 4400 4500
+F 0 "Y?" H 4550 4600 50  0000 L CNN
+F 1 "12MHz" H 4000 4600 50  0000 L CNN
+F 2 "SquantorCrystal:Crystal_3225_4" H 4400 4500 50  0001 C CNN
+F 3 "~" H 4400 4500 50  0001 C CNN
+	1    4400 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4400 3500 4400
+Wire Wire Line
+	5200 4400 5250 4400
+$Comp
+L Device:C C?
+U 1 1 622406EA
+P 4200 4700
+F 0 "C?" H 4250 4800 50  0000 L CNN
+F 1 "12p" H 4250 4600 50  0000 L CNN
+F 2 "SquantorRcl:C_0402" H 4238 4550 50  0001 C CNN
+F 3 "~" H 4200 4700 50  0001 C CNN
+	1    4200 4700
+	1    0    0    -1  
+$EndComp
+Text Label 4150 4900 2    50   ~ 0
+VSS
+$Comp
+L Device:C C?
+U 1 1 62241113
+P 4600 4700
+F 0 "C?" H 4650 4800 50  0000 L CNN
+F 1 "12p" H 4650 4600 50  0000 L CNN
+F 2 "SquantorRcl:C_0402" H 4638 4550 50  0001 C CNN
+F 3 "~" H 4600 4700 50  0001 C CNN
+	1    4600 4700
+	1    0    0    -1  
+$EndComp
+Text Label 4350 4250 2    50   ~ 0
+VSS
+Wire Wire Line
+	4350 4250 4400 4250
+Wire Wire Line
+	4400 4250 4400 4300
+Wire Wire Line
+	4400 4700 4400 4900
+Wire Wire Line
+	4400 4900 4200 4900
+Wire Wire Line
+	4200 4850 4200 4900
+Connection ~ 4200 4900
+Wire Wire Line
+	4200 4900 4150 4900
+Wire Wire Line
+	4600 4850 4600 4900
+Wire Wire Line
+	4600 4900 4400 4900
+Connection ~ 4400 4900
+Wire Wire Line
+	4600 4550 4600 4500
+Wire Wire Line
+	4600 4500 4550 4500
+Wire Wire Line
+	4200 4550 4200 4500
+Wire Wire Line
+	4200 4500 4250 4500
+Wire Wire Line
+	3900 4500 4200 4500
+Connection ~ 4200 4500
+Wire Wire Line
+	4600 4500 4800 4500
+Connection ~ 4600 4500
 $EndSCHEMATC
