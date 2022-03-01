@@ -719,9 +719,9 @@ Text Label 1000 4100 0    50   ~ 0
 PIO0_06
 Text Label 1000 4000 0    50   ~ 0
 PIO0_07
-Text Label 1000 3900 0    50   ~ 0
-PIO0_08
 Text Label 1000 3800 0    50   ~ 0
+PIO0_08
+Text Label 1000 3900 0    50   ~ 0
 PIO0_09
 Text Label 1000 3700 0    50   ~ 0
 PIO0_01
