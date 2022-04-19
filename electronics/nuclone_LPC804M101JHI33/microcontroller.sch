@@ -405,4 +405,98 @@ Wire Wire Line
 	1000 2900 950  2900
 Wire Wire Line
 	950  3000 1000 3000
+Text Label 9550 2150 2    50   ~ 0
+PIO0_15
+Text Label 9550 2050 2    50   ~ 0
+PIO0_14
+Text Label 9550 2650 2    50   ~ 0
+PIO0_18
+Text Label 9550 2750 2    50   ~ 0
+PIO0_19
+Text Label 9550 2950 2    50   ~ 0
+PIO0_22
+Text Label 9550 3050 2    50   ~ 0
+PIO0_23
+Text Label 9550 3150 2    50   ~ 0
+PIO0_24
+Text Label 9550 3250 2    50   ~ 0
+PIO0_25
+Text Label 9550 3350 2    50   ~ 0
+PIO0_26
+Text Label 9550 3450 2    50   ~ 0
+PIO0_27
+Text Label 9550 3550 2    50   ~ 0
+PIO0_28
+Text Label 9550 3650 2    50   ~ 0
+PIO0_29
+Text Label 9550 3750 2    50   ~ 0
+PIO0_30
+Wire Wire Line
+	9550 2650 9600 2650
+Wire Wire Line
+	9600 2750 9550 2750
+Wire Wire Line
+	9550 2950 9600 2950
+Wire Wire Line
+	9600 3050 9550 3050
+Wire Wire Line
+	9550 3150 9600 3150
+Wire Wire Line
+	9600 3250 9550 3250
+Wire Wire Line
+	9550 3350 9600 3350
+Wire Wire Line
+	9600 3450 9550 3450
+Wire Wire Line
+	9550 3550 9600 3550
+Wire Wire Line
+	9600 3650 9550 3650
+Wire Wire Line
+	9550 3750 9600 3750
+Wire Wire Line
+	9550 2050 9600 2050
+Wire Wire Line
+	9600 2150 9550 2150
+Text Label 9550 1550 2    50   ~ 0
+PIO0_09
+Text Label 9550 1450 2    50   ~ 0
+PIO0_08
+Text Label 9550 1350 2    50   ~ 0
+PIO0_07
+Wire Wire Line
+	9550 1550 9600 1550
+Wire Wire Line
+	9600 1450 9550 1450
+Wire Wire Line
+	9550 1350 9600 1350
+Text Label 9550 850  2    50   ~ 0
+PIO0_01
+Text Label 9550 750  2    50   ~ 0
+PIO0_00
+Wire Wire Line
+	9550 750  9600 750 
+Wire Wire Line
+	9600 850  9550 850 
+Text Label 1000 2400 0    50   ~ 0
+PIO0_05
+Wire Wire Line
+	1000 2400 950  2400
+Text Label 1000 2600 0    50   ~ 0
+PIO0_03
+Text Label 9250 950  2    50   ~ 0
+PIO0_02
+Text Label 1000 2700 0    50   ~ 0
+PIO0_02
+Wire Wire Line
+	1000 2600 950  2600
+Wire Wire Line
+	950  2700 1000 2700
+Text Label 8650 2850 0    50   ~ 0
+PIO0_29
+Text Label 8650 2950 0    50   ~ 0
+PIO0_28
+Text Label 8650 3050 0    50   ~ 0
+PIO0_27
+Text Label 8650 3150 0    50   ~ 0
+PIO0_26
 $EndSCHEMATC
