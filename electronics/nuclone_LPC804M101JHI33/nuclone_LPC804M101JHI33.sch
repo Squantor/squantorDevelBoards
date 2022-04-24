@@ -476,7 +476,7 @@ L SquantorLabels:Label N4
 U 1 1 5FB0926C
 P 950 6650
 F 0 "N4" H 900 6700 60  0000 L CNN
-F 1 "NuClone Small template V1.4" H 800 6600 60  0000 L CNN
+F 1 "NuClone LPC804M101JHI33" H 800 6600 60  0000 L CNN
 F 2 "SquantorLabels:Label_Generic" H 950 6650 60  0001 C CNN
 F 3 "" H 950 6650 60  0001 C CNN
 	1    950  6650
