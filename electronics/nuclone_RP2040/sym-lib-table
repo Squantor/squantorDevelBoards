@@ -31,4 +31,5 @@
   (lib (name "SquantorUsb")(type "KiCad")(uri "${KIPRJMOD}/../squantorPcbLibrary/SquantorUsb.kicad_sym")(options "")(descr ""))
   (lib (name "SquantorWCH")(type "KiCad")(uri "${KIPRJMOD}/../squantorPcbLibrary/SquantorWCH.kicad_sym")(options "")(descr ""))
   (lib (name "SquantorWinbond")(type "KiCad")(uri "${KIPRJMOD}/../squantorPcbLibrary/SquantorWinbond.kicad_sym")(options "")(descr ""))
+  (lib (name "SquantorRaspberryPi")(type "KiCad")(uri "${KIPRJMOD}/../squantorPcbLibrary/SquantorRaspberryPi.kicad_sym")(options "")(descr ""))
 )
