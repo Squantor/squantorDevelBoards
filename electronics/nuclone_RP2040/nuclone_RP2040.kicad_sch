@@ -2887,7 +2887,7 @@
     (property "Reference" "N2" (id 0) (at 22.86 180.34 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
-    (property "Value" "" (id 1) (at 17.78 182.88 0)
+    (property "Value" "V20220527" (id 1) (at 17.78 182.88 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
     (property "Footprint" "SquantorLabels:Label_Generic" (id 2) (at 24.13 182.88 0)
@@ -2914,8 +2914,8 @@
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid ef85c080-0620-4d60-b431-365183019483))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410c8))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410c8))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410ca))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410ca))
     (pin "3" (uuid 4709173f-fab0-46d0-803e-338cfaee027e))
   )
 
@@ -3623,6 +3623,48 @@
     (path "/00000000-0000-0000-0000-000060ee70cc"
       (reference "C17") (unit 1) (value "1u") (footprint "SquantorRcl:C_0603")
     )
+    (path "/00000000-0000-0000-0000-00006127a958/074e34d6-2284-4ea8-ae9b-39e8d962d7e8"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/4af6bbfa-396e-4b37-9bc8-72d83a65a002"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/5696bc61-9b51-46db-8e32-84007ad49203"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/58b3fe65-90f4-45d2-948d-69865e39a640"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/5af1bf61-ae8c-4f02-860a-cd44f7e94bad"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/61343b4c-2694-48d6-aa9b-776a3336cde4"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/75a1010b-ce1a-4dc7-9d65-e661c54d10ff"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/83f25c78-35be-4d3d-9b00-97037428c384"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/87d678fc-4f10-4bde-9126-165035f05d45"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/939411a5-54ee-4f8c-a422-9b8b80d3489a"
+      (reference "C?") (unit 1) (value "22p") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/9933035d-30aa-4140-9b9c-0b3f2ff054d3"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/e369bbca-593f-40f0-85bf-25ff9655b134"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/f2a82e48-4a9e-43d2-95c8-4ea601628687"
+      (reference "C?") (unit 1) (value "22p") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/fbed8992-f70c-4c0a-802f-3afb5ad272e2"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
     (path "/00000000-0000-0000-0000-0000605c45fe"
       (reference "D2") (unit 1) (value "GREEN") (footprint "SquantorDiodes:LED_0603_hand")
     )
@@ -3631,6 +3673,9 @@
     )
     (path "/00000000-0000-0000-0000-00005d65ce8e"
       (reference "FB1") (unit 1) (value "600") (footprint "SquantorRcl:L_0603")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/cbdf1516-653f-4956-bdd1-3773ba450ea7"
+      (reference "FB?") (unit 1) (value "600") (footprint "SquantorRcl:L_0402")
     )
     (path "/00000000-0000-0000-0000-00005d6a1740"
       (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3_Pad_Via")
@@ -3701,6 +3746,9 @@
     (path "/00000000-0000-0000-0000-0000605c45f3"
       (reference "R14") (unit 1) (value "1K") (footprint "SquantorRcl:R_0402_hand")
     )
+    (path "/00000000-0000-0000-0000-00006127a958/432159f1-6ae4-4ef4-a946-9e666d388f88"
+      (reference "R?") (unit 1) (value "TBD") (footprint "SquantorRcl:R_0402_hand")
+    )
     (path "/00000000-0000-0000-0000-00005dc2b74b"
       (reference "SW1") (unit 1) (value "RESET") (footprint "SquantorSwitches:TD-85XU")
     )
@@ -3736,6 +3784,9 @@
     )
     (path "/00000000-0000-0000-0000-00006127a958/bcd2ab95-e54b-42f8-9705-988c05d4585a"
       (reference "U?") (unit 3) (value "rp2040") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/66ea1ada-e055-4474-87b3-72698db6d44c"
+      (reference "Y?") (unit 1) (value "12MHz") (footprint "SquantorCrystal:Crystal_3225_4")
     )
   )
 )
