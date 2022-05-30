@@ -2714,10 +2714,10 @@
     (property "Reference" "N1" (id 0) (at 29.21 189.23 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Value" "" (id 1) (at 24.13 193.04 0)
+    (property "Value" "OHWLOGO" (id 1) (at 24.13 193.04 0)
       (effects (font (size 1.524 1.524)))
     )
-    (property "Footprint" "" (id 2) (at 24.13 189.23 0)
+    (property "Footprint" "Symbol:OSHW-Symbol_6.7x6mm_SilkScreen" (id 2) (at 24.13 189.23 0)
       (effects (font (size 1.524 1.524)) hide)
     )
     (property "Datasheet" "" (id 3) (at 24.13 189.23 0)
@@ -2914,8 +2914,8 @@
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid ef85c080-0620-4d60-b431-365183019483))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410cb))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410cb))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410cc))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410cc))
     (pin "3" (uuid 4709173f-fab0-46d0-803e-338cfaee027e))
   )
 
@@ -3665,6 +3665,12 @@
     (path "/00000000-0000-0000-0000-00006127a958/074e34d6-2284-4ea8-ae9b-39e8d962d7e8"
       (reference "C21") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
     )
+    (path "/00000000-0000-0000-0000-00006127a958/03f49080-26fb-4f7a-9e8e-22c1a0b376b7"
+      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/89870a58-fd08-44ca-bfe6-107ba5ea9add"
+      (reference "C?") (unit 1) (value "10u") (footprint "SquantorRcl:C_0603")
+    )
     (path "/00000000-0000-0000-0000-0000605c45fe"
       (reference "D2") (unit 1) (value "GREEN") (footprint "SquantorDiodes:LED_0603_hand")
     )
@@ -3784,6 +3790,9 @@
     )
     (path "/00000000-0000-0000-0000-00006127a958/bcd2ab95-e54b-42f8-9705-988c05d4585a"
       (reference "U3") (unit 3) (value "rp2040") (footprint "SquantorIC:QFN56_7by7mm_RaspberryPi")
+    )
+    (path "/00000000-0000-0000-0000-00006127a958/413195a7-c5c8-4b2d-8109-bcdaf552ebce"
+      (reference "U?") (unit 1) (value "MX25L3233FZBI") (footprint "SquantorIC:USON-8-4x3-Macronix")
     )
     (path "/00000000-0000-0000-0000-00006127a958/66ea1ada-e055-4474-87b3-72698db6d44c"
       (reference "Y1") (unit 1) (value "12MHz") (footprint "SquantorCrystal:Crystal_3225_4")
