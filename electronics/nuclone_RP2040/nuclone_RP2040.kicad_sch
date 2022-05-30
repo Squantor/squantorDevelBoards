@@ -3666,10 +3666,10 @@
       (reference "C21") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
     )
     (path "/00000000-0000-0000-0000-00006127a958/03f49080-26fb-4f7a-9e8e-22c1a0b376b7"
-      (reference "C?") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
+      (reference "C22") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
     )
     (path "/00000000-0000-0000-0000-00006127a958/89870a58-fd08-44ca-bfe6-107ba5ea9add"
-      (reference "C?") (unit 1) (value "10u") (footprint "SquantorRcl:C_0603")
+      (reference "C23") (unit 1) (value "10u") (footprint "SquantorRcl:C_0603")
     )
     (path "/00000000-0000-0000-0000-0000605c45fe"
       (reference "D2") (unit 1) (value "GREEN") (footprint "SquantorDiodes:LED_0603_hand")
@@ -3792,7 +3792,7 @@
       (reference "U3") (unit 3) (value "rp2040") (footprint "SquantorIC:QFN56_7by7mm_RaspberryPi")
     )
     (path "/00000000-0000-0000-0000-00006127a958/413195a7-c5c8-4b2d-8109-bcdaf552ebce"
-      (reference "U?") (unit 1) (value "MX25L3233FZBI") (footprint "SquantorIC:USON-8-4x3-Macronix")
+      (reference "U4") (unit 1) (value "MX25L3233FZBI") (footprint "SquantorIC:USON-8-4x3-Macronix")
     )
     (path "/00000000-0000-0000-0000-00006127a958/66ea1ada-e055-4474-87b3-72698db6d44c"
       (reference "Y1") (unit 1) (value "12MHz") (footprint "SquantorCrystal:Crystal_3225_4")
