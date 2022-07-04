@@ -2914,8 +2914,8 @@
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid ef85c080-0620-4d60-b431-365183019483))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410cd))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410cd))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410ce))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410ce))
     (pin "3" (uuid 4709173f-fab0-46d0-803e-338cfaee027e))
   )
 
@@ -3707,6 +3707,9 @@
     (path "/00000000-0000-0000-0000-00005d897e29"
       (reference "J4") (unit 1) (value "nuclone_small_right") (footprint "SquantorConnectorsNamed:nuclone_small_right_stacked")
     )
+    (path "/00000000-0000-0000-0000-00006127a958/fd573b2c-68d8-4697-8d98-089f975654e5"
+      (reference "J5") (unit 1) (value "Conn_02x06_Odd_Even") (footprint "SquantorConnectors:Header-0127-2X06-H006")
+    )
     (path "/00000000-0000-0000-0000-00005a135869"
       (reference "N1") (unit 1) (value "OHWLOGO") (footprint "Symbol:OSHW-Symbol_6.7x6mm_SilkScreen")
     )
@@ -3775,24 +3778,6 @@
     )
     (path "/00000000-0000-0000-0000-00006108cd4c"
       (reference "TP5") (unit 1) (value "Reset") (footprint "SquantorTestPoints:TestPoint_hole_H04R07")
-    )
-    (path "/00000000-0000-0000-0000-00006127a958/55f2dc20-9ad6-444d-9670-cac1ab5b0a52"
-      (reference "TP6") (unit 1) (value "QSPI_SS") (footprint "SquantorTestPoints:TestPoint_hole_H04R07")
-    )
-    (path "/00000000-0000-0000-0000-00006127a958/65be020e-0623-4f02-a655-fc04d16a56ca"
-      (reference "TP7") (unit 1) (value "QSPI_SCLK") (footprint "SquantorTestPoints:TestPoint_hole_H04R07")
-    )
-    (path "/00000000-0000-0000-0000-00006127a958/38a59e26-f6a3-4094-a432-b6828f24059d"
-      (reference "TP8") (unit 1) (value "QSPI_SD0") (footprint "SquantorTestPoints:TestPoint_hole_H04R07")
-    )
-    (path "/00000000-0000-0000-0000-00006127a958/cfc6068a-9f80-44c4-95ac-8838de8aede6"
-      (reference "TP9") (unit 1) (value "QSPI_SD1") (footprint "SquantorTestPoints:TestPoint_hole_H04R07")
-    )
-    (path "/00000000-0000-0000-0000-00006127a958/60451267-318a-4728-a96c-fb6c827a93da"
-      (reference "TP10") (unit 1) (value "QSPI_SD2") (footprint "SquantorTestPoints:TestPoint_hole_H04R07")
-    )
-    (path "/00000000-0000-0000-0000-00006127a958/1ef4e5c9-f558-4646-bd9c-54e8e5cbaad9"
-      (reference "TP11") (unit 1) (value "QSPI_SD3") (footprint "SquantorTestPoints:TestPoint_hole_H04R07")
     )
     (path "/00000000-0000-0000-0000-00005d81cb9f"
       (reference "U1") (unit 1) (value "MCP1702-MB") (footprint "SquantorIC:SOT89-NXP")
