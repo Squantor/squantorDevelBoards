@@ -2812,7 +2812,7 @@
     (uuid 66ea1ada-e055-4474-87b3-72698db6d44c)
     (property "Reference" "Y1" (id 0) (at 217.17 88.9 90))
     (property "Value" "12MHz" (id 1) (at 218.44 96.52 90))
-    (property "Footprint" "SquantorCrystal:Crystal_3225_4" (id 2) (at 214.63 92.71 0)
+    (property "Footprint" "SquantorCrystal:Crystal_2520_4" (id 2) (at 214.63 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 214.63 92.71 0)
