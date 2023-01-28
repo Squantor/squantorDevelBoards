@@ -3524,9 +3524,6 @@
     (path "/00000000-0000-0000-0000-00006127a958/4af6bbfa-396e-4b37-9bc8-72d83a65a002"
       (reference "C15") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
     )
-    (path "/00000000-0000-0000-0000-00006127a958/61343b4c-2694-48d6-aa9b-776a3336cde4"
-      (reference "C16") (unit 1) (value "1u") (footprint "SquantorRcl:C_0402")
-    )
     (path "/00000000-0000-0000-0000-000060ee70cc"
       (reference "C17") (unit 1) (value "1u") (footprint "SquantorRcl:C_0603")
     )
