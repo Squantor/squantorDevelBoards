@@ -2860,8 +2860,8 @@
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid ef85c080-0620-4d60-b431-365183019483))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410d8))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410d8))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410d9))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410d9))
     (pin "3" (uuid 4709173f-fab0-46d0-803e-338cfaee027e))
   )
 
@@ -3666,7 +3666,7 @@
       (reference "U3") (unit 3) (value "rp2040") (footprint "SquantorIC:QFN56_7by7mm_RaspberryPi")
     )
     (path "/00000000-0000-0000-0000-00006127a958/413195a7-c5c8-4b2d-8109-bcdaf552ebce"
-      (reference "U4") (unit 1) (value "MX25L3233FZBI") (footprint "SquantorIC:USON-8-4x3-Macronix")
+      (reference "U4") (unit 1) (value "generic QSPI flash") (footprint "SquantorIC:SOIC-8_dual_wide")
     )
     (path "/00000000-0000-0000-0000-00006127a958/66ea1ada-e055-4474-87b3-72698db6d44c"
       (reference "Y1") (unit 1) (value "12MHz") (footprint "SquantorCrystal:Crystal_2520_4")
