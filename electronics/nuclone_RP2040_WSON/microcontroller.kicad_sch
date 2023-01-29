@@ -2703,7 +2703,7 @@
     (uuid 413195a7-c5c8-4b2d-8109-bcdaf552ebce)
     (property "Reference" "U4" (id 0) (at 232.41 142.24 0))
     (property "Value" "MX25L3233FZBI" (id 1) (at 219.71 160.02 0))
-    (property "Footprint" "SquantorIC:USON-8-4x3-Macronix" (id 2) (at 223.52 152.4 0)
+    (property "Footprint" "SquantorIC:WSON-8-5x6" (id 2) (at 223.52 152.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 223.52 152.4 0)
