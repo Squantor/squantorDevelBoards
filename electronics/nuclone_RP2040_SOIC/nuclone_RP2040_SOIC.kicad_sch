@@ -1454,6 +1454,7 @@
     )
   )
 
+
   (junction (at 39.37 100.33) (diameter 0) (color 0 0 0 0)
     (uuid 36c5fd12-ae01-45c6-ac7a-5fdf5ee1008d)
   )
@@ -2413,7 +2414,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 728a8e27-eaef-4708-962f-f44cc20534fe)
   )
-  (label "Bootloader" (at 241.3 157.48 0)
+  (label "BOOTLOADER" (at 241.3 157.48 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 728facfe-6250-49da-af89-e45bedcaca4a)
   )
@@ -2465,7 +2466,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 971c0335-c37f-4b11-8944-3c6bcd551cc7)
   )
-  (label "Bootloader" (at 91.44 130.81 180)
+  (label "BOOTLOADER" (at 91.44 130.81 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 99b16b3e-c969-4c22-b214-8be0cfcc1731)
   )
@@ -2833,7 +2834,7 @@
     (property "Reference" "N2" (id 0) (at 22.86 180.34 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
-    (property "Value" "V20230129" (id 1) (at 17.78 182.88 0)
+    (property "Value" "V20230205" (id 1) (at 17.78 182.88 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
     (property "Footprint" "SquantorLabels:Label_Generic" (id 2) (at 24.13 182.88 0)
@@ -2860,8 +2861,8 @@
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid ef85c080-0620-4d60-b431-365183019483))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410d9))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410d9))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410da))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410da))
     (pin "3" (uuid 4709173f-fab0-46d0-803e-338cfaee027e))
   )
 
@@ -3119,7 +3120,7 @@
     (property "Reference" "N4" (id 0) (at 22.86 167.64 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
-    (property "Value" "NuClone RP2040" (id 1) (at 20.32 170.18 0)
+    (property "Value" "NuClone RP2040 SOIC" (id 1) (at 20.32 170.18 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
     (property "Footprint" "SquantorLabels:Label_Generic" (id 2) (at 24.13 168.91 0)
@@ -3482,6 +3483,9 @@
     (path "/00000000-0000-0000-0000-00005d6773b2"
       (reference "#FLG01") (unit 1) (value "PWR_FLAG") (footprint "")
     )
+    (path "/00000000-0000-0000-0000-00006127a958/b195664f-b0b4-4cbf-be13-d29e0fd9e869"
+      (reference "#FLG0101") (unit 1) (value "PWR_FLAG") (footprint "")
+    )
     (path "/00000000-0000-0000-0000-00005d820111"
       (reference "C1") (unit 1) (value "10u") (footprint "SquantorRcl:C_0603")
     )
@@ -3588,13 +3592,13 @@
       (reference "N1") (unit 1) (value "OHWLOGO") (footprint "Symbol:OSHW-Symbol_6.7x6mm_SilkScreen")
     )
     (path "/00000000-0000-0000-0000-00005d6a68b9"
-      (reference "N2") (unit 1) (value "V20230129") (footprint "SquantorLabels:Label_Generic")
+      (reference "N2") (unit 1) (value "V20230205") (footprint "SquantorLabels:Label_Generic")
     )
     (path "/00000000-0000-0000-0000-00005d8b1b32"
       (reference "N3") (unit 1) (value "JLCJLCJLCJLC") (footprint "SquantorLabels:Label_Generic")
     )
     (path "/00000000-0000-0000-0000-00005fb0926c"
-      (reference "N4") (unit 1) (value "NuClone RP2040") (footprint "SquantorLabels:Label_Generic")
+      (reference "N4") (unit 1) (value "NuClone RP2040 SOIC") (footprint "SquantorLabels:Label_Generic")
     )
     (path "/00000000-0000-0000-0000-0000618b84bf"
       (reference "N5") (unit 1) (value "Nuclone Template 20220513") (footprint "SquantorLabels:Label_Generic")
