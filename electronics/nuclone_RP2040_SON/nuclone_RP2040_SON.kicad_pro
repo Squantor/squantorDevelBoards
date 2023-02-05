@@ -391,7 +391,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "nuclone_RP2040.kicad_pro",
+    "filename": "nuclone_RP2040_SON.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -449,7 +449,6 @@
         "microvia_drill": 0.3,
         "name": "Signal",
         "nets": [
-          "/Bootloader",
           "/DN",
           "/DP",
           "/GPIO_00",
