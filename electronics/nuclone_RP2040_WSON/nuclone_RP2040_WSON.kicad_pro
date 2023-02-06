@@ -45,7 +45,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.3
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -391,7 +391,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "nuclone_RP2040.kicad_pro",
+    "filename": "nuclone_RP2040_WSON.kicad_pro",
     "version": 1
   },
   "net_settings": {

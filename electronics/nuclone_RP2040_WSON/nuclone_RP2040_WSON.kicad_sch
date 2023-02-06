@@ -2833,7 +2833,7 @@
     (property "Reference" "N2" (id 0) (at 22.86 180.34 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
-    (property "Value" "V20230129" (id 1) (at 17.78 182.88 0)
+    (property "Value" "V20230206" (id 1) (at 17.78 182.88 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
     (property "Footprint" "SquantorLabels:Label_Generic" (id 2) (at 24.13 182.88 0)
@@ -2860,8 +2860,8 @@
       (effects (font (size 1.524 1.524)) hide)
     )
     (pin "1" (uuid ef85c080-0620-4d60-b431-365183019483))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410d9))
-    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410d9))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410da))
+    (pin "2" (uuid 7a155c26-a51a-4bf2-ba0e-e327d93410da))
     (pin "3" (uuid 4709173f-fab0-46d0-803e-338cfaee027e))
   )
 
@@ -3588,7 +3588,7 @@
       (reference "N1") (unit 1) (value "OHWLOGO") (footprint "Symbol:OSHW-Symbol_6.7x6mm_SilkScreen")
     )
     (path "/00000000-0000-0000-0000-00005d6a68b9"
-      (reference "N2") (unit 1) (value "V20230129") (footprint "SquantorLabels:Label_Generic")
+      (reference "N2") (unit 1) (value "V20230206") (footprint "SquantorLabels:Label_Generic")
     )
     (path "/00000000-0000-0000-0000-00005d8b1b32"
       (reference "N3") (unit 1) (value "JLCJLCJLCJLC") (footprint "SquantorLabels:Label_Generic")
