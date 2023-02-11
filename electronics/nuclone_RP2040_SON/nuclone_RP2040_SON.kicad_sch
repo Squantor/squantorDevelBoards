@@ -1482,6 +1482,11 @@
   (no_connect (at 74.93 102.87) (uuid 9ada0bca-9ebe-4bc4-87fa-0e080722896f))
   (no_connect (at 54.61 102.87) (uuid bf6eb301-cf98-400f-a266-f1dc43c7ae21))
 
+  (bus_entry (at 143.51 255.27) (size 2.54 2.54)
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid b6b82db0-052e-4a63-8bf1-bda8b3db6e87)
+  )
+
   (polyline (pts (xy 76.2 123.19) (xy 15.24 123.19))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 0078d5b0-3e2b-404e-a167-d259131e3725)
