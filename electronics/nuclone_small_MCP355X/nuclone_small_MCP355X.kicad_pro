@@ -463,7 +463,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "small_nuclone_expansion_UART+proto.kicad_pro",
+    "filename": "nuclone_small_MCP355X.kicad_pro",
     "version": 1
   },
   "net_settings": {
