@@ -557,6 +557,26 @@
       {
         "netclass": "Power",
         "pattern": "/VDD"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/RESET"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/TDI"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/TDO"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/TMS"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/TCK"
       }
     ]
   },
