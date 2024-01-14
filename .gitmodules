@@ -13,3 +13,6 @@
 [submodule "software/squantorLibEmbedded"]
 	path = software/squantorLibEmbedded
 	url = git@github.com:Squantor/squantorLibEmbedded.git
+[submodule "electronics/ki-lime-pi-pico"]
+	path = electronics/ki-lime-pi-pico
+	url = git@github.com:Squantor/ki-lime-pi-pico.git
