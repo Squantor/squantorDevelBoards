@@ -2360,7 +2360,7 @@
     (property "Reference" "N5" (at 22.86 161.29 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
-    (property "Value" "Nuclone Template V20240114" (at 20.32 163.83 0)
+    (property "Value" "Nuclone Template V20240211" (at 20.32 163.83 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
     (property "Footprint" "SquantorLabels:Label_Generic" (at 24.13 162.56 0)
