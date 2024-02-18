@@ -538,7 +538,7 @@
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp b01eb4a2-1dfc-48cb-b27e-c052fb51add6)
     )
-    (fp_text value "NuClone Medium template V1.3" (at 0 0.0125) (layer "F.SilkS")
+    (fp_text value "Raspberry Pi Pico" (at 0 0.0125) (layer "F.SilkS")
         (effects (font (size 0.8 0.8) (thickness 0.15)))
       (tstamp 0c07eb0e-4833-4641-a8a8-68045da53f75)
     )
