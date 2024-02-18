@@ -1472,7 +1472,7 @@
     (property "Value" "RaspberryPiPico" (at 81.28 59.69 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Module_RaspberryPi_Pico:RaspberryPi_Pico_Original_SMD" (at 81.28 88.9 0)
+    (property "Footprint" "SquantorModules:RaspberryPi_Pico_Original_SMD_nokeepout" (at 81.28 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 81.28 88.9 0)
