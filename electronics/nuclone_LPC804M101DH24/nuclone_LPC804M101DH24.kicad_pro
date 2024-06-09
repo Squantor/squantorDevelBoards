@@ -545,6 +545,18 @@
       {
         "netclass": "Signal",
         "pattern": "/BOOT"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/VSS"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/VDD"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/microcontroller/VREFP"
       }
     ]
   },
