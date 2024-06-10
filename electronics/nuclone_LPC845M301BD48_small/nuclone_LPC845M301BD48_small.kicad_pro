@@ -460,7 +460,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "nuclone_devboard_small_2_layer_USB-C_data.kicad_pro",
+    "filename": "nuclone_LPC845M301BD48_small.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -525,7 +525,28 @@
       "/DN": "diff_usb",
       "/DP": "diff_usb"
     },
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Power",
+        "pattern": "/VSS"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/VDD"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/VDDA"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/VREF"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "/GPIO_*"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
