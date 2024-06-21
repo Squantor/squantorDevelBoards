@@ -4031,7 +4031,7 @@
     (property "Value" "CH340B" (at 123.19 111.76 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_SO:SO-16_3.9x9.9mm_P1.27mm" (at 120.65 99.06 0)
+    (property "Footprint" "SquantorIC:SOIC-16_3.9x9.9mm_P1.27mm" (at 120.65 99.06 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 120.65 99.06 0)
