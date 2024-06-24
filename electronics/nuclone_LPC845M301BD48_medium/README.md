@@ -1,5 +1,5 @@
-# small nuclone board LPC845 PQFP48
-Small sized nuclone board LPC845 PQFP48
+# medium nuclone board LPC845 PQFP48
+Medium sized nuclone board LPC845 PQFP48
 ## TODO's
 Still some things need to be done:
 * schematic entry 
