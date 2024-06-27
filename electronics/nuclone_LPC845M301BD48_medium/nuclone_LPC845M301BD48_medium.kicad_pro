@@ -561,6 +561,14 @@
       {
         "netclass": "Power",
         "pattern": "/VUSB"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/microcontroller/VDDA"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/microcontroller/VREFP"
       }
     ]
   },
