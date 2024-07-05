@@ -1901,7 +1901,7 @@
     (property "Reference" "U6" (at 194.31 143.51 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "25X_8pin_QSPI_flash" (at 194.31 158.75 0)
+    (property "Value" "generic SPI flash" (at 194.31 158.75 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "SquantorIC:SOIC-8_dual_wide" (at 194.31 151.13 0)
