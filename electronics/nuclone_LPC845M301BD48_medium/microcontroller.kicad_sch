@@ -2247,7 +2247,7 @@
     (property "Value" "12MHz" (at 215.9 114.3 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "SquantorCrystal:Crystal_3225_4" (at 226.06 118.11 0)
+    (property "Footprint" "SquantorCrystal:Crystal_3225_4_hand" (at 226.06 118.11 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 226.06 118.11 0)
