@@ -2194,7 +2194,7 @@
     (property "Reference" "N2" (at 22.86 180.34 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
-    (property "Value" "V20240606" (at 17.78 182.88 0)
+    (property "Value" "V20240712" (at 17.78 182.88 0)
       (effects (font (size 1.524 1.524)) (justify left))
     )
     (property "Footprint" "SquantorLabels:Label_Generic" (at 24.13 182.88 0)
